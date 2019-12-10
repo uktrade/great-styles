@@ -8,10 +8,12 @@ const sourcemaps = require('gulp-sourcemaps');
 const del = require('del');
 
 const PROJECT_DIR = path.resolve(__dirname);
-const SASS_FILES = `${PROJECT_DIR}/sass/**/*.scss`;
-const CSS_DIR = `${PROJECT_DIR}/css`;
-const CSS_FILES = `${PROJECT_DIR}/css/**/*.css`;
-const CSS_MAPS = `${PROJECT_DIR}/css/**/*.css.map`;
+const SASS_FILES = `${PROJECT_DIR}/src/**/*.scss`;
+const CSS_DIR = `${PROJECT_DIR}/styles`;
+const CSS_FILES = `${PROJECT_DIR}/styles/**/*.css`;
+const CSS_MAPS = `${PROJECT_DIR}/styles/**/*.css.map`;
+const IMAGES_SRC = `${PROJECT_DIR}/src/images/**/*`;
+const IMAGES_DEST = `${PROJECT_DIR}/styles/images/**/*`;
 
 
 gulp.task('lint:sass', function () {
@@ -39,6 +41,11 @@ gulp.task('sass:compile', function () {
     }).on('error', sass.logError))
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest(CSS_DIR));
+});
+
+gulp.task('images', function () {
+  return gulp.src(IMAGES_SRC)
+  .pipe(gulp.dest(IMAGES_DEST));
 });
 
 gulp.task('watch', function () {
