@@ -18,11 +18,15 @@ body {
   }
 }
 
-p, ul, ol, blockquote {
+p,
+ul,
+ol,
+blockquote {
   @include paragraph;
 }
 
-b, strong {
+b,
+strong {
   font-weight: $bold;
 }
 
@@ -30,7 +34,8 @@ u {
   text-decoration: underline;
 }
 
-i, em {
+i,
+em {
   font-style: italic;
 }
 

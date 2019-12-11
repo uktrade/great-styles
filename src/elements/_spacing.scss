@@ -6,35 +6,35 @@
 // Padding/margin
 
 $spacings-desktop:
-  (0 - $space-m, n-m)
-  (0 - $space-s, n-s)
-  (0 - $space-xs, n-xs)
-  (0 - $space-xxs, n-xxs)
-  (0, 0)
-  ($space-xxs, xxs)
-  ($space-xs, xs)
-  ($space-s, s)
-  ($space-m, m)
-  ($space-l, l)
-  ($space-xl, xl)
+  (0 - $space-m, n-m),
+  (0 - $space-s, n-s),
+  (0 - $space-xs, n-xs),
+  (0 - $space-xxs, n-xxs),
+  (0, 0),
+  ($space-xxs, xxs),
+  ($space-xs, xs),
+  ($space-s, s),
+  ($space-m, m),
+  ($space-l, l),
+  ($space-xl, xl),
   ($space-xxl, xxl);
 $spacings-mobile:
   (0 - $space-m-m, n-m)
-  (0 - $space-s-m, n-s)
-  (0 - $space-xs-m, n-xs)
-  (0 - $space-xxs-m, n-xxs)
-  (0, 0)
-  ($space-xxs-m, xxs)
-  ($space-xs-m, xs)
-  ($space-s-m, s)
-  ($space-m-m, m)
-  ($space-l-m, l)
-  ($space-xl-m, xl)
+  (0 - $space-s-m, n-s),
+  (0 - $space-xs-m, n-xs),
+  (0 - $space-xxs-m, n-xxs),
+  (0, 0),
+  ($space-xxs-m, xxs),
+  ($space-xs-m, xs),
+  ($space-s-m, s),
+  ($space-m-m, m),
+  ($space-l-m, l),
+  ($space-xl-m, xl),
   ($space-xxl-m, xxl);
 $positions:
-  (top, t)
-  (right, r)
-  (bottom, b)
+  (top, t),
+  (right, r),
+  (bottom, b),
   (left, f);
 $rules:
   (padding, p),

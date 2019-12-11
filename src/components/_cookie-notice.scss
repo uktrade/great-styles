@@ -2,12 +2,13 @@
 @import 'helpers/mixins';
 @import 'helpers/colours';
 
-.cookie-notice {
+.g-cookie-notice {
   @include body-small;
 
   @include float-clear;
 
-  a:focus, button:focus {
+  a:focus,
+  button:focus {
     @include focus;
   }
 
@@ -16,7 +17,7 @@
     float: left;
   }
 
-  .cookie-close {
+  .close {
     float: right;
     display: block;
     padding: 0;

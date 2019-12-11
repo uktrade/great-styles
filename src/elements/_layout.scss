@@ -15,11 +15,11 @@ hr {
 }
 
 .section {
-  padding: #{2 * ($line-height-mobile * $base-font-size-mobile)} 0;
+  padding: $space-s-m 0;
   overflow: visible;
 
-  @media (min-width: $mobile-min-breakpoint) {
-    padding: #{2 * ($line-height-desktop * $base-font-size-desktop)} 0;
+  @include tablet {
+    padding: $space-s 0;
   }
 }
 

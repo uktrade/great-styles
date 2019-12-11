@@ -1,24 +1,24 @@
 
 .g-multi-select-autocomplete-selected-values {
-  border: 2px solid $grey;
-  margin-top: $space-xs-m;
-  padding: $space-xxs-m $space-xxs-m 0 $space-xxs-m;
   @include tablet {
     margin-top: $space-xs;
-    padding: $space-xxs $space-xxs 0 $space-xxs;
+    padding: $space-xxs $space-xxs 0;
   }
+  border: 2px solid $grey;
+  margin-top: $space-xs-m;
+  padding: $space-xxs-m $space-xxs-m 0;
 
   span,
   .g-multi-select-autocomplete-selected-item {
-    display: inline-block;
-    margin-right: $space-xxs-m;
-    margin-bottom: $space-xxs-m;
-    padding-left: $space-xxs-m;
     @include tablet {
       margin-right: $space-xxs;
       padding-left: $space-xxs;
       margin-bottom: $space-xxs;
     }
+    display: inline-block;
+    margin-right: $space-xxs-m;
+    margin-bottom: $space-xxs-m;
+    padding-left: $space-xxs-m;
   }
 
   span {
@@ -34,13 +34,13 @@
   }
 
   .autocomplete__wrapper input {
-    border: none;
+    border: 0;
     height: 100%;
   }
 
   .autocomplete__menu {
     overflow: hidden;
-    border-top: 2px solid black;
+    border-top: 2px solid $black;
   }
 
   .g-multi-select-autocomplete-selected-item {
@@ -49,7 +49,7 @@
     border-radius: 5px;
 
     button {
-      border: none;
+      border: 0;
       background: none;
       padding: 10px;
       padding-bottom: 5px;

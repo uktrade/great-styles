@@ -39,14 +39,13 @@
     }
 
     .burger-icon {
+      // The three burger lines are formed using the span, and its before and after.
+      @include burger-icon-line;
       position: absolute;
       right: 10px;
       top: 17px;
       transition: background-color .2s ease;
       background-color: transparent;
-
-      // The three burger lines are formed using the span, and its before and after.
-      @include burger-icon-line;
 
       &:before {
         @include burger-icon-line;
@@ -69,7 +68,8 @@
       .burger-icon {
         background-color: transparent;
 
-        &:before, &:after {
+        &:before,
+        &:after {
           width: 25px;
           margin-right: -3px;
         }

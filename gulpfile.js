@@ -9,6 +9,11 @@ const del = require('del');
 
 const PROJECT_DIR = path.resolve(__dirname);
 const SASS_FILES = `${PROJECT_DIR}/src/**/*.scss`;
+const SASS_LINT_FILES = [
+  `${PROJECT_DIR}/src/**/*.scss`,
+  `!${PROJECT_DIR}/src/elements/_reset.scss`,
+  `!${PROJECT_DIR}/src/helpers/_colours.scss`
+];
 const CSS_DIR = `${PROJECT_DIR}/styles`;
 const CSS_FILES = `${PROJECT_DIR}/styles/**/*.css`;
 const CSS_MAPS = `${PROJECT_DIR}/styles/**/*.css.map`;
@@ -16,12 +21,13 @@ const IMAGES_SRC = `${PROJECT_DIR}/src/images/**/*`;
 const IMAGES_DEST = `${PROJECT_DIR}/styles/images/**/*`;
 
 
-gulp.task('lint:sass', function () {
-  return gulp.src('sass/**/*.scss')
+gulp.task('lint', function () {
+  console.log(`${PROJECT_DIR}/src/elements/_reset.scss`);
+  return gulp.src(SASS_LINT_FILES)
     .pipe(sassLint({
       options: {
         formatter: 'stylish',
-        'merge-default-rules': true
+        'merge-default-rules': true,
       },
       configFile: 'sass-lint-config.yml'
     }))

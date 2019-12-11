@@ -1,7 +1,7 @@
 .autocomplete__menu,
 .SelectiveLookupDisplay {
-  background-color: #fff;
-  border: #999 solid 1px;
+  background-color: $white;
+  border: $light-grey solid 1px;
   max-height: 221px;
   overflow: scroll;
   z-index: 2;
@@ -9,19 +9,20 @@
   font-size: 16px;
   margin-top: -1px;
   margin-left: 1px;
-  font-family: "Roboto", arial, helvetica, sans-serif;
+  font-family: $brand-font-body;
   overflow-x: hidden;
 
   li {
     cursor: pointer;
-    border-top: #999 solid 1px;
+    border-top: $light-grey solid 1px;
     padding: 12px 24px;
     position: relative;
     top: -1px;
+
     &:focus {
-      border-color: #ffbf47;
+      border-color: $focus-yellow;
       border-style: solid;
-      border-width: 4px 3px 3px 3px;
+      border-width: 4px 3px 3px;
       box-shadow: none;
       outline: 0;
       padding: 8px 22px;
@@ -30,13 +31,13 @@
 
     &:hover,
     &:focus {
-      background-color: #007ea3 !important;
-      color: white;
+      background-color: $aqua !important;
+      color: $white;
     }
   }
 
   #company-lookup-name-not-in-companies-house {
-    border-top: 2px solid #999;
-    background: #dedede;
+    border-top: 2px solid $light-grey;
+    background: $light-grey;
   }
 }

@@ -52,6 +52,7 @@
 
   .g-footer-domestic-international-link {
     text-align: right;
+
     li {
       margin: 0;
     }
@@ -67,6 +68,7 @@
 @media (max-width: 640px) {
   .g-footer-links {
     display: block;
+
     a {
       color: $white;
       text-decoration: none;

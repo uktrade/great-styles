@@ -1,13 +1,6 @@
 
 $site-width: 1230px;
 
-$asset-root: './images/';
-
-//Functions
-@function asset-path($path){
-  @return "#{$asset-root}#{$path}";
-}
-
 $gutter-small: 15px;
 $gutter-medium: 14px;
 $gutter-large: 16px;
@@ -21,7 +14,7 @@ $mobile-min-breakpoint: $mobile-max-breakpoint + 1;
 $tablet-min-breakpoint: $tablet-max-breakpoint + 1;
 $desktop-min-breakpoint: $desktop-max-breakpoint + 1;
 
-$brand-font-heading: 'Overpass','Roboto', Arial, Helvetica, Verdana;
+$brand-font-heading: 'Overpass', 'Roboto', Arial, Helvetica, Verdana;
 $brand-font-body: 'Roboto', Arial, Helvetica, Verdana;
 $quote-font: 'Georgia', serif;
 

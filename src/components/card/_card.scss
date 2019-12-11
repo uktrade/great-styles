@@ -7,19 +7,14 @@ $card-min-height-mobile: $space-s-m * 7;
 }
 
 .g-card {
-  height: auto;
-  min-height: $card-min-height-mobile;
   @include desktop {
     min-height: $card-min-height;
-  }
-  flex-grow: 1;
-}
-
-.g-card {
-  margin-bottom: $space-s-m;
-  @include desktop {
     margin-bottom: $space-s;
   }
+  height: auto;
+  min-height: $card-min-height-mobile;
+  flex-grow: 1;
+  margin-bottom: $space-s-m;
   width: 100%;
 
   .g-card-link {
@@ -29,7 +24,10 @@ $card-min-height-mobile: $space-s-m * 7;
     text-decoration: none;
 
     &:hover .g-card-inner {
-      h3, h4, h5, h6 {
+      h3,
+      h4,
+      h5,
+      h6 {
         color: $light-blue;
       }
     }
@@ -45,7 +43,10 @@ $card-min-height-mobile: $space-s-m * 7;
         background: $focus-yellow;
       }
 
-      h3, h4, h5, h6 {
+      h3,
+      h4,
+      h5,
+      h6 {
         color: $mid-blue;
       }
     }
@@ -69,7 +70,11 @@ $card-min-height-mobile: $space-s-m * 7;
       margin: 0;
     }
 
-    h2, h3, h4, h5, h6 {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       @include brand-medium;
       margin-bottom: #{2 * ($line-height-mobile * $base-font-size-mobile) - ($font-size-large-mobile * $line-height-mobile)};
 

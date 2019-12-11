@@ -85,7 +85,8 @@ $hero-height-mobile: $space-s-m * 8;
 }
 
 @include tablet {
-  .great-hero, .great-hero > .container {
+  .great-hero,
+  .great-hero > .container {
     min-height: $hero-height;
   }
 

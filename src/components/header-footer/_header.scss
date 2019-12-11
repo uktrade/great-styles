@@ -7,13 +7,13 @@ $menu-item-vertical-spacing: 10px;
 $menu-margin-l: 30px;
 $menu-margin-s: 20px;
 
-@mixin desktopOnly() {
+@mixin desktop-only() {
   @media (max-width: 768px) {
     display: none;
   }
 }
 
-@mixin mobileOnly() {
+@mixin mobile-only() {
   display: none;
 
   @media (max-width: 768px) {
@@ -21,7 +21,8 @@ $menu-margin-s: 20px;
   }
 }
 
-.g-header, .g-sub-header {
+.g-header,
+.g-sub-header {
   // need to make sure it's not underneath anything
   position: relative;
   z-index: 5;
@@ -56,16 +57,17 @@ $menu-margin-s: 20px;
   }
 
   .extra-links {
+    @include tablet {
+      top: $space-xs;
+    }
     margin: 0;
     font-size: 14px;
     color: $white;
     position: absolute;
     top: $space-xs-m;
-    @include tablet {
-      top: $space-xs;
-    }
     right: 0;
     display: flex;
+
     li:last-child {
       margin-left: 10px;
     }
@@ -74,7 +76,7 @@ $menu-margin-s: 20px;
   .main-nav-container {
     &.mobile {
       margin: 0;
-      @include mobileOnly;
+      @include mobile-only;
     }
 
     &.desktop {
@@ -83,7 +85,7 @@ $menu-margin-s: 20px;
       justify-content: flex-end;
       flex-grow: 1;
       align-self: flex-end;
-      @include desktopOnly;
+      @include desktop-only;
 
       @media (max-width: 1260px) {
         margin-left: $menu-margin-l;

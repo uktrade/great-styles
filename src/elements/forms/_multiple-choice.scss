@@ -8,13 +8,18 @@
 // a list of checkboxes needs margin between them
 // standalone checkboxes (div.multiple-choice) do not
 li.multiple-choice {
-  margin-bottom: $space-xs-m;
   @include tablet {
     margin-bottom: $space-xs;
   }
+  margin-bottom: $space-xs-m;
 }
 
 .multiple-choice {
+  @include tablet {
+    min-height: $space-m;
+    padding: 0 0 0 $space-m;
+    float: left;
+  }
 
   display: block;
   float: none;
@@ -23,14 +28,15 @@ li.multiple-choice {
   padding: 0 0 0 $space-m-m;
   min-height: $space-m-m;
 
-  @include tablet {
-    min-height: $space-m;
-    padding: 0 0 0 $space-m;
-    float: left;
-  }
 
   // Absolutely position inputs within label, to allow text to wrap
   input {
+
+    @include tablet {
+      width: $space-m;
+      height: $space-m;
+    }
+
     position: absolute;
     cursor: pointer;
     left: 0;
@@ -40,37 +46,48 @@ li.multiple-choice {
     width: $space-m-m;
     height: $space-m-m;
 
-    @include tablet {
-      width: $space-m;
-      height: $space-m;
-    }
-
     &:focus {
       outline: 0;
     }
   }
 
   label {
+    @include tablet {
+      line-height: $space-m;
+      float: left;
+    }
     cursor: pointer;
     padding-left: $space-xs;
     display: block;
     line-height: $space-m-m;
 
-    @include tablet {
-      line-height: $space-m;
-    }
-
     // remove 300ms pause on mobile
     -ms-touch-action: manipulation;
     touch-action: manipulation;
 
-    @media (min-width: $mobile-min-breakpoint) {
-      float: left;
+    &:after {
+      color: $grey;
+      z-index: 1;
+    }
+  }
+
+  [type=radio] + label {
+    &::before {
+      border: 2px solid $grey;
+      background-color: $white;
+    }
+  }
+
+  [type=checkbox] + label {
+    &::before {
+      border-radius: 0;
+      border: 2px solid $grey;
+      background-color: $white;
     }
   }
 
   [type=radio] + label::before {
-    content: "";
+    content: '';
     border: 2px solid;
     background: transparent;
     width: 28px;
@@ -88,7 +105,7 @@ li.multiple-choice {
   }
 
   [type=radio] + label::after {
-    content: "";
+    content: '';
     width: 0;
     height: 0;
     position: absolute;
@@ -106,7 +123,7 @@ li.multiple-choice {
   }
 
   [type=checkbox] + label::before {
-    content: "";
+    content: '';
     border: 2px solid;
     background: transparent;
     width: $space-m-m - 4;
@@ -123,7 +140,7 @@ li.multiple-choice {
   }
 
   [type=checkbox] + label::after {
-    content: "";
+    content: '';
     border: solid;
     background: transparent;
     border-top-color: transparent;
@@ -177,28 +194,5 @@ li.multiple-choice {
   @media (min-width: $mobile-min-breakpoint) {
     margin-bottom: 0;
     margin-right: $space-s;
-  }
-}
-
-.multiple-choice {
-
-  label:after {
-    color: $grey;
-    z-index: 1;
-  }
-
-  [type=radio] + label {
-    &::before {
-      border: 2px solid $grey;
-      background-color: $white;
-    }
-  }
-
-  [type=checkbox] + label {
-    &::before {
-      border-radius: 0;
-      border: 2px solid $grey;
-      background-color: $white;
-    }
   }
 }

@@ -5,6 +5,10 @@
 @import 'colours';
 @import 'vars';
 
+@function asset-path($path) {
+  @return '#{$asset-root}#{$path}';
+}
+
 @mixin paragraph {
   margin-top: $line-height-mobile-px;
   margin-bottom: $line-height-mobile-px;

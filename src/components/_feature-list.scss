@@ -3,31 +3,24 @@
 
 $min-height: $space-s * 12;
 
-.list-with-media {
+.g-feature-list {
   width: 100%;
   min-height: $min-height;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  color: white;
+  color: $white;
 
   a {
-    color: white;
+    color: $white;
   }
 
-  a:visited{
-    color: white;
+  a:visited {
+    color: $white;
   }
 
-  a:active:focus{
-    color: $great-blue;
-  }
-
-  .list-item {
-
-    p {
-      @include body-small;
-    }
+  .list-item p {
+    @include body-small;
   }
 
   .list-item-container {

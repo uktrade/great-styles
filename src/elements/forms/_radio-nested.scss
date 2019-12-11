@@ -1,14 +1,11 @@
 
 .g-nested-radio-parent {
+  margin-bottom: 0;
+
   label,
   input {
     float: none;
   }
-}
-
-
-.g-nested-radio-parent {
-  margin-bottom: 0;
 
   input:not(:checked) + label + .g-radio-nested {
     display: none;
@@ -20,17 +17,17 @@
 }
 
 .g-radio-nested {
-  border-left-width: 4px;
-  border-style: solid;
-  border-color: $grey;
-  margin-top: $space-xs-m;
-  padding-left: $space-s-m;
-  margin-left: $space-n-s-m + 4; // account for border width
   @include tablet {
     margin-top: $space-xs;
     margin-left: $space-n-s + 4;
     padding-left: $space-s;
   }
+  margin-top: $space-xs-m;
+  padding-left: $space-s-m;
+  margin-left: $space-n-s-m + 4; // account for border width
+  border-left-width: 4px;
+  border-style: solid;
+  border-color: $grey;
   margin-bottom: 0;
 
   .form-hint + .form-group {
@@ -55,8 +52,10 @@
       position: inherit;
       cursor: inherit;
     }
-    //
-    input, select, textarea {
+
+    input,
+    select,
+    textarea {
       width: 100%;
     }
   }

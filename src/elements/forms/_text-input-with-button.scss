@@ -3,19 +3,18 @@
 .text-input-with-submit-button-container {
   display: flex;
 
-  .text-input-with-submit-button:active {
-    top: inherit;
-  }
-
   .text-input-with-submit-button {
-    border: none;
+    border: 0;
     background: $active-blue;
     cursor: pointer;
     color: $white;
-    cursor: pointer;
+
+    &:active {
+      top: inherit;
+    }
   }
 
   input {
-    border-right: none;
+    border-right: 0;
   }
 }

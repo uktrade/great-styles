@@ -30,8 +30,8 @@ $min-height: $space-s * 12;
   }
 
   &.background-tint:before {
-    background-color: rgba(0,0,0,0.5);
-    content: "";
+    background-color: $background-tint;
+    content: '';
     height: 100%;
     left: 0;
     position: absolute;
