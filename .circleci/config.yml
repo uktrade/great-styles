@@ -9,7 +9,7 @@ jobs:
           key: v1-deps-{{ checksum "package.json" }}
       - run:
           command: |
-            npm install
+            yarn install
       - save_cache:
           key: v1-deps-{{ checksum "package.json" }}
           paths:
