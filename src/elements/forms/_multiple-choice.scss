@@ -1,0 +1,204 @@
+
+// Multiple choice/radio buttons
+
+@import 'helpers/colours';
+
+// Radio buttons & checkboxes
+
+// a list of checkboxes needs margin between them
+// standalone checkboxes (div.multiple-choice) do not
+li.multiple-choice {
+  margin-bottom: $space-xs-m;
+  @include tablet {
+    margin-bottom: $space-xs;
+  }
+}
+
+.multiple-choice {
+
+  display: block;
+  float: none;
+  clear: left;
+  position: relative;
+  padding: 0 0 0 $space-m-m;
+  min-height: $space-m-m;
+
+  @include tablet {
+    min-height: $space-m;
+    padding: 0 0 0 $space-m;
+    float: left;
+  }
+
+  // Absolutely position inputs within label, to allow text to wrap
+  input {
+    position: absolute;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    -webkit-appearance: none;
+    width: $space-m-m;
+    height: $space-m-m;
+
+    @include tablet {
+      width: $space-m;
+      height: $space-m;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  label {
+    cursor: pointer;
+    padding-left: $space-xs;
+    display: block;
+    line-height: $space-m-m;
+
+    @include tablet {
+      line-height: $space-m;
+    }
+
+    // remove 300ms pause on mobile
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+
+    @media (min-width: $mobile-min-breakpoint) {
+      float: left;
+    }
+  }
+
+  [type=radio] + label::before {
+    content: "";
+    border: 2px solid;
+    background: transparent;
+    width: 28px;
+    height: 28px;
+
+    @include tablet {
+      width: 40px;
+      height: 40px;
+    }
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+  }
+
+  [type=radio] + label::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    border: 8px solid;
+    top: 8px;
+    left: 8px;
+
+    @include tablet {
+      border: 11px solid;
+      top: 11px;
+      left: 11px;
+    }
+    border-radius: 50%;
+    opacity: 0;
+  }
+
+  [type=checkbox] + label::before {
+    content: "";
+    border: 2px solid;
+    background: transparent;
+    width: $space-m-m - 4;
+    height: $space-m-m - 4;
+
+    @include tablet {
+      width: $space-m - 4;
+      height: $space-m - 4;
+    }
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  [type=checkbox] + label::after {
+    content: "";
+    border: solid;
+    background: transparent;
+    border-top-color: transparent;
+    position: absolute;
+    border-width: 0 0 4px 4px;
+    width: 18px;
+    height: 8px;
+    top: 8px;
+    left: 6px;
+    @include tablet {
+      border-width: 0 0 6px 6px;
+      width: 24px;
+      height: 10px;
+      top: 10px;
+      left: 8px;
+    }
+    transform: rotate(-45deg);
+    opacity: 0;
+  }
+
+  // Focused state
+  [type=radio]:focus + label::before {
+    box-shadow: 0 0 0 4px $focus-yellow;
+  }
+
+  [type=checkbox]:focus + label::before {
+    box-shadow: 0 0 0 3px $focus-yellow;
+  }
+
+  // Selected state
+  input:checked + label::after {
+    opacity: 1;
+  }
+
+  // Disabled state
+  input:disabled {
+    cursor: default;
+  }
+
+  input:disabled + label {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+}
+
+// To sit multiple choice inputs next to each other, use .inline on parent
+.inline .multiple-choice {
+  clear: none;
+
+  @media (min-width: $mobile-min-breakpoint) {
+    margin-bottom: 0;
+    margin-right: $space-s;
+  }
+}
+
+.multiple-choice {
+
+  label:after {
+    color: $grey;
+    z-index: 1;
+  }
+
+  [type=radio] + label {
+    &::before {
+      border: 2px solid $grey;
+      background-color: $white;
+    }
+  }
+
+  [type=checkbox] + label {
+    &::before {
+      border-radius: 0;
+      border: 2px solid $grey;
+      background-color: $white;
+    }
+  }
+}

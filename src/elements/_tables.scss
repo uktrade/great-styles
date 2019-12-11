@@ -1,0 +1,40 @@
+// Tables
+
+@import 'helpers/vars';
+@import 'helpers/mixins';
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin: $space-s-m 0;
+
+  @include tablet {
+    margin: $space-s 0;
+  }
+
+  th,
+  td {
+    @include body-medium;
+    padding: $space-xxs-m - 1 $space-s-m $space-xxs-m 0;
+    text-align: left;
+    border-bottom: 1px solid $active-blue;
+
+    @include tablet {
+      padding: $space-xxs - 1 $space-s $space-xxs 0;
+    }
+  }
+
+  thead th {
+    @include brand-small;
+  }
+
+  td:last-child,
+  th:last-child {
+    padding-right: 0;
+  }
+
+  caption {
+    text-align: left;
+  }
+}

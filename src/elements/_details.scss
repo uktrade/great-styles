@@ -1,0 +1,27 @@
+
+details {
+  display: block;
+  clear: both;
+  overflow: auto;
+
+  summary {
+    color: $active-blue;
+    cursor: pointer;
+    position: relative;
+    // don't set display here for browser compatibility reasons
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary#Browser_compatibility
+
+    &:hover {
+      color: $active-blue-alt;
+    }
+
+    &:focus {
+      outline: 3px solid $focus-yellow;
+    }
+  }
+
+  & > :not(summary) {
+    margin-left: 20px;
+  }
+
+}

@@ -1,0 +1,68 @@
+
+// CASE STUDY/BANNER
+
+$min-height: $space-s * 12;
+
+.g-case-study {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  position: relative;
+  min-height: $min-height;
+
+  .heading-large {
+    margin-top: $space-s-m;
+    @include tablet {
+      margin-top: $space-s;
+    }
+  }
+
+  .content {
+    margin-top: -3px;
+  }
+
+  @include tablet {
+    p {
+      display: inline-block;
+      margin-top: 0;
+    }
+  }
+
+  &.background-tint:before {
+    background-color: rgba(0,0,0,0.5);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  & > .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  @media (max-width: $desktop-max-breakpoint) {
+    // horrible but only way to override inline background style
+    background-image: none !important;
+    color: $grey;
+
+    &.background-tint:before {
+      display: none;
+    }
+
+    & > .container {
+     min-height: 0;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .button {
+      width: auto;
+      min-width: 300px;
+    }
+  }
+}

@@ -1,0 +1,136 @@
+
+// COMMON STYLES
+// ==============
+
+@import 'helpers/vars';
+@import '../../helpers/colours';
+@import 'helpers/mixins';
+
+.g-global-header-footer,
+.g-sub-header,
+.g-header {
+  font-family: $brand-font-heading;
+  font-weight: 700;
+}
+
+.g-global-header-footer {
+  background-color: $white;
+  height: $space-m-m;
+  line-height: $space-m-m;
+  @include tablet {
+    height: $space-m;
+    line-height: $space-m;
+  }
+
+  & > .container {
+    @include float-clear;
+  }
+
+  .g-global-header-footer-logo {
+    float: left;
+    white-space: nowrap;
+    margin-top: 11px;
+  }
+
+  .g-domestic-international-links {
+    @include float-clear;
+    float: right;
+  }
+
+  .g-footer-copyright {
+    float: right;
+    font-size: 12px;
+    margin: 0;
+    color: $grey;
+  }
+}
+
+.g-footer-logo-container,
+.g-footer .g-domestic-international-links {
+  border-bottom: 1px solid $lightened-great-blue;
+}
+
+.g-footer,
+.g-header,
+.g-sub-header {
+  a:active:focus {
+    color: $great-blue;
+  }
+}
+
+.g-domestic-international-links {
+  @include float-clear;
+  height: $space-m-m;
+  line-height: $space-m-m;
+  @include tablet {
+    height: $space-m;
+    line-height: $space-m;
+  }
+  font-family: $brand-font-heading;
+
+  a {
+    text-decoration: none;
+    display: block;
+    float: left;
+    padding: 0 15px;
+    font-size: 14px;
+    position: relative;
+  }
+}
+
+.g-global-header.domestic a.domestic,
+.g-global-header.international a.international {
+  @include flag-red-underline;
+  color: $great-blue;
+}
+
+@media (max-width: 640px) {
+
+  .g-global-header-footer {
+    height: auto;
+    line-height: 1;
+
+    & > .container {
+      margin: 0;
+      width: 100%;
+    }
+
+    .g-global-header-footer-logo {
+      padding-left: 15px;
+      float: none;
+    }
+
+    .g-domestic-international-links {
+      display: table;
+      float: none;
+      width: 100%;
+
+      a {
+        float: none;
+        font-size: 12px;
+        display: table-cell;
+        vertical-align: middle;
+        min-height: 50px;
+        height: auto;
+
+        &:first-child {
+          padding: 10px 0 10px 15px;
+        }
+
+        &:last-child {
+          text-align: right;
+          padding: 10px 15px 10px 0;
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 350px) {
+  .g-global-header-footer {
+    .g-domestic-international-links > * {
+      font-size: 12px;
+    }
+  }
+}

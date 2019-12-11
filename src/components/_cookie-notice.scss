@@ -1,0 +1,64 @@
+@import 'helpers/vars';
+@import 'helpers/mixins';
+@import 'helpers/colours';
+
+.cookie-notice {
+  @include body-small;
+
+  @include float-clear;
+
+  a:focus, button:focus {
+    @include focus;
+  }
+
+  p {
+    width: calc(100% - 50px);
+    float: left;
+  }
+
+  .cookie-close {
+    float: right;
+    display: block;
+    padding: 0;
+    width: $space-s-m;
+    height: $space-s-m;
+    @include desktop {
+      width: $space-s;
+      height: $space-s;
+    }
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    border: 0;
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+      @include up-chevron-1($mid-blue);
+      margin: 0;
+      width: $space-xs;
+      height: $space-xs;
+      position: absolute;
+      left: 6px;
+      top: 17px;
+    }
+
+    &:after {
+      @include down-chevron-1($mid-blue);
+      margin: 0;
+      width: $space-xs;
+      height: $space-xs;
+      position: absolute;
+      left: 6px;
+      top: -4px;
+    }
+
+    &:hover {
+      &:before,
+      &:after {
+        border-color: $light-blue;
+      }
+    }
+
+  }
+}

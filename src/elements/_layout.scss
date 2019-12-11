@@ -1,0 +1,46 @@
+
+@import 'helpers/vars';
+@import 'helpers/colours';
+@import 'helpers/mixins';
+
+// LAYOUT
+// =======
+
+hr {
+  display: block;
+  background: $stone;
+  border: 0;
+  height: 2px;
+  @include paragraph;
+}
+
+.section {
+  padding: #{2 * ($line-height-mobile * $base-font-size-mobile)} 0;
+  overflow: visible;
+
+  @media (min-width: $mobile-min-breakpoint) {
+    padding: #{2 * ($line-height-desktop * $base-font-size-desktop)} 0;
+  }
+}
+
+.container {
+  max-width: $site-width;
+  margin: 0 $gutter-small;
+
+  @media (min-width: $mobile-min-breakpoint) {
+    margin: 0 $gutter-medium;
+  }
+
+  @media (min-width: $tablet-min-breakpoint) {
+    margin: 0 $gutter-large;
+  }
+
+  @media (min-width: $desktop-min-breakpoint) {
+    margin: 0 $gutter-xlarge;
+  }
+
+  @media (min-width: $site-width + ($gutter-xlarge * 2)) {
+    margin: 0 auto;
+  }
+
+}

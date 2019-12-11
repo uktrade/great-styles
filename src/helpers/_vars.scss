@@ -1,0 +1,79 @@
+
+$site-width: 1230px;
+
+$asset-root: './images/';
+
+//Functions
+@function asset-path($path){
+  @return "#{$asset-root}#{$path}";
+}
+
+$gutter-small: 15px;
+$gutter-medium: 14px;
+$gutter-large: 16px;
+$gutter-xlarge: 30px;
+
+$mobile-max-breakpoint: 640px;
+$tablet-max-breakpoint: 768px;
+$desktop-max-breakpoint: 1024px;
+
+$mobile-min-breakpoint: $mobile-max-breakpoint + 1;
+$tablet-min-breakpoint: $tablet-max-breakpoint + 1;
+$desktop-min-breakpoint: $desktop-max-breakpoint + 1;
+
+$brand-font-heading: 'Overpass','Roboto', Arial, Helvetica, Verdana;
+$brand-font-body: 'Roboto', Arial, Helvetica, Verdana;
+$quote-font: 'Georgia', serif;
+
+$font-size-small-desktop: 16px;
+$base-font-size-desktop: 19px;
+$font-size-large-desktop: 24px;
+$font-size-xlarge-desktop: 36px;
+$font-size-xxlarge-desktop: 48px;
+
+$line-height-desktop: 1.578947368;
+$line-height-desktop-px: #{$line-height-desktop * $base-font-size-desktop};
+
+$font-size-small-mobile: 14px;
+$base-font-size-mobile: 16px;
+$font-size-large-mobile: 19px;
+$font-size-xlarge-mobile: 24px;
+$font-size-xxlarge-mobile: 36px;
+
+$line-height-mobile: 1.375;
+$line-height-mobile-px: #{$line-height-mobile * $base-font-size-mobile};
+
+$normal: 400;
+$bold: 700;
+
+// Desktop
+$space-xxs: ($line-height-desktop * $base-font-size-desktop) / 4;
+$space-xs: ($line-height-desktop * $base-font-size-desktop) / 2;
+$space-s: ($line-height-desktop * $base-font-size-desktop);
+$space-m: ($line-height-desktop * $base-font-size-desktop) * 3 / 2;
+$space-l: ($line-height-desktop * $base-font-size-desktop) * 2;
+$space-xl: ($line-height-desktop * $base-font-size-desktop) * 3;
+$space-xxl: ($line-height-desktop * $base-font-size-desktop) * 4;
+
+// Mobile
+$space-xxs-m: ($line-height-mobile * $base-font-size-mobile) / 4;
+$space-xs-m: ($line-height-mobile * $base-font-size-mobile) / 2;
+$space-s-m: ($line-height-mobile * $base-font-size-mobile);
+$space-m-m: ($line-height-mobile * $base-font-size-mobile) * 3 / 2;
+$space-l-m: ($line-height-mobile * $base-font-size-mobile) * 2;
+$space-xl-m: ($line-height-mobile * $base-font-size-mobile) * 3;
+$space-xxl-m: ($line-height-mobile * $base-font-size-mobile) * 4;
+
+$space-n-xs: 0 - $space-xs;
+$space-n-s: 0 - $space-s;
+$space-n-m: 0 - $space-m;
+$space-n-l: 0 - $space-l;
+$space-n-xl: 0 - $space-xl;
+$space-n-xxl: 0 - $space-xxl;
+
+$space-n-xs-m: 0 - $space-xs-m;
+$space-n-s-m: 0 - $space-s-m;
+$space-n-m-m: 0 - $space-m-m;
+$space-n-l-m: 0 - $space-l-m;
+$space-n-xl-m: 0 - $space-xl-m;
+$space-n-xxl-m: 0 - $space-xxl-m;

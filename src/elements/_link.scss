@@ -1,0 +1,35 @@
+
+// LINKS
+// ======
+
+@import 'helpers/colours';
+@import 'helpers/mixins';
+
+a:focus {
+  @include focus;
+}
+
+a:focus:active {
+  background-color: $focus-yellow;
+}
+
+a {
+  color: $active-blue;
+  text-decoration: underline;
+
+  &:visited {
+    color: $purple;
+  }
+
+  &:hover {
+    color: $active-blue-alt;
+  }
+
+  &:active {
+    color: $active-blue;
+  }
+
+  &:focus:active {
+    color: $great-blue;
+  }
+}

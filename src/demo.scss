@@ -1,0 +1,343 @@
+
+@import 'helpers/colours';
+@import 'helpers/mixins';
+@import 'helpers/typography-mixins';
+
+#content {
+  z-index: 0;
+}
+
+code {
+  font-size: 14px;
+  font-family: Monaco, 'Lucida Console', monospace;
+  background-color: $black;
+  color: $focus-yellow;
+  padding-left: 2px;
+  padding-right: 2px; 
+
+  @include desktop {
+    font-size: 16px;
+  }
+}
+
+$one-line-desktop: $line-height-desktop * $base-font-size-desktop;
+$one-line-mobile: $line-height-mobile * $base-font-size-mobile;
+
+.debug {
+  position: absolute;
+  z-index: 50;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0.3;
+  font-size: $base-font-size-mobile;
+  background: repeating-linear-gradient(
+    to bottom,
+    $mid-grey,
+    $mid-grey 1px,
+    transparent 1px,
+    transparent $one-line-mobile,
+    $mid-grey $one-line-mobile,
+  );
+
+  @media (min-width: $mobile-min-breakpoint) {
+    font-size: $base-font-size-desktop;
+    background: repeating-linear-gradient(
+      to bottom,
+      $mid-grey,
+      $mid-grey 1px,
+      transparent 1px,
+      transparent $one-line-desktop,
+      $mid-grey $one-line-desktop,
+    );
+  }
+}
+
+#debug-activator {
+  @include button-reset;
+  @include body-small;
+  border-radius: 2px solid $black;
+  background-color: $active-blue;
+  color: $white;
+  padding: $space-xxs $space-s;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: $space-xs;
+  z-index: 100;
+
+  &:after {
+    content: '+';
+  }
+
+  &.active:after {
+    content: '-';
+  }
+}
+
+.top-navigation {
+  background-color: $stone-80;
+
+  ul li {
+    display: block;
+    float: left;
+
+    a {
+      color: $grey;
+      display: block;
+      @include brand-small;
+      padding: $space-xs-m;
+
+      @include tablet {
+        padding: $space-xs;
+      }
+
+      text-decoration: none;
+      position: relative;
+
+      &:hover {
+        background-color: $stone-30;
+      }
+    }
+
+    .current,
+    .current:hover {
+      background-color: $stone-30;
+    }
+
+    .current:before {
+      display: block;
+      content: '';
+      height: 4px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color:$flag-red;
+    }
+  }
+
+  ul:after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}
+
+
+.sub-navigation {
+  background-color: $stone-30;
+
+  ul li {
+    a {
+      @include body-medium;
+      padding: $space-xs-m;
+
+      @include tablet {
+        padding: $space-xs;
+      }
+
+      &:hover {
+        background-color: $white;
+        text-decoration: underline;
+      }
+    }
+
+    .current {
+      background-color: $white;
+
+      &:before {
+        display: block;
+        content: '';
+        height: 4px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color:$flag-red;
+      }
+
+      &:hover {
+        background-color: $white;
+      }
+    }
+
+  }
+}
+
+pre {
+  background-color: $black;
+  padding: $space-s-m;
+  @include tablet {
+    padding: $space-s;
+  }
+  white-space: pre-wrap;
+  font-family: Monaco, 'Lucida Console', monospace;
+}
+
+.colour-examples p {
+  margin: 0;
+}
+
+.demo-footer {
+  margin-top: -4px;
+
+  & > .footer-main {
+    background-color: $great-blue;
+  }
+
+  .footer-main > .container {
+    padding: $space-l 0;
+  }
+
+  .copyright {
+    color: $light-grey;
+    float: right;
+    height: 70px;
+    font-size: 15px;
+
+    p {
+      margin-top: 50px;
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+.demo-header {
+  position: relative;
+
+  img {
+    display: block;
+  }
+
+  .header-footer-logo {
+    height: $space-l-m;
+    @include tablet {
+      height: $space-l;
+    }
+  }
+
+  .header-main > .container {
+    padding: $space-s-m 0;
+
+    @include tablet {
+      padding: $space-s 0;
+    }
+  }
+
+  & > .header-main {
+    background-color: $great-blue;
+  }
+
+  .logo-container {
+    float: left;
+  }
+
+  .home-link {
+    @include brand-medium;
+
+    @include tablet {
+      line-height: $space-l;
+    }
+
+    color: $white;
+    text-decoration: none;
+    display: inline;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active:focus {
+      color: $great-blue;
+    }
+  }
+
+  .home-link-container {
+    float: right;
+    width: 50%;
+  }
+
+}
+
+.red-border {
+  z-index: 1;
+  position: relative;
+  height: 4px;
+  background-color:$flag-red;
+}
+
+.pagination > ol:not(.has-previous) {
+  padding-left: 140px;
+}
+
+.pagination > ol:not(.has-next) {
+  padding-right: 100px;
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .pagination .pagination-previous{
+    margin-bottom: 15px;
+  }
+
+  .pagination .pagination-next{
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 640px) {
+  .demo-footer .copyright {
+    font-size: 13px;
+
+    p {
+      margin-top: 15px;
+    }
+  }
+
+  .header-footer-logo {
+    height: 60px;
+  }
+
+  nav.pagination > ol:not(.has-previous) {
+    padding-left: unset;
+  }
+
+  nav.pagination > ol:not(.has-next) {
+    padding-right: unset;
+  }
+}
+
+/* Pygments overrides */
+
+.highlight {
+  padding: $space-xs-m - 2;
+  margin: $space-s-m 0;
+
+  @include tablet {
+    padding: $space-xs - 2;
+    margin: $space-s 0;
+  }
+
+  background-color:$stone-20;
+  border: 2px solid $stone;
+
+  pre {
+    background: inherit;
+    padding: 0;
+  }
+
+  ol {
+    margin: 0;
+    list-style: none;
+  }
+}
+
+
+.heading-xlarge + .highlight,
+.heading-large + .highlight,
+.heading-medium + .highlight,
+.heading-small + .highlight {
+  margin-top: 0;
+}

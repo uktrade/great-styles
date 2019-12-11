@@ -1,0 +1,76 @@
+@import 'header';
+@import 'global-header';
+@import 'header-logo';
+@import 'mobile-menu-button';
+
+@mixin underlineActiveHeaders($underline-color) {
+  .menu-item {
+    &.active:after {
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      background-color: $white;
+      content: '';
+    }
+  }
+}
+
+.g-international-header {
+  @include underlineActiveHeaders($great-red);
+}
+
+.g-international-header, .g-sub-header {
+  .sub-nav {
+    @extend .container;
+  }
+
+  .sub-nav-list {
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    @include underlineActiveHeaders($white);
+
+    .menu-item {
+      padding-top: 15px;
+    }
+  }
+
+  .sub-nav-mobile-list {
+    margin: 0;
+    margin-left: $space-s-m;
+    @include tablet {
+      margin-left: $space-s;
+    }
+
+    .link-heading {
+      margin: 0;
+      padding: $space-xxs-m;
+      @include tablet {
+        padding: $space-xxs;
+      }
+    }
+  }
+
+  .link-heading {
+    @media(hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding: 10px 0;
+      text-decoration: none;
+
+    }
+  }
+}
+
+.g-sub-header {
+  background-color: $mid-blue;
+  @include desktopOnly;
+}

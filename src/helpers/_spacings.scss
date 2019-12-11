@@ -1,0 +1,17 @@
+
+// Spacing units
+
+$site-width: 1230px;
+
+$gutter-small: 15px;
+$gutter-medium: 14px;
+$gutter-large: 16px;
+$gutter-xlarge: 30px;
+
+$mobile-max-breakpoint: 640px;
+$tablet-max-breakpoint: 768px;
+$desktop-max-breakpoint: 1024px;
+
+$mobile-min-breakpoint: $mobile-max-breakpoint + 1;
+$tablet-min-breakpoint: $tablet-max-breakpoint + 1;
+$desktop-min-breakpoint: $desktop-max-breakpoint + 1;

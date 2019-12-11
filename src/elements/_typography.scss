@@ -1,0 +1,112 @@
+
+@import 'helpers/vars';
+@import 'helpers/mixins';
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import url('https://fonts.googleapis.com/css?family=Overpass:700');
+
+body {
+  position: relative;
+  line-height: $line-height-mobile;
+  font-size: $base-font-size-mobile;
+  font-family: $brand-font-body;
+  color: $grey;
+
+  @include tablet {
+    line-height: $line-height-desktop;
+    font-size: $base-font-size-desktop;
+  }
+}
+
+p, ul, ol, blockquote {
+  @include paragraph;
+}
+
+b, strong {
+  font-weight: $bold;
+}
+
+u {
+  text-decoration: underline;
+}
+
+i, em {
+  font-style: italic;
+}
+
+// Text
+
+.uppercase { text-transform: uppercase }
+.bold { font-weight: 700 }
+.italic { font-style: italic }
+.font-brand { font-family: $brand-font-heading }
+.font-body { font-family: $brand-font-body }
+
+%heading {
+  text-indent: -1px;
+}
+
+.heading-xlarge,
+.heading-large,
+.heading-medium,
+.heading-small {
+  @extend %heading;
+}
+
+.heading-xlarge {
+  @include brand-xlarge;
+  padding-bottom: #{3 * $space-s-m - ($font-size-xxlarge-mobile * $line-height-mobile)};
+
+  @include tablet {
+    padding-bottom: #{3 * $space-s - ($font-size-xxlarge-desktop * $line-height-desktop)};
+  }
+}
+
+.heading-large {
+  @include brand-large;
+  padding-bottom: #{(3 * $space-s-m) - ($font-size-xlarge-mobile * $line-height-mobile)};
+
+  @include tablet {
+    padding-bottom: #{(3 * $space-s) - ($font-size-xlarge-desktop * $line-height-desktop)};
+  }
+}
+
+.heading-medium {
+  @include brand-medium;
+  padding-top: #{(2 * $space-s-m) - ($font-size-large-mobile * $line-height-mobile) - $space-xxs-m};
+  padding-bottom: $space-xxs-m;
+
+  @include tablet {
+    padding-top: #{(2 * $space-s) - ($font-size-large-desktop * $line-height-desktop) - $space-xxs};
+    padding-bottom: $space-xxs;
+  }
+}
+
+.heading-small {
+  @include brand-small;
+  padding-top: #{$space-s-m - $space-xxs-m};
+  padding-bottom: $space-xxs-m;
+
+  @include tablet {
+    padding-top: #{$space-s - $space-xxs};
+    padding-bottom: $space-xxs;
+  }
+}
+
+
+.heading-xlarge + *,
+.heading-large + *,
+.heading-medium + *,
+.heading-small + * {
+  margin-top: 0;
+}
+
+.subheading {
+  color: $mid-grey;
+  line-height: $line-height-desktop;
+  margin: 0;
+
+  & + * {
+    margin-top: 0;
+  }
+}
