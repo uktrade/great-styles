@@ -1,15 +1,15 @@
 version: 2
 jobs:
-  test:
+  build:
     docker:
-      - image: circleci/node:8.6.0
+      - image: circleci/node:8.10.0
     steps:
       - checkout
       - restore_cache:
           key: v1-deps-{{ checksum "package.json" }}
       - run:
           command: |
-            yarn install
+            yarn
       - save_cache:
           key: v1-deps-{{ checksum "package.json" }}
           paths:
