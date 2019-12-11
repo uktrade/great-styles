@@ -1,6 +1,9 @@
 {
   "name": "great-styles",
   "version": "1.0.0",
+  "engines": {
+    "node": "8.6.0"
+  },
   "description": "Styles for great.gov.uk",
   "main": "index.js",
   "scripts": {
