@@ -51,14 +51,14 @@ em {
   text-indent: -1px;
 }
 
-.heading-xlarge,
-.heading-large,
-.heading-medium,
-.heading-small {
+.h-xl,
+.h-l,
+.h-m,
+.h-s {
   @extend %heading;
 }
 
-.heading-xlarge {
+.h-xl {
   @include brand-xlarge;
   padding-bottom: #{3 * $space-s-m - ($font-size-xxlarge-mobile * $line-height-mobile)};
 
@@ -67,7 +67,7 @@ em {
   }
 }
 
-.heading-large {
+.h-l {
   @include brand-large;
   padding-bottom: #{(3 * $space-s-m) - ($font-size-xlarge-mobile * $line-height-mobile)};
 
@@ -76,7 +76,7 @@ em {
   }
 }
 
-.heading-medium {
+.h-m {
   @include brand-medium;
   padding-top: #{(2 * $space-s-m) - ($font-size-large-mobile * $line-height-mobile) - $space-xxs-m};
   padding-bottom: $space-xxs-m;
@@ -87,7 +87,7 @@ em {
   }
 }
 
-.heading-small {
+.h-s {
   @include brand-small;
   padding-top: #{$space-s-m - $space-xxs-m};
   padding-bottom: $space-xxs-m;
@@ -99,14 +99,14 @@ em {
 }
 
 
-.heading-xlarge + *,
-.heading-large + *,
-.heading-medium + *,
-.heading-small + * {
+.h-xl + *,
+.h-l + *,
+.h-m + *,
+.h-s + * {
   margin-top: 0;
 }
 
-.subheading {
+.h-sub {
   color: $mid-grey;
   line-height: $line-height-desktop;
   margin: 0;
