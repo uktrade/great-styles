@@ -14,6 +14,22 @@ hr {
   @include paragraph;
 }
 
+// Layout
+
+.with-flag {
+  position: relative;
+  @include container;
+
+  &:after {
+    bottom: -20px;
+    background-image: url(asset-path('uj-motif.png'));
+    background-size: 155px;
+    background-repeat: no-repeat;
+    height: 30px;
+    z-index: 2;
+  }
+}
+
 .section {
   padding: $space-s-m 0;
   overflow: visible;
