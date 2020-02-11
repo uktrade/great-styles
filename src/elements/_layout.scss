@@ -1,0 +1,62 @@
+
+@import 'helpers/vars';
+@import 'helpers/colours';
+@import 'helpers/mixins';
+
+// LAYOUT
+// =======
+
+hr {
+  display: block;
+  background: $stone;
+  border: 0;
+  height: 2px;
+  @include paragraph;
+}
+
+// Layout
+
+.with-flag {
+  position: relative;
+  @include container;
+
+  &:after {
+    bottom: -20px;
+    background-image: url(asset-path('uj-motif.png'));
+    background-size: 155px;
+    background-repeat: no-repeat;
+    height: 30px;
+    z-index: 2;
+  }
+}
+
+.section {
+  padding: $space-s-m 0;
+  overflow: visible;
+
+  @include tablet {
+    padding: $space-s 0;
+  }
+}
+
+.container {
+  max-width: $site-width;
+  margin: 0 $gutter-small;
+
+  @media (min-width: $mobile-min-breakpoint) {
+    margin: 0 $gutter-medium;
+  }
+
+  @media (min-width: $tablet-min-breakpoint) {
+    margin: 0 $gutter-large;
+  }
+
+  @media (min-width: $desktop-min-breakpoint) {
+    margin: 0 $gutter-xlarge;
+  }
+
+  @media (min-width: $site-width + ($gutter-xlarge * 2)) {
+    margin: 0 auto;
+  }
+
+}

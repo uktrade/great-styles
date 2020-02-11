@@ -1,0 +1,20 @@
+@import 'helpers/colours';
+
+.text-input-with-submit-button-container {
+  display: flex;
+
+  .text-input-with-submit-button {
+    border: 0;
+    background: $active-blue;
+    cursor: pointer;
+    color: $white;
+
+    &:active {
+      top: inherit;
+    }
+  }
+
+  input {
+    border-right: 0;
+  }
+}

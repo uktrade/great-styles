@@ -1,0 +1,101 @@
+@import 'helpers/colours';
+@import 'helpers/vars';
+
+// Accordion-style details component
+
+.g-accordion-list {
+  margin: $space-s-m 0;
+  @include desktop {
+    margin: $space-s 0;
+  }
+
+  details.g-accordion {
+    border-bottom: 0;
+  }
+
+  details.g-accordion:first-child summary {
+    padding-bottom: $space-xs-m - 4;
+
+    @include tablet {
+      padding-bottom: $space-xs - 4;
+    }
+  }
+
+  details.g-accordion:last-child {
+    border-bottom: 2px solid $light-grey;
+  }
+
+}
+
+details.g-accordion {
+  border-top: 2px solid $light-grey;
+  border-bottom: 2px solid $light-grey;
+  margin: 0;
+
+  & > * {
+    margin-left: 0;
+  }
+}
+
+details.g-accordion summary {
+  display: block;
+  list-style-image: none;
+  @include brand-medium;
+  padding-top: #{2 * ($line-height-mobile * $base-font-size-mobile) - ($font-size-large-mobile * $line-height-mobile) - $space-xs-m};
+  padding-bottom: $space-xs-m - 2;
+
+  @include tablet {
+    padding-top: #{2 * ($line-height-desktop * $base-font-size-desktop) - ($font-size-large-desktop * $line-height-desktop) - $space-xs};
+    padding-bottom: $space-xs - 2;
+  }
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &:after {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: inherit;
+    padding-right: $space-xs;
+  }
+}
+
+// For IE details-polyfill.js
+details.g-accordion[closed] summary:before,
+details.g-accordion[open] summary:before, {
+  display: none;
+}
+
+@include tablet {
+  details.g-accordion summary {
+    padding-right: $space-s-m;
+    @include tablet {
+      padding-right: $space-s;
+    }
+  }
+
+  details.g-accordion, // if no open or closed attribute details is closed by default
+  details.g-accordion[closed],
+  details.g-accordion[open=false] {
+
+    summary:after {
+      content: '+';
+    }
+  }
+
+  details.g-accordion[open],
+  details.g-accordion[closed=false] {
+    padding-bottom: $space-s-m;
+    @include tablet {
+      padding-bottom: $space-s;
+    }
+
+    summary:after {
+      content: '–';
+    }
+  }
+
+}

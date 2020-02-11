@@ -1,0 +1,126 @@
+
+$card-min-height: $space-s * 7;
+$card-min-height-mobile: $space-s-m * 7;
+
+.g-card.only-title {
+  height: auto;
+}
+
+.g-card {
+  @include desktop {
+    min-height: $card-min-height;
+    margin-bottom: $space-s;
+  }
+  height: auto;
+  min-height: $card-min-height-mobile;
+  flex-grow: 1;
+  margin-bottom: $space-s-m;
+  width: 100%;
+
+  .g-card-link {
+    height: 100%;
+    display: block;
+    color: $grey;
+    text-decoration: none;
+
+    &:hover .g-card-inner {
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: $light-blue;
+      }
+    }
+
+    &:focus {
+      outline: 3px solid $focus-yellow;
+    }
+
+    &:active {
+      background: $focus-yellow;
+
+      .g-card-inner {
+        background: $focus-yellow;
+      }
+
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: $mid-blue;
+      }
+    }
+
+  }
+
+  .g-card-image {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .g-card-inner.html-content > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .g-card-inner {
+
+    p {
+      margin: 0;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include brand-medium;
+      margin-bottom: #{2 * ($line-height-mobile * $base-font-size-mobile) - ($font-size-large-mobile * $line-height-mobile)};
+
+      @media (min-width: $mobile-min-breakpoint) {
+        margin-bottom: #{2 * ($line-height-desktop * $base-font-size-desktop) - ($font-size-large-desktop * $line-height-desktop)};
+      }
+      color: $active-blue;
+      text-decoration: underline;
+    }
+
+    h2 + p,
+    h3 + p,
+    h4 + p,
+    h5 + p,
+    h6 + p {
+      margin-top: $space-xxs-m;
+      @include desktop {
+        margin-top: $space-xxs;
+      }
+    }
+
+    .g-card-meta {
+      margin-bottom: $space-xs-m;
+      @include desktop {
+        margin-bottom: $space-xs;
+      }
+
+      .subheading {
+        margin: 0;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 640px) {
+  .g-card {
+    min-height: auto;
+    height: auto;
+
+    .g-card-icon {
+      height: $space-m;
+    }
+
+    .g-card-link {
+      position: static;
+    }
+  }
+}

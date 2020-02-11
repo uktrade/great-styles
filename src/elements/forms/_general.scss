@@ -1,0 +1,193 @@
+
+@import 'helpers/colours';
+@import 'helpers/mixins';
+@import 'helpers/vars';
+@import 'helpers/typography-mixins';
+
+
+// Fieldset is used to group more than one .form-group
+fieldset {
+  @include float-clear;
+  width: 100%;
+}
+
+// Hack to let legends or elements within legends have margins in webkit browsers
+legend {
+  overflow: hidden;
+}
+
+// Remove margin under textarea in Chrome and FF
+textarea {
+  display: block;
+}
+
+
+// 2. Form wrappers
+// ==========================================================================
+
+.form-group {
+  @include float-clear;
+  box-sizing: border-box;
+  margin-bottom: $space-s-m;
+  @include tablet {
+    margin-bottom: $space-s;
+  }
+}
+
+.form-field-container {
+  @include float-clear;
+}
+
+.error-message + .form-group {
+  margin-top: $space-xxs;
+}
+
+
+// 3. Form labels
+// ==========================================================================
+
+// Form labels, or for legends styled to look like labels
+.form-label {
+  display: block;
+  @include body-medium;
+}
+
+// 4. Form hints
+// ==========================================================================
+
+// Form hints and example text are grey and sit above a form control
+.form-hint {
+  @include body-medium;
+  display: block;
+  color: $mid-grey;
+  font-weight: normal;
+}
+
+.form-hint + input {
+  margin-top: $space-xs-m;
+  @include tablet {
+    margin-top: $space-xs;
+  }
+}
+
+.form-label + input,
+.form-label + .multiple-choice,
+select.form-control {
+  margin-top: $space-xs-m;
+  @include tablet {
+    margin-top: $space-xs;
+  }
+}
+
+// 5. Form controls
+// ==========================================================================
+
+.form-control {
+  box-sizing: border-box;
+  @include body-medium;
+  background-color: $white;
+  color: $grey;
+  width: 100%;
+  padding: 0;
+  border: 2px solid $grey;
+}
+
+// Allow a qualifying element, remove rounded corners from inputs and textareas
+// scss-lint:disable QualifyingElement
+input.form-control,
+textarea.form-control,
+select.form-control {
+  // Disable inner shadow and remove rounded corners
+  -webkit-appearance: none;
+  border-radius: 0;
+  height: $space-m-m;
+  padding: 0 $space-xxs-m;
+  @include tablet {
+    padding: 0 $space-xxs;
+    height: $space-m;
+  }
+}
+
+textarea.form-control {
+  // Disable opacity and background image for Firefox
+  opacity: 1;
+  background-image: none;
+}
+// scss-lint:enable QualifyingElement
+
+
+// 7. Browser accessibility fixes
+// ==========================================================================
+
+option:active,
+option:checked,
+select:focus::-ms-value {
+  color: $white;
+  background-color: $active-blue;
+}
+
+ul.g-select-multiple {
+  @include float-clear;
+  margin-bottom: 0;
+  margin-top: $space-s-m;
+  @include tablet {
+    margin-top: $space-s;
+  }
+
+  input {
+    // Disable inner shadow and remove rounded corners
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+}
+
+select:focus,
+input:focus,
+a:focus {
+  @include focus;
+}
+
+a:focus:active {
+  background-color: $focus-yellow;
+}
+
+// File upload
+
+input[type='file'] {
+  background: $stone-40;
+  border: 1px solid $stone;
+  padding: $space-xs-m;
+  @include tablet {
+    padding: $space-xs;
+  }
+}
+
+select,
+input[type=number] {
+  font-size: inherit;
+
+  /* add arrow */
+  background-image: url(asset-path('dropdown.svg'));
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px);
+
+  // Disable inner shadow and remove rounded corners
+  border-radius: 0;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+// Hide dropdown arrow in IE11
+select::-ms-expand {
+  display: none;
+}

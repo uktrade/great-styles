@@ -1,0 +1,46 @@
+
+@import 'helpers/colours';
+
+.g-panel {
+  box-sizing: border-box;
+  @include float-clear;
+  clear: both;
+  border-left-style: solid;
+  border-left-width: 6px;
+  border-color: $active-blue;
+
+  padding: 0 $space-xs-m;
+  @include tablet {
+    padding: 0 $space-xs;
+  }
+  @include paragraph;
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  :only-child,
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+%g-panel-vertical {
+  box-sizing: border-box;
+  @include float-clear;
+  clear: both;
+  border-left-style: solid;
+  border-color: $active-blue;
+  padding: em(15, 19) 0;
+  margin-bottom: em(15, 19);
+}
+
+.g-panel-vertical {
+  @extend %g-panel-vertical;
+  border-top: solid 6px $active-blue;
+  padding-top: $space-s-m - 6;
+  @include tablet {
+    padding-top: $space-s - 6;
+  }
+  @include paragraph;
+}

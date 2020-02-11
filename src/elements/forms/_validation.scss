@@ -1,0 +1,44 @@
+
+// Form validation
+// ================
+
+@import 'helpers/colours';
+@import 'helpers/vars';
+
+// Use .form-group-error to add a red border to the left of a .form-group
+.form-group-error {
+  @include tablet {
+    border-left: 5px solid $flag-red;
+    padding-left: $space-s;
+  }
+  margin-right: 15px;
+  border-left: 4px solid $flag-red;
+  padding-left: $space-s;
+}
+
+// Error messages should be red and bold
+.error-message {
+  @include body-medium-bold;
+  color: $flag-red;
+  display: block;
+  clear: both;
+}
+
+.errorlist {
+  margin: 0;
+}
+
+// Summary of multiple error messages
+.error-summary {
+  @include tablet {
+    margin-top: -4px;
+    margin-bottom: $space-s - 4;
+    padding: 0 $space-s;
+  }
+
+  // Error summary has a border on all sides
+  border: 4px solid $flag-red;
+  margin-top: -4px;
+  margin-bottom: $space-s-m - 4;
+  padding: 0 $space-s-m;
+}

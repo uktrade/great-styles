@@ -1,0 +1,42 @@
+
+// RESPONSIVE
+
+.display-mobile {
+  display: block;
+}
+
+@media (min-width: $mobile-min-breakpoint) {
+  .display-mobile {
+    display: none;
+  }
+}
+
+.display-mobile-tablet {
+  display: none;
+}
+
+@media (max-width: $desktop-max-breakpoint) {
+  .display-mobile-tablet {
+    display: block;
+  }
+}
+
+.display-tablet {
+  display: none;
+}
+
+@media (min-width: $mobile-min-breakpoint) and (max-width: $desktop-max-breakpoint) {
+  .display-tablet {
+    display: block;
+  }
+}
+
+.display-desktop {
+  display: none;
+}
+
+@media (min-width: $desktop-min-breakpoint) {
+  .display-desktop {
+    display: block;
+  }
+}

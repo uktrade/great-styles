@@ -1,0 +1,19 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8.10.0
+    steps:
+      - checkout
+      - restore_cache:
+          key: v1-deps-{{ checksum "package.json" }}
+      - run:
+          command: |
+            yarn
+      - save_cache:
+          key: v1-deps-{{ checksum "package.json" }}
+          paths:
+            - "node_modules"
+      - run:
+          command: |
+            ./node_modules/.bin/gulp lint

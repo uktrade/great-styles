@@ -1,0 +1,106 @@
+.g-pagination {
+  margin-top: $space-l-m;
+  @include desktop {
+    margin-top: $space-l;
+  }
+  display: flex;
+
+  a {
+    text-align: center;
+  }
+
+  ol {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+
+      a {
+        width: 50px;
+      }
+    }
+  }
+
+  @media (max-width: 640px) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    a {
+      width: 125px;
+    }
+
+    ol {
+      order: 2;
+      display: flex;
+
+      li {
+        margin-right: 10px;
+      }
+    }
+
+    &.has-previous,
+    &.has-next {
+
+      > a {
+        width: auto;
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+
+      .g-paginator-previous {
+        order: 1;
+      }
+
+      .g-paginator-next {
+        order: 2;
+      }
+
+      ol {
+        order: 1;
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    a {
+      width: 95px;
+    }
+  }
+}
+
+
+.g-pagination-button {
+  margin-top: 0;
+  margin-bottom: 0;
+  min-width: 50px;
+}
+
+.g-pagination-list {
+  margin: 0;
+}
+
+.g-pagination-page {
+  min-width: 150px;
+  margin-top: 0;
+}
+
+.g-pagination-ellipsis {
+  position: relative;
+  min-width: $space-m-m;
+  @include tablet {
+    min-width: $space-m;
+  }
+
+  span {
+    position: absolute;
+    top: $space-s-m;
+    @include tablet {
+      top: $space-s;
+    }
+    right: 0;
+    left: 0;
+  }
+}

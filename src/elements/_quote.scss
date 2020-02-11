@@ -1,0 +1,13 @@
+
+blockquote {
+  @include quote;
+
+  cite {
+    display: block;
+    @include body-large;
+    margin-top: $space-s-m;
+    @include tablet {
+      margin-top: $space-s;
+    }
+  }
+}

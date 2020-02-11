@@ -1,0 +1,37 @@
+
+// LISTS
+// ======
+
+@import 'helpers/colours';
+
+ul li,
+ol li {
+  list-style-type: none;
+}
+
+ol.list-number {
+  margin-left: 20px;
+}
+
+ol.list-number li {
+  list-style-type: decimal;
+}
+
+ul.list-bullet {
+  li {
+    position: relative;
+    padding-left: 20px;
+
+    &:before {
+      background-color: $grey;
+      border-radius: 4px;
+      content: '';
+      display: inline-block;
+      height: 8px;
+      left: 0;
+      position: absolute;
+      top: .5em;
+      width: 8px;
+    }
+  }
+}

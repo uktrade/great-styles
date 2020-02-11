@@ -1,0 +1,39 @@
+
+@import 'helpers/mixins';
+@import 'helpers/typography-mixins';
+
+.g-statistics {
+  position: relative;
+
+  figcaption {
+    margin: 0;
+  }
+
+  .flex-grid {
+    margin-bottom: $space-s-m;
+    @include tablet {
+      margin-bottom: $space-s;
+    }
+  }
+
+  &:after {
+    width: 100%;
+    display: block;
+    content: '';
+    background-color: $active-blue;
+    height: 4px;
+    margin-top: -4px;
+  }
+
+  .g-statistic-heading,
+  .g-statistic-smallprint {
+    @include body-small;
+  }
+
+  .g-statistic-number {
+    @include brand-large;
+    margin: 0;
+    padding: 0;
+  }
+
+}

@@ -1,0 +1,145 @@
+
+
+@mixin font-generator(
+  $font-family: $brand-font-body,
+  $font-size: $base-font-size-desktop,
+  $font-size-mobile: $base-font-size-mobile,
+  $font-weight: 400,
+  $font-style: normal
+) {
+  font-weight: $font-weight;
+  font-size: $font-size-mobile;
+  font-family: $font-family;
+  font-style: $font-style;
+  line-height: $line-height-mobile;
+
+  @include tablet {
+    font-size: $font-size;
+    line-height: $line-height-desktop;
+  }
+}
+
+@mixin body-xlarge {
+  @include font-generator(
+    $font-size: $font-size-xlarge-desktop,
+    $font-size-mobile: $font-size-xlarge-mobile,
+  )
+
+  line-height: (2 * $line-height-mobile * $base-font-size-mobile) / $font-size-xlarge-mobile;
+
+  @include tablet {
+    line-height: (2 * $line-height-desktop * $base-font-size-desktop) / $font-size-xlarge-desktop;
+  }
+}
+
+@mixin body-large {
+  @include font-generator(
+    $font-size: $font-size-large-desktop,
+    $font-size-mobile: $font-size-large-mobile,
+  )
+
+  line-height: ($line-height-mobile * $base-font-size-mobile) / $font-size-large-mobile;
+
+  @include tablet {
+    line-height: ($line-height-desktop * $base-font-size-desktop) / $font-size-large-desktop;
+  }
+}
+
+@mixin body-medium {
+  @include font-generator(
+    $font-size: $base-font-size-desktop,
+    $font-size-mobile: $base-font-size-mobile,
+  )
+}
+
+@mixin body-small {
+  @include font-generator(
+    $font-size: $font-size-small-desktop,
+    $font-size-mobile: $font-size-small-mobile,
+  )
+
+  line-height: ($line-height-mobile * $base-font-size-mobile) / $font-size-small-mobile;
+
+  @include tablet {
+    line-height: ($line-height-desktop * $base-font-size-desktop) / $font-size-small-desktop;
+  }
+}
+
+@mixin quote {
+  @include font-generator(
+    $font-family: $quote-font,
+    $font-size: $font-size-large-desktop,
+    $font-size-mobile: $font-size-large-mobile,
+  )
+  font-style: italic;
+  line-height: ($line-height-mobile * $base-font-size-mobile) / $font-size-large-mobile;
+
+  @include tablet {
+    line-height: ($line-height-desktop * $base-font-size-desktop) / $font-size-large-desktop;
+  }
+}
+
+@mixin body-xlarge-bold {
+  @include body-large;
+  font-weight: $bold;
+}
+
+@mixin body-large-bold {
+  @include body-large;
+  font-weight: $bold;
+}
+
+@mixin body-medium-bold {
+  @include body-medium;
+  font-weight: $bold;
+}
+
+@mixin body-small-bold {
+  @include body-small;
+  font-weight: $bold;
+}
+
+@mixin brand-xlarge {
+  @include font-generator(
+    $font-size: $font-size-xxlarge-desktop,
+    $font-size-mobile: $font-size-xxlarge-mobile,
+    $font-weight: $bold,
+    $font-family: $brand-font-heading
+  )
+}
+
+@mixin brand-large {
+  @include font-generator(
+    $font-size: $font-size-xlarge-desktop,
+    $font-size-mobile: $font-size-xlarge-mobile,
+    $font-weight: $bold,
+    $font-family: $brand-font-heading
+  )
+}
+
+@mixin brand-medium {
+  @include font-generator(
+    $font-size: $font-size-large-desktop,
+    $font-size-mobile: $font-size-large-mobile,
+    $font-weight: $bold,
+    $font-family: $brand-font-heading
+  )
+}
+
+@mixin brand-small {
+  @include font-generator(
+    $font-size: $base-font-size-desktop,
+    $font-size-mobile: $base-font-size-mobile,
+    $font-weight: $bold,
+    $font-family: $brand-font-heading
+  )
+}
+
+@mixin brand-xsmall {
+  @include font-generator(
+    $font-size: $font-size-small-desktop,
+    $font-size-mobile: $font-size-small-mobile,
+    $font-weight: $bold,
+    $font-family: $brand-font-heading
+  )
+}
