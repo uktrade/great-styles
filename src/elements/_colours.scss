@@ -1,40 +1,19 @@
-
 // UTILITY CLASSES
 // ================
 
-@import 'helpers/colours';
+@import "helpers/colours";
 
 // Backgrounds
 
-$colours:
-  ($black, black),
-  ($grey, grey),
-  ($mid-grey, mid-grey),
-  ($light-grey, light-grey),
-  ($offwhite, offwhite),
-  ($white, white),
-  (transparent, transparent),
-  ($purple, purple),
-  ($great-blue, great-blue),
-  ($dark-navy, dark-navy),
-  ($mid-blue, mid-blue),
-  ($active-blue, active-blue),
-  ($light-blue, light-blue),
-  ($aqua, aqua),
-  ($teal, teal),
-  ($flag-red, flag-red),
-  ($great-red, great-red),
-  ($focus-yellow, focus-yellow),
-  ($stone-10, stone-10),
-  ($stone-20, stone-20),
-  ($stone-30, stone-30),
-  ($stone-40, stone-40),
-  ($stone-50, stone-50),
-  ($stone-60, stone-60),
-  ($stone-70, stone-70),
-  ($stone-80, stone-80),
-  ($stone-90, stone-90),
-  ($stone, stone);
+$colours: ($black, black), ($grey, grey), ($mid-grey, mid-grey),
+  ($light-grey, light-grey), ($offwhite, offwhite), ($white, white),
+  (transparent, transparent), ($purple, purple), ($great-blue, great-blue),
+  ($dark-navy, dark-navy), ($mid-blue, mid-blue), ($active-blue, active-blue),
+  ($light-blue, light-blue), ($aqua, aqua), ($teal, teal), ($flag-red, flag-red),
+  ($great-red, great-red), ($focus-yellow, focus-yellow), ($stone-10, stone-10),
+  ($stone-20, stone-20), ($stone-30, stone-30), ($stone-40, stone-40),
+  ($stone-50, stone-50), ($stone-60, stone-60), ($stone-70, stone-70),
+  ($stone-80, stone-80), ($stone-90, stone-90), ($stone, stone);
 
 @each $colour, $name in $colours {
   .bg-#{$name} {
@@ -63,7 +42,7 @@ $colours:
   border-style: solid;
 }
 
-.border-thick  {
+.border-thick {
   border-width: 6px;
 }
 
@@ -71,11 +50,9 @@ $colours:
   border-width: 4px;
 }
 
-.border-thin   {
+.border-thin {
   border-width: 2px;
 }
-
-
 
 // Section underline
 
@@ -86,7 +63,7 @@ $colours:
     &:after {
       @extend .container;
       display: block;
-      content: '';
+      content: "";
       height: 4px;
       margin-top: -4px;
       position: absolute;

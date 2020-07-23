@@ -1,9 +1,10 @@
+@import "helpers/vars";
+@import "helpers/mixins";
 
-@import 'helpers/vars';
-@import 'helpers/mixins';
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+@import url("https://fonts.googleapis.com/css?family=Overpass:700");
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
-@import url('https://fonts.googleapis.com/css?family=Overpass:700');
+@import "_design-tokens";
 
 body {
   position: relative;
@@ -41,11 +42,21 @@ em {
 
 // Text
 
-.uppercase { text-transform: uppercase }
-.bold { font-weight: 700 }
-.italic { font-style: italic }
-.font-brand { font-family: $brand-font-heading }
-.font-body { font-family: $brand-font-body }
+.uppercase {
+  text-transform: uppercase;
+}
+.bold {
+  font-weight: 700;
+}
+.italic {
+  font-style: italic;
+}
+.font-brand {
+  font-family: $brand-font-heading;
+}
+.font-body {
+  font-family: $brand-font-body;
+}
 
 %heading {
   text-indent: -1px;
@@ -59,30 +70,40 @@ em {
 }
 
 .h-xl {
-  @include brand-xlarge;
-  padding-bottom: #{3 * $space-s-m - ($font-size-xxlarge-mobile * $line-height-mobile)};
+  @include font-title-3-6-blue-80-1-left;
+  padding-bottom: #{3 * $space-s-m -
+    ($font-size-xxlarge-mobile * $line-height-mobile)};
 
   @include tablet {
-    padding-bottom: #{3 * $space-s - ($font-size-xxlarge-desktop * $line-height-desktop)};
+    padding-bottom: #{3 * $space-s -
+      ($font-size-xxlarge-desktop * $line-height-desktop)};
   }
 }
 
 .h-l {
   @include brand-large;
-  padding-bottom: #{(3 * $space-s-m) - ($font-size-xlarge-mobile * $line-height-mobile)};
+  padding-bottom: #{(3 * $space-s-m) - (
+      $font-size-xlarge-mobile * $line-height-mobile
+    )};
 
   @include tablet {
-    padding-bottom: #{(3 * $space-s) - ($font-size-xlarge-desktop * $line-height-desktop)};
+    padding-bottom: #{(3 * $space-s) - (
+        $font-size-xlarge-desktop * $line-height-desktop
+      )};
   }
 }
 
 .h-m {
   @include brand-medium;
-  padding-top: #{(2 * $space-s-m) - ($font-size-large-mobile * $line-height-mobile) - $space-xxs-m};
+  padding-top: #{(2 * $space-s-m) - (
+      $font-size-large-mobile * $line-height-mobile
+    ) - $space-xxs-m};
   padding-bottom: $space-xxs-m;
 
   @include tablet {
-    padding-top: #{(2 * $space-s) - ($font-size-large-desktop * $line-height-desktop) - $space-xxs};
+    padding-top: #{(2 * $space-s) - (
+        $font-size-large-desktop * $line-height-desktop
+      ) - $space-xxs};
     padding-bottom: $space-xxs;
   }
 }

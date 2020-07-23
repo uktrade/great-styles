@@ -1,3 +1,5 @@
+@import "_design-tokens";
+
 // DIT colour palette
 
 // Red
@@ -10,7 +12,6 @@ $light-grey: #d8d8d8; // rgb(216, 216, 216)
 $mid-grey: #666666;
 $grey: #333333; // rgb(51, 51, 51)
 
-
 // White
 $offwhite: #fafafa; // rgb(220, 224, 223)
 $white: #ffffff; // rgb(255, 255, 255)
@@ -21,12 +22,12 @@ $active-blue-alt: #328dc2; // rgb( 50, 141, 194)
 $active-blue-disabled: #9bc6e9; // rgb(155, 198, 233)
 $dark-blue: #132965; // rgb(19, 41, 101)
 $dark-navy: #160d37; // rgb(22, 13, 55)
-$great-blue: #1e1348; // rgb(30, 19, 72)
+$great-blue: $colour-blue-deep-80; // rgb(30, 19, 72)
 $lightened-great-blue: #3b3458;
 $mid-blue: #00549f; // rgb(0, 84, 159)
 $hero-blue: rgba(0, 82, 157, 0.8);
 $aqua: #007ea3; // rgb(0, 126, 163)
-$teal: #00A699;
+$teal: #00a699;
 $light-blue: #2b8cc4; // from govuk elements
 $light-aqua: #8ae2fb; // rgb(138, 226, 251)
 
@@ -47,6 +48,6 @@ $stone-30: #f5f2ed; // rgb(245, 242, 237)
 $stone-20: #fcfbf9;
 $stone-10: #fdfdfc;
 
-$stone-light:         #f5f2ed; // rgb(245, 242, 237)
-$tap-highlight:       rgba(0, 0, 0, 0.3);
-$background-tint:     rgba(0,0,0,0.5);
+$stone-light: #f5f2ed; // rgb(245, 242, 237)
+$tap-highlight: rgba(0, 0, 0, 0.3);
+$background-tint: rgba(0, 0, 0, 0.5);

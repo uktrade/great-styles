@@ -1,9 +1,7 @@
-
-@import 'helpers/colours';
-@import 'helpers/mixins';
-@import 'helpers/vars';
-@import 'helpers/typography-mixins';
-
+@import "helpers/colours";
+@import "helpers/mixins";
+@import "helpers/vars";
+@import "helpers/typography-mixins";
 
 // Fieldset is used to group more than one .form-group
 fieldset {
@@ -20,7 +18,6 @@ legend {
 textarea {
   display: block;
 }
-
 
 // 2. Form wrappers
 // ==========================================================================
@@ -41,7 +38,6 @@ textarea {
 .error-message + .form-group {
   margin-top: $space-xxs;
 }
-
 
 // 3. Form labels
 // ==========================================================================
@@ -115,7 +111,6 @@ textarea.form-control {
 }
 // scss-lint:enable QualifyingElement
 
-
 // 7. Browser accessibility fixes
 // ==========================================================================
 
@@ -153,7 +148,7 @@ a:focus:active {
 
 // File upload
 
-input[type='file'] {
+input[type="file"] {
   background: $stone-40;
   border: 1px solid $stone;
   padding: $space-xs-m;
@@ -163,11 +158,11 @@ input[type='file'] {
 }
 
 select,
-input[type=number] {
+input[type="number"] {
   font-size: inherit;
 
   /* add arrow */
-  background-image: url(asset-path('dropdown.svg'));
+  // background-image: url(asset-path('dropdown.svg'));
   background-repeat: no-repeat;
   background-position: calc(100% - 10px);
 
@@ -178,12 +173,12 @@ input[type=number] {
   -moz-appearance: none;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
