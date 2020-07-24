@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ds-tokens": ". ./fetch-design-tokens.sh",
+    "ds-tokens": "DSM_TOKENS_KEY=REPLACE_WITH_TOKEN . ./fetch-design-tokens.sh",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "babel": "./node_modules/.bin/babel ./react-components --out-dir ./dist"
