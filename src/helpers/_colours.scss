@@ -1,5 +1,18 @@
 @import "_design-tokens";
 
+// DSM colours
+
+$blue-deep-80: $colour-blue-deep-80;
+$blue-deep-40: $colour-blue-deep-40;
+$blue-deep-10: $colour-blue-deep-10;
+
+$aqua-100: $colour-aqua-100;
+
+$red-80: $colour-red-80;
+
+$white: #ffffff; // rgb(255, 255, 255)
+
+
 // DIT colour palette
 
 // Red
@@ -15,7 +28,6 @@ $grey: #333333; // rgb(51, 51, 51)
 
 // White
 $offwhite: #fafafa; // rgb(220, 224, 223)
-$white: #ffffff; // rgb(255, 255, 255)
 
 // Blue
 $active-blue: #006ccc; // rgb(  0, 108, 204)
@@ -23,7 +35,7 @@ $active-blue-alt: #328dc2; // rgb( 50, 141, 194)
 $active-blue-disabled: #9bc6e9; // rgb(155, 198, 233)
 $dark-blue: #132965; // rgb(19, 41, 101)
 $dark-navy: #160d37; // rgb(22, 13, 55)
-$great-blue: $colour-blue-deep-80; // rgb(30, 19, 72)
+$great-blue: #1e1348; // rgb(30, 19, 72)
 $lightened-great-blue: #3b3458;
 $mid-blue: #00549f; // rgb(0, 84, 159)
 $hero-blue: rgba(0, 82, 157, 0.8);

@@ -2,6 +2,44 @@
 @import 'helpers/colours';
 @import 'helpers/vars';
 
+// DSM Buttons
+
+.button {
+  @include font-subcopy-bold-4-white-1-left;
+  border: 0;
+  border-radius: 20px;
+  padding: 12px 22px;
+
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    @include font-subcopy-bold-4-white-1-left;
+    text-decoration: none;
+  }
+
+  &--primary {
+    background: $red-80;
+  }
+
+  &--secondary {
+    background: $blue-deep-80;
+  }
+
+  &--tertiary {
+    background: $blue-deep-40;
+  }
+
+  &--large {
+    border-radius: 25px;
+    height: 50px;
+    padding: 0 48px;
+  }
+}
+
+
+
+
 // BUTTONS
 
 @mixin great-button($colour: $active-blue) {

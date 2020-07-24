@@ -8,11 +8,8 @@
 @import "_design-tokens";
 
 body {
+  @include font-body-1-black-1-left;
   position: relative;
-  line-height: $line-height-mobile;
-  font-size: $base-font-size-mobile;
-  font-family: $brand-font-body;
-  color: $grey;
 
   @include tablet {
     line-height: $line-height-desktop;
@@ -61,7 +58,7 @@ em {
 }
 
 .h-xl {
-  @include font-title-3-6-blue-80-1-left;
+  @include font-title-3-1-black-1-left;
   padding-bottom: #{3 * $space-s-m - ($font-size-xxlarge-mobile * $line-height-mobile)};
 
   @include tablet {
@@ -70,7 +67,7 @@ em {
 }
 
 .h-l {
-  @include brand-large;
+  @include font-title-2-1-black-1-left;
   padding-bottom: #{(3 * $space-s-m) - ($font-size-xlarge-mobile * $line-height-mobile)};
 
   @include tablet {
@@ -79,7 +76,7 @@ em {
 }
 
 .h-m {
-  @include brand-medium;
+  @include font-title-1-1-black-1-left;
   padding-top: #{(2 * $space-s-m) - ($font-size-large-mobile * $line-height-mobile) - $space-xxs-m};
   padding-bottom: $space-xxs-m;
 
