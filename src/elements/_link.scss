@@ -5,6 +5,21 @@
 @import 'helpers/colours';
 @import 'helpers/mixins';
 
+// DSM Link
+
+.link {
+  @include font-body-bold-6-blue-80-1-left;
+  text-decoration: none;
+
+  &:visited,
+  &:hover,
+  &:active,
+  &:focus:active {
+    color: $blue-deep-80;
+  }
+  
+}
+
 a:focus {
   @include focus;
 }

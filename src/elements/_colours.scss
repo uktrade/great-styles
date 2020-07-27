@@ -12,7 +12,6 @@ $colours:
   ($mid-grey, mid-grey),
   ($light-grey, light-grey),
   ($offwhite, offwhite),
-  ($white, white),
   (transparent, transparent),
   ($purple, purple),
   ($great-blue, great-blue),
@@ -34,7 +33,14 @@ $colours:
   ($stone-70, stone-70),
   ($stone-80, stone-80),
   ($stone-90, stone-90),
-  ($stone, stone);
+  ($stone, stone),
+  // DSM colours
+  ($blue-deep-80, blue-deep-80),
+  ($blue-deep-40, blue-deep-40),
+  ($blue-deep-10, blue-deep-10),
+  ($aqua-100, aqua-100),
+  ($red-80, red-80),
+  ($white, white),;
 
 @each $colour, $name in $colours {
   .bg-#{$name} {

@@ -1,3 +1,18 @@
+@import "_design-tokens";
+
+// DSM colours
+
+$blue-deep-80: $colour-blue-deep-80;
+$blue-deep-40: $colour-blue-deep-40;
+$blue-deep-10: $colour-blue-deep-10;
+
+$aqua-100: $colour-aqua-100;
+
+$red-80: $colour-red-80;
+
+$white: #ffffff; // rgb(255, 255, 255)
+
+
 // DIT colour palette
 
 // Red
@@ -13,7 +28,6 @@ $grey: #333333; // rgb(51, 51, 51)
 
 // White
 $offwhite: #fafafa; // rgb(220, 224, 223)
-$white: #ffffff; // rgb(255, 255, 255)
 
 // Blue
 $active-blue: #006ccc; // rgb(  0, 108, 204)

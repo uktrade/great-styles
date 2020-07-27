@@ -167,7 +167,7 @@ input[type=number] {
   font-size: inherit;
 
   /* add arrow */
-  background-image: url(asset-path('dropdown.svg'));
+  // background-image: url(asset-path('dropdown.svg'));
   background-repeat: no-repeat;
   background-position: calc(100% - 10px);
 
