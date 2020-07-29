@@ -71,6 +71,9 @@ docs/_build/
 # PyBuilder
 target/
 
+#Storybook stuff
+storybook-static/
+
 # Jupyter Notebook
 .ipynb_checkpoints
 
