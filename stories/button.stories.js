@@ -19,5 +19,9 @@ export const Button = () => (
     <button className="button button--tertiary">
       .button .button--tertiary
     </button>
+    <p></p>
+    <button className="button button--primary button--round-corner">
+      .button .button--primary .button--round-corner
+    </button>
   </div>
 );

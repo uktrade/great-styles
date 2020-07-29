@@ -165,6 +165,11 @@
   width: 100%;
 }
 
+.w-full-viewport {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
 .c-full {
   @include grid-column(1);
   width: 100%;
