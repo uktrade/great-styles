@@ -10,6 +10,5 @@ export const Form = () => (
       <input type="checkbox" id="checkbox" />
       <label htmlFor="checkbox">Label text</label>
     </div>
-    <p></p>
   </div>
 );
