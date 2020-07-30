@@ -191,3 +191,104 @@ input[type=number] {
 select::-ms-expand {
   display: none;
 }
+
+
+// DSM Forms
+
+.great-checkbox {
+  display: block;
+  float: none;
+  clear: left;
+  position: relative;
+  padding: 0 0 0 26px;
+  min-height: 26px;
+
+  input {
+    position: absolute;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    -webkit-appearance: none;
+    width: 26px;
+    height: 26px;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  label {
+    @include font-body-bold-6-blue-80-1-left;
+
+    cursor: pointer;
+    padding-left: $space-xs;
+    padding-top: 2px;
+    display: block;
+
+    // remove 300ms pause on mobile
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+
+    &:after {
+      color: $grey;
+      z-index: 1;
+    }
+  }
+
+  [type=checkbox] + label {
+    &::before {
+      border-radius: 0;
+      border: 2px solid $grey;
+      background-color: $white;
+    }
+  }
+
+  [type=checkbox] + label::before {
+    content: '';
+    border: 2px solid $blue-deep-60;
+    border-radius: 4px;
+    background: $white;
+    width: 22px;
+    height: 22px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  [type=checkbox] + label::after {
+    content: '';
+    border: solid;
+    background: transparent;
+    border-top-color: transparent;
+    position: absolute;
+    border-width: 0 0 4px 4px;
+    width: 10px;
+    height: 5px;
+    top: 7px;
+    left: 6px;
+
+    transform: rotate(-45deg);
+    opacity: 0;
+  }
+
+  [type=checkbox]:focus + label::before {
+    box-shadow: 0 0 0 3px $focus-yellow;
+  }
+
+  // Selected state
+  input:checked + label::after {
+    opacity: 1;
+  }
+
+  // Disabled state
+  input:disabled {
+    cursor: default;
+  }
+
+  input:disabled + label {
+    opacity: 0.5;
+    cursor: default;
+  }  
+}
