@@ -292,3 +292,47 @@ select::-ms-expand {
     cursor: default;
   }  
 }
+
+.great-checkbox--large {
+  padding: 0 0 0 57px;
+  min-height: 57px;
+
+  input {
+    width: 57px;
+    height: 57px;
+  }
+
+  label {
+    @include font-title-2-4-white-1-left;
+    line-height: 57px;
+    padding: 0 0 0 24px;
+  }
+
+  input:checked + label::before {
+    background: $green;
+    border-color: $green;
+  }
+
+  [type=checkbox] + label {
+    &::before {
+      border: 3px solid $white;
+      background-color: transparent;
+    }
+  }
+
+  [type=checkbox] + label::before {
+    border: 3px solid $white;
+    border-radius: 10px;
+    width: 51px;
+    height: 51px;
+  }
+
+  [type=checkbox] + label::after {
+    border-color: $white;
+    border-width: 0 0 8px 8px;
+    width: 32px;
+    height: 15px;
+    top: 13px;
+    left: 9px;
+  }
+}
