@@ -17,6 +17,7 @@
   &:hover,
   &:active {
     @include font-subcopy-bold-4-white-1-left;
+    text-align: center;
     text-decoration: none;
   }
 
