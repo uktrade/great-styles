@@ -35,3 +35,24 @@ ul.list-bullet {
     }
   }
 }
+
+// DSM colours
+ul.list-dot {
+  li {
+    position: relative;
+    margin-bottom: 11px;
+    padding-left: 42px;
+
+    &:before {
+      background-color: $blue-deep-80;
+      border-radius: 50%;
+      content: '';
+      display: inline-block;
+      height: 4px;
+      left: 18px;
+      position: absolute;
+      top: 12px;
+      width: 4px;
+    }
+  }
+}
