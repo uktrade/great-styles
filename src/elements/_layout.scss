@@ -8,10 +8,15 @@
 
 hr {
   display: block;
-  background: $stone;
+  background: $blue-deep-10;
   border: 0;
   height: 2px;
   @include paragraph;
+}
+
+.hr--thick {
+  background: $blue-deep-10;
+  height: 5px;
 }
 
 // Layout

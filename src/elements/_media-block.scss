@@ -1,0 +1,24 @@
+.media-block {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 0;
+
+  @include tablet {
+    flex-direction: row;
+  }
+
+  > img {
+    border-radius: 50%;
+    width: 70px;
+    margin: 0 0 30px 0;
+
+    @include tablet {
+      margin: 0 30px 0 0;
+    }
+  }
+
+  > div {
+    flex: 1;
+  }
+}
