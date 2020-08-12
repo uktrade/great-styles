@@ -36,44 +36,42 @@ export const Personalisation_bar = () => (
 
 export const Dashboard_card = () => (
   <div className="m-s">
-    <div className="m-s p-s bg-black-20">
+    <div className="m-s p-s bg-black-10">
         <div class="grid">
           <div class="c-1-2 m-b-s">
-            <div class="g-card" id="your-export-plan-card">
+            <section class="g-card">
+                <div class="g-card-header">
+                    <h3 class="h-m">.g-card-header</h3>
+                </div>
+                .g-card - used for cards in the domestic dashboard 
+            </section>
+            <section class="g-card" id="your-export-plan-card">
                 <div class="g-card-header">
                     <h3 class="h-m">Your Learning progress</h3>
                 </div>
                 <p>
                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
-            </div>
-            <div class="g-card" id="your-export-plan-card">
+            </section>
+          </div>
+          <div class="c-1-2 m-b-s">
+            <section class="g-card" id="your-export-plan-card">
                 <div class="g-card-header">
                     <h3 class="h-m">Your export plan</h3>
                 </div>
                 <p>
                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
-            </div>
-          </div>
-          <div class="c-1-2 m-b-s">
-            <div class="g-card" id="your-export-plan-card">
+            </section>
+            <section class="g-card" id="your-export-plan-card">
                 <div class="g-card-header">
                     <h3 class="h-m">Your favourite colour</h3>
                 </div>
                 <p>
                    Blue
                 </p>
-            </div>
-            <div class="g-card" id="your-export-plan-card">
-                <div class="g-card-header">
-                    <h3 class="h-m">The Jabberwocky</h3>
-                </div>
-                <p>Twas brillig, and the slithy toves</p>
-                <p>Did gyre and gimble in the wabe:</p>
-                <p>All mimsy were the borogoves,</p>
-                <p>And the mome raths outgrabe.</p>
-            </div>
+            </section>
+
           </div>
         </div>
   </div>
