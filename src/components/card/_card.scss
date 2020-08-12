@@ -6,7 +6,8 @@ $card-min-height-mobile: $space-s-m * 7;
   height: auto;
 }
 
-.grid .g-card, .flex-grid .g-card {
+.grid .g-card, 
+.flex-grid .g-card {
   margin: 0 0 $space-s 0;
 }
 
