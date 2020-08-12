@@ -70,7 +70,7 @@ $card-min-height-mobile: $space-s-m * 7;
 
   .g-card-image img {
     margin: 0;
-    width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
     object-fit: contain;
