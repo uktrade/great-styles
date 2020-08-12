@@ -6,16 +6,30 @@ $card-min-height-mobile: $space-s-m * 7;
   height: auto;
 }
 
+.grid .g-card, .flex-grid .g-card {
+  margin: 0 0 $space-s 0;
+}
+
 .g-card {
+  box-shadow: 2px 2px 4px 0 $black-20;
+  border-radius: 10px;
+  padding: $space-s;
+  background: $white;
   @include desktop {
     min-height: $card-min-height;
     margin-bottom: $space-s;
   }
+  margin: $space-s;
   height: auto;
   min-height: $card-min-height-mobile;
   flex-grow: 1;
-  margin-bottom: $space-s-m;
   width: 100%;
+
+  .g-card-header {
+    margin: (-$space-s) (-$space-s) 0;
+    padding: $space-xs $space-s;
+    border-bottom: 1px solid $black-30;
+  }
 
   .g-card-link {
     height: 100%;
@@ -53,11 +67,12 @@ $card-min-height-mobile: $space-s-m * 7;
 
   }
 
-  .g-card-image {
+  .g-card-image img {
     margin: 0;
     width: 100%;
     height: auto;
     display: block;
+    object-fit: contain;
   }
 
   .g-card-inner.html-content > *:last-child {
