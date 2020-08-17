@@ -6,6 +6,8 @@
 
   @include tablet {
     flex-direction: row;
+    margin-left: -100px;
+    width: calc(100% + 100px);
   }
 
   > img {
