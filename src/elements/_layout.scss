@@ -59,7 +59,7 @@ hr {
     margin: 0 $gutter-xlarge;
   }
 
-  @media (min-width: $site-width + ($gutter-xlarge * 2)) {
+  @media (min-width: $site-width+($gutter-xlarge * 2)) {
     margin: 0 auto;
   }
 
