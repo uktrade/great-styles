@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "ds-tokens": "DSM_TOKENS_KEY=REPLACE_WITH_TOKEN . ./fetch-design-tokens.sh",
-    "storybook": "start-storybook -p $PORT",
+    "storybook": "start-storybook -p 8080",
     "build-storybook": "build-storybook",
     "babel": "./node_modules/.bin/babel ./react-components --out-dir ./dist"
   },
