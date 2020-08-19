@@ -1,12 +1,33 @@
-
-
 .visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+/* Useful helper styles */
+.m-f-auto {
+    margin-left: auto;
+}
+
+.m-r-auto {
+    margin-right: auto;
+}
+
+.min-height-s {
+    min-height: $space-s;
+}
+
+/******************************/
+/* Richtext area reset styles */
+/******************************/
+.rich-text {
+    ul li {
+        list-style-type: disc;
+        list-style-position: inside;
+    }
 }
