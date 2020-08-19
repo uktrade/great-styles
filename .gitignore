@@ -1,6 +1,8 @@
 demo/conf/staticfiles
 demo/config/staticfiles
 
+.idea/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
