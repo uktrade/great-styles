@@ -1,11 +1,10 @@
 import React from "react";
 
-import "../styles/great-styles.css";
-
 export default { title: "Button" };
 
 export const Button = () => (
   <div className="m-s">
+    <i className="fab fa-500px"></i>
     <button className="button button--primary">.button .button--primary</button>
     <p></p>
     <button className="button button--primary button--large">
