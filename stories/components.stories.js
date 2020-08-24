@@ -1,7 +1,5 @@
 import React from "react";
 
-import "../styles/great-styles.css";
-
 export default { title: "Components" };
 
 export const Personalisation_bar = () => (
@@ -43,7 +41,7 @@ export const Dashboard_card = () => (
                 <div class="g-card-header">
                     <h3 class="h-m">.g-card-header</h3>
                 </div>
-                .g-card - used for cards in the domestic dashboard 
+                .g-card - used for cards in the domestic dashboard
             </section>
             <section class="g-card" id="your-export-plan-card">
                 <div class="g-card-header">

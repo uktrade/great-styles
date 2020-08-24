@@ -18,7 +18,9 @@ const CSS_DIR = `${PROJECT_DIR}/styles`;
 const CSS_FILES = `${PROJECT_DIR}/styles/**/*.css`;
 const CSS_MAPS = `${PROJECT_DIR}/styles/**/*.css.map`;
 const IMAGES_SRC = `${PROJECT_DIR}/src/images/**/*`;
-const IMAGES_DEST = `${PROJECT_DIR}/styles/images/**/*`;
+const IMAGES_DEST = `${PROJECT_DIR}/styles/images/`;
+const FONTS_SRC = `${PROJECT_DIR}/src/fonts/**/*`;
+const FONTS_DEST = `${PROJECT_DIR}/styles/fonts/`;
 
 
 gulp.task('lint', function () {
@@ -54,6 +56,12 @@ gulp.task('images', function () {
   .pipe(gulp.dest(IMAGES_DEST));
 });
 
+gulp.task('copy-fonts', () => (
+  gulp
+    .src(FONTS_SRC)
+    .pipe(gulp.dest(FONTS_DEST))
+));
+
 gulp.task('watch', function () {
   gulp.watch(
     [SASS_FILES],
@@ -76,6 +84,8 @@ gulp.task(
   'default',
   gulp.series(
     'clean',
+    'images',
+    'copy-fonts',
     'styles',
     gulp.parallel('server', 'watch'))
 );

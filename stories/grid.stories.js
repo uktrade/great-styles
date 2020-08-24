@@ -1,7 +1,5 @@
 import React from "react";
 
-import "../styles/great-styles.css";
-
 export default { title: "Grid" };
 
 export const Columns = () => (
