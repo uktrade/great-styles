@@ -71,7 +71,7 @@ ol.list-circle-number  {
     list-style-type: none;
     margin-bottom: 35px;
     overflow: hidden;
-  
+
     &:before {
       @include font-title-2-4-white-1-left;
       content: counter(circle-counter);
@@ -86,7 +86,7 @@ ol.list-circle-number  {
       position: relative;
       text-align: center;
     }
-  
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -97,5 +97,6 @@ ol.list-circle-number  {
       float: left;
       width: calc(100% - 80px);
     }
+    
   }
 }
