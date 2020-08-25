@@ -31,3 +31,9 @@
         list-style-position: inside;
     }
 }
+
+.width {
+    &-full {
+        width: 100%;
+    }
+}
