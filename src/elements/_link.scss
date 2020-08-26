@@ -17,7 +17,11 @@
   &:focus:active {
     color: $blue-deep-80;
   }
-  
+
+  &--underline {
+    border-bottom: 2px solid;
+  }
+
 }
 
 a:focus {
