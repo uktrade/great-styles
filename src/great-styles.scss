@@ -22,7 +22,6 @@ $fa-font-path: $fonts;
 @import 'elements/list';
 @import 'elements/media-block';
 @import 'elements/typography';
-@import 'elements/quote';
 @import 'elements/colours';
 @import 'elements/spacing';
 @import 'elements/responsive';
@@ -31,6 +30,7 @@ $fa-font-path: $fonts;
 @import 'elements/tables';
 @import 'elements/utils';
 @import 'elements/box';
+@import 'elements/quote';
 
 // Components
 @import 'components/card/base';
