@@ -1,0 +1,7 @@
+{
+  "authToken": $AUTH-TOKEN,
+  "dsmHost": "trade.invisionapp.com",
+  "organization": "department-for-international-trade",
+  "outputDir": ".dsm",
+  "storyPath": "src/**/*.stories.js"
+}
