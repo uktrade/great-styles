@@ -70,6 +70,10 @@
         }
     }
   }
+
+  &:disabled {
+    opacity: .4;
+  }
 }
 
 

@@ -41,3 +41,14 @@ export const Button_with_icon = () => (
     </button>
   </div>
 );
+
+export const Button_disabled = () => (
+  <div className="m-s">
+    <button className="button button--primary" disabled>.button .button--primary</button>
+    <br className='m-v-s'/>
+    <button className="button button--secondary" disabled>.button .button--secondary</button>
+    <br className='m-v-s'/>
+    <button className="button button--tertiary" disabled>.button .button--tertiary</button>
+    <br className='m-v-s'/>
+  </div>
+);
