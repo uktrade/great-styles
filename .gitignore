@@ -2,6 +2,7 @@ demo/conf/staticfiles
 demo/config/staticfiles
 
 .idea/
+.dsm/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

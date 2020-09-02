@@ -3,6 +3,7 @@ import React from "react";
 import "../styles/great-styles.css";
 
 export default { title: "Button" };
+import { storiesOf } from '@storybook/react';
 
 export const Button = () => (
   <div className="m-s">
@@ -25,3 +26,16 @@ export const Button = () => (
     </button>
   </div>
 );
+
+storiesOf('Button', module)
+  .add(
+    'primary button',
+    () => (
+      <button>i'm a primary button</button>
+    ),
+    {
+      'in-dsm': {
+        id: '5f4e59b14faa682b89ba7f74'
+      }
+    }
+  );

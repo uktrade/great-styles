@@ -11,14 +11,15 @@
     "ds-tokens": "DSM_TOKENS_KEY=REPLACE_WITH_TOKEN . ./fetch-design-tokens.sh",
     "storybook": "start-storybook -p 8080",
     "build-storybook": "build-storybook",
-    "babel": "./node_modules/.bin/babel ./react-components --out-dir ./dist"
+    "babel": "./node_modules/.bin/babel ./react-components --out-dir ./dist",
+    "dsm-storybook:publish": "dsm-storybook publish",
+    "dsm-storybook:preview": "dsm-storybook preview"
   },
   "author": "DIT",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.5",
-    "@storybook/html": "^5.3.19",
-    "@storybook/react": "^5.3.19",
+    "@storybook/react": "^5.3.21",
     "ansi-colors": "^4.1.1",
     "babel-loader": "^8.1.0",
     "del": "^4.1.1",
@@ -36,13 +37,12 @@
   },
   "dependencies": {
     "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "@babel/core": "^7.10.5",
-    "@storybook/html": "^5.3.19",
-    "@storybook/react": "^5.3.19",
+    "@invisionapp/dsm-storybook": "0.0.131",
+    "@storybook/addon-options": "^5.3.21",
+    "@storybook/addons": "^6.0.21",
     "ansi-colors": "^4.1.1",
     "babel-loader": "^8.1.0",
     "del": "^4.1.1",
@@ -56,6 +56,9 @@
     "gulp-sass-lint": "^1.4.0",
     "gulp-sourcemaps": "^2.6.5",
     "nodemon": "^2.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "storybook": "^6.0.21",
     "yarn": "^1.17.3"
   }
 }
