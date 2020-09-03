@@ -32,6 +32,32 @@ $card-min-height-mobile: $space-s-m * 7;
     border-bottom: 1px solid $black-30;
   }
 
+  .g-card-full {
+    margin: 0 (-$space-s);
+  }
+
+  .lh-1 {
+    line-height: 1em;
+  }
+
+  progress {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+  }
+  progress[value]::-webkit-progress-bar {
+    background-color: $black-20;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  }
+  progress[value]::-webkit-progress-value {
+    background-image: -webkit-linear-gradient(left, $red-80, $red-80);
+    border-radius: 5px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+  }
+
   .g-card-link {
     height: 100%;
     display: block;

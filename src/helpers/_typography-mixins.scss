@@ -80,7 +80,7 @@
 }
 
 @mixin body-xlarge-bold {
-  @include body-large;
+  @include body-xlarge;
   font-weight: $bold;
 }
 

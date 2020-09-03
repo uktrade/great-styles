@@ -121,3 +121,12 @@ em {
     margin-top: 0;
   }
 }
+
+.body-xl { @include body-xlarge; }
+.body-l { @include body-large; }
+.body-m { @include body-medium; }
+.body-s { @include body-small; }
+.body-xl-b { @include body-xlarge-bold; }
+.body-l-b { @include body-large-bold; }
+.body-m-b { @include body-medium-bold; }
+.body-s-b { @include body-small-bold; }
