@@ -119,6 +119,8 @@ ul.list-arrow {
     span {
       display: block;
       margin-top: 5px;
+      float: left;
+      width: calc(100% - 38px);
     }
   }
 }

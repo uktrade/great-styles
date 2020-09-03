@@ -30,6 +30,12 @@
     display: flex;
 }
 
+.d-flex-t {
+    @include tablet {
+        display: flex;
+    }
+}
+
 /******************************/
 /* Richtext area reset styles */
 /******************************/
