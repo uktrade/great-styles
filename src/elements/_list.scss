@@ -100,3 +100,25 @@ ol.list-circle-number  {
     
   }
 }
+
+ul.list-arrow {
+  margin-bottom: 0;
+
+  li {
+    color: $blue-deep-80;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+    i {
+      color: $blue-deep-60;
+      float: left;
+      font-size: 36px;
+      margin-right: 20px;
+    }
+
+    span {
+      display: block;
+      margin-top: 5px;
+    }
+  }
+}

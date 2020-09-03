@@ -20,4 +20,15 @@
       left: -12px;
     }
   }
+
+  &--no-pointer {
+    background: $colour-blue-deep-10;
+    padding: 26px 22px;
+
+    &:before {
+      display: none;
+    }
+  }
 }
+
+
