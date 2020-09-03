@@ -1,4 +1,3 @@
-
 $card-min-height: $space-s * 7;
 $card-min-height-mobile: $space-s-m * 7;
 
@@ -6,7 +5,7 @@ $card-min-height-mobile: $space-s-m * 7;
   height: auto;
 }
 
-.grid .g-card, 
+.grid .g-card,
 .flex-grid .g-card {
   margin: 0 0 $space-s 0;
 }
@@ -16,10 +15,12 @@ $card-min-height-mobile: $space-s-m * 7;
   border-radius: 10px;
   padding: $space-s;
   background: $white;
+
   @include desktop {
     min-height: $card-min-height;
     margin-bottom: $space-s;
   }
+
   margin: $space-s;
   height: auto;
   min-height: $card-min-height-mobile;
@@ -32,6 +33,14 @@ $card-min-height-mobile: $space-s-m * 7;
     border-bottom: 1px solid $black-30;
   }
 
+  .g-card-full {
+    margin: 0 (-$space-s);
+  }
+
+  .lh-1 {
+    line-height: 1em;
+  }
+
   .g-card-link {
     height: 100%;
     display: block;
@@ -39,6 +48,7 @@ $card-min-height-mobile: $space-s-m * 7;
     text-decoration: none;
 
     &:hover .g-card-inner {
+
       h3,
       h4,
       h5,
@@ -76,7 +86,7 @@ $card-min-height-mobile: $space-s-m * 7;
     object-fit: contain;
   }
 
-  .g-card-inner.html-content > *:last-child {
+  .g-card-inner.html-content>*:last-child {
     margin-bottom: 0;
   }
 
@@ -97,16 +107,18 @@ $card-min-height-mobile: $space-s-m * 7;
       @media (min-width: $mobile-min-breakpoint) {
         margin-bottom: #{2 * ($line-height-desktop * $base-font-size-desktop) - ($font-size-large-desktop * $line-height-desktop)};
       }
+
       color: $active-blue;
       text-decoration: underline;
     }
 
-    h2 + p,
-    h3 + p,
-    h4 + p,
-    h5 + p,
-    h6 + p {
+    h2+p,
+    h3+p,
+    h4+p,
+    h5+p,
+    h6+p {
       margin-top: $space-xxs-m;
+
       @include desktop {
         margin-top: $space-xxs;
       }
@@ -114,6 +126,7 @@ $card-min-height-mobile: $space-s-m * 7;
 
     .g-card-meta {
       margin-bottom: $space-xs-m;
+
       @include desktop {
         margin-bottom: $space-xs;
       }
