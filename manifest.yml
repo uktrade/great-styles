@@ -1,5 +1,10 @@
 applications:
+  - name: great-styles-staging
+  - command: npm install
+  - command: ./update-auth.sh
+  - command: npm run dsm-storybook:publish
   - buildpacks:
-    - https://github.com/cloudfoundry/nodejs-buildpack.git#v1.7.22
+    - nodejs_buildpack
+    timeout: 180
     memory: 2G
     disk_quota: 2G
