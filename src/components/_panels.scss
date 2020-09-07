@@ -2,18 +2,19 @@
 @import 'helpers/colours';
 
 .g-panel {
-  box-sizing: border-box;
-  @include float-clear;
-  clear: both;
-  border-left-style: solid;
-  border-left-width: 6px;
-  border-color: $active-blue;
+  padding: 10px 0 10px 30px;
+  position: relative;
 
-  padding: 0 $space-xs-m;
-  @include tablet {
-    padding: 0 $space-xs;
+  &:before {
+    background: $blue-deep-80;
+    border-radius: 100px;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 6px;
   }
-  @include paragraph;
 
   :first-child {
     margin-top: 0;
