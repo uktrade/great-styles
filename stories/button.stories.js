@@ -28,7 +28,7 @@ export const Button = () => (
 );
 
 storiesOf('Button', module)
-  .add(
+  .add( 
     'primary button',
     () => (
       <button>i'm a primary button</button>
