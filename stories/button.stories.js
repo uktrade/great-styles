@@ -59,7 +59,7 @@ export const Button_disabled = () => (
 
 storiesOf('Button', module)
   .add(
-    'primary button', () => primary_button,
+      'blinking button', () => (<button><blink>I'm a fancy button</blink></button>),
     {
       'in-dsm': {
         id: '5f4e59b14faa682b89ba7f74'
