@@ -1,7 +1,6 @@
 import React from "react";
 
 import "../styles/great-styles.css";
-import primary_button from './primary_button.html';
 
 import { storiesOf } from '@storybook/react';
 export default { title: "Button" };
@@ -67,3 +66,4 @@ storiesOf('Button', module)
       }
     }
   );
+
