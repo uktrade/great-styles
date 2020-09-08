@@ -23,7 +23,6 @@
     "@invisionapp/dsm-storybook": "0.0.131",
     "@storybook/addon-options": "^5.3.21",
     "@storybook/addons": "^6.0.21",
-    "@storybook/html": "^5.3.21",
     "@storybook/react": "^5.3.21",
     "ansi-colors": "^4.1.1",
     "babel-loader": "^8.1.0",
@@ -38,7 +37,7 @@
     "gulp-sass-lint": "^1.4.0",
     "gulp-sourcemaps": "^2.6.5",
     "nodemon": "^2.0.1",
-    "storybook": "^5.0.21",
+    "storybook": "^5.2.21",
     "yarn": "^1.17.3"
   },
   "dependencies": {
@@ -51,7 +50,6 @@
     "@storybook/addon-options": "^5.3.21",
     "@storybook/addons": "^6.0.21",
     "@fortawesome/fontawesome-free": "^5.14.0",
-    "@storybook/html": "^5.3.21",
     "@storybook/react": "^5.3.21",
     "ansi-colors": "^4.1.1",
     "babel-loader": "^8.1.0",
@@ -68,7 +66,7 @@
     "nodemon": "^2.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "storybook": "^5.0.21",
+    "storybook": "^5.2.21",
     "yarn": "^1.17.3"
   }
 }
