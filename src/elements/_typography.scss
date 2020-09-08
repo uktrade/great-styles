@@ -7,6 +7,14 @@
 
 @import 'design-tokens';
 
+@font-face {
+  font-family: 'FS Lucas';
+  src: url('#{$fonts}/FSLucas-Regular.woff2') format('woff2'), url('#{$fonts}/FSLucas-Regular.woff') format('woff'),
+  url('#{$fonts}/FSLucas-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   @include font-body-1-black-1-left;
   position: relative;
@@ -113,3 +121,12 @@ em {
     margin-top: 0;
   }
 }
+
+.body-xl { @include body-xlarge; }
+.body-l { @include body-large; }
+.body-m { @include body-medium; }
+.body-s { @include body-small; }
+.body-xl-b { @include body-xlarge-bold; }
+.body-l-b { @include body-large-bold; }
+.body-m-b { @include body-medium-bold; }
+.body-s-b { @include body-small-bold; }

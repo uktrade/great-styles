@@ -1,7 +1,15 @@
+@import 'helpers/vars';
 
 // Config
 // This must be changed to match your static files path when importing sass!
 $asset-root: './images/';
+$fonts: './fonts/';
+$fa-font-path: $fonts;
+
+// Icons
+@import 'node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/solid';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/brands';
 
 // Base
 @import 'elements/reset';
@@ -14,7 +22,6 @@ $asset-root: './images/';
 @import 'elements/list';
 @import 'elements/media-block';
 @import 'elements/typography';
-@import 'elements/quote';
 @import 'elements/colours';
 @import 'elements/spacing';
 @import 'elements/responsive';
@@ -22,6 +29,8 @@ $asset-root: './images/';
 @import 'elements/details';
 @import 'elements/tables';
 @import 'elements/utils';
+@import 'elements/box';
+@import 'elements/quote';
 
 // Components
 @import 'components/card/base';
@@ -46,3 +55,4 @@ $asset-root: './images/';
 @import 'components/stats';
 @import 'components/tag-list';
 @import 'components/panels';
+@import 'components/beta';

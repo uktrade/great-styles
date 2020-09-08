@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "ds-tokens": "DSM_TOKENS_KEY=REPLACE_WITH_TOKEN . ./fetch-design-tokens.sh",
-    "storybook": "start-storybook -p 8080",
+    "storybook": "start-storybook -s styles -p 8080",
     "build-storybook": "build-storybook",
     "babel": "./node_modules/.bin/babel ./react-components --out-dir ./dist",
     "dsm-storybook:publish": "dsm-storybook publish",
@@ -19,6 +19,7 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.5",
+    "@storybook/html": "^5.3.21",
     "@storybook/react": "^5.3.21",
     "ansi-colors": "^4.1.1",
     "babel-loader": "^8.1.0",
@@ -43,6 +44,9 @@
     "@invisionapp/dsm-storybook": "0.0.131",
     "@storybook/addon-options": "^5.3.21",
     "@storybook/addons": "^6.0.21",
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "@storybook/html": "^5.3.21",
+    "@storybook/react": "^5.3.21",
     "ansi-colors": "^4.1.1",
     "babel-loader": "^8.1.0",
     "del": "^4.1.1",

@@ -17,7 +17,11 @@
   &:focus:active {
     color: $blue-deep-80;
   }
-  
+
+  &--underline {
+    border-bottom: 2px solid;
+  }
+
 }
 
 a:focus {
@@ -46,5 +50,9 @@ a {
 
   &:focus:active {
     color: $great-blue;
+  }
+
+  &.button {
+    display: inline-block;
   }
 }

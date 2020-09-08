@@ -1,7 +1,5 @@
 import React from "react";
 
-import "../styles/great-styles.css";
-
 export default { title: "Colours" };
 
 export const Text_Colours = () => (
@@ -40,6 +38,7 @@ export const BG_Colours = () => (
     <p className="bg-black-30">.bg-black-30</p>
     <p className="bg-black-20">.bg-black-20</p>
     <p className="bg-black-10">.bg-black-10</p>
+    <p className="bg-blue-deep-100">.bg-blue-deep-100</p>
     <p className="bg-blue-deep-80">.bg-blue-deep-80</p>
     <p className="bg-blue-deep-60">.bg-blue-deep-60</p>
     <p className="bg-blue-deep-40">.bg-blue-deep-40</p>

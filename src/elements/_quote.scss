@@ -11,3 +11,22 @@ blockquote {
     }
   }
 }
+
+.quote {
+  blockquote {
+    color: $blue-deep-80;
+    font-family: Georgia;
+    font-size: 24px;
+    font-style: italic;
+    letter-spacing: 0;
+    line-height: 40px;
+    margin-top: 0;
+  }
+
+  figcaption {
+    color: $blue-deep-100;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: 30px;
+  }
+}
