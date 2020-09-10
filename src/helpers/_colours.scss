@@ -1,4 +1,5 @@
 @import "_design-tokens";
+@import "_design-tokens-temp";
 
 // DSM colours
 
@@ -12,6 +13,7 @@ $black-40: $colour-black-40;
 $black-30: $colour-black-30;
 $black-20: $colour-black-20;
 $black-10: $colour-black-10;
+$black-05: $colour-black-05;
 
 $blue-deep-100: $colour-blue-deep-100;
 $blue-deep-80: $colour-blue-deep-80;
@@ -21,7 +23,8 @@ $blue-deep-10: $colour-blue-deep-10;
 
 $aqua-100: $colour-aqua-100;
 
-$green: #75C67C;
+$green-100: $colour-green-100;
+$green-30: $colour-green-30;
 
 $red-80: $colour-red-80;
 
@@ -36,9 +39,9 @@ $great-red: #e41f13; // rgb(228,  31,  19)
 $great-red-alt: #ef5f56; // rgb(239,  95,  86)
 
 // Grey
-$light-grey: #d8d8d8; // rgb(216, 216, 216)
+$light-grey: $colour-light-grey; // rgb(216, 216, 216)
 $mid-grey: #666666;
-$grey: #333333; // rgb(51, 51, 51)
+$grey: $colour-grey; // rgb(51, 51, 51)
 
 
 // White
