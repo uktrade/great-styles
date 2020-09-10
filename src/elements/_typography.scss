@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css?family=Overpass:700');
 
 @import 'design-tokens';
+@import 'design-tokens-temp';
 
 @font-face {
   font-family: 'FS Lucas';
@@ -66,7 +67,7 @@ em {
 }
 
 .h-xl {
-  @include font-title-3-1-black-1-left;
+  @include font-title-5;
   padding-bottom: #{3 * $space-s-m - ($font-size-xxlarge-mobile * $line-height-mobile)};
 
   @include tablet {
@@ -75,7 +76,7 @@ em {
 }
 
 .h-l {
-  @include font-title-2-1-black-1-left;
+  @include font-title-4;
   padding-bottom: #{(3 * $space-s-m) - ($font-size-xlarge-mobile * $line-height-mobile)};
 
   @include tablet {
@@ -84,7 +85,7 @@ em {
 }
 
 .h-m {
-  @include font-title-1-1-black-1-left;
+  @include font-title-3;
   padding-top: #{(2 * $space-s-m) - ($font-size-large-mobile * $line-height-mobile) - $space-xxs-m};
   padding-bottom: $space-xxs-m;
 
@@ -95,7 +96,18 @@ em {
 }
 
 .h-s {
-  @include brand-small;
+  @include font-title-2;
+  padding-top: #{$space-s-m - $space-xxs-m};
+  padding-bottom: $space-xxs-m;
+
+  @include tablet {
+    padding-top: #{$space-s - $space-xxs};
+    padding-bottom: $space-xxs;
+  }
+}
+
+.h-xs {
+  @include font-title-1;
   padding-top: #{$space-s-m - $space-xxs-m};
   padding-bottom: $space-xxs-m;
 
@@ -122,11 +134,12 @@ em {
   }
 }
 
-.body-xl { @include body-xlarge; }
-.body-l { @include body-large; }
-.body-m { @include body-medium; }
-.body-s { @include body-small; }
-.body-xl-b { @include body-xlarge-bold; }
-.body-l-b { @include body-large-bold; }
-.body-m-b { @include body-medium-bold; }
-.body-s-b { @include body-small-bold; }
+.body-l { @include font-body-3; }
+.body-m { @include font-body-2; }
+.body-s { @include font-body-1; }
+
+.body-l-b { @include font-body-3-bold; }
+.body-m-b { @include font-body-2-bold; }
+.body-s-b { @include font-body-1-bold; }
+
+.quote-text { @include quote-text; }
