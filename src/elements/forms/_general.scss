@@ -290,7 +290,7 @@ select::-ms-expand {
   input:disabled + label {
     opacity: 0.5;
     cursor: default;
-  }  
+  }
 }
 
 .great-checkbox--large {
@@ -309,8 +309,8 @@ select::-ms-expand {
   }
 
   input:checked + label::before {
-    background: $green;
-    border-color: $green;
+    background: $green-100;
+    border-color: $green-100;
   }
 
   [type=checkbox] + label {
