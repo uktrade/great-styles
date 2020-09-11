@@ -24,8 +24,8 @@ export const Text_Colours = () => (
     <p className="text-white" style={{ background: "black" }}>
       .text-white
     </p>
-    <p className="text-green-100">.text-red-80</p>
-    <p className="text-green-30">.text-red-80</p>
+    <p className="text-green-100">.text-green-100</p>
+    <p className="text-green-30">.text-green-30</p>
     <p className="text-grey">.text-grey</p>
     <p className="text-light-grey">.text-light-grey</p>
   </div>
