@@ -18,6 +18,7 @@ export const Text_Colours = () => (
     <p className="text-blue-deep-80">.text-blue-deep-80</p>
     <p className="text-blue-deep-60">.text-blue-deep-60</p>
     <p className="text-blue-deep-40">.text-blue-deep-40</p>
+    <p className="text-blue-deep-20">.text-blue-deep-20</p>
     <p className="text-blue-deep-10">.text-blue-deep-10</p>
     <p className="text-aqua-100">.text-aqua-100</p>
     <p className="text-red-80">.text-red-80</p>
@@ -48,6 +49,7 @@ export const BG_Colours = () => (
     <p className="bg-blue-deep-80">.bg-blue-deep-80</p>
     <p className="bg-blue-deep-60">.bg-blue-deep-60</p>
     <p className="bg-blue-deep-40">.bg-blue-deep-40</p>
+    <p className="bg-blue-deep-20">.bg-blue-deep-20</p>
     <p className="bg-blue-deep-10">.bg-blue-deep-10</p>
     <p className="bg-aqua-100">.bg-aqua-100</p>
     <p className="bg-red-80">.bg-red-80</p>

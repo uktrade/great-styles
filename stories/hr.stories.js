@@ -4,7 +4,9 @@ export default { title: "HR" };
 
 export const HR = () => (
   <div className="m-s">
-    <hr className="hr--thick" />
-    <hr className="hr--thick hr--dark" />
+    <p>.hr .hr--light</p>
+    <hr className="hr hr--light" />
+    <p>.hr .hr--dark</p>
+    <hr className="hr hr--dark" />
   </div>
 );

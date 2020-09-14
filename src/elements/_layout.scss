@@ -13,13 +13,16 @@ hr {
   @include paragraph;
 }
 
-.hr--thick {
-  background: $blue-deep-10;
+.hr {
   height: 1px;
 }
 
+.hr--light {
+  background: $blue-deep-20;
+}
+
 .hr--dark {
-  background: $blue-deep-60;
+  background: $blue-deep-80;
 }
 
 // Layout
