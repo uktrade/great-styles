@@ -5,6 +5,8 @@ demo/config/staticfiles
 .dsm
 .dsmrc
 
+react/storybook/.dsmrc
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
