@@ -11,6 +11,17 @@
 
 ## Development
 
+cd react/storybook
+
+npm install
+
+preview DSM/storybook locally: npm run dsm-storybook:preview 
+
+publish DSM/storybook: npm run dsm-storybook:publish
+you will need a proper .dsmrc file, read more on how to "manage authentication tokens" here:
+https://support.invisionapp.com/hc/en-us/articles/360028510211-Configuring-the-Storybook-DSM-Integration
+
+
 ### Installing
 
 ### Requirements
