@@ -137,6 +137,35 @@ $card-min-height-mobile: $space-s-m * 7;
     }
   }
 
+  &--with-image {
+    padding: 0;
+
+    @include desktop {
+      display: flex;
+    }
+
+    > div {
+      @include desktop {
+        flex-basis: 50%;
+      }
+    }
+
+    &__content {
+      padding: 30px;
+    }
+
+    &__image {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      align-items: flex-end;
+
+      img {
+        float: right;
+        max-width: 100%;
+      }
+    }
+  }
 }
 
 @media (max-width: 640px) {
