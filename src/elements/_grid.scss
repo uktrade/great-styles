@@ -221,6 +221,17 @@
   width: 100%;
 }
 
+// Used on lesson page
+.c-1-12 {
+  @include grid-column(1 / 12);
+  width: 100%;
+}
+
+.c-10-12 {
+  @include grid-column(10 / 12);
+  width: 100%;
+}
+
 // =============================
 // Responsive classes
 // =============================
