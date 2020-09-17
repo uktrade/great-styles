@@ -52,3 +52,9 @@ export const Button_disabled = () => (
     <br className='m-v-s'/>
   </div>
 );
+
+export const Button_as_icon = () => (
+  <div className="m-s">
+    <button type='button' className='button button--icon-center'><i className='fas fa-share text-blue-deep-60 icon--border'/></button>
+  </div>
+)
