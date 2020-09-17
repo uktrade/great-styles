@@ -69,6 +69,11 @@
           margin-left: 20px;
         }
     }
+
+    &-center {
+      min-width: auto;
+      padding: 0;
+    }
   }
 
   &:disabled {
