@@ -1,8 +1,8 @@
 import React from "react";
 
-export default { title: "Form" };
+export default { title: "Form/Label" };
 
-export const Form = () => (
+export const Label = () => (
   <div className="m-s">
     <div class="great-checkbox">
       <input type="checkbox" id="checkbox" />
