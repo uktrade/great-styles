@@ -16,6 +16,24 @@
     width: 6px;
   }
 
+  &--horizontal-mobile {
+    padding-left: 0;
+
+    @include tablet {
+      padding-left: 30px;
+    }
+
+    &:before {
+      height: 6px;
+      width: 50%;
+
+      @include tablet {
+        height: 100%;
+        width: 6px;
+      }
+    }
+  }
+
   :first-child {
     margin-top: 0;
   }
