@@ -11,12 +11,20 @@ export const Links = () => (
     <a href="" className="link link--underline">
       .link .link--underline
     </a>
+    <br className="m-v-s" />
+    <button className="link link--icon">
+      <i className="fas fa-caret-right m-r-xs"></i>{" "}
+      <span>.link link--icon</span>
+    </button>
   </div>
 );
 
 export const Links_as_button = () => (
   <div className="m-s">
-    <a href='#' className="button button--secondary button--icon button--icon-left">
+    <a
+      href="#"
+      className="button button--secondary button--icon button--icon-left"
+    >
       <i className="fab fa-linkedin" />
       <span>.button .button--secondary .button--icon .button--icon-left</span>
     </a>

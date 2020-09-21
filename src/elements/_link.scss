@@ -10,29 +10,41 @@
 .link {
   @include font-body-bold-6-blue-80-1-left;
   text-decoration: none;
+  border: 0;
+  background: none;
+  padding: 0;
 
   &:visited,
   &:hover,
   &:active,
   &:focus:active {
     color: $blue-deep-80;
+    cursor: pointer;
   }
 
   &--underline {
     border-bottom: 2px solid;
   }
 
+  &--icon {
+    i {
+      transform: scale(1.75);
+    }
+  }
 }
 
-a:focus {
+a:focus,
+button:focus {
   @include focus;
 }
 
-a:focus:active {
+a:focus:active,
+button:focus:active {
   background-color: $focus-yellow;
 }
 
-a {
+a,
+button {
   color: $active-blue;
   text-decoration: underline;
 
