@@ -2,6 +2,10 @@ demo/conf/staticfiles
 demo/config/staticfiles
 
 .idea/
+.dsm
+.dsmrc
+
+react/storybook/.dsmrc
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
