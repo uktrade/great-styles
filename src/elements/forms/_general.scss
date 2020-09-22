@@ -49,7 +49,7 @@ textarea {
 // Form labels, or for legends styled to look like labels
 .form-label {
   display: block;
-  @include body-medium;
+  @include font-title-1;
 }
 
 // 4. Form hints
@@ -84,12 +84,13 @@ select.form-control {
 
 .form-control {
   box-sizing: border-box;
-  @include body-medium;
+  @include font-body-3 ;
   background-color: $white;
-  color: $grey;
+  color: $blue-deep-60;
   width: 100%;
   padding: 0;
-  border: 2px solid $grey;
+  border: 2px solid $blue-deep-20;
+  border-radius: 10px;
 }
 
 // Allow a qualifying element, remove rounded corners from inputs and textareas
@@ -97,15 +98,9 @@ select.form-control {
 input.form-control,
 textarea.form-control,
 select.form-control {
-  // Disable inner shadow and remove rounded corners
+  height: 50px;
   -webkit-appearance: none;
-  border-radius: 0;
-  height: $space-m-m;
-  padding: 0 $space-xxs-m;
-  @include tablet {
-    padding: 0 $space-xxs;
-    height: $space-m;
-  }
+  padding: 15px;
 }
 
 textarea.form-control {
@@ -145,6 +140,20 @@ select:focus,
 input:focus,
 a:focus {
   @include focus;
+}
+
+input {
+  &:disabled {
+    background-color: $input-disabled;
+    border: {
+      color: $black-20;
+      width: 1px;
+    }
+  }
+}
+
+input:active {
+  @include active;
 }
 
 a:focus:active {
