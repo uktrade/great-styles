@@ -62,9 +62,17 @@
   width: 100%;
 }
 
+@mixin active {
+  color: $blue-deep-80;
+  border-color: $blue-deep-60;
+}
+
 @mixin focus {
-  outline: $focus-yellow solid 3px;
+  outline: $focus-yellow solid 6px;
   outline-offset: 0;
+  color: $blue-deep-80;
+  border-color: $blue-deep-60;
+  border-width: 4px;
 }
 
 @mixin separator($colour) {
