@@ -17,15 +17,17 @@
   }
 
   &--horizontal-mobile {
+    padding-top: 30px;
     padding-left: 0;
 
     @include tablet {
-      padding-left: 30px;
+      padding-left: 36px;
+      padding-top: 0;
     }
 
     &:before {
       height: 6px;
-      width: 50%;
+      width: 150px;
 
       @include tablet {
         height: 100%;
