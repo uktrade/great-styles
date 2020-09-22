@@ -3,83 +3,190 @@
 @import 'helpers/vars';
 
 // DSM Buttons
-
 .button {
-  @include font-subcopy-bold-4-white-1-left;
-  border: 0;
-  border-radius: 20px;
+  @include font-body-3-bold;
+  background: $colour-red-80;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  color: $white;
+  cursor: pointer;
   min-width: 100px;
-  padding: 12px 22px;
-  position: relative;
+  padding: 8px 26px 7px;
   text-align: center;
 
-  &:link,
-  &:visited,
   &:hover,
   &:active {
-    @include font-subcopy-bold-4-white-1-left;
-    text-align: center;
-    text-decoration: none;
+    background: $colour-red-100;
   }
 
-  &--primary {
-    background: $red-80;
+  &:active {
+    border-color: $black;
   }
 
-  &--secondary {
-    background: $blue-deep-80;
+  &:focus,
+  &:focus:active {
+    background: $colour-red-100;
+    outline: $focus-yellow solid 6px;
+    outline-offset: 0;
+    color: $white;
+    border-color: $black;
+    border-width: 2px;
   }
 
-  &--tertiary {
-    background: $blue-deep-40;
+  &[disabled] {
+    cursor: auto;
+    opacity: 0.4;
+  }
+
+  &--small {
+    @include font-body-2-bold;
+    border-radius: 20px;
+    color: $white;
+    padding: 8px 20px;
   }
 
   &--large {
-    border-radius: 25px;
-    font-size: 20px;
-    height: 50px;
-    padding: 0 48px;
+    @include font-body-3-bold;
+    color: $white;
+    padding: 8px 50px;
+  }
 
-    &:link,
-    &:visited,
+  &--secondary {
+    background: $colour-blue-deep-80;
+
     &:hover,
     &:active {
-      font-size: 20px;
+      background: $colour-blue-deep-100;
+    }
+
+    &:focus,
+    &:focus:active {
+      background: $colour-blue-deep-100;
     }
   }
 
-  &--round-corner {
-    border-radius: 4px;
-    padding: 4px 10px;
-  }
+  &--tertiary {
+    background: $white;
+    border-color: $colour-blue-deep-80;
+    color: $colour-blue-deep-80;
 
-  &--icon {
-
-    i {
-      padding-right: 10px;
+    &:hover,
+    &:active {
+      background: $white;
+      color: $colour-blue-deep-80;
     }
 
-    &-left {
-        i {
-          left: 15px;
-          position: absolute;
-        }
-
-        span {
-          margin-left: 20px;
-        }
+    &:focus,
+    &:focus:active {
+      background: $white;
+      color: $colour-blue-deep-80;
     }
-
-    &-center {
-      min-width: auto;
-      padding: 0;
-    }
-  }
-
-  &:disabled {
-    opacity: .4;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .button {
+//   @include font-subcopy-bold-4-white-1-left;
+//   border: 0;
+//   border-radius: 20px;
+//   min-width: 100px;
+//   padding: 12px 22px;
+//   position: relative;
+//   text-align: center;
+
+//   &:link,
+//   &:visited,
+//   &:hover,
+//   &:active {
+//     @include font-subcopy-bold-4-white-1-left;
+//     text-align: center;
+//     text-decoration: none;
+//   }
+
+//   &--primary {
+//     background: $red-80;
+//   }
+
+//   &--secondary {
+//     background: $blue-deep-80;
+//   }
+
+//   &--tertiary {
+//     background: $blue-deep-40;
+//   }
+
+//   &--large {
+//     border-radius: 25px;
+//     font-size: 20px;
+//     height: 50px;
+//     padding: 0 48px;
+
+//     &:link,
+//     &:visited,
+//     &:hover,
+//     &:active {
+//       font-size: 20px;
+//     }
+//   }
+
+//   &--round-corner {
+//     border-radius: 4px;
+//     padding: 4px 10px;
+//   }
+
+//   &--icon {
+
+//     i {
+//       padding-right: 10px;
+//     }
+
+//     &-left {
+//         i {
+//           left: 15px;
+//           position: absolute;
+//         }
+
+//         span {
+//           margin-left: 20px;
+//         }
+//     }
+
+//     &-center {
+//       min-width: auto;
+//       padding: 0;
+//     }
+//   }
+
+//   &:disabled {
+//     opacity: .4;
+//   }
+// }
 
 
 
