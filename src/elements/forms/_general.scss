@@ -32,6 +32,10 @@ textarea {
   @include tablet {
     margin-bottom: $space-s;
   }
+
+  &-example {
+    border-radius: 10px;
+  }
 }
 
 .form-field-container {
@@ -71,6 +75,7 @@ textarea {
 }
 
 .form-label + input,
+.form-label + textarea,
 .form-label + .multiple-choice,
 select.form-control {
   margin-top: $space-xs-m;
@@ -107,6 +112,7 @@ textarea.form-control {
   // Disable opacity and background image for Firefox
   opacity: 1;
   background-image: none;
+  height: 80px;
 }
 // scss-lint:enable QualifyingElement
 
@@ -138,11 +144,13 @@ ul.g-select-multiple {
 
 select:focus,
 input:focus,
+textarea:focus,
 a:focus {
   @include focus;
 }
 
-input {
+input,
+textarea {
   &:disabled {
     background-color: $input-disabled;
     border: {
@@ -152,7 +160,8 @@ input {
   }
 }
 
-input:active {
+input:active,
+textarea:active {
   @include active;
 }
 
