@@ -8,7 +8,33 @@ export const Textarea = () => (
       <label className='form-label' htmlFor='textarea'>
         Why can't you provide a National Insurance number?
       </label>
+      <textarea className='form-control' name='textarea' id='textarea' rows='5' />
+    </div>
+    <hr className='hr hr--dark'/>
+    <div className='form-group'>
+      <label className='form-label' htmlFor='textarea'>
+        Why can't you provide a National Insurance number?
+      </label>
       <div className='text-blue-deep-80 p-t-xs p-b-xxs'>Intro text</div>
+      <dl className='form-group-example bg-blue-deep-10 p-xs m-b-xs'>
+        <dt className='body-l-b'>Example</dt>
+        <dd className='m-t-xxs body-l'>Example text</dd>
+      </dl>
+      <textarea className='form-control' name='textarea' id='textarea' rows='5' />
+    </div>
+    <hr className='hr hr--dark'/>
+    <div className='form-group'>
+      <label className='form-label' htmlFor='textarea'>
+        Why can't you provide a National Insurance number?
+      </label>
+      <div className='text-blue-deep-80 p-t-xs p-b-xxs'>Intro text</div>
+      <textarea className='form-control' name='textarea' id='textarea' rows='5' />
+    </div>
+    <hr className='hr hr--dark'/>
+    <div className='form-group'>
+      <label className='form-label' htmlFor='textarea'>
+        Why can't you provide a National Insurance number?
+      </label>
       <dl className='form-group-example bg-blue-deep-10 p-xs m-b-xs'>
         <dt className='body-l-b'>Example</dt>
         <dd className='m-t-xxs body-l'>Example text</dd>
