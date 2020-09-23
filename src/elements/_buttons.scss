@@ -11,7 +11,7 @@
   color: $white;
   cursor: pointer;
   min-width: 100px;
-  padding: 8px 26px 7px;
+  padding: 8px 26px;
   text-align: center;
 
   &:hover,
@@ -26,7 +26,7 @@
   &:focus,
   &:focus:active {
     background: $colour-red-100;
-    outline: $focus-yellow solid 6px;
+    outline: $focus-yellow solid 4px;
     outline-offset: 0;
     color: $white;
     border-color: $black;
@@ -43,6 +43,20 @@
     border-radius: 20px;
     color: $white;
     padding: 8px 20px;
+
+    &.button--loading {
+      .button--loading__spinner {
+        width: 20px;
+        height: 20px;
+      }
+
+      &.button--only-icon {
+        .button--loading__spinner {
+          width: 26px;
+          height: 26px;
+        }
+      }
+    }
   }
 
   &--large {
@@ -63,6 +77,13 @@
     &:focus:active {
       background: $colour-blue-deep-100;
     }
+
+    &.button--icon,
+    &.button--only-icon {
+      i {
+        color: $colour-blue-deep-10;
+      }
+    }
   }
 
   &--tertiary {
@@ -81,35 +102,100 @@
       background: $white;
       color: $colour-blue-deep-80;
     }
+
+    &.button--icon,
+    &.button--only-icon {
+      i {
+        color: $colour-blue-deep-80;
+      }
+    }
+
+    &.button--loading {
+      .button--loading__spinner {
+        border-top: 2px solid rgba(0, 0, 0, 0.2);
+        border-right: 2px solid rgba(0, 0, 0, 0.2);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+        border-left: 2px solid $black;
+      }
+    }
+  }
+
+  &--icon {
+    padding-left: 18px;
+
+    i {
+      padding-right: 20px;
+      color: $colour-red-10;
+      transform: scale(.85);
+      vertical-align: middle;
+    }
+  }
+
+  &--only-icon {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    min-width: 40px;
+
+    i {
+      color: $colour-red-10;
+      transform: scale(1.2);
+      vertical-align: middle;
+    }
+  }
+
+  &--loading {
+    &__spinner,
+    &__spinner:after {
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+    }
+
+    &__spinner {
+      margin: 0 auto;
+      font-size: 10px;
+      position: relative;
+      text-indent: -9999em;
+      border-top: 2px solid rgba(255, 255, 255, 0.2);
+      border-right: 2px solid rgba(255, 255, 255, 0.2);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+      border-left: 2px solid #ffffff;
+      -webkit-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-animation: spin 1.1s infinite linear;
+      animation: spin 1.1s infinite linear;
+    }
+
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  &--round-corner {
+    border-radius: 4px;
+    padding: 4px 10px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // .button {
 //   @include font-subcopy-bold-4-white-1-left;
@@ -187,8 +273,6 @@
 //     opacity: .4;
 //   }
 // }
-
-
 
 
 // BUTTONS
