@@ -1,0 +1,68 @@
+.tag {
+  @include font-body-3-bold;
+  background: $colour-red-80;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  color: $white;
+  cursor: pointer;
+  padding: 0 13px;
+
+  &:hover,
+  &:active {
+    background: $colour-red-100;
+  }
+
+  &[disabled] {
+    cursor: auto;
+    opacity: 0.4;
+  }
+
+  &--icon {
+    padding: 0 8px 0 13px;
+
+    i {
+      color: $colour-red-10;
+      margin-left: 8px;
+      transform: scale(.85);
+      vertical-align: middle;
+    }
+  }
+
+  &--small {
+    @include font-body-2-bold;
+    color: $white;
+
+    &.tag--icon {
+      padding: 2px 7px 2px 12px;
+    }
+  }
+
+  &--secondary {
+    background: $colour-blue-deep-80;
+
+    &:hover,
+    &:active {
+      background: $colour-blue-deep-100;
+    }
+
+    i {
+      color: $colour-blue-deep-10;
+    }
+  }
+
+  &--tertiary {
+    background: $white;
+    border-color: $colour-blue-deep-80;
+    color: $colour-blue-deep-80;
+
+    &:hover,
+    &:active {
+      background: $white;
+      color: $colour-blue-deep-80;
+    }
+
+    i {
+      color: $colour-blue-deep-80;
+    }
+  }
+}
