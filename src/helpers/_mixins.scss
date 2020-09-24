@@ -70,6 +70,11 @@
 @mixin focus {
   outline: $focus-yellow solid 6px;
   outline-offset: 0;
+}
+
+@mixin focus-input {
+  outline: $focus-yellow solid 6px;
+  outline-offset: 0;
   color: $blue-deep-80;
   border-color: $blue-deep-60;
   border-width: 4px;

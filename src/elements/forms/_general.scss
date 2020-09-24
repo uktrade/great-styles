@@ -145,9 +145,8 @@ ul.g-select-multiple {
 
 select:focus,
 input:focus,
-textarea:focus,
-a:focus {
-  @include focus;
+textarea:focus {
+  @include focus-input;
 }
 
 input,
@@ -166,8 +165,12 @@ textarea:active {
   @include active;
 }
 
-a:focus:active {
-  background-color: $focus-yellow;
+a:focus {
+  @include focus;
+
+  &:active {
+    background-color: $focus-yellow;
+  }
 }
 
 // File upload
