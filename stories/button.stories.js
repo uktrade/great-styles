@@ -1,7 +1,5 @@
 import React from "react";
 
-export default { title: "Buttons" };
-
 export const Button = () => (
   <div className="m-s">
     <button className="button button--primary">.button .button--primary</button>
@@ -58,3 +56,12 @@ export const Button_as_icon = () => (
     <button type='button' className='button button--icon-center'><i className='fas fa-share text-blue-deep-60 icon--border'/></button>
   </div>
 )
+
+export default { title: "Buttons",
+parameters: {
+    component: Button,
+    // Module-Level 'in-dsm' configuration (Will apply to all stories inside the module)
+    'in-dsm': { id: '5f6bbd137780ce82bce8d6fa' }
+  }
+};
+
