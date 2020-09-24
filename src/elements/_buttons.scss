@@ -26,7 +26,6 @@
   &:focus,
   &:focus:active {
     background: $colour-red-100;
-    outline: $focus-yellow solid 4px;
     outline-offset: 0;
     color: $white;
     border-color: $black;

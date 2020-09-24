@@ -12,6 +12,11 @@
     background: $colour-red-100;
   }
 
+  &:focus,
+  &:focus:active {
+    background: $colour-red-100;
+  }
+
   &[disabled] {
     cursor: auto;
     opacity: 0.4;
@@ -45,6 +50,11 @@
       background: $colour-blue-deep-100;
     }
 
+    &:focus,
+    &:focus:active {
+      background: $colour-blue-deep-100;
+    }
+
     i {
       color: $colour-blue-deep-10;
     }
@@ -57,6 +67,12 @@
 
     &:hover,
     &:active {
+      background: $white;
+      color: $colour-blue-deep-80;
+    }
+
+    &:focus,
+    &:focus:active {
       background: $white;
       color: $colour-blue-deep-80;
     }
