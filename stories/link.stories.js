@@ -16,6 +16,11 @@ export const Links = () => (
       <i className="fas fa-caret-right m-r-xs"></i>{" "}
       <span>.link link--icon</span>
     </button>
+    <br className="m-v-s" />
+    <a href="" className="link link--large link--icon-right">
+      <span>link link--large link--icon-right</span>
+      <i class="fas fa-arrow-right"></i>
+    </a>
   </div>
 );
 
