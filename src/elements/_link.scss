@@ -31,6 +31,22 @@
       transform: scale(1.75);
     }
   }
+
+  &--icon-right {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+
+    i {
+      margin-left: 20px;
+      transform: scale(1.2);
+    }
+  }
+
+  &--large {
+    @extend .h-s;
+  }
 }
 
 a:focus,
