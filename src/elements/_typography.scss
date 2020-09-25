@@ -48,7 +48,7 @@ blockquote {
 
 b,
 strong {
-  font-weight: $bold;
+  @include bold;
 }
 
 u {
@@ -63,7 +63,7 @@ em {
 // Text
 
 .uppercase { text-transform: uppercase }
-.bold { font-weight: 700 }
+.bold { @include bold }
 .italic { font-style: italic }
 .font-brand { font-family: $brand-font-heading }
 .font-body { font-family: $brand-font-body }
@@ -76,12 +76,12 @@ em {
 .h-l,
 .h-m,
 .h-s {
-
   @extend %heading;
 }
 
 .h-xl {
   @include font-title-5;
+  @include bold;
   padding-bottom: #{3 * $space-s-m - ($font-size-xxlarge-mobile * $line-height-mobile)};
 
   @include tablet {
@@ -91,6 +91,7 @@ em {
 
 .h-l {
   @include font-title-4;
+  @include bold;
   padding-bottom: #{(3 * $space-s-m) - ($font-size-xlarge-mobile * $line-height-mobile)};
 
   @include tablet {
@@ -100,6 +101,7 @@ em {
 
 .h-m {
   @include font-title-3;
+  @include bold;
   padding-top: #{(2 * $space-s-m) - ($font-size-large-mobile * $line-height-mobile) - $space-xxs-m};
   padding-bottom: $space-xxs-m;
 
@@ -111,6 +113,7 @@ em {
 
 .h-s {
   @include font-title-2;
+  @include bold;
   padding-top: #{$space-s-m - $space-xxs-m};
   padding-bottom: $space-xxs-m;
 
@@ -122,6 +125,7 @@ em {
 
 .h-xs {
   @include font-title-1;
+  @include bold;
   padding-top: #{$space-s-m - $space-xxs-m};
   padding-bottom: $space-xxs-m;
 
@@ -152,8 +156,19 @@ em {
 .body-m { @include font-body-2; }
 .body-s { @include font-body-1; }
 
-.body-l-b { @include font-body-3-bold; }
-.body-m-b { @include font-body-2-bold; }
-.body-s-b { @include font-body-1-bold; }
+.body-l-b {
+  @include font-body-3-bold;
+  @include bold;
+}
+
+.body-m-b {
+  @include font-body-2-bold;
+  @include bold;
+}
+
+.body-s-b {
+  @include font-body-1-bold;
+  @include bold;
+}
 
 .quote-text { @include quote-text; }

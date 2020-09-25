@@ -198,3 +198,10 @@
     }
   }
 }
+
+@mixin bold() {
+  font: {
+    family: $brand-font-heading;
+    weight: 600;
+  }
+}
