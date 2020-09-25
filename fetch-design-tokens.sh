@@ -1,5 +1,5 @@
 #!/bin/sh
-DSM_URL="https://trade.invisionapp.com/dsm-export/department-for-international-trade/great"
+DSM_URL="https://trade.invisionapp.com/dsm-export/department-for-international-trade/magna"
 
 # Fetching CSS variables
 echo Fetching "$DSM_URL/_style-params.scss?key=******"
