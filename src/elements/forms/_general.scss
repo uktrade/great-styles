@@ -53,7 +53,7 @@ textarea {
 // Form labels, or for legends styled to look like labels
 .form-label {
   display: block;
-  @include font-title-1;
+  @extend .h-xs;
 }
 
 // 4. Form hints
