@@ -13,10 +13,13 @@
   min-width: 100px;
   padding: 8px 26px;
   text-align: center;
+  text-decoration: none;
 
   &:hover,
-  &:active {
+  &:active,
+  &:visited {
     background: $colour-red-100;
+    color: $white;
   }
 
   &:active {
@@ -68,8 +71,10 @@
     background: $colour-blue-deep-80;
 
     &:hover,
-    &:active {
+    &:active,
+    &:visited {
       background: $colour-blue-deep-100;
+      color: $white;
     }
 
     &:focus,
@@ -91,7 +96,8 @@
     color: $colour-blue-deep-80;
 
     &:hover,
-    &:active {
+    &:active,
+    &:visited {
       background: $white;
       color: $colour-blue-deep-80;
     }
