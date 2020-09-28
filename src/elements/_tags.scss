@@ -36,6 +36,7 @@
   &--small {
     @include font-body-2-bold;
     color: $white;
+    padding: 2px 13px;
 
     &.tag--icon {
       padding: 2px 7px 2px 12px;
