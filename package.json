@@ -2,7 +2,7 @@
   "name": "great-styles",
   "version": "0.1.0",
   "engines": {
-    "node": "12"
+    "node": "12.18.3"
   },
   "description": "Styles for great.gov.uk",
   "main": "index.js",
