@@ -23,7 +23,7 @@ export const Expanded = () => (
     <button className='select__button text-blue-deep-20 bg-white' type='button' aria-haspopup='listbox'>
       <i className='fas fa-times-circle text-blue-deep-60' />
     </button>
-    <ul role='listbox' className='select__list body-l radius'>
+    <ul role='listbox' className='select__list bg-white body-l radius'>
       <li>Select one</li>
       <li className='select__list--item' aria-selected='false' role='option'>item 1</li>
       <li className='select__list--item' aria-selected='false' role='option'>item 2</li>
