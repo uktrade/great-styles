@@ -1,0 +1,36 @@
+.select {
+  position: relative;
+
+  &__button {
+    bottom: 10px;
+    position: absolute;
+    right: 10px;
+    z-index: 10;
+    border: 0;
+    font: inherit;
+  }
+
+  &__list {
+    border: 2px solid $colour-blue-deep-60;
+    margin-top: -50px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
+    li {
+      padding: 10px 20px;
+    }
+  }
+
+  &__list--item {
+    cursor: pointer;
+
+    &:hover {
+      background-color: $colour-blue-deep-20;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 0;
+  }
+}
