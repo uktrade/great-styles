@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "ds-tokens": "DSM_TOKENS_KEY=REPLACE_WITH_TOKEN . ./fetch-design-tokens.sh",
     "babel": "./node_modules/.bin/babel ./react-components --out-dir ./dist",
-    "storybook": "start-storybook -p 9009 -s styles",
+    "storybook": "start-storybook -p 8080 -s styles",
     "build-storybook": "build-storybook -s public",
     "dsm-storybook:publish": "dsm-storybook publish",
     "dsm-storybook:preview": "dsm-storybook preview"
