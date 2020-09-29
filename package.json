@@ -1,6 +1,6 @@
 {
   "name": "great-styles",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "engines": {
     "node": "12.18.3"
   },
@@ -23,7 +23,8 @@
     "precss": "^4.0.0",
     "raw-loader": "1.0.0",
     "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1"
+    "style-loader": "^0.23.1",
+    "nodemon": "^2.0.1"
   },
   "browserslist": [
     ">0.2%",
@@ -49,13 +50,14 @@
     "gulp-sass": "^4.0.2",
     "gulp-sass-lint": "^1.4.0",
     "gulp-sourcemaps": "^2.6.5",
-    "nodemon": "^2.0.1",
-    "yarn": "^1.17.3",
     "@invisionapp/dsm-storybook": "latest",
     "@storybook/addon-a11y": "5.2.0",
     "@storybook/addon-actions": "5.2.0",
     "@storybook/addon-backgrounds": "5.2.0",
     "@storybook/addon-centered": "5.2.0",
+    "mithril": "*",
+    "preact": "*",
+    "eslint": "^5.0.0",
     "@storybook/addon-docs": "5.2.0",
     "@storybook/addon-knobs": "5.2.0",
     "@storybook/addon-options": "5.2.0",
