@@ -117,7 +117,7 @@ ENV/
 node_modules
 npm-debug.log
 .DS_Store
-/*.env
+#/*.env
 
 directory_components/static/directory_components/export_elements/images/crests
 directory_components/static/directory_components/export_elements/images/examples
