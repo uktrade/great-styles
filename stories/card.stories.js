@@ -28,7 +28,7 @@ export const Card_Horizontal = () => (
       <div className="card__section">
         <p className="body-l-b">Title</p>
         <p className="h-m">Title 36/40</p>
-        <p className="body-l">Lorem ipsum dolor sit amet</p>
+        <p className="body-l p-b-xs">Lorem ipsum dolor sit amet</p>
         <p className="text-blue-deep-80 m-t-0 p-t-0 m-b-xs">
           <i className="fas fa-clock m-r-xxs"></i>
           <strong> 12 min read</strong>
@@ -53,7 +53,7 @@ export const Card_Full_Width_Image = () => (
     <div className="card card--full-width-image">
       <div className="card__section">
         <p className="body-l-b">Title</p>
-        <p className="h-m">Title 36/40</p>
+        <p className="h-m p-b-xs">Title 36/40</p>
         <p className="body-l">Lorem ipsum dolor sit amet</p>
         <div className="card__cta">
           <button className="button button--secondary button--small">
