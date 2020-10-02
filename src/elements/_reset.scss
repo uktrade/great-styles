@@ -22,6 +22,19 @@ acronym[title] {
   text-decoration: none;
 }
 
+button {
+  border: 0;
+  margin: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: normal;
+  -webkit-appearance: none;
+}
+
 // Legend --------------------------------
 // Fix legend text wrapping in Edge and IE
 // ---------------------------------------
