@@ -26,7 +26,6 @@
   }
 
   .close {
-    @include button-reset
     background-color: transparent;
     color: $active-blue;
     cursor: pointer;
