@@ -96,20 +96,6 @@
   transform: rotate(#{$deg + 'deg'});
 }
 
-@mixin button-reset {
-  border: 0;
-  margin: 0;
-  width: auto;
-  overflow: visible;
-  background: transparent;
-  color: inherit;
-  cursor: pointer;
-  font: inherit;
-  line-height: normal;
-  -webkit-appearance: none;
-}
-
-
 // CHEVRONS
 
 @mixin chevron($rotate, $colour) {
