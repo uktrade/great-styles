@@ -41,7 +41,7 @@ export const Card_Horizontal = () => (
       </div>
       <div className="card__section card__section--image">
         <div className="card__image">
-          <img src="https://dummyimage.com/150x150/4b426d/fff" alt="" />
+          <img src="https://dummyimage.com/300x150/4b426d/fff" alt="" />
         </div>
       </div>
     </div>
