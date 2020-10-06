@@ -1,75 +1,29 @@
-
-// Modal component
-
-@import 'helpers/colours';
 @import 'helpers/mixins';
-@import 'helpers/vars';
 
+.modal {
+  width: 630px;
 
-.Modal-Container {
-  display: none;
-  padding: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-
-  .content {
-    max-width: 900px;
-    margin: 30px auto 0;
-    background-color: $white;
-    border: $light-grey solid 1px;
-    padding: 30px;
-    position: relative;
-    z-index: 0;
+  &-header {
+    background: {
+      image: url(asset-path('modal-1.png'));
+      position: center bottom;
+      size: 281px;
+      repeat: no-repeat;
+    }
+    height: 160px;
   }
 
-  .close {
-    background-color: transparent;
-    color: $active-blue;
-    cursor: pointer;
-    font-size: inherit;
-    padding: 0;
-    position: absolute;
-    text-decoration: underline;
-    right: 30px;
-    top: 30px;
-    z-index: 1;
-
-    &:focus {
-      @include focus;
+  &-header--2 {
+    background: {
+      image: url(asset-path('modal-2.png'));
+      size: 365px;
     }
   }
-}
 
-.Modal-Overlay {
-  background-color: $black;
-  display: none;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  opacity: 0.4;
-  position: fixed;
-}
-
-@media (max-width: 900px) {
-  .Modal-Container .content {
-    margin: 30px;
-  }
-}
-
-@media (max-width: 480px) {
-  .Modal-Container {
-    .close {
-      right: 15px;
-      top: 20px;
-    }
-
-    .content {
-      margin: 15px;
-      padding: 20px 15px;
+  &-header--3 {
+    background: {
+      image: url(asset-path('modal-3.png'));
+      size: 314px;
     }
   }
 }
