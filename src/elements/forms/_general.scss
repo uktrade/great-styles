@@ -209,6 +209,28 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+input[type=date] {
+  position: relative;
+
+  &::-webkit-calendar-picker-indicator {
+    background: none;
+    color: transparent;
+    z-index: 1;
+  }
+
+  &:before {
+    background: none;
+    color: $blue-deep-40;
+    content: '\f073';
+    height: 25px;
+    font-family: 'Font Awesome 5 Free';
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    width: 25px;
+  }
+}
+
 // Hide dropdown arrow in IE11
 select::-ms-expand {
   display: none;

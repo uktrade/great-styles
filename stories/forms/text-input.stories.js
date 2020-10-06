@@ -38,3 +38,12 @@ export const Input_disabled = () => (
     </div>
   </div>
 );
+
+export const Input_date = () => (
+  <div className="m-s">
+    <div className="form-group">
+      <label className="form-label" htmlFor="full-name-f1">Date of birth</label>
+      <input className="form-control" id="full-name-f1" type="date" name="full-name-f1"/>
+    </div>
+  </div>
+);
