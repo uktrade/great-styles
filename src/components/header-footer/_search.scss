@@ -36,7 +36,6 @@
     }
 
     button {
-      @include button-reset;
       color: $white;
       border: 0;
       font-size: 0; // hide button text visually but not for screenreaders

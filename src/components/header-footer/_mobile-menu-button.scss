@@ -16,8 +16,6 @@
   display: none;
 
   @media (max-width: $tablet-max-breakpoint) {
-    @include button-reset;
-
     height: 40px;
     position: absolute;
     top: 40px;
