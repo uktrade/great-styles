@@ -98,3 +98,10 @@ export const button_small_only_icon = () =>
     false,
     true
   );
+
+export const button_full_width = () =>
+  renderButtons([
+    "button button--full-width",
+    "button button--full-width button--secondary ",
+    "button button--full-width button--tertiary "
+  ]);
