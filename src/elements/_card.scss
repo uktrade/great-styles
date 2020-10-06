@@ -21,7 +21,7 @@
 
   &--horizontal {
     display: flex;
-    padding: 30px;
+    padding: 0;
 
     .card__cta {
       margin-bottom: 20px;
@@ -32,9 +32,20 @@
       margin-top: 0;
     }
 
+    .card__section {
+      padding: 30px 0 30px 30px;
+      width: 50%;
+    }
+
     .card__section--image {
       display: flex;
-      align-items: center;
+      align-items: flex-end;
+      padding: 0;
+
+      img {
+        border-bottom-right-radius: 10px;
+        max-width: 100%;
+      }
     }
   }
 
