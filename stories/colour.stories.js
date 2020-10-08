@@ -25,6 +25,7 @@ const colors = [
   "blue-deep-10",
   "aqua-100",
   "aqua-20",
+  "red-deep-100",
   "red-100",
   "red-90",
   "red-80",
