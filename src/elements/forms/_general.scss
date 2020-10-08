@@ -194,10 +194,12 @@ input[type=number] {
   background-position: calc(100% - 10px);
 
   // Disable inner shadow and remove rounded corners
-  border-radius: 0;
-  box-sizing: border-box;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  &.square {
+    border-radius: 0;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
 }
 
 input[type=number]::-webkit-inner-spin-button,
