@@ -4,23 +4,32 @@
   width: 630px;
 
   &-header {
-    background: {
-      image: url(asset-path('modal-1.png'));
-      position: center bottom;
-      size: 281px;
-      repeat: no-repeat;
-    }
-    height: 160px;
+
   }
 
-  &-header--2 {
+  &-header-bg {
+    height: 160px;
+    background: {
+      position: center bottom;
+      repeat: no-repeat;
+    }
+  }
+
+  &-header-bg--1 {
+    background: {
+      image: url(asset-path('modal-1.png'));
+      size: 281px;
+    }
+  }
+
+  &-header-bg--2 {
     background: {
       image: url(asset-path('modal-2.png'));
       size: 365px;
     }
   }
 
-  &-header--3 {
+  &-header-bg--3 {
     background: {
       image: url(asset-path('modal-3.png'));
       size: 314px;
