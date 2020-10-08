@@ -19,10 +19,27 @@ export const Modal = () => (
   </div>
 )
 
+export const Modal_1 = () => (
+  <div className='bg-blue-deep-10 p-l'>
+    <div className='modal'>
+      <div className='modal-header  modal-header-bg modal-header-bg--1 radius-top bg-blue-deep-80 p-s'>
+        <a href='/test' className='link text-white body-m modal-close'><i className='fas fa-arrow-circle-left m-r-xxs' /> back</a>
+      </div>
+      <div className='modal-inner text-blue-deep-80 bg-white radius-bottom'>
+        <div className='p-s'>
+          <h4 className='h-xs p-0'>Add your target market</h4>
+          <p className='m-t-xs'>You will need to choose a target market before you can complete this section</p>
+          <button className='button'>Add a target market</button>
+        </div>
+      </div>
+    </div>
+  </div>
+)
+
 export const Modal_2 = () => (
   <div className='bg-blue-deep-10 p-l'>
     <div className='modal'>
-      <div className='modal-header modal-header--2 radius-top bg-blue-deep-80 p-s'>
+      <div className='modal-header modal-header-bg modal-header-bg--2 radius-top bg-blue-deep-80 p-s'>
         <a href='/test' className='link text-white body-m modal-close'><i className='fas fa-arrow-circle-left m-r-xxs' /> back</a>
       </div>
       <div className='modal-inner text-blue-deep-80 bg-white radius-bottom'>
@@ -39,7 +56,7 @@ export const Modal_2 = () => (
 export const Modal_3 = () => (
   <div className='bg-blue-deep-10 p-l'>
     <div className='modal'>
-      <div className='modal-header modal-header--3 radius-top bg-blue-deep-80 p-s'>
+      <div className='modal-header modal-header-bg modal-header-bg--3 radius-top bg-blue-deep-80 p-s'>
         <a href='/test' className='link text-white body-m modal-close'><i className='fas fa-arrow-circle-left m-r-xxs' /> back</a>
       </div>
       <div className='modal-inner text-blue-deep-80 bg-white radius-bottom'>
