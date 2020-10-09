@@ -1,7 +1,8 @@
-import { configure, addDecorator, addParameters } from "@storybook/react";
-import { withA11y } from "@storybook/addon-a11y";
+import {configure, addDecorator, addParameters} from "@storybook/react";
+import {withA11y} from "@storybook/addon-a11y";
 import centered from "@storybook/addon-centered/react";
-import { initDsm } from "@invisionapp/dsm-storybook";
+import {initDsm} from "@invisionapp/dsm-storybook";
+import {withInfo} from "@storybook/addon-info";
 
 /**
  * To override @invisionapp/dsm-storybook custom options\theme you can use Storybook options parameter and theming
@@ -20,14 +21,20 @@ import { initDsm } from "@invisionapp/dsm-storybook";
 
 addParameters({
   backgrounds: [
-    { name: "DSM background", value: "#f8f8fa", default: true },
-    { name: "dark", value: "#333" }
-  ]
+    {name: "DSM background", value: "#f8f8fa", default: true},
+    {name: "dark", value: "#333"},
+  ],
 });
 
-addParameters({ docs: { page: null } });
+addParameters({docs: {page: null}});
 addDecorator(withA11y);
 addDecorator(centered);
+addDecorator(
+  withInfo({
+    header: false,
+    source: true,
+  })
+);
 
 //Init Dsm
 initDsm({
@@ -37,5 +44,5 @@ initDsm({
     // apply the custom options
     // setCustomOptions();
     configure(require.context("../stories", true, /\.stories\.js$/), module);
-  }
+  },
 });
