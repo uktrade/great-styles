@@ -41,3 +41,14 @@
     border-radius: 50%;
   }
 }
+
+.media-block--round-image-small {
+  > img {
+    width: 50px;
+    margin: 0 0 30px 0;
+
+    @include tablet {
+      margin: 0 30px 0 20px;
+    }
+  }
+}
