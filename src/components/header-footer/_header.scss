@@ -61,9 +61,11 @@ $menu-margin-s: 20px;
         padding: $space-xs;
         border-radius: $space-xs * 3 / 2;
         text-decoration: none;
+
         &.active {
           background-color: $blue-deep-70;
         }
+
         &:focus {
           color: $colour-white-100;
         }
@@ -107,7 +109,9 @@ $menu-margin-s: 20px;
         border-radius: 50%;
       }
     }
+
     transition: background-color 0.3s;
+
     &:hover {
       background-color: darken($black-10, 5%);
     }
