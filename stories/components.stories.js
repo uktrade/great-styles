@@ -2,6 +2,30 @@ import React from "react";
 
 export default { title: "Components" };
 
+export const Header = () => (
+  <div style={{minWidth:'1000px'}}>
+    <header class="magna-header bg-blue-deep-80 text-white" id="header" dir="ltr" data-ga-section="header">
+      <nav>
+        <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
+          <img className="header-logo" src="/images/exporting-is-great.svg" alt="Exporting is Great" id="header-logo-exporting-is-great"/>
+        </a>
+        <div className="header-links">
+          <ul id="services-area" className="services-area">
+            <li><a id="header-link-learning" className="link active" href="/learn/categories/">Learn to export</a></li>
+            <li><a id="header-link-markets" className="link" href="/find-your-target-market/ ">Target a market</a></li>
+            <li><a id="header-link-exporting-plan" className="link" href="/export-plan/dashboard/">Make an export plan</a></li>
+            <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
+              <div style={{lineHeight: '0'}}>
+                <button className="avatar"><i className="fas fa-user text-blue-deep-80"/></button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </div>
+)
+
 export const Personalisation_bar = () => (
   <div className="m-s">
     <div className="m-s p-s bg-black-20">
@@ -47,17 +71,17 @@ export const Personalisation_bar = () => (
 export const Dashboard_card = () => (
   <div className="m-s">
     <div className="m-s p-s bg-black-10">
-      <div class="grid">
-        <div class="c-1-2 m-b-s">
-          <section class="g-card">
-            <div class="g-card-header">
-              <h3 class="h-m">.g-card-header</h3>
+      <div className="grid">
+        <div className="c-1-2 m-b-s">
+          <section className="g-card">
+            <div className="g-card-header">
+              <h3 className="h-m">.g-card-header</h3>
             </div>
             .g-card - used for cards in the domestic dashboard
           </section>
-          <section class="g-card" id="your-export-plan-card">
-            <div class="g-card-header">
-              <h3 class="h-m">Your Learning progress</h3>
+          <section className="g-card" id="your-export-plan-card">
+            <div className="g-card-header">
+              <h3 className="h-m">Your Learning progress</h3>
             </div>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -67,10 +91,10 @@ export const Dashboard_card = () => (
             </p>
           </section>
         </div>
-        <div class="c-1-2 m-b-s">
-          <section class="g-card" id="your-export-plan-card">
-            <div class="g-card-header">
-              <h3 class="h-m">Your export plan</h3>
+        <div className="c-1-2 m-b-s">
+          <section className="g-card" id="your-export-plan-card">
+            <div className="g-card-header">
+              <h3 className="h-m">Your export plan</h3>
             </div>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -79,9 +103,9 @@ export const Dashboard_card = () => (
               nisi ut aliquip ex ea commodo consequat.
             </p>
           </section>
-          <section class="g-card" id="your-export-plan-card">
-            <div class="g-card-header">
-              <h3 class="h-m">Your favourite colour</h3>
+          <section className="g-card" id="your-export-plan-card">
+            <div className="g-card-header">
+              <h3 className="h-m">Your favourite colour</h3>
             </div>
             <p>Blue</p>
           </section>
