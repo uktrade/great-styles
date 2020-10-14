@@ -21,146 +21,107 @@ $menu-margin-s: 20px;
   }
 }
 
-.g-header,
-.g-sub-header {
-  // need to make sure it's not underneath anything
+.magna-header {
   position: relative;
-  z-index: 5;
+  z-index: 2;
 
-  &:focus-within {
-    // ensure that the focused outline will appear above any other headers/sub-headers.
-    // focus-within won't work on all browsers, but its still usable without this.
-    z-index: 6;
-  }
-
-  a:focus {
-    @include focus;
-
-    &:active {
-      background-color: $focus-yellow;
-      color: $great-blue;
+  .header-logo {
+    @include desktop {
+      height: 50px + 2*$space-xxs;
+      padding: $space-xxs;
     }
   }
 
-  .menu {
-    background-color: $great-blue;
-    position: relative;
-
-    .container {
-      position: relative;
-      display: flex;
-      flex-wrap: wrap;
-      align-content: center;
-      padding: 0;
-      @extend .container;
-    }
-  }
-
-  .extra-links {
-    @include tablet {
-      top: $space-xs;
-    }
-    margin: 0;
-    font-size: 14px;
-    color: $white;
-    position: absolute;
-    top: $space-xs-m;
-    right: 0;
+  .header-links {
     display: flex;
-
-    li:last-child {
-      margin-left: 10px;
-    }
+    flex-grow: 1;
+    justify-content: flex-end;
   }
 
-  .main-nav-container {
-    &.mobile {
-      margin: 0;
-      @include mobile-only;
-    }
-
-    &.desktop {
-      background-color: transparent;
-      display: flex;
-      justify-content: flex-end;
-      flex-grow: 1;
-      align-self: flex-end;
-      @include desktop-only;
-
-      @media (max-width: 1260px) {
-        margin-left: $menu-margin-l;
-      }
-    }
-  }
-
-  .main-nav {
-    &.mobile {
-      display: none;
-      transition: all .2s ease;
-      background-color: $lightened-great-blue;
-      margin: 0;
-      width: 100%;
-      opacity: 0;
-      overflow: hidden;
-
-      &.expanded {
-        opacity: 1;
-        display: block;
-      }
-
-      .nav-list {
-        margin: 4px 30px;
-        flex-direction: column;
-      }
-    }
-
-    &.desktop {
-      max-width: $site-width;
-    }
-  }
-
-  .nav-list {
+  ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    position: relative;
     margin: 0;
 
-    .menu-item:last-child {
-      padding-right: 0;
-    }
+    li {
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-top: auto;
+      margin-bottom: auto;
 
-    @media (max-width: 420px) {
-      margin: 4px $menu-margin-s;
+      &.name-greet {
+        max-width: 200px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      a.link {
+        color: $colour-white-100;
+        padding: $space-xs;
+        border-radius: $space-xs * 3 / 2;
+        text-decoration: none;
+
+        &.active {
+          background-color: $blue-deep-70;
+        }
+
+        &:focus {
+          color: $colour-white-100;
+        }
+      }
     }
   }
 
-  .menu-item {
-    width: auto;
-    box-sizing: border-box;
-    line-height: 1;
-    padding: 15px;
-    padding-top: 0;
-    position: relative;
+  nav {
+    width: 100%;
+    display: flex;
+
+    .services-area,
+    .user-state-area {
+      li:last-child {
+        padding-right: 30px;
+      }
+    }
   }
 
-  .link-heading {
-    color: $white;
-    font-family: inherit;
-    display: block;
-    @include brand-xsmall;
-    text-decoration: none;
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $black-10;
     position: relative;
+    padding: 0;
+
+    &:focus,
+    &.active {
+      outline: none;
+
+      &:after {
+        content: '';
+        top: -10%;
+        left: -10%;
+        display: block;
+        position: absolute;
+        border: 2px solid $red-80;
+        width: 110%;
+        height: 110%;
+        border-radius: 50%;
+      }
+    }
+
+    transition: background-color 0.3s;
 
     &:hover {
-      text-decoration: underline;
+      background-color: darken($black-10, 5%);
     }
 
-    @media (max-width: 768px) {
-      text-decoration: underline;
-      padding: 15px 0;
-      margin: 0;
-      line-height: 1;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
     }
   }
+
+
 }
