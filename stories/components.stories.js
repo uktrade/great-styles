@@ -3,66 +3,94 @@ import React from "react";
 export default { title: "Components" };
 
 export const Header = () => (
-  <div style={{minWidth:'1000px'}}>
-    <header class="magna-header bg-blue-deep-80 text-white" id="header" dir="ltr" data-ga-section="header">
-      <nav>
-        <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
-          <img className="header-logo" src="/images/exporting-is-great.svg" alt="Exporting is Great" id="header-logo-exporting-is-great"/>
-        </a>
-        <div className="header-links">
-          <ul id="services-area" className="services-area">
-            <li><a id="header-link-learning" className="link active" href="/learn/categories/">Learn to export</a></li>
-            <li><a id="header-link-markets" className="link" href="/find-your-target-market/ ">Target a market</a></li>
-            <li><a id="header-link-exporting-plan" className="link" href="/export-plan/dashboard/">Make an export plan</a></li>
-            <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
-              <div style={{lineHeight: '0'}}>
-                <button className="avatar"><i className="fas fa-user text-blue-deep-80"/></button>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-  </div>
-)
+  <div style={{minWidth:'1200px'}}>
+  
+    <div className="p-v-m">
+      <header className="magna-header bg-blue-deep-80 text-white" id="header" dir="ltr" data-ga-section="header">
+        <nav>
+          <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
+            <img className="header-logo" src="/images/exporting-is-great.svg" alt="Exporting is Great" id="header-logo-exporting-is-great"/>
+          </a>
+          <div className="header-links">
+            <ul id="services-area" className="services-area">
+              <li><a id="header-link-learning" className="link active" href="/learn/categories/">Learn to export</a></li>
+              <li><a id="header-link-markets" className="link" href="/find-your-target-market/ ">Target a market</a></li>
+              <li><a id="header-link-exporting-plan" className="link" href="/export-plan/dashboard/">Make an export plan</a></li>
+              <li><a id="header-sign-up-link" href="/signup/" className="button button--primary">Sign up</a></li>
+              <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
+                <div style={{lineHeight:'0'}}>
+                  <button className="avatar">
+                  <i className="fas fa-caret-down text-blue-deep-80" style={{fontSize: '30px'}}/>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    </div>
 
-export const Personalisation_bar = () => (
-  <div className="m-s">
-    <div className="m-s p-s bg-black-20">
-      <nav className="p-t-xxs p-h-xs p-b-xxs bg-white" id="personalisation-bar">
-        <span className="m-f-xs m-r-xxs">I am interested in exporting</span>
-        <span id="set-product-button">
-          <button className="button button--primary button--round-corner">
-            add products
-          </button>
-        </span>
-        <span className="m-f-xxs m-r-xxs">to</span>
-        <span id="set-country-button">
-          <button className="button button--primary button--round-corner">
-            add countries
-          </button>
-        </span>
+    <div className="p-v-m">
+      <header className="magna-header bg-blue-deep-80 text-white" id="header" dir="ltr" data-ga-section="header">
+        <nav>
+          <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
+            <img className="header-logo" src="/images/exporting-is-great.svg" alt="Exporting is Great" id="header-logo-exporting-is-great"/>
+          </a>
+          <div className="header-links">
+            <ul id="services-area" className="services-area">
+              <li><a id="header-link-learning" className="link active" href="/learn/categories/">Learn to export</a></li>
+              <li><a id="header-link-markets" className="link" href="/find-your-target-market/ ">Target a market</a></li>
+              <li><a id="header-link-exporting-plan" className="link" href="/export-plan/dashboard/">Make an export plan</a></li>
+              <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
+                <div style={{lineHeight: '0'}}>
+                  <button className="avatar"><i className="fas fa-user text-blue-deep-80"/></button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <nav className="p-t-xxs p-h-xs p-b-xxs bg-blue-deep-70 c-full-width text-white" id="personalisation-bar">
+          <span className="m-f-xs m-r-xxs">I want to learn about exporting</span>
+          <span id="set-product-button" data-text="{{product_name}}">
+            <button className="tag tag--tertiary tag--icon">add product<i className="fas fa-plus"></i></button>
+          </span>
+          <span className="m-f-xxs m-r-xxs">to</span>
+          <span id="set-country-button" data-text="{{market.country_name}}">
+            <button className="tag tag--tertiary tag--icon">add country<i className="fas fa-plus"></i></button>
+          </span>
       </nav>
-      <p></p>
-      <nav className="p-t-xxs p-h-xs p-b-xxs bg-white" id="personalisation-bar">
-        <span className="m-f-xs m-r-xxs">I am interested in exporting</span>
-        <span id="set-product-button">
-          <button className="button button--primary button--round-corner">
-            Cheese
-          </button>
-          <button className="button button--primary button--round-corner">
-            Wine
-          </button>
-        </span>
-        <span className="m-f-xxs m-r-xxs">to</span>
-        <span id="set-country-button">
-          <button className="button button--primary button--round-corner">
-            France
-          </button>
-          <button className="button button--primary button--round-corner">
-            Spain
-          </button>
-        </span>
+    </div>
+
+    <div className="p-v-m">
+      <header className="magna-header bg-blue-deep-80 text-white" id="header" dir="ltr" data-ga-section="header">
+        <nav>
+          <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
+            <img className="header-logo" src="/images/exporting-is-great.svg" alt="Exporting is Great" id="header-logo-exporting-is-great"/>
+          </a>
+          <div className="header-links">
+            <ul id="services-area" className="services-area">
+              <li><a id="header-link-learning" className="link active" href="/learn/categories/">Learn to export</a></li>
+              <li><a id="header-link-markets" className="link" href="/find-your-target-market/ ">Target a market</a></li>
+              <li><a id="header-link-exporting-plan" className="link" href="/export-plan/dashboard/">Make an export plan</a></li>
+              <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
+                <div style={{lineHeight: '0'}}>
+                  <button className="avatar"><i className="fas fa-user text-blue-deep-80"/></button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <nav className="p-t-xxs p-h-xs p-b-xxs bg-blue-deep-70 c-full-width text-white" id="personalisation-bar">
+          <span className="m-f-xs m-r-xxs">I want to learn about exporting</span>
+          <span id="set-product-button" data-text="{{product_name}}">
+            <button className="tag tag--icon">Cheese<i className="fas fa-edit"></i></button>
+          </span>
+          <span className="m-f-xxs m-r-xxs">to</span>
+          <span id="set-country-button" data-text="{{market.country_name}}">
+            <button className="tag tag--icon">Italy<i className="fas fa-edit"></i></button>
+          </span>
       </nav>
     </div>
   </div>
