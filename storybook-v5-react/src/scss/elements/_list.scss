@@ -1,0 +1,126 @@
+
+// LISTS
+// ======
+
+@import 'helpers/colours';
+@import 'design-tokens';
+
+ul li,
+ol li {
+  list-style-type: none;
+}
+
+ol.list-number {
+  margin-left: 20px;
+}
+
+ol.list-number li {
+  list-style-type: decimal;
+}
+
+ul.list-bullet {
+  li {
+    position: relative;
+    padding-left: 20px;
+
+    &:before {
+      background-color: $grey;
+      border-radius: 4px;
+      content: '';
+      display: inline-block;
+      height: 8px;
+      left: 0;
+      position: absolute;
+      top: .5em;
+      width: 8px;
+    }
+  }
+}
+
+// DSM colours
+ul.list-dot {
+  li {
+    position: relative;
+    margin-bottom: 11px;
+    padding-left: 42px;
+
+    &:before {
+      background-color: $blue-deep-80;
+      border-radius: 50%;
+      content: '';
+      display: inline-block;
+      height: 4px;
+      left: 12px;
+      position: absolute;
+      top: 14px;
+      width: 4px;
+    }
+  }
+}
+
+ol.list-circle-number  {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  counter-reset: circle-counter;
+
+  li {
+    @include font-body-bold-4-white-1-left;
+    counter-increment: circle-counter;
+    line-height: 30px;
+    list-style-type: none;
+    margin-bottom: 35px;
+    overflow: hidden;
+
+    &:before {
+      @include font-title-2-4-white-1-left;
+      content: counter(circle-counter);
+      background-color: $red-80;
+      float: left;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: block;
+      line-height: 55px;
+      margin-right: 30px;
+      position: relative;
+      text-align: center;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    span {
+      display: block;
+      margin-top: 4px;
+      float: left;
+      width: calc(100% - 80px);
+    }
+    
+  }
+}
+
+ul.list-arrow {
+  margin-bottom: 0;
+
+  li {
+    color: $blue-deep-80;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+    i {
+      color: $blue-deep-60;
+      float: left;
+      font-size: 36px;
+      margin-right: 20px;
+    }
+
+    span {
+      display: block;
+      margin-top: 5px;
+      float: left;
+      width: calc(100% - 38px);
+    }
+  }
+}

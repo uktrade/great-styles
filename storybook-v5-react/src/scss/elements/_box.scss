@@ -1,0 +1,33 @@
+.box {
+  background: $colour-blue-deep-10;
+  border-radius: 10px;
+  padding: 30px;
+  position: relative;
+
+  &:before {
+    background: $colour-blue-deep-10;
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    transform: rotate(45deg);
+    top: -12px;
+    left: 30px;
+
+    @include tablet {
+      top: 30px;
+      left: -12px;
+    }
+  }
+
+  &--no-pointer {
+    padding: 26px 22px;
+
+    &:before {
+      display: none;
+    }
+  }
+}
+
+

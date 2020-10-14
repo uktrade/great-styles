@@ -1,30 +1,30 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { select, text, withKnobs } from '@storybook/addon-knobs';
+import React from "react";
+import {storiesOf} from "@storybook/react";
+import {select, text, withKnobs} from "@storybook/addon-knobs";
 
-import Toast from './Toast';
+import Toast from "./Toast";
 
-storiesOf('Toast', module)
+storiesOf("Toast", module)
   .addDecorator(withKnobs)
   .add(
-    'Toast',
+    "Toast",
     () => {
       const statusOptions = {
-        default: 'default',
-        success: 'success',
-        warning: 'warning',
-        error: 'error',
-        info: 'info'
+        default: "default",
+        success: "success",
+        warning: "warning",
+        error: "error",
+        info: "info",
       };
 
       return (
         <Toast
-          text={text('text', 'This is a notification message')}
-          status={select('status', statusOptions, statusOptions.default)}
+          text={text("text", "This is a notification message")}
+          status={select("status", statusOptions, statusOptions.default)}
         />
       );
     },
     {
-      'in-dsm': { id: '5c4eb8659b3358003a8b60ff', version: '1.0.0' }
+      // 'in-dsm': { id: '5c4eb8659b3358003a8b60ff', version: '1.0.0' }
     }
   );

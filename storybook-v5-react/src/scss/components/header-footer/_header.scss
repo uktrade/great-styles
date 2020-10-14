@@ -1,0 +1,166 @@
+@import 'helpers/vars';
+@import 'helpers/colours';
+@import 'helpers/mixins';
+@import 'helpers/vars';
+
+$menu-item-vertical-spacing: 10px;
+$menu-margin-l: 30px;
+$menu-margin-s: 20px;
+
+@mixin desktop-only() {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+@mixin mobile-only() {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+}
+
+.g-header,
+.g-sub-header {
+  // need to make sure it's not underneath anything
+  position: relative;
+  z-index: 5;
+
+  &:focus-within {
+    // ensure that the focused outline will appear above any other headers/sub-headers.
+    // focus-within won't work on all browsers, but its still usable without this.
+    z-index: 6;
+  }
+
+  a:focus {
+    @include focus;
+
+    &:active {
+      background-color: $focus-yellow;
+      color: $great-blue;
+    }
+  }
+
+  .menu {
+    background-color: $great-blue;
+    position: relative;
+
+    .container {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      padding: 0;
+      @extend .container;
+    }
+  }
+
+  .extra-links {
+    @include tablet {
+      top: $space-xs;
+    }
+    margin: 0;
+    font-size: 14px;
+    color: $white;
+    position: absolute;
+    top: $space-xs-m;
+    right: 0;
+    display: flex;
+
+    li:last-child {
+      margin-left: 10px;
+    }
+  }
+
+  .main-nav-container {
+    &.mobile {
+      margin: 0;
+      @include mobile-only;
+    }
+
+    &.desktop {
+      background-color: transparent;
+      display: flex;
+      justify-content: flex-end;
+      flex-grow: 1;
+      align-self: flex-end;
+      @include desktop-only;
+
+      @media (max-width: 1260px) {
+        margin-left: $menu-margin-l;
+      }
+    }
+  }
+
+  .main-nav {
+    &.mobile {
+      display: none;
+      transition: all .2s ease;
+      background-color: $lightened-great-blue;
+      margin: 0;
+      width: 100%;
+      opacity: 0;
+      overflow: hidden;
+
+      &.expanded {
+        opacity: 1;
+        display: block;
+      }
+
+      .nav-list {
+        margin: 4px 30px;
+        flex-direction: column;
+      }
+    }
+
+    &.desktop {
+      max-width: $site-width;
+    }
+  }
+
+  .nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    position: relative;
+    margin: 0;
+
+    .menu-item:last-child {
+      padding-right: 0;
+    }
+
+    @media (max-width: 420px) {
+      margin: 4px $menu-margin-s;
+    }
+  }
+
+  .menu-item {
+    width: auto;
+    box-sizing: border-box;
+    line-height: 1;
+    padding: 15px;
+    padding-top: 0;
+    position: relative;
+  }
+
+  .link-heading {
+    color: $white;
+    font-family: inherit;
+    display: block;
+    @include brand-xsmall;
+    text-decoration: none;
+    position: relative;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      text-decoration: underline;
+      padding: 15px 0;
+      margin: 0;
+      line-height: 1;
+    }
+  }
+}

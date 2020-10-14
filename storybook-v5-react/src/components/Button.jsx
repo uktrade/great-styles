@@ -1,9 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { chevronRightIcon } from './icons';
-import SVGInline from 'react-svg-inline';
-
-import './_button.scss';
+import React, {Fragment} from "react";
+import PropTypes from "prop-types";
+import "../scss/great-styles.scss";
 
 /**
  * Buttons indicate actions on the page that will occur when a user touches them. This button is responsive to screen sizes.
@@ -11,17 +8,31 @@ import './_button.scss';
  * It requires text in all cases, but allows for icons as an optional addition.
  * The primary button can also exist as an element within larger molecules and organisms.
  * */
-const Button = ({ onClick, icon, disabled, children }) => {
+const Button = ({onClick, icon, disabled, children, size, theme}) => {
   return (
     <button
+      disabled={disabled}
       onClick={!disabled && onClick}
-      className={`c-button ${icon && 'c-button__with-icon'} ${disabled && 'c-button__disabled'}`}
+      className={`button
+         ${
+           size === "large" ? "button--large" : size === "small" ? "button--small" : null
+         } 
+         ${
+           theme === "secondary"
+             ? "button--secondary"
+             : theme === "tertiary"
+             ? "button--tertiary"
+             : null
+         }
+         ${icon && "button--icon"}
+      `}
     >
-      <div className="c-button__content">{children}</div>
+      {!icon && <div className="button__content">{children}</div>}
       {icon && (
-        <div className="c-button__icon">
-          <SVGInline svg={chevronRightIcon} />
-        </div>
+        <Fragment>
+          <i className="fas fa-plus" />
+          <span>{children}</span>
+        </Fragment>
       )}
     </button>
   );
@@ -29,9 +40,17 @@ const Button = ({ onClick, icon, disabled, children }) => {
 
 Button.propTypes = {
   /**
+   * Choose button theme
+   */
+  theme: PropTypes.oneOf(["primary", "secondary", "tertiary"]),
+  /**
    * Adds an icon to the button
    */
-  icon: PropTypes.oneOf(['chevron-right']),
+  icon: PropTypes.oneOf(["icon-left"]),
+  /**
+   * Specify size of the button
+   */
+  size: PropTypes.oneOf(["large", "small", null]),
   /**
    * The content of the Button
    * */
@@ -43,11 +62,11 @@ Button.propTypes = {
   /**
    * The function to be called when the button is clicked
    */
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
-  disabled: false
+  disabled: false,
 };
 
 export default Button;

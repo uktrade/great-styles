@@ -1,0 +1,492 @@
+
+@mixin grid-column($width) {
+  box-sizing: border-box;
+  width: (($site-width + $gutter-small) * $width) - $gutter-small;
+
+  @media (min-width: $mobile-min-breakpoint) {
+    float: left;
+    width: percentage($width);
+  }
+}
+
+@mixin grid-row() {
+  @include float-clear;
+  margin-left: (0 - $gutter-small);
+
+  @media (min-width: $mobile-min-breakpoint) {
+    margin-left: (0 - $gutter-medium);
+  }
+
+  @media (min-width: $tablet-min-breakpoint) {
+    margin-left: (0 - $gutter-large);
+  }
+
+  @media (min-width: $desktop-min-breakpoint) {
+    margin-left: (0 - $gutter-xlarge);
+  }
+
+  & > * {
+    padding-left: $gutter-small;
+
+    @media (min-width: $mobile-min-breakpoint) {
+      padding-left: $gutter-medium;
+    }
+
+    @media (min-width: $tablet-min-breakpoint) {
+      padding-left: $gutter-large;
+    }
+
+    @media (min-width: $desktop-min-breakpoint) {
+      padding-left: $gutter-xlarge;
+    }
+  }
+
+}
+
+.flex-grid {
+  margin: 0 -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-grid > * {
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  > * {
+    display: flex;
+    flex-grow: 1; // align heights of elements inside grid columns
+  }
+}
+
+.grid {
+  @include grid-row
+}
+
+// Included as a shortcut to using a grid-row and columns
+// when only one column is needed
+
+.w-1-6,
+.w-1-5,
+.w-1-4,
+.w-1-3,
+.w-2-3,
+.w-3-4,
+.w-5-12,
+.w-7-12,
+.w-1-2 {
+  width: 100%;
+}
+
+@include tablet {
+  .w-1-6 {
+    width: percentage(1 / 6);
+  }
+
+  .w-1-5 {
+    width: percentage(1 / 5);
+  }
+
+  .w-1-4 {
+    width: 25%;
+  }
+
+  .w-1-2 {
+    width: 50%;
+  }
+
+  .w-1-3 {
+    width: percentage(1 / 3);
+  }
+
+  .w-2-3 {
+    width: percentage(2 / 3);
+  }
+
+  .w-3-4 {
+    width: percentage(3 / 4);
+  }
+
+  .w-5-12 {
+    width: percentage(5 / 12);
+  }
+
+  .w-7-12 {
+    width: percentage(7 / 12);
+  }
+
+  .w-full {
+    width: 100%;
+  }
+
+}
+
+// Non-responsive versions
+
+.w-1-6-all {
+  width: percentage(1 / 6);
+}
+
+.w-1-5-all {
+  width: percentage(1 / 5);
+}
+
+.w-1-4-all {
+  width: 25%;
+}
+
+.w-1-2-all {
+  width: 50%;
+}
+
+.w-1-3-all {
+  width: percentage(1 / 3);
+}
+
+.w-2-3-all {
+  width: percentage(2 / 3);
+}
+
+.w-3-4-all {
+  width: percentage(3 / 4);
+}
+
+.w-5-12-all {
+  width: percentage(5 / 12);
+}
+
+.w-7-12-all {
+  width: percentage(7 / 12);
+}
+
+.w-full-all {
+  width: 100%;
+}
+
+.w-full-viewport {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.c-full {
+  @include grid-column(1);
+  width: 100%;
+}
+
+.c-1-2 {
+  @include grid-column(1 / 2);
+  width: 100%;
+}
+
+.c-1-3 {
+  @include grid-column(1 / 3);
+  width: 100%;
+}
+
+.c-2-3 {
+  @include grid-column(2 / 3);
+  width: 100%;
+}
+
+.c-1-4 {
+  @include grid-column(1 / 4);
+  width: 100%;
+}
+
+.c-5-12 {
+  @include grid-column(5 / 12);
+  width: 100%;
+}
+
+.c-1-6 {
+  @include grid-column(1 / 6);
+  width: 100%;
+}
+
+.c-1-5 {
+  @include grid-column(1 / 5);
+  width: 100%;
+}
+
+.c-3-4 {
+  @include grid-column(3 / 4);
+  width: 100%;
+}
+
+// Used on article pages
+.c-7-12 {
+  @include grid-column(7 / 12);
+  width: 100%;
+}
+
+// Used on lesson page
+.c-1-12 {
+  @include grid-column(1 / 12);
+  width: 100%;
+}
+
+.c-10-12 {
+  @include grid-column(10 / 12);
+  width: 100%;
+}
+
+// =============================
+// Responsive classes
+// =============================
+
+// Medium screen width
+
+@media (min-width: $mobile-min-breakpoint) {
+
+  .w-1-6-m {
+    width: percentage(1 / 6);
+  }
+
+  .w-1-5-m {
+    width: percentage(1 / 5);
+  }
+
+  .w-1-4-m {
+    width: 25%;
+  }
+
+  .w-1-2-m {
+    width: 50%;
+  }
+
+  .w-1-3-m {
+    width: percentage(1 / 3);
+  }
+
+  .w-2-3-m {
+    width: percentage(2 / 3);
+  }
+
+  .w-3-4-m {
+    width: percentage(3 / 4);
+  }
+
+  .w-5-12-m {
+    width: percentage(5 / 12);
+  }
+
+  .w-7-12-m {
+    width: percentage(7 / 12);
+  }
+
+  .w-full-m {
+    width: 100%;
+  }
+
+  .c-full-m {
+    @include grid-column(1);
+  }
+
+  .c-1-2-m {
+    @include grid-column(1 / 2);
+  }
+
+  .c-1-3-m {
+    @include grid-column(1 / 3);
+  }
+
+  .c-2-3-m {
+    @include grid-column(2 / 3);
+  }
+
+  .c-1-5-m {
+    @include grid-column(1 / 5);
+  }
+
+  .c-1-4-m {
+    @include grid-column(1 / 4);
+  }
+
+  .c-5-12-m {
+    @include grid-column(5 / 12);
+  }
+
+  .c-1-6-m {
+    @include grid-column(1 / 6);
+  }
+
+  .c-7-12-m {
+    @include grid-column(7 / 12);
+  }
+
+  .c-3-4-m {
+    @include grid-column(3 / 4);
+  }
+}
+
+// Large screen width
+
+@media (min-width: $tablet-min-breakpoint) {
+
+  .w-1-6-l {
+    width: percentage(1 / 6);
+  }
+
+  .w-1-5-l {
+    width: percentage(1 / 5);
+  }
+
+  .w-1-4-l {
+    width: 25%;
+  }
+
+  .w-1-2-l {
+    width: 50%;
+  }
+
+  .w-1-3-l {
+    width: percentage(1 / 3);
+  }
+
+  .w-2-3-l {
+    width: percentage(2 / 3);
+  }
+
+  .w-3-4-l {
+    width: percentage(3 / 4);
+  }
+
+  .w-5-12-l {
+    width: percentage(5 / 12);
+  }
+
+  .w-7-12-l {
+    width: percentage(7 / 12);
+  }
+
+  .w-full-l {
+    width: 100%;
+  }
+
+  .c-full-l {
+    @include grid-column(1);
+  }
+
+  .c-1-2-l {
+    @include grid-column(1 / 2);
+  }
+
+  .c-1-3-l {
+    @include grid-column(1 / 3);
+  }
+
+  .c-2-3-l {
+    @include grid-column(2 / 3);
+  }
+
+  .c-1-4-l {
+    @include grid-column(1 / 4);
+  }
+
+  .c-1-5-l {
+    @include grid-column(1 / 5);
+  }
+
+  .c-5-12-l {
+    @include grid-column(5 / 12);
+  }
+
+  .c-1-6-l {
+    @include grid-column(1 / 6);
+  }
+
+  .c-7-12-l {
+    @include grid-column(7 / 12);
+  }
+
+  .c-3-4-l {
+    @include grid-column(3 / 4);
+  }
+}
+
+// XLarge screen width
+
+@media (min-width: $desktop-min-breakpoint) {
+
+  .w-1-6-xl {
+    width: percentage(1 / 6);
+  }
+
+  .w-1-5-xl {
+    width: percentage(1 / 5);
+  }
+
+  .w-1-4-xl {
+    width: 25%;
+  }
+
+  .w-1-2-xl {
+    width: 50%;
+  }
+
+  .w-1-3-xl {
+    width: percentage(1 / 3);
+  }
+
+  .w-2-3-xl {
+    width: percentage(2 / 3);
+  }
+
+  .w-3-4-xl {
+    width: percentage(3 / 4);
+  }
+
+  .w-5-12-xl {
+    width: percentage(5 / 12);
+  }
+
+  .w-7-12-xl {
+    width: percentage(7 / 12);
+  }
+
+  .w-full-xl {
+    width: 100%;
+  }
+
+  .c-full-xl {
+    @include grid-column(1);
+  }
+
+  .c-1-2-xl {
+    @include grid-column(1 / 2);
+  }
+
+  .c-1-3-xl {
+    @include grid-column(1 / 3);
+  }
+
+  .c-2-3-xl {
+    @include grid-column(2 / 3);
+  }
+
+  .c-1-4-xl {
+    @include grid-column(1 / 4);
+  }
+
+  .c-1-5-xl {
+    @include grid-column(1 / 5);
+  }
+
+  .c-5-12-xl {
+    @include grid-column(5 / 12);
+  }
+
+  .c-1-6-xl {
+    @include grid-column(1 / 6);
+  }
+
+  .c-7-12-xl {
+    @include grid-column(7 / 12);
+  }
+
+  .c-3-4-xl {
+    @include grid-column(3 / 4);
+  }
+}

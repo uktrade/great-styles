@@ -1,0 +1,29 @@
+@import 'helpers/mixins';
+
+.modal {
+  width: 630px;
+
+  &-header {
+    background: {
+      image: url(asset-path('modal-1.png'));
+      position: center bottom;
+      size: 281px;
+      repeat: no-repeat;
+    }
+    height: 160px;
+  }
+
+  &-header--2 {
+    background: {
+      image: url(asset-path('modal-2.png'));
+      size: 365px;
+    }
+  }
+
+  &-header--3 {
+    background: {
+      image: url(asset-path('modal-3.png'));
+      size: 314px;
+    }
+  }
+}
