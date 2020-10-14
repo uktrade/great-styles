@@ -1,5 +1,7 @@
 /* Styles for modal overlays, windows and menus */
 
+$shim-background: rgba($black-90, 0.3);
+
 .modal-menu {
   position: absolute;
   left: auto;
@@ -96,7 +98,7 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(45, 45, 45, 0.3);
+  background: $shim-background;
   z-index: 3;
 
   &.center {
@@ -108,7 +110,7 @@
   .modal {
     position: absolute;
     background-color: $white;
-    border: none;
+    border: 0;
     border-radius: 5px;
     outline: none;
   }
