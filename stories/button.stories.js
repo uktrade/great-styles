@@ -24,9 +24,6 @@ const renderButtons = (buttons, isDisabled = false, isIconOnly = false) => {
                 }
               })}
             </button>
-            <a href="http://bbc.com" class="button button--secondary">
-              test
-            </a>
           </div>
         );
       })}
