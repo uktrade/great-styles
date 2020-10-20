@@ -5,7 +5,7 @@ export default { title: "Components" };
 export const Header_not_signed_in = () => (    
   <div style={{minWidth:'1200px'}}>
     <div>
-      <header className="magna-header bg-blue-deep-80 text-white" id="header" dir="ltr" data-ga-section="header">
+      <header className="magna-header bg-blue-deep-90 text-white" id="header" dir="ltr" data-ga-section="header">
         <nav>
           <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
             <img className="header-logo" src="/images/exporting-is-great.svg" alt="Exporting is Great" id="header-logo-exporting-is-great"/>
@@ -34,7 +34,7 @@ export const Header_not_signed_in = () => (
 export const Header_signed_in = () => (
   <div style={{minWidth:'1200px'}}>
     <div className="m-v-m">
-      <header className="magna-header bg-blue-deep-80 text-white" id="header" dir="ltr" data-ga-section="header">
+      <header className="magna-header bg-blue-deep-90 text-white" id="header" dir="ltr" data-ga-section="header">
         <nav>
           <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
             <img className="header-logo" src="/images/exporting-is-great.svg" alt="Exporting is Great" id="header-logo-exporting-is-great"/>
@@ -65,7 +65,7 @@ export const Header_signed_in = () => (
       </nav>
     </div>
     <div className="m-v-m">
-        <header className="magna-header bg-blue-deep-80 text-white" id="header" dir="ltr" data-ga-section="header">
+        <header className="magna-header bg-blue-deep-90 text-white" id="header" dir="ltr" data-ga-section="header">
           <nav>
             <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
               <img className="header-logo" src="/images/exporting-is-great.svg" alt="Exporting is Great" id="header-logo-exporting-is-great"/>
@@ -146,7 +146,7 @@ export const Header_with_menu = () => {
   return (
     <div style={{minWidth:'1200px'}}>
       <div style={{position:'relative',paddingBottom:'450px'}}>
-        <header className="magna-header bg-blue-deep-80 text-white" id="header" dir="ltr" data-ga-section="header">
+        <header className="magna-header bg-blue-deep-90 text-white" id="header" dir="ltr" data-ga-section="header">
           <nav>
             <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
               <img className="header-logo" src="/images/exporting-is-great.svg" alt="Exporting is Great" id="header-logo-exporting-is-great"/>
