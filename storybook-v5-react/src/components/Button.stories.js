@@ -8,7 +8,7 @@ import Button from "./Button";
 // This story is written in "Component Story Format" that was introduced in Storybook 5.2
 // https://storybook.js.org/docs/formats/component-story-format/
 export default {
-  title: "Button",
+  title: "Actions|Button",
   parameters: {
     component: Button,
     decorators: [withKnobs],

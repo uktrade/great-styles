@@ -1,10 +1,10 @@
 {
-  "name": "react-sample-v5",
+  "name": "trade-dsm-react-v5",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
-    "@invisionapp/dsm-storybook": "latest",
+    "@invisionapp/dsm-storybook": "0.0.135",
     "@storybook/addon-a11y": "~5.3.0",
     "@storybook/addon-actions": "~5.3.0",
     "@storybook/addon-backgrounds": "~5.3.0",
@@ -12,6 +12,7 @@
     "@storybook/addon-docs": "~5.3.0",
     "@storybook/addon-knobs": "~5.3.0",
     "@storybook/addon-options": "~5.3.0",
+    "@storybook/addon-storysource": "~5.3.0",
     "@storybook/addons": "~5.3.0",
     "@storybook/preset-create-react-app": "^2.1.2",
     "@storybook/react": "~5.3.0",
