@@ -71,9 +71,14 @@
     background: $colour-blue-deep-80;
 
     &:hover,
-    &:active,
-    &:visited {
+    &:visited:hover,
+    &:active {
       background: $colour-blue-deep-100;
+      color: $white;
+    }
+
+    &:visited {
+      background: $colour-blue-deep-80;
       color: $white;
     }
 
