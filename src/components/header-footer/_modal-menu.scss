@@ -46,7 +46,8 @@ $shim-background: rgba($black-90, 0.3);
     margin: 0;
 
     li {
-      a {
+      a,
+      button {
         display: block;
         cursor: pointer;
 
