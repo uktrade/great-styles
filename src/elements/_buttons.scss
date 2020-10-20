@@ -130,6 +130,29 @@
     }
   }
 
+  &--quaternary {
+    background: $colour-green-100;
+
+    &:hover,
+    &:active,
+    &:visited {
+      background: $colour-green-100;
+      color: $white;
+    }
+
+    &:focus,
+    &:focus:active {
+      background: $colour-green-100;
+    }
+
+    &.button--icon,
+    &.button--only-icon {
+      i {
+        color: $white;
+      }
+    }
+  }
+
   &--icon {
     padding-left: 18px;
 

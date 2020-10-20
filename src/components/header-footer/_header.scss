@@ -27,8 +27,8 @@ $menu-margin-s: 20px;
 
   .header-logo {
     @include desktop {
-      height: 50px + 2*$space-xxs;
-      padding: $space-xxs;
+      height: 60px;
+      padding: 10px 0 0 0;
     }
   }
 
@@ -44,8 +44,7 @@ $menu-margin-s: 20px;
     margin: 0;
 
     li {
-      padding-right: 15px;
-      padding-left: 15px;
+      padding: 0 $space-xxs;
       margin-top: auto;
       margin-bottom: auto;
 
@@ -58,8 +57,8 @@ $menu-margin-s: 20px;
 
       a.link {
         color: $colour-white-100;
-        padding: $space-xs;
-        border-radius: $space-xs * 3 / 2;
+        padding: 13px $space-xs;
+        border-radius: $space-xs * 2;
         text-decoration: none;
 
         &.active {

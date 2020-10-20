@@ -2,12 +2,23 @@
   position: relative;
 
   &__button {
+    border: 0;
     bottom: 10px;
+    font: inherit;
+    left: 0;
+    padding: 5px 15px;
     position: absolute;
     right: 10px;
-    z-index: 10;
-    border: 0;
-    font: inherit;
+    width: 100%;
+    z-index: 1;
+
+    i {
+      float: right;
+    }
+
+    &--close {
+      z-index: 3;
+    }
   }
 
   &__list {
@@ -15,7 +26,7 @@
     margin-top: -50px;
     position: absolute;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 
     li {
       padding: 10px 20px;
