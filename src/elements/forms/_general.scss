@@ -194,10 +194,12 @@ input[type=number] {
   background-position: calc(100% - 10px);
 
   // Disable inner shadow and remove rounded corners
-  border-radius: 0;
-  box-sizing: border-box;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  &.square {
+    border-radius: 0;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -338,17 +340,17 @@ select::-ms-expand {
 }
 
 .great-checkbox--large {
-  padding: 0 0 0 57px;
-  min-height: 57px;
+  padding: 0 0 0 50px;
+  min-height: 50px;
 
   input {
-    width: 57px;
-    height: 57px;
+    width: 50px;
+    height: 50px;
   }
 
   label {
     @include font-title-2-4-white-1-left;
-    line-height: 57px;
+    line-height: 50px;
     padding: 0 0 0 24px;
   }
 
@@ -367,16 +369,16 @@ select::-ms-expand {
   [type=checkbox] + label::before {
     border: 3px solid $white;
     border-radius: 10px;
-    width: 51px;
-    height: 51px;
+    width: 44px;
+    height: 44px;
   }
 
   [type=checkbox] + label::after {
     border-color: $white;
     border-width: 0 0 8px 8px;
-    width: 32px;
-    height: 15px;
-    top: 13px;
+    width: 24px;
+    height: 11px;
+    top: 12px;
     left: 9px;
   }
 }

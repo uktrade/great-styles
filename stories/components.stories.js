@@ -2,62 +2,200 @@ import React from "react";
 
 export default { title: "Components" };
 
-export const Personalisation_bar = () => (
-  <div className="m-s">
-    <div className="m-s p-s bg-black-20">
-      <nav className="p-t-xxs p-h-xs p-b-xxs bg-white" id="personalisation-bar">
-        <span className="m-f-xs m-r-xxs">I am interested in exporting</span>
-        <span id="set-product-button">
-          <button className="button button--primary button--round-corner">
-            add products
-          </button>
-        </span>
-        <span className="m-f-xxs m-r-xxs">to</span>
-        <span id="set-country-button">
-          <button className="button button--primary button--round-corner">
-            add countries
-          </button>
-        </span>
-      </nav>
-      <p></p>
-      <nav className="p-t-xxs p-h-xs p-b-xxs bg-white" id="personalisation-bar">
-        <span className="m-f-xs m-r-xxs">I am interested in exporting</span>
-        <span id="set-product-button">
-          <button className="button button--primary button--round-corner">
-            Cheese
-          </button>
-          <button className="button button--primary button--round-corner">
-            Wine
-          </button>
-        </span>
-        <span className="m-f-xxs m-r-xxs">to</span>
-        <span id="set-country-button">
-          <button className="button button--primary button--round-corner">
-            France
-          </button>
-          <button className="button button--primary button--round-corner">
-            Spain
-          </button>
-        </span>
-      </nav>
+export const Header_not_signed_in = () => (    
+  <div style={{minWidth:'1200px'}}>
+    <div>
+      <header className="magna-header bg-blue-deep-90 text-white" id="header" dir="ltr" data-ga-section="header">
+        <nav>
+          <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
+            <img className="header-logo" src="/images/exporting-is-great.svg" alt="Exporting is Great" id="header-logo-exporting-is-great"/>
+          </a>
+          <div className="header-links">
+            <ul id="services-area" className="services-area">
+              <li><a id="header-link-learning" className="link active" href="/learn/categories/">Learn to export</a></li>
+              <li><a id="header-link-markets" className="link" href="/find-your-target-market/ ">Target a market</a></li>
+              <li><a id="header-link-exporting-plan" className="link" href="/export-plan/dashboard/">Make an export plan</a></li>
+              <li><a id="header-sign-up-link" href="/signup/" className="button button--primary">Sign up</a></li>
+              <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
+                <div style={{lineHeight:'0'}}>
+                  <button className="avatar">
+                  <i className="fas fa-caret-down text-blue-deep-80" style={{fontSize: '30px'}}/>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
     </div>
   </div>
-);
+)
+
+export const Header_signed_in = () => (
+  <div style={{minWidth:'1200px'}}>
+    <div className="m-v-m">
+      <header className="magna-header bg-blue-deep-90 text-white" id="header" dir="ltr" data-ga-section="header">
+        <nav>
+          <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
+            <img className="header-logo" src="/images/exporting-is-great.svg" alt="Exporting is Great" id="header-logo-exporting-is-great"/>
+          </a>
+          <div className="header-links">
+            <ul id="services-area" className="services-area">
+              <li><a id="header-link-learning" className="link active" href="/learn/categories/">Learn to export</a></li>
+              <li><a id="header-link-markets" className="link" href="/find-your-target-market/ ">Target a market</a></li>
+              <li><a id="header-link-exporting-plan" className="link" href="/export-plan/dashboard/">Make an export plan</a></li>
+              <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
+                <div style={{lineHeight: '0'}}>
+                  <button className="avatar"><i className="fas fa-user text-blue-deep-80"/></button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <nav className="p-t-xxs p-h-xs p-b-xxs bg-blue-deep-70 c-full-width text-white" id="personalisation-bar">
+          <span className="m-f-xs m-r-xxs">I want to learn about exporting</span>
+          <span id="set-product-button" data-text="{{product_name}}">
+            <button className="tag tag--tertiary tag--icon">add product<i className="fas fa-plus"></i></button>
+          </span>
+          <span className="m-f-xxs m-r-xxs">to</span>
+          <span id="set-country-button" data-text="{{market.country_name}}">
+            <button className="tag tag--tertiary tag--icon">add country<i className="fas fa-plus"></i></button>
+          </span>
+      </nav>
+    </div>
+    <div className="m-v-m">
+        <header className="magna-header bg-blue-deep-90 text-white" id="header" dir="ltr" data-ga-section="header">
+          <nav>
+            <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
+              <img className="header-logo" src="/images/exporting-is-great.svg" alt="Exporting is Great" id="header-logo-exporting-is-great"/>
+            </a>
+            <div className="header-links">
+              <ul id="services-area" className="services-area">
+                <li><a id="header-link-learning" className="link active" href="/learn/categories/">Learn to export</a></li>
+                <li><a id="header-link-markets" className="link" href="/find-your-target-market/ ">Target a market</a></li>
+                <li><a id="header-link-exporting-plan" className="link" href="/export-plan/dashboard/">Make an export plan</a></li>
+                <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
+                  <div style={{lineHeight: '0'}}>
+                    <button className="avatar"><i className="fas fa-user text-blue-deep-80"/></button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </header>
+        <nav className="p-t-xxs p-h-xs p-b-xxs bg-blue-deep-70 c-full-width text-white" id="personalisation-bar">
+            <span className="m-f-xs m-r-xxs">I want to learn about exporting</span>
+            <span id="set-product-button" data-text="{{product_name}}">
+              <button className="tag tag--icon">Cheese<i className="fas fa-edit"></i></button>
+            </span>
+            <span className="m-f-xxs m-r-xxs">to</span>
+            <span id="set-country-button" data-text="{{market.country_name}}">
+              <button className="tag tag--icon">Italy<i className="fas fa-edit"></i></button>
+            </span>
+        </nav>
+      </div>
+  </div>
+)
+
+export const Header_with_menu = () => {
+  const modalMenu = (
+    <div style={{position:'absolute',zIndex:'2', top:'3px', right:'14px'}}>
+      <div className="ReactModal__Content ReactModal__Content--after-open modal-menu" tabindex="-1" role="dialog" style={{marginRight: '-29px', marginTop: '15px', top: '60px', right: '65px', opacity: '1'}}>
+        <div className="h-xs p-t-xxs">Hi Robert</div>
+        <ul className="menu-items">
+          <li>
+            <a href="/dashboard/" className="link">
+              <i className="fa fa-tachometer-alt"/>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="/learn/categories/" className="link">
+              <i className="fa fa-book"/>
+              <span>Learn to export</span>
+            </a>
+          </li>
+          <li>
+            <a href="/find-your-target-market/" className="link">
+              <i className="fa fa-map-marker-alt"/>
+              <span>Target a market</span>
+            </a>
+          </li>
+          <li>
+            <a href="/export-plan/dashboard/" className="link">
+              <i className="fa fa-folder"/>
+              <span>Make an export plan</span>
+            </a>
+          </li>
+          <hr className="m-v-xxs"/>
+          <li>
+            <a href="https://www.great.gov.uk/contact/feedback/" target="_blank" className="link">
+              <i className="fa fa-comment"/>
+              <span>Send a feedback email</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" className="link"><i className="fa fa-arrow-right"></i><span>Sign out</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  )
+
+  return (
+    <div style={{minWidth:'1200px'}}>
+      <div style={{position:'relative',paddingBottom:'450px'}}>
+        <header className="magna-header bg-blue-deep-90 text-white" id="header" dir="ltr" data-ga-section="header">
+          <nav>
+            <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
+              <img className="header-logo" src="/images/exporting-is-great.svg" alt="Exporting is Great" id="header-logo-exporting-is-great"/>
+            </a>
+            <div className="header-links">
+              <ul id="services-area" className="services-area">
+                <li><a id="header-link-learning" className="link active" href="/learn/categories/">Learn to export</a></li>
+                <li><a id="header-link-markets" className="link" href="/find-your-target-market/ ">Target a market</a></li>
+                <li><a id="header-link-exporting-plan" className="link" href="/export-plan/dashboard/">Make an export plan</a></li>
+                <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
+                  <div style={{lineHeight: '0'}}>
+                    <button className="avatar"><i className="fas fa-user text-blue-deep-80"/></button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </header>
+        <nav className="p-t-xxs p-h-xs p-b-xxs bg-blue-deep-70 c-full-width text-white" id="personalisation-bar">
+            <span className="m-f-xs m-r-xxs">I want to learn about exporting</span>
+            <span id="set-product-button" data-text="{{product_name}}">
+              <button className="tag tag--icon">Cheese<i className="fas fa-edit"></i></button>
+            </span>
+            <span className="m-f-xxs m-r-xxs">to</span>
+            <span id="set-country-button" data-text="{{market.country_name}}">
+              <button className="tag tag--icon">Italy<i className="fas fa-edit"></i></button>
+            </span>
+        </nav>
+        {modalMenu}
+      </div>
+
+    </div>
+  )
+};
 
 export const Dashboard_card = () => (
   <div className="m-s">
     <div className="m-s p-s bg-black-10">
-      <div class="grid">
-        <div class="c-1-2 m-b-s">
-          <section class="g-card">
-            <div class="g-card-header">
-              <h3 class="h-m">.g-card-header</h3>
+      <div className="grid">
+        <div className="c-1-2 m-b-s">
+          <section className="g-card">
+            <div className="g-card-header">
+              <h3 className="h-m">.g-card-header</h3>
             </div>
             .g-card - used for cards in the domestic dashboard
           </section>
-          <section class="g-card" id="your-export-plan-card">
-            <div class="g-card-header">
-              <h3 class="h-m">Your Learning progress</h3>
+          <section className="g-card" id="your-export-plan-card">
+            <div className="g-card-header">
+              <h3 className="h-m">Your Learning progress</h3>
             </div>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -67,10 +205,10 @@ export const Dashboard_card = () => (
             </p>
           </section>
         </div>
-        <div class="c-1-2 m-b-s">
-          <section class="g-card" id="your-export-plan-card">
-            <div class="g-card-header">
-              <h3 class="h-m">Your export plan</h3>
+        <div className="c-1-2 m-b-s">
+          <section className="g-card" id="your-export-plan-card">
+            <div className="g-card-header">
+              <h3 className="h-m">Your export plan</h3>
             </div>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -79,9 +217,9 @@ export const Dashboard_card = () => (
               nisi ut aliquip ex ea commodo consequat.
             </p>
           </section>
-          <section class="g-card" id="your-export-plan-card">
-            <div class="g-card-header">
-              <h3 class="h-m">Your favourite colour</h3>
+          <section className="g-card" id="your-export-plan-card">
+            <div className="g-card-header">
+              <h3 className="h-m">Your favourite colour</h3>
             </div>
             <p>Blue</p>
           </section>

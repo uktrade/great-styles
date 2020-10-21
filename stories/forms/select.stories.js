@@ -8,7 +8,7 @@ export const Collapsed = () => (
       <label className='form-label' htmlFor='Business performance'>Business performance</label>
       <input className='form-control' id='Business performance' type='text' name='Business performance' placeholder='Select one' readOnly value='£50 million or over' />
     </div>
-    <button className='select__button text-blue-deep-20 bg-white' type='button' aria-haspopup='listbox'>
+    <button className='select__button text-blue-deep-20' type='button' aria-haspopup='listbox'>
       <i className='fas fa-sort' />
     </button>
   </div>
@@ -20,7 +20,7 @@ export const Expanded = () => (
       <label className='form-label' htmlFor='Business performance'>Business performance</label>
       <input className='form-control' id='Business performance' type='text' name='Business performance' placeholder='Select one' readOnly='' value='£50 million or over' />
     </div>
-    <button className='select__button text-blue-deep-20 bg-white' type='button' aria-haspopup='listbox'>
+    <button className='select__button text-blue-deep-20 select__button--close' type='button' aria-haspopup='listbox'>
       <i className='fas fa-times-circle text-blue-deep-60' />
     </button>
     <ul role='listbox' className='select__list bg-white body-l radius'>

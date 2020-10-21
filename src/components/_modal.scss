@@ -3,24 +3,29 @@
 .modal {
   width: 630px;
 
-  &-header {
+  &-header-bg {
+    height: 160px;
     background: {
-      image: url(asset-path('modal-1.png'));
       position: center bottom;
-      size: 281px;
       repeat: no-repeat;
     }
-    height: 160px;
   }
 
-  &-header--2 {
+  &-header-bg--1 {
+    background: {
+      image: url(asset-path('modal-1.png'));
+      size: 281px;
+    }
+  }
+
+  &-header-bg--2 {
     background: {
       image: url(asset-path('modal-2.png'));
       size: 365px;
     }
   }
 
-  &-header--3 {
+  &-header-bg--3 {
     background: {
       image: url(asset-path('modal-3.png'));
       size: 314px;
