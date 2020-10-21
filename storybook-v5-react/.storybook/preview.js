@@ -7,3 +7,11 @@ addParameters({docs: {page: null}});
 addDecorator(withA11y);
 addDecorator(centered);
 addDecorator(withDsm);
+
+// Sort the stories and folders alphabetically (at the top level)
+addParameters({
+  options: {
+    storySort: (a, b) =>
+      a[1].kind === b[1].kind ? 0 : a[1].id.localeCompare(b[1].id, {numeric: true}),
+  },
+});

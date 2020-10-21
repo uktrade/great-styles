@@ -1,6 +1,6 @@
 import React, {Fragment} from "react";
 import PropTypes from "prop-types";
-import "../scss/great-styles.scss";
+import "../../scss/great-styles.scss";
 
 /**
  * Buttons indicate actions on the page that will occur when a user touches them. This button is responsive to screen sizes.

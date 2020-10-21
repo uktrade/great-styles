@@ -79,6 +79,53 @@ export const Card_Full_Width_Image = () => (
   </div>
 );
 
+export const Dashboard = () => (
+  <div className="m-s">
+    <div className="m-s p-s bg-black-10">
+      <div className="grid">
+        <div className="c-1-2 m-b-s">
+          <section className="g-card">
+            <div className="g-card-header">
+              <h3 className="h-m">.g-card-header</h3>
+            </div>
+            .g-card - used for cards in the domestic dashboard
+          </section>
+          <section className="g-card" id="your-export-plan-card">
+            <div className="g-card-header">
+              <h3 className="h-m">Your Learning progress</h3>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </p>
+          </section>
+        </div>
+        <div className="c-1-2 m-b-s">
+          <section className="g-card" id="your-export-plan-card">
+            <div className="g-card-header">
+              <h3 className="h-m">Your export plan</h3>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </p>
+          </section>
+          <section className="g-card" id="your-export-plan-card">
+            <div className="g-card-header">
+              <h3 className="h-m">Your favourite colour</h3>
+            </div>
+            <p>Blue</p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 // Card_image_below.story = {
 //   parameters: {
 //     // Story-Level 'in-dsm' configuration (Will apply only to the story that is being configured)
