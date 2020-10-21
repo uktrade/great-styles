@@ -4,7 +4,7 @@ import {action} from "@storybook/addon-actions";
 import tagDocs from "./Tag.mdx";
 
 export default {
-  title: "Actions|Tag",
+  title: "Actions/Tag",
   parameters: {
     // component: Tag,
     decorators: [withKnobs],

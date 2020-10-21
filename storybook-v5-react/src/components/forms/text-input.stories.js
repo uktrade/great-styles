@@ -4,7 +4,7 @@ import {action} from "@storybook/addon-actions";
 import textInputDocs from "./text-input.mdx";
 
 export default {
-  title: "Forms|Form molecules",
+  title: "Form/Text-field",
   parameters: {
     // component: Tag,
     decorators: [withKnobs],

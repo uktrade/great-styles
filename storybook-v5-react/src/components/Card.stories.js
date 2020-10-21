@@ -1,6 +1,6 @@
 import React from "react";
 import {withKnobs, boolean, select, text} from "@storybook/addon-knobs";
-import {action} from "@storybook/addon-actions";
+// import {action} from "@storybook/addon-actions";
 import cardDocs from "./Card.mdx";
 
 export default {
@@ -17,7 +17,7 @@ export default {
   },
 };
 
-export const Card = () => (
+export const Card_image_below = () => (
   <div className="m-s">
     <div className="card">
       <div className="card__section">
@@ -79,7 +79,7 @@ export const Card_Full_Width_Image = () => (
   </div>
 );
 
-// Card.story = {
+// Card_image_below.story = {
 //   parameters: {
 //     // Story-Level 'in-dsm' configuration (Will apply only to the story that is being configured)
 //     // Story-Level configuration will override Module-Level 'in-dsm' configuration for the specific story
