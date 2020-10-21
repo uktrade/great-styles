@@ -11,7 +11,7 @@
   color: $white;
   cursor: pointer;
   min-width: 100px;
-  padding: 8px 26px;
+  padding: 6px 26px 5px;
   text-align: center;
   text-decoration: none;
 
@@ -71,9 +71,14 @@
     background: $colour-blue-deep-80;
 
     &:hover,
-    &:active,
-    &:visited {
+    &:visited:hover,
+    &:active {
       background: $colour-blue-deep-100;
+      color: $white;
+    }
+
+    &:visited {
+      background: $colour-blue-deep-80;
       color: $white;
     }
 
@@ -121,6 +126,29 @@
         border-right: 2px solid $colour-black-20;
         border-bottom: 2px solid $colour-black-20;
         border-left: 2px solid $black;
+      }
+    }
+  }
+
+  &--quaternary {
+    background: $colour-green-100;
+
+    &:hover,
+    &:active,
+    &:visited {
+      background: $colour-green-100;
+      color: $white;
+    }
+
+    &:focus,
+    &:focus:active {
+      background: $colour-green-100;
+    }
+
+    &.button--icon,
+    &.button--only-icon {
+      i {
+        color: $white;
       }
     }
   }
