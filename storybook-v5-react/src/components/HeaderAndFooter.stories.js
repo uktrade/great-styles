@@ -30,7 +30,7 @@ export const Header_Signed_Out = () => (
           <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
             <img
               className="header-logo"
-              src="/images/exporting-is-great.svg"
+              src="/images/logo.svg"
               alt="Exporting is Great"
               id="header-logo-exporting-is-great"
             />
@@ -40,7 +40,7 @@ export const Header_Signed_Out = () => (
               <li>
                 <a
                   id="header-link-learning"
-                  className="link active"
+                  className="button button--secondary active"
                   href="/learn/categories/"
                 >
                   Learn to export
@@ -49,7 +49,7 @@ export const Header_Signed_Out = () => (
               <li>
                 <a
                   id="header-link-markets"
-                  className="link"
+                  className="button button--secondary"
                   href="/find-your-target-market/ "
                 >
                   Target a market
@@ -58,7 +58,7 @@ export const Header_Signed_Out = () => (
               <li>
                 <a
                   id="header-link-exporting-plan"
-                  className="link"
+                  className="button button--secondary"
                   href="/export-plan/dashboard/"
                 >
                   Make an export plan
@@ -104,7 +104,7 @@ export const Header_Signed_In = () => (
           <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
             <img
               className="header-logo"
-              src="/images/exporting-is-great.svg"
+              src="/images/logo.svg"
               alt="Exporting is Great"
               id="header-logo-exporting-is-great"
             />
@@ -114,7 +114,7 @@ export const Header_Signed_In = () => (
               <li>
                 <a
                   id="header-link-learning"
-                  className="link active"
+                  className="button button--secondary"
                   href="/learn/categories/"
                 >
                   Learn to export
@@ -123,7 +123,7 @@ export const Header_Signed_In = () => (
               <li>
                 <a
                   id="header-link-markets"
-                  className="link"
+                  className="button button--secondary"
                   href="/find-your-target-market/ "
                 >
                   Target a market
@@ -132,7 +132,7 @@ export const Header_Signed_In = () => (
               <li>
                 <a
                   id="header-link-exporting-plan"
-                  className="link"
+                  className="button button--secondary"
                   href="/export-plan/dashboard/"
                 >
                   Make an export plan
@@ -150,7 +150,7 @@ export const Header_Signed_In = () => (
         </nav>
       </header>
       <nav
-        className="p-t-xxs p-h-xs p-b-xxs bg-blue-deep-70 c-full-width text-white"
+        className="p-v-xs p-h-xs bg-blue-deep-80 c-full-width text-white"
         id="personalisation-bar"
       >
         <span className="m-f-xs m-r-xxs">I want to learn about exporting</span>
@@ -178,7 +178,7 @@ export const Header_Signed_In = () => (
           <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
             <img
               className="header-logo"
-              src="/images/exporting-is-great.svg"
+              src="/images/logo.svg"
               alt="Exporting is Great"
               id="header-logo-exporting-is-great"
             />
@@ -188,7 +188,7 @@ export const Header_Signed_In = () => (
               <li>
                 <a
                   id="header-link-learning"
-                  className="link active"
+                  className="button button--secondary"
                   href="/learn/categories/"
                 >
                   Learn to export
@@ -197,7 +197,7 @@ export const Header_Signed_In = () => (
               <li>
                 <a
                   id="header-link-markets"
-                  className="link"
+                  className="button button--secondary"
                   href="/find-your-target-market/ "
                 >
                   Target a market
@@ -206,7 +206,7 @@ export const Header_Signed_In = () => (
               <li>
                 <a
                   id="header-link-exporting-plan"
-                  className="link"
+                  className="button button--secondary"
                   href="/export-plan/dashboard/"
                 >
                   Make an export plan
@@ -224,7 +224,7 @@ export const Header_Signed_In = () => (
         </nav>
       </header>
       <nav
-        className="p-t-xxs p-h-xs p-b-xxs bg-blue-deep-70 c-full-width text-white"
+        className="p-v-xs p-h-xs bg-blue-deep-80 c-full-width text-white"
         id="personalisation-bar"
       >
         <span className="m-f-xs m-r-xxs">I want to learn about exporting</span>
@@ -320,7 +320,7 @@ export const Header_Menu_Open = () => {
             <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
               <img
                 className="header-logo"
-                src="/images/exporting-is-great.svg"
+                src="/images/logo.svg"
                 alt="Exporting is Great"
                 id="header-logo-exporting-is-great"
               />
@@ -330,7 +330,7 @@ export const Header_Menu_Open = () => {
                 <li>
                   <a
                     id="header-link-learning"
-                    className="link active"
+                    className="button button--secondary"
                     href="/learn/categories/"
                   >
                     Learn to export
@@ -339,7 +339,7 @@ export const Header_Menu_Open = () => {
                 <li>
                   <a
                     id="header-link-markets"
-                    className="link"
+                    className="button button--secondary"
                     href="/find-your-target-market/ "
                   >
                     Target a market
@@ -348,7 +348,7 @@ export const Header_Menu_Open = () => {
                 <li>
                   <a
                     id="header-link-exporting-plan"
-                    className="link"
+                    className="button button--secondary"
                     href="/export-plan/dashboard/"
                   >
                     Make an export plan
@@ -366,7 +366,7 @@ export const Header_Menu_Open = () => {
           </nav>
         </header>
         <nav
-          className="p-t-xxs p-h-xs p-b-xxs bg-blue-deep-70 c-full-width text-white"
+          className="p-v-xs p-h-xs bg-blue-deep-80 c-full-width text-white"
           id="personalisation-bar"
         >
           <span className="m-f-xs m-r-xxs">I want to learn about exporting</span>
