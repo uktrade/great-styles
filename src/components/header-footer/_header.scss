@@ -25,10 +25,13 @@ $menu-margin-s: 20px;
   position: relative;
   z-index: 2;
 
-  .header-logo {
-    @include desktop {
-      height: 60px;
-      padding: 10px 0 0 0;
+  #header-logo-link {
+    line-height: 0;
+    .header-logo {
+      @include desktop {
+        height: 63px;
+        padding: 0;
+      }
     }
   }
 
@@ -48,25 +51,10 @@ $menu-margin-s: 20px;
       margin-top: auto;
       margin-bottom: auto;
 
-      &.name-greet {
-        max-width: 200px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-      }
-
-      a.link {
-        color: $colour-white-100;
-        padding: 13px $space-xs;
-        border-radius: $space-xs * 2;
-        text-decoration: none;
-
+      a.button.button--secondary {
+        background-color: $blue-deep-90;
         &.active {
           background-color: $blue-deep-80;
-        }
-
-        &:focus {
-          color: $colour-white-100;
         }
       }
     }
