@@ -27,6 +27,7 @@ $menu-margin-s: 20px;
 
   #header-logo-link {
     line-height: 0;
+
     .header-logo {
       @include desktop {
         height: 63px;
@@ -53,6 +54,7 @@ $menu-margin-s: 20px;
 
       a.button.button--secondary {
         background-color: $blue-deep-90;
+
         &.active {
           background-color: $blue-deep-80;
         }
