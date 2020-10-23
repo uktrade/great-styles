@@ -8,13 +8,13 @@ export const Header_not_signed_in = () => (
       <header className="magna-header bg-blue-deep-90 text-white" id="header" dir="ltr" data-ga-section="header">
         <nav>
           <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
-            <img className="header-logo" src="/images/exporting-is-great.svg" alt="Exporting is Great" id="header-logo-exporting-is-great"/>
+            <img className="header-logo" src="/images/logo.svg" alt="Exporting is Great" id="header-logo-exporting-is-great"/>
           </a>
           <div className="header-links">
             <ul id="services-area" className="services-area">
-              <li><a id="header-link-learning" className="link active" href="/learn/categories/">Learn to export</a></li>
-              <li><a id="header-link-markets" className="link" href="/find-your-target-market/ ">Target a market</a></li>
-              <li><a id="header-link-exporting-plan" className="link" href="/export-plan/dashboard/">Make an export plan</a></li>
+              <li><a id="header-link-learning" className="button button--secondary active" href="/learn/categories/">Learn to export</a></li>
+              <li><a id="header-link-markets" className="button button--secondary" href="/find-your-target-market/ ">Target a market</a></li>
+              <li><a id="header-link-exporting-plan" className="button button--secondary" href="/export-plan/dashboard/">Make an export plan</a></li>
               <li><a id="header-sign-up-link" href="/signup/" className="button button--primary">Sign up</a></li>
               <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
                 <div style={{lineHeight:'0'}}>
@@ -37,14 +37,14 @@ export const Header_signed_in = () => (
       <header className="magna-header bg-blue-deep-90 text-white" id="header" dir="ltr" data-ga-section="header">
         <nav>
           <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
-            <img className="header-logo" src="/images/exporting-is-great.svg" alt="Exporting is Great" id="header-logo-exporting-is-great"/>
+            <img className="header-logo" src="/images/logo.svg" alt="Exporting is Great" id="header-logo-exporting-is-great"/>
           </a>
           <div className="header-links">
             <ul id="services-area" className="services-area">
-              <li><a id="header-link-learning" className="link active" href="/learn/categories/">Learn to export</a></li>
-              <li><a id="header-link-markets" className="link" href="/find-your-target-market/ ">Target a market</a></li>
-              <li><a id="header-link-exporting-plan" className="link" href="/export-plan/dashboard/">Make an export plan</a></li>
-              <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
+              <li><a id="header-link-learning" className="button button--secondary" href="/learn/categories/">Learn to export</a></li>
+              <li><a id="header-link-markets" className="button button--secondary" href="/find-your-target-market/ ">Target a market</a></li>
+              <li><a id="header-link-exporting-plan" className="button button--secondary" href="/export-plan/dashboard/">Make an export plan</a></li>
+             <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
                 <div style={{lineHeight: '0'}}>
                   <button className="avatar"><i className="fas fa-user text-blue-deep-80"/></button>
                 </div>
@@ -53,7 +53,7 @@ export const Header_signed_in = () => (
           </div>
         </nav>
       </header>
-      <nav className="p-t-xxs p-h-xs p-b-xxs bg-blue-deep-70 c-full-width text-white" id="personalisation-bar">
+      <nav className="p-v-xs p-h-xs bg-blue-deep-80 c-full-width text-white" id="personalisation-bar">
           <span className="m-f-xs m-r-xxs">I want to learn about exporting</span>
           <span id="set-product-button" data-text="{{product_name}}">
             <button className="tag tag--tertiary tag--icon">add product<i className="fas fa-plus"></i></button>
@@ -68,13 +68,13 @@ export const Header_signed_in = () => (
         <header className="magna-header bg-blue-deep-90 text-white" id="header" dir="ltr" data-ga-section="header">
           <nav>
             <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
-              <img className="header-logo" src="/images/exporting-is-great.svg" alt="Exporting is Great" id="header-logo-exporting-is-great"/>
+              <img className="header-logo" src="/images/logo.svg" alt="Exporting is Great" id="header-logo-exporting-is-great"/>
             </a>
             <div className="header-links">
               <ul id="services-area" className="services-area">
-                <li><a id="header-link-learning" className="link active" href="/learn/categories/">Learn to export</a></li>
-                <li><a id="header-link-markets" className="link" href="/find-your-target-market/ ">Target a market</a></li>
-                <li><a id="header-link-exporting-plan" className="link" href="/export-plan/dashboard/">Make an export plan</a></li>
+                <li><a id="header-link-learning" className="button button--secondary" href="/learn/categories/">Learn to export</a></li>
+                <li><a id="header-link-markets" className="button button--secondary" href="/find-your-target-market/ ">Target a market</a></li>
+                <li><a id="header-link-exporting-plan" className="button button--secondary" href="/export-plan/dashboard/">Make an export plan</a></li>
                 <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
                   <div style={{lineHeight: '0'}}>
                     <button className="avatar"><i className="fas fa-user text-blue-deep-80"/></button>
@@ -84,7 +84,7 @@ export const Header_signed_in = () => (
             </div>
           </nav>
         </header>
-        <nav className="p-t-xxs p-h-xs p-b-xxs bg-blue-deep-70 c-full-width text-white" id="personalisation-bar">
+        <nav className="p-v-xs p-h-xs bg-blue-deep-80 c-full-width text-white" id="personalisation-bar">
             <span className="m-f-xs m-r-xxs">I want to learn about exporting</span>
             <span id="set-product-button" data-text="{{product_name}}">
               <button className="tag tag--icon">Cheese<i className="fas fa-edit"></i></button>
@@ -149,13 +149,13 @@ export const Header_with_menu = () => {
         <header className="magna-header bg-blue-deep-90 text-white" id="header" dir="ltr" data-ga-section="header">
           <nav>
             <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
-              <img className="header-logo" src="/images/exporting-is-great.svg" alt="Exporting is Great" id="header-logo-exporting-is-great"/>
+              <img className="header-logo" src="/images/logo.svg" alt="Exporting is Great" id="header-logo-exporting-is-great"/>
             </a>
             <div className="header-links">
               <ul id="services-area" className="services-area">
-                <li><a id="header-link-learning" className="link active" href="/learn/categories/">Learn to export</a></li>
-                <li><a id="header-link-markets" className="link" href="/find-your-target-market/ ">Target a market</a></li>
-                <li><a id="header-link-exporting-plan" className="link" href="/export-plan/dashboard/">Make an export plan</a></li>
+                <li><a id="header-link-learning" className="button button--secondary" href="/learn/categories/">Learn to export</a></li>
+                <li><a id="header-link-markets" className="button button--secondary" href="/find-your-target-market/ ">Target a market</a></li>
+                <li><a id="header-link-exporting-plan" className="button button--secondary" href="/export-plan/dashboard/">Make an export plan</a></li>
                 <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
                   <div style={{lineHeight: '0'}}>
                     <button className="avatar"><i className="fas fa-user text-blue-deep-80"/></button>
@@ -165,7 +165,7 @@ export const Header_with_menu = () => {
             </div>
           </nav>
         </header>
-        <nav className="p-t-xxs p-h-xs p-b-xxs bg-blue-deep-70 c-full-width text-white" id="personalisation-bar">
+        <nav className="p-v-xs p-h-xs bg-blue-deep-80 c-full-width text-white" id="personalisation-bar">
             <span className="m-f-xs m-r-xxs">I want to learn about exporting</span>
             <span id="set-product-button" data-text="{{product_name}}">
               <button className="tag tag--icon">Cheese<i className="fas fa-edit"></i></button>
