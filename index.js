@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
-const port = (process.env.PORT || 6111);
-
+const port = process.env.PORT || 6111;
 
 app.use(express.static("styles"));
 
