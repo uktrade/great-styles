@@ -1,19 +1,10 @@
 import React from "react";
-import {withKnobs, boolean, select, text} from "@storybook/addon-knobs";
-// import {action} from "@storybook/addon-actions";
-// import cardDocs from "./Card.mdx";
+import {withKnobs} from "@storybook/addon-knobs";
 
 export default {
   title: "Header and Footer",
   parameters: {
-    // component: Tag,
     decorators: [withKnobs],
-    // Module-Level 'in-dsm' configuration (Will apply to all stories inside the module)
-    // "in-dsm": {
-    //   // id: "5f6de8af2e4958dec03e7d04",
-    //   versionFilePath: "../components/versionFile.json",
-    // },
-    // docs: {page: cardDocs},
   },
 };
 
