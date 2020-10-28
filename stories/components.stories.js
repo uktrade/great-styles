@@ -16,7 +16,7 @@ export const Header_not_signed_in = () => (
               <li><a id="header-link-markets" className="button button--secondary" href="/find-your-target-market/ ">Target a market</a></li>
               <li><a id="header-link-exporting-plan" className="button button--secondary" href="/export-plan/dashboard/">Make an export plan</a></li>
               <li><a id="header-sign-up-link" href="/signup/" className="button button--primary">Sign up</a></li>
-              <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
+              <li id="header-link-user-profile">
                 <div style={{lineHeight:'0'}}>
                   <button className="avatar">
                     <i className="fas fa-caret-down text-blue-deep-80" style={{fontSize: '30px'}}/>
@@ -45,7 +45,7 @@ export const Header_signed_in = () => (
               <li><a id="header-link-learning" className="button button--secondary" href="/learn/categories/">Learn to export</a></li>
               <li><a id="header-link-markets" className="button button--secondary" href="/find-your-target-market/ ">Target a market</a></li>
               <li><a id="header-link-exporting-plan" className="button button--secondary" href="/export-plan/dashboard/">Make an export plan</a></li>
-             <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
+             <li id="header-link-user-profile">
                 <div style={{lineHeight: '0'}}>
                   <button className="avatar">
                     <i className="fas fa-user text-blue-deep-80"/>
@@ -79,7 +79,7 @@ export const Header_signed_in = () => (
                 <li><a id="header-link-learning" className="button button--secondary" href="/learn/categories/">Learn to export</a></li>
                 <li><a id="header-link-markets" className="button button--secondary" href="/find-your-target-market/ ">Target a market</a></li>
                 <li><a id="header-link-exporting-plan" className="button button--secondary" href="/export-plan/dashboard/">Make an export plan</a></li>
-                <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
+                <li id="header-link-user-profile">
                   <div style={{lineHeight: '0'}}>
                     <button className="avatar">
                       <i className="fas fa-user text-blue-deep-80"/>
@@ -107,7 +107,7 @@ export const Header_signed_in = () => (
 
 export const Header_with_menu = () => {
   const modalMenu = (
-    <div style={{position:'absolute',zIndex:'2', top:'3px', right:'14px'}}>
+    <div style={{position:'absolute',zIndex:'2', top:'3px', right:'-14px'}}>
       <div className="ReactModal__Content ReactModal__Content--after-open modal-menu" tabindex="-1" role="dialog" style={{marginRight: '-29px', marginTop: '15px', top: '60px', right: '65px', opacity: '1'}}>
         <div className="h-xs p-t-xxs">Hi Robert</div>
         <ul className="menu-items">
@@ -163,7 +163,7 @@ export const Header_with_menu = () => {
                 <li><a id="header-link-learning" className="button button--secondary" href="/learn/categories/">Learn to export</a></li>
                 <li><a id="header-link-markets" className="button button--secondary" href="/find-your-target-market/ ">Target a market</a></li>
                 <li><a id="header-link-exporting-plan" className="button button--secondary" href="/export-plan/dashboard/">Make an export plan</a></li>
-                <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
+                <li id="header-link-user-profile">
                   <div style={{lineHeight: '0'}}>
                     <button className="avatar">
                       <i className="fas fa-user text-blue-deep-80"/>

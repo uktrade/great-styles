@@ -51,7 +51,6 @@ $menu-margin-s: 20px;
     li {
       display: flex;
       align-items: center;
-      padding: 0 $space-xxs;
 
       a.button.button--secondary {
         background-color: $blue-deep-90;
@@ -69,17 +68,18 @@ $menu-margin-s: 20px;
 
     .services-area,
     .user-state-area {
-      li:last-child {
-        padding-right: 30px;
-      }
     }
   }
 
+  #header-link-user-profile {
+    margin: 15px 30px;
+  }
+
   .avatar {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    background-color: $black-10;
+    background-color: $white;
     position: relative;
     padding: 0;
 
@@ -100,10 +100,14 @@ $menu-margin-s: 20px;
       }
     }
 
-    transition: background-color 0.3s;
+    transition: background-color 0.2s;
 
     &:hover {
-      background-color: darken($black-10, 5%);
+      background-color: darken($white, 10%);
+    }
+
+    .fas {
+      margin-top: 5px;
     }
 
     img {
