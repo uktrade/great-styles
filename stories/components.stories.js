@@ -58,7 +58,7 @@ export const Header_signed_in = () => (
         </nav>
       </header>
       <nav className="p-v-xs p-h-xs bg-blue-deep-80 c-full-width text-white" id="personalisation-bar">
-          <span className="m-f-xs m-r-xxs">I want to learn about exporting</span>
+          <span className="m-f-xs m-r-xxs">I want to export</span>
           <span id="set-product-button" data-text="{{product_name}}">
             <button className="tag tag--tertiary tag--icon">add product<i className="fas fa-plus"></i></button>
           </span>
@@ -92,7 +92,7 @@ export const Header_signed_in = () => (
           </nav>
         </header>
         <nav className="p-v-xs p-h-xs bg-blue-deep-80 c-full-width text-white" id="personalisation-bar">
-            <span className="m-f-xs m-r-xxs">I want to learn about exporting</span>
+            <span className="m-f-xs m-r-xxs">I want to export</span>
             <span id="set-product-button" data-text="{{product_name}}">
               <button className="tag tag--icon">Cheese<i className="fas fa-edit"></i></button>
             </span>
@@ -176,7 +176,7 @@ export const Header_with_menu = () => {
           </nav>
         </header>
         <nav className="p-v-xs p-h-xs bg-blue-deep-80 c-full-width text-white" id="personalisation-bar">
-            <span className="m-f-xs m-r-xxs">I want to learn about exporting</span>
+            <span className="m-f-xs m-r-xxs">I want to export</span>
             <span id="set-product-button" data-text="{{product_name}}">
               <button className="tag tag--icon">Cheese<i className="fas fa-edit"></i></button>
             </span>
