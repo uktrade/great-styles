@@ -7,7 +7,7 @@ export const Header_not_signed_in = () => (
     <div>
       <header className="magna-header bg-blue-deep-90 text-white" id="header" dir="ltr" data-ga-section="header">
         <nav>
-          <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
+          <a id="header-logo-link" href="/">
             <img className="header-logo" src="/images/logo.svg" alt="Exporting is Great" id="header-logo-exporting-is-great"/>
           </a>
           <div className="header-links">
@@ -16,10 +16,11 @@ export const Header_not_signed_in = () => (
               <li><a id="header-link-markets" className="button button--secondary" href="/find-your-target-market/ ">Target a market</a></li>
               <li><a id="header-link-exporting-plan" className="button button--secondary" href="/export-plan/dashboard/">Make an export plan</a></li>
               <li><a id="header-sign-up-link" href="/signup/" className="button button--primary">Sign up</a></li>
-              <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
+              <li id="header-link-user-profile">
                 <div style={{lineHeight:'0'}}>
                   <button className="avatar">
-                  <i className="fas fa-caret-down text-blue-deep-80" style={{fontSize: '30px'}}/>
+                    <i className="fas fa-caret-down text-blue-deep-80" style={{fontSize: '30px'}}/>
+                    <span className="visually-hidden" >User menu</span>
                   </button>
                 </div>
               </li>
@@ -36,7 +37,7 @@ export const Header_signed_in = () => (
     <div className="m-v-m">
       <header className="magna-header bg-blue-deep-90 text-white" id="header" dir="ltr" data-ga-section="header">
         <nav>
-          <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
+          <a id="header-logo-link" href="/">
             <img className="header-logo" src="/images/logo.svg" alt="Exporting is Great" id="header-logo-exporting-is-great"/>
           </a>
           <div className="header-links">
@@ -44,9 +45,12 @@ export const Header_signed_in = () => (
               <li><a id="header-link-learning" className="button button--secondary" href="/learn/categories/">Learn to export</a></li>
               <li><a id="header-link-markets" className="button button--secondary" href="/find-your-target-market/ ">Target a market</a></li>
               <li><a id="header-link-exporting-plan" className="button button--secondary" href="/export-plan/dashboard/">Make an export plan</a></li>
-             <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
+             <li id="header-link-user-profile">
                 <div style={{lineHeight: '0'}}>
-                  <button className="avatar"><i className="fas fa-user text-blue-deep-80"/></button>
+                  <button className="avatar">
+                    <i className="fas fa-user text-blue-deep-80"/>
+                    <span className="visually-hidden" >User menu</span>
+                  </button>
                 </div>
               </li>
             </ul>
@@ -54,7 +58,7 @@ export const Header_signed_in = () => (
         </nav>
       </header>
       <nav className="p-v-xs p-h-xs bg-blue-deep-80 c-full-width text-white" id="personalisation-bar">
-          <span className="m-f-xs m-r-xxs">I want to learn about exporting</span>
+          <span className="m-f-xs m-r-xxs">I want to export</span>
           <span id="set-product-button" data-text="{{product_name}}">
             <button className="tag tag--tertiary tag--icon">add product<i className="fas fa-plus"></i></button>
           </span>
@@ -67,7 +71,7 @@ export const Header_signed_in = () => (
     <div className="m-v-m">
         <header className="magna-header bg-blue-deep-90 text-white" id="header" dir="ltr" data-ga-section="header">
           <nav>
-            <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
+            <a id="header-logo-link" href="/">
               <img className="header-logo" src="/images/logo.svg" alt="Exporting is Great" id="header-logo-exporting-is-great"/>
             </a>
             <div className="header-links">
@@ -75,9 +79,12 @@ export const Header_signed_in = () => (
                 <li><a id="header-link-learning" className="button button--secondary" href="/learn/categories/">Learn to export</a></li>
                 <li><a id="header-link-markets" className="button button--secondary" href="/find-your-target-market/ ">Target a market</a></li>
                 <li><a id="header-link-exporting-plan" className="button button--secondary" href="/export-plan/dashboard/">Make an export plan</a></li>
-                <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
+                <li id="header-link-user-profile">
                   <div style={{lineHeight: '0'}}>
-                    <button className="avatar"><i className="fas fa-user text-blue-deep-80"/></button>
+                    <button className="avatar">
+                      <i className="fas fa-user text-blue-deep-80"/>
+                      <span className="visually-hidden" >User menu</span>
+                    </button>
                   </div>
                 </li>
               </ul>
@@ -85,7 +92,7 @@ export const Header_signed_in = () => (
           </nav>
         </header>
         <nav className="p-v-xs p-h-xs bg-blue-deep-80 c-full-width text-white" id="personalisation-bar">
-            <span className="m-f-xs m-r-xxs">I want to learn about exporting</span>
+            <span className="m-f-xs m-r-xxs">I want to export</span>
             <span id="set-product-button" data-text="{{product_name}}">
               <button className="tag tag--icon">Cheese<i className="fas fa-edit"></i></button>
             </span>
@@ -100,7 +107,7 @@ export const Header_signed_in = () => (
 
 export const Header_with_menu = () => {
   const modalMenu = (
-    <div style={{position:'absolute',zIndex:'2', top:'3px', right:'14px'}}>
+    <div style={{position:'absolute',zIndex:'2', top:'3px', right:'-14px'}}>
       <div className="ReactModal__Content ReactModal__Content--after-open modal-menu" tabindex="-1" role="dialog" style={{marginRight: '-29px', marginTop: '15px', top: '60px', right: '65px', opacity: '1'}}>
         <div className="h-xs p-t-xxs">Hi Robert</div>
         <ul className="menu-items">
@@ -148,7 +155,7 @@ export const Header_with_menu = () => {
       <div style={{position:'relative',paddingBottom:'450px'}}>
         <header className="magna-header bg-blue-deep-90 text-white" id="header" dir="ltr" data-ga-section="header">
           <nav>
-            <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
+            <a id="header-logo-link" href="/">
               <img className="header-logo" src="/images/logo.svg" alt="Exporting is Great" id="header-logo-exporting-is-great"/>
             </a>
             <div className="header-links">
@@ -156,9 +163,12 @@ export const Header_with_menu = () => {
                 <li><a id="header-link-learning" className="button button--secondary" href="/learn/categories/">Learn to export</a></li>
                 <li><a id="header-link-markets" className="button button--secondary" href="/find-your-target-market/ ">Target a market</a></li>
                 <li><a id="header-link-exporting-plan" className="button button--secondary" href="/export-plan/dashboard/">Make an export plan</a></li>
-                <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
+                <li id="header-link-user-profile">
                   <div style={{lineHeight: '0'}}>
-                    <button className="avatar"><i className="fas fa-user text-blue-deep-80"/></button>
+                    <button className="avatar">
+                      <i className="fas fa-user text-blue-deep-80"/>
+                      <span className="visually-hidden" >User menu</span>
+                    </button>
                   </div>
                 </li>
               </ul>
@@ -166,7 +176,7 @@ export const Header_with_menu = () => {
           </nav>
         </header>
         <nav className="p-v-xs p-h-xs bg-blue-deep-80 c-full-width text-white" id="personalisation-bar">
-            <span className="m-f-xs m-r-xxs">I want to learn about exporting</span>
+            <span className="m-f-xs m-r-xxs">I want to export</span>
             <span id="set-product-button" data-text="{{product_name}}">
               <button className="tag tag--icon">Cheese<i className="fas fa-edit"></i></button>
             </span>
