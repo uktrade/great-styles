@@ -51,7 +51,7 @@ $menu-margin-s: 20px;
     li {
       display: flex;
       align-items: center;
-
+      margin: 0 5px;
       a.button.button--secondary {
         background-color: $blue-deep-90;
 
