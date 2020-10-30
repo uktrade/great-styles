@@ -51,6 +51,7 @@ $menu-margin-s: 20px;
     li {
       display: flex;
       align-items: center;
+      margin: 0 5px;
 
       a.button.button--secondary {
         background-color: $blue-deep-90;
@@ -67,8 +68,7 @@ $menu-margin-s: 20px;
     display: flex;
 
     .services-area,
-    .user-state-area {
-    }
+    .user-state-area {}
   }
 
   #header-link-user-profile {
