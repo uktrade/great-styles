@@ -43,7 +43,7 @@
   "scripts": {
     "build-static": "npx gulp",
     "storybook": "start-storybook -p 8080 -s static",
-    "build-storybook": "build-storybook -s static",
+    "build-storybook": "build-storybook -s static, public",
     "dsm-storybook:publish": "dsm-storybook publish",
     "dsm-storybook:preview": "dsm-storybook preview"
   },
