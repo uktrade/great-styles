@@ -1,5 +1,5 @@
 applications:
   - buildpacks:
-    - https://github.com/cloudfoundry/nodejs-buildpack.git#v1.7.25
+      - https://github.com/cloudfoundry/nodejs-buildpack.git#v1.7.25
     memory: 8G
     disk_quota: 6G
