@@ -1,6 +1,6 @@
 applications:
-  - name: great-styles-staging
   - buildpacks:
-      - staticfile_buildpack
+      - https://github.com/cloudfoundry/nodejs-buildpack.git#v1.7.25
+      # - staticfile_buildpack
     memory: 8G
     disk_quota: 6G
