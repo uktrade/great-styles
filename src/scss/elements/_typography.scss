@@ -1,0 +1,174 @@
+
+@import 'helpers/vars';
+@import 'helpers/mixins';
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import url('https://fonts.googleapis.com/css?family=Overpass:700');
+
+@import 'design-tokens';
+@import 'design-tokens-temp';
+
+@font-face {
+  font-family: 'FS Lucas';
+  src: url($fonts+'/FSLucas-Regular.woff2') format('woff2'),
+       url($fonts+'/FSLucas-Regular.woff') format('woff'),
+       url($fonts+'/FSLucas-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// sass-lint:disable-all
+@font-face {
+  font-family: 'FS Lucas SemiBold';
+  src: url($fonts+'/FSLucas-SemiBold.eot'),
+       url($fonts+'/FSLucas-SemiBold.eot?#iefix') format('embedded-opentype'),
+       url($fonts+'/FSLucas-SemiBold.woff2') format('woff2'),
+       url($fonts+'/FSLucas-SemiBold.woff') format('woff'),
+       url($fonts+'/FSLucas-SemiBold.ttf') format('truetype'),
+       url($fonts+'/FSLucas-SemiBold.svg#UbuntuBold') format('svg');
+}
+// sass-lint:enable-all
+
+body {
+  @include font-body-1-black-1-left;
+  position: relative;
+
+  @include tablet {
+    line-height: $line-height-desktop;
+    font-size: $base-font-size-desktop;
+  }
+}
+
+p,
+ul,
+ol,
+blockquote {
+  @include paragraph;
+}
+
+b,
+strong {
+  @include bold;
+}
+
+u {
+  text-decoration: underline;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+// Text
+
+.uppercase { text-transform: uppercase }
+.bold { @include bold }
+.italic { font-style: italic }
+.font-brand { font-family: $brand-font-heading }
+.font-body { font-family: $brand-font-body }
+
+%heading {
+  text-indent: -1px;
+}
+
+.h-xl,
+.h-l,
+.h-m,
+.h-s {
+  @extend %heading;
+}
+
+.h-xl {
+  @include font-title-5;
+  @include bold;
+  padding-bottom: #{3 * $space-s-m - ($font-size-xxlarge-mobile * $line-height-mobile)};
+
+  @include tablet {
+    padding-bottom: #{3 * $space-s - ($font-size-xxlarge-desktop * $line-height-desktop)};
+  }
+}
+
+.h-l {
+  @include font-title-4;
+  @include bold;
+  padding-bottom: #{(3 * $space-s-m) - ($font-size-xlarge-mobile * $line-height-mobile)};
+
+  @include tablet {
+    padding-bottom: #{(3 * $space-s) - ($font-size-xlarge-desktop * $line-height-desktop)};
+  }
+}
+
+.h-m {
+  @include font-title-3;
+  @include bold;
+  padding-top: #{(2 * $space-s-m) - ($font-size-large-mobile * $line-height-mobile) - $space-xxs-m};
+  padding-bottom: $space-xxs-m;
+
+  @include tablet {
+    padding-top: #{(2 * $space-s) - ($font-size-large-desktop * $line-height-desktop) - $space-xxs};
+    padding-bottom: $space-xxs;
+  }
+}
+
+.h-s {
+  @include font-title-2;
+  @include bold;
+  padding-top: #{$space-s-m - $space-xxs-m};
+  padding-bottom: $space-xxs-m;
+
+  @include tablet {
+    padding-top: #{$space-s - $space-xxs};
+    padding-bottom: $space-xxs;
+  }
+}
+
+.h-xs {
+  @include font-title-1;
+  @include bold;
+  padding-top: #{$space-s-m - $space-xxs-m};
+  padding-bottom: $space-xxs-m;
+
+  @include tablet {
+    padding-top: #{$space-s - $space-xxs};
+    padding-bottom: $space-xxs;
+  }
+}
+
+.h-xl + *,
+.h-l + *,
+.h-m + *,
+.h-s + * {
+  margin-top: 0;
+}
+
+.h-sub {
+  color: $mid-grey;
+  line-height: $line-height-desktop;
+  margin: 0;
+
+  & + * {
+    margin-top: 0;
+  }
+}
+
+.body-l { @include font-body-3; }
+.body-m { @include font-body-2; }
+.body-s { @include font-body-1; }
+
+.body-l-b {
+  @include font-body-3-bold;
+  @include bold;
+}
+
+.body-m-b {
+  @include font-body-2-bold;
+  @include bold;
+}
+
+.body-s-b {
+  @include font-body-1-bold;
+  @include bold;
+}
+
+.quote-text { @include quote-text; }

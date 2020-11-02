@@ -1,0 +1,241 @@
+@import 'helpers/mixins';
+@import 'helpers/colours';
+@import 'helpers/vars';
+
+// DSM Buttons
+.button {
+  @include font-body-3-bold;
+  background: $colour-red-80;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  color: $white;
+  cursor: pointer;
+  min-width: 100px;
+  overflow: hidden;
+  padding: 6px 26px 5px;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:visited {
+    background: $colour-red-100;
+    color: $white;
+  }
+
+  &:active {
+    border-color: $black;
+  }
+
+  &:focus,
+  &:focus:active {
+    background: $colour-red-100;
+    outline-offset: 0;
+    color: $white;
+    border-color: $black;
+    border-width: 2px;
+  }
+
+  &[disabled],
+  &--disabled {
+    cursor: auto;
+    opacity: 0.4;
+  }
+
+  &--small {
+    @include font-body-2-bold;
+    border-radius: 20px;
+    color: $white;
+    padding: 8px 20px;
+
+    &.button--loading {
+      .button--loading__spinner {
+        width: 20px;
+        height: 20px;
+      }
+
+      &.button--only-icon {
+        .button--loading__spinner {
+          width: 26px;
+          height: 26px;
+        }
+      }
+    }
+  }
+
+  &--large {
+    @include font-body-3-bold;
+    color: $white;
+    padding: 8px 30px;
+  }
+
+  &--secondary {
+    background: $colour-blue-deep-80;
+
+    &:hover,
+    &:visited:hover,
+    &:active {
+      background: $colour-blue-deep-100;
+      color: $white;
+    }
+
+    &:visited {
+      background: $colour-blue-deep-80;
+      color: $white;
+    }
+
+    &:focus,
+    &:focus:active {
+      background: $colour-blue-deep-100;
+    }
+
+    &.button--icon,
+    &.button--only-icon {
+      i {
+        color: $colour-blue-deep-10;
+      }
+    }
+  }
+
+  &--tertiary {
+    background: $white;
+    border-color: $colour-blue-deep-80;
+    color: $colour-blue-deep-80;
+
+    &:hover,
+    &:active,
+    &:visited {
+      background: $white;
+      color: $colour-blue-deep-80;
+    }
+
+    &:focus,
+    &:focus:active {
+      background: $white;
+      color: $colour-blue-deep-80;
+    }
+
+    &.button--icon,
+    &.button--only-icon {
+      i {
+        color: $colour-blue-deep-80;
+      }
+    }
+
+    &.button--loading {
+      .button--loading__spinner {
+        border-top: 2px solid $colour-black-20;
+        border-right: 2px solid $colour-black-20;
+        border-bottom: 2px solid $colour-black-20;
+        border-left: 2px solid $black;
+      }
+    }
+  }
+
+  &--quaternary {
+    background: $colour-green-100;
+
+    &:hover,
+    &:active,
+    &:visited {
+      background: $colour-green-100;
+      color: $white;
+    }
+
+    &:focus,
+    &:focus:active {
+      background: $colour-green-100;
+    }
+
+    &.button--icon,
+    &.button--only-icon {
+      i {
+        color: $white;
+      }
+    }
+  }
+
+  &--icon {
+    padding-left: 18px;
+
+    i {
+      padding-right: 20px;
+      color: $colour-red-10;
+      transform: scale(.85);
+      vertical-align: middle;
+    }
+  }
+
+  &--only-icon {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    min-width: 40px;
+
+    i {
+      color: $colour-red-10;
+      transform: scale(1.2);
+      vertical-align: middle;
+    }
+  }
+
+  &--loading {
+    &__spinner,
+    &__spinner:after {
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+    }
+
+    &__spinner {
+      margin: 0 auto;
+      font-size: 10px;
+      position: relative;
+      text-indent: -9999em;
+      border-top: 2px solid $white-40;
+      border-right: 2px solid $white-40;
+      border-bottom: 2px solid $white-40;
+      border-left: 2px solid $white;
+      -webkit-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-animation: spin 1.1s infinite linear;
+      animation: spin 1.1s infinite linear;
+    }
+
+    @-webkit-keyframes spin {
+
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+
+    }
+
+    @keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  &--round-corner {
+    border-radius: 4px;
+    padding: 4px 10px;
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+}

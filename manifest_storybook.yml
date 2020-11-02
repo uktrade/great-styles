@@ -1,0 +1,5 @@
+applications:
+  - buildpacks:
+      - staticfile_buildpack
+    memory: 8G
+    disk_quota: 6G
