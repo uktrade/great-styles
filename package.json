@@ -47,7 +47,9 @@
   },
   "scripts": {
     "build-static": "npx gulp",
-    "storybook:dev": "start-storybook -p 8080 -s static",
+    "storybook-manifest": "cp manifest_storybook.yml storybook-static/manifest.yml",
+    "storybook-push": "cf push great-styles-staging",
+    "storybook-staging": "npm run build-storybook && npm run storybook-manifest && npm run storybook-push",
     "storybook": "start-storybook -p 8080 -s static",
     "build-storybook": "build-storybook -s public",
     "dsm-storybook:publish": "dsm-storybook publish",

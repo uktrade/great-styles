@@ -1,5 +1,4 @@
 applications:
-  - name: great-styles-staging
   - buildpacks:
       - staticfile_buildpack
     memory: 8G
