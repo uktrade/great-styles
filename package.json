@@ -47,7 +47,8 @@
   },
   "scripts": {
     "build-static": "npx gulp",
-    "storybook": "start-storybook -p 8080 -s static",
+    "storybook:dev": "start-storybook -p 8080 -s static",
+    "storybook": "start-storybook -p 8081 -s styles",
     "build-storybook": "build-storybook -s public",
     "dsm-storybook:publish": "dsm-storybook publish",
     "dsm-storybook:preview": "dsm-storybook preview"
