@@ -125,25 +125,3 @@ export const Dashboard = () => (
     </div>
   </div>
 );
-
-// Card_image_below.story = {
-//   parameters: {
-//     // Story-Level 'in-dsm' configuration (Will apply only to the story that is being configured)
-//     // Story-Level configuration will override Module-Level 'in-dsm' configuration for the specific story
-//     // "in-dsm": {id: "5f6de8af2e4958dec03e7d04", versionFilePath: "./versionFile.json"},
-//   },
-// };
-// Card_Horizontal.story = {
-//   parameters: {
-//     // Story-Level 'in-dsm' configuration (Will apply only to the story that is being configured)
-//     // Story-Level configuration will override Module-Level 'in-dsm' configuration for the specific story
-//     // "in-dsm": {id: "5f6de8af2e4958dec03e7d04", versionFilePath: "./versionFile.json"},
-//   },
-// };
-// Card_Full_Width_Image.story = {
-//   parameters: {
-//     // Story-Level 'in-dsm' configuration (Will apply only to the story that is being configured)
-//     // Story-Level configuration will override Module-Level 'in-dsm' configuration for the specific story
-//     // "in-dsm": {id: "5f6de8af2e4958dec03e7d04", versionFilePath: "./versionFile.json"},
-//   },
-// };

@@ -8,6 +8,12 @@ export default {
   },
 };
 
+export const Footer_Global = () => (
+  <div style={{minWidth: "1200px"}}>
+    <footer className="magna-footer"></footer>
+  </div>
+);
+
 export const Header_Signed_Out = () => (
   <div style={{minWidth: "1200px"}}>
     <div>
@@ -18,7 +24,7 @@ export const Header_Signed_Out = () => (
         data-ga-section="header"
       >
         <nav>
-          <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
+          <a id="header-logo-link" href="/">
             <img
               className="header-logo"
               src="/images/logo.svg"
@@ -64,13 +70,14 @@ export const Header_Signed_Out = () => (
                   Sign up
                 </a>
               </li>
-              <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
+              <li id="header-link-user-profile">
                 <div style={{lineHeight: "0"}}>
                   <button className="avatar">
                     <i
                       className="fas fa-caret-down text-blue-deep-80"
                       style={{fontSize: "30px"}}
                     />
+                    <span className="visually-hidden">User menu</span>
                   </button>
                 </div>
               </li>
@@ -92,7 +99,7 @@ export const Header_Signed_In = () => (
         data-ga-section="header"
       >
         <nav>
-          <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
+          <a id="header-logo-link" href="/">
             <img
               className="header-logo"
               src="/images/logo.svg"
@@ -129,10 +136,11 @@ export const Header_Signed_In = () => (
                   Make an export plan
                 </a>
               </li>
-              <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
+              <li id="header-link-user-profile">
                 <div style={{lineHeight: "0"}}>
                   <button className="avatar">
                     <i className="fas fa-user text-blue-deep-80" />
+                    <span className="visually-hidden">User menu</span>
                   </button>
                 </div>
               </li>
@@ -144,7 +152,7 @@ export const Header_Signed_In = () => (
         className="p-v-xs p-h-xs bg-blue-deep-80 c-full-width text-white"
         id="personalisation-bar"
       >
-        <span className="m-f-xs m-r-xxs">I want to learn about exporting</span>
+        <span className="m-f-xs m-r-xxs">I want to export</span>
         <span id="set-product-button" data-text="{{product_name}}">
           <button className="tag tag--tertiary tag--icon">
             add product<i className="fas fa-plus"></i>
@@ -166,7 +174,7 @@ export const Header_Signed_In = () => (
         data-ga-section="header"
       >
         <nav>
-          <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
+          <a id="header-logo-link" href="/">
             <img
               className="header-logo"
               src="/images/logo.svg"
@@ -203,10 +211,11 @@ export const Header_Signed_In = () => (
                   Make an export plan
                 </a>
               </li>
-              <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
+              <li id="header-link-user-profile">
                 <div style={{lineHeight: "0"}}>
                   <button className="avatar">
                     <i className="fas fa-user text-blue-deep-80" />
+                    <span className="visually-hidden">User menu</span>
                   </button>
                 </div>
               </li>
@@ -218,7 +227,7 @@ export const Header_Signed_In = () => (
         className="p-v-xs p-h-xs bg-blue-deep-80 c-full-width text-white"
         id="personalisation-bar"
       >
-        <span className="m-f-xs m-r-xxs">I want to learn about exporting</span>
+        <span className="m-f-xs m-r-xxs">I want to export</span>
         <span id="set-product-button" data-text="{{product_name}}">
           <button className="tag tag--icon">
             Cheese<i className="fas fa-edit"></i>
@@ -237,7 +246,7 @@ export const Header_Signed_In = () => (
 
 export const Header_Menu_Open = () => {
   const modalMenu = (
-    <div style={{position: "absolute", zIndex: "2", top: "3px", right: "14px"}}>
+    <div style={{position: "absolute", zIndex: "2", top: "3px", right: "-14px"}}>
       <div
         className="ReactModal__Content ReactModal__Content--after-open modal-menu"
         tabindex="-1"
@@ -308,7 +317,7 @@ export const Header_Menu_Open = () => {
           data-ga-section="header"
         >
           <nav>
-            <a id="header-logo-link" className="m-h-s m-v-xxs" href="/">
+            <a id="header-logo-link" href="/">
               <img
                 className="header-logo"
                 src="/images/logo.svg"
@@ -345,10 +354,11 @@ export const Header_Menu_Open = () => {
                     Make an export plan
                   </a>
                 </li>
-                <li id="header-link-user-profile" className="m-v-xs m-l-xs m-r-s">
+                <li id="header-link-user-profile">
                   <div style={{lineHeight: "0"}}>
                     <button className="avatar">
                       <i className="fas fa-user text-blue-deep-80" />
+                      <span className="visually-hidden">User menu</span>
                     </button>
                   </div>
                 </li>
@@ -360,7 +370,7 @@ export const Header_Menu_Open = () => {
           className="p-v-xs p-h-xs bg-blue-deep-80 c-full-width text-white"
           id="personalisation-bar"
         >
-          <span className="m-f-xs m-r-xxs">I want to learn about exporting</span>
+          <span className="m-f-xs m-r-xxs">I want to export</span>
           <span id="set-product-button" data-text="{{product_name}}">
             <button className="tag tag--icon">
               Cheese<i className="fas fa-edit"></i>
