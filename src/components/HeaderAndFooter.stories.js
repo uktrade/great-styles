@@ -11,7 +11,7 @@ export default {
 export const Footer_Global = () => (
   <div style={{minWidth: "1200px"}}>
     <footer className="magna-footer" id="footer">
-      <nav className="magna-footer__nav bg-blue-deep-90 text-white">
+      <nav className="magna-footer__nav bg-blue-deep-90 text-white p-h-l">
         <ul className="magna-footer__links footer-links">
           <li>
             <a href="#">Privacy notice</a>
@@ -34,7 +34,7 @@ export const Footer_Global = () => (
           </a>
         </div>
       </nav>
-      <div className="magna-footer__copyright bg-blue-white">
+      <div className="magna-footer__copyright bg-blue-white p-h-l">
         <div className="magna-footer__dit-logo">
           <img
             className="header-logo"

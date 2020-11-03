@@ -25,6 +25,12 @@
   }
 }
 
+@mixin desktop-large() {
+  @media (min-width: $desktop-min-breakpoint) {
+    @content;
+  }
+}
+
 @mixin tablet() {
   @media (min-width: $mobile-min-breakpoint) {
     @content;

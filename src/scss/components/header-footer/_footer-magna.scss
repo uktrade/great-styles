@@ -1,4 +1,7 @@
-$footer-padding: 0 60px;
+@import 'helpers/mixins';
+
+$footer-padding: 0 30px;
+$footer-padding-desktop: 0 60px;
 
 .magna-footer {
   display: flex;
@@ -11,6 +14,9 @@ $footer-padding: 0 60px;
     justify-content: space-between;
     min-height: 182px;
     padding: $footer-padding;
+    @include desktop-large {
+      padding: $footer-padding-desktop;
+    }
 }
 
     .magna-footer__links {
@@ -43,8 +49,11 @@ $footer-padding: 0 60px;
     justify-content: space-between;
     align-items: center;
     min-height: 88px;
-    padding: $footer-padding;
     background-color: $white;
+    padding: $footer-padding;
+    @include desktop-large {
+      padding: $footer-padding-desktop;
+    }
   }
 
     .magna-footer__dit-logo {
