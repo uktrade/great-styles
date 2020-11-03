@@ -1,1 +1,1 @@
-web: npm run storybook
+web: npm run build-storybook
