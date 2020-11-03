@@ -1,4 +1,4 @@
-$footer-padding: 0 50px;
+$footer-padding: 0 60px;
 
 .magna-footer {
   display: flex;
@@ -44,6 +44,7 @@ $footer-padding: 0 50px;
     align-items: center;
     min-height: 88px;
     padding: $footer-padding;
+    background-color: $white;
   }
 
     .magna-footer__dit-logo {
