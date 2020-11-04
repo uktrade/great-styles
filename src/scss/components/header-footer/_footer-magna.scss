@@ -1,7 +1,23 @@
 @import 'helpers/mixins';
 
+// Start sticky footer
+// Stick footer to bottom when content is short.
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+// Fill space
+main {
+  flex: 1;
+}
+// End Sticky footer
+
 $footer-padding: 0 30px;
-$footer-padding-desktop: 0 60px;
 
 .magna-footer {
   display: flex;
@@ -14,9 +30,6 @@ $footer-padding-desktop: 0 60px;
     justify-content: space-between;
     min-height: 182px;
     padding: $footer-padding;
-    @include desktop-large {
-      padding: $footer-padding-desktop;
-    }
 }
 
     .magna-footer__links {
@@ -51,9 +64,6 @@ $footer-padding-desktop: 0 60px;
     min-height: 88px;
     background-color: $white;
     padding: $footer-padding;
-    @include desktop-large {
-      padding: $footer-padding-desktop;
-    }
   }
 
     .magna-footer__dit-logo {
