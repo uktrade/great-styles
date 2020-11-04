@@ -2,7 +2,8 @@
 
 // Start sticky footer
 // Stick footer to bottom when content is short.
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -38,9 +39,11 @@ $footer-padding: 0 30px;
     }
 
     .footer-links {
+      
       li + li {
         margin-left: 30px;
       }
+
       a {
         text-decoration: none;
         color: $white;
