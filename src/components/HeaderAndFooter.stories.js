@@ -10,7 +10,7 @@ export default {
 
 export const Footer_Global = () => (
   <div style={{minWidth: "1200px"}}>
-    <footer className="magna-footer p-t-l" id="footer">
+    <footer className="magna-footer" id="footer">
       <nav className="magna-footer__nav bg-blue-deep-90 text-white p-h-l">
         <ul className="magna-footer__links footer-links">
           <li>
