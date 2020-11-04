@@ -36,7 +36,7 @@ export const Footer_Global = () => (
       <div className="magna-footer__copyright bg-blue-white p-h-l">
         <div className="magna-footer__dit-logo">
           <img
-            className="header-logo"
+            className="footer-logo-dit"
             src="/images/dit-crest-and-text-landscape.svg"
             alt="Department for International Trade"
           />
