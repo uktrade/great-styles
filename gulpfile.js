@@ -76,6 +76,9 @@ gulp.task("server", function() {
 
 gulp.task("styles", gulp.series("clean", "sass:compile"));
 
+// No server nor watch
+gulp.task("build", gulp.series("clean", "images", "copy-fonts", "styles"));
+
 gulp.task(
   "default",
   gulp.series("clean", "images", "copy-fonts", "styles", gulp.parallel("server", "watch"))

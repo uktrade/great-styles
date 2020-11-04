@@ -46,9 +46,10 @@
     "style-loader": "^0.23.1"
   },
   "scripts": {
-    "build-static": "npx gulp",
+    "static-watch": "npx gulp",
+    "static-build": "npx gulp build",
     "storybook-manifest": "cp manifest_storybook.yml storybook-static/manifest.yml",
-    "storybook-push": "cf push great-styles-staging",
+    "storybook-push": "cd storybook-static && cf push great-styles-staging",
     "storybook-staging": "npm run build-storybook && npm run storybook-manifest && npm run storybook-push",
     "storybook": "start-storybook -p 8080 -s static",
     "build-storybook": "build-storybook -s public",

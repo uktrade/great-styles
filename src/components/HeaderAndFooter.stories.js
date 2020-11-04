@@ -10,7 +10,44 @@ export default {
 
 export const Footer_Global = () => (
   <div style={{minWidth: "1200px"}}>
-    <footer className="magna-footer"></footer>
+    <footer className="magna-footer" id="footer">
+      <nav className="magna-footer__nav bg-blue-deep-90 text-white p-h-l">
+        <ul className="magna-footer__links footer-links">
+          <li>
+            <a href="#">Privacy notice</a>
+          </li>
+          <li>
+            <a href="#">Terms and conditions</a>
+          </li>
+          <li>
+            <a href="#">Contact us</a>
+          </li>
+        </ul>
+        <div className="magna-footer__great-logo">
+          <a href="#">
+            <img
+              className="footer-logo m-t-s"
+              src="/images/logo.svg"
+              alt="Exporting is Great"
+            />
+          </a>
+        </div>
+      </nav>
+      <div className="magna-footer__copyright bg-blue-white p-h-l">
+        <div className="magna-footer__dit-logo">
+          <img
+            className="footer-logo-dit"
+            src="/images/dit-crest-and-text-landscape.svg"
+            alt="Department for International Trade"
+          />
+        </div>
+        <div className="magna-footer__copy">
+          <p className="text-black-100 body-m m-0">
+            &copy; Crown copyright 2021. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
   </div>
 );
 

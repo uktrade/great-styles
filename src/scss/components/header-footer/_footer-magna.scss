@@ -1,0 +1,52 @@
+@import 'helpers/mixins';
+
+$footer-padding: 0 30px;
+
+.magna-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+  .magna-footer__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 182px;
+    padding: $footer-padding;
+  }
+
+    .magna-footer__links {
+      display: inline-flex;
+      align-self: flex-end;
+    }
+
+    .footer-links {
+
+      li + li {
+        margin-left: 30px;
+      }
+
+      a {
+        text-decoration: none;
+        color: $white;
+        padding-right: 4px;
+        border-bottom: 2px solid $white;
+      }
+    }
+
+    .magna-footer__great-logo {
+      img {
+        width: 191px;
+        height: 66px;
+      }
+    }
+
+  .magna-footer__copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 88px;
+    background-color: $white;
+    padding: $footer-padding;
+  }
