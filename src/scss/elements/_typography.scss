@@ -80,44 +80,48 @@ em {
 }
 
 .h-xl {
-  @include font-title-5;
+  @include font-title-4;
   @include bold;
   padding-bottom: #{3 * $space-s-m - ($font-size-xxlarge-mobile * $line-height-mobile)};
 
   @include tablet {
+    @include font-title-5;
     padding-bottom: #{3 * $space-s - ($font-size-xxlarge-desktop * $line-height-desktop)};
   }
 }
 
 .h-l {
-  @include font-title-4;
+  @include font-title-3;
   @include bold;
   padding-bottom: #{(3 * $space-s-m) - ($font-size-xlarge-mobile * $line-height-mobile)};
 
   @include tablet {
+    @include font-title-4;
     padding-bottom: #{(3 * $space-s) - ($font-size-xlarge-desktop * $line-height-desktop)};
   }
 }
 
 .h-m {
-  @include font-title-3;
+  @include font-title-2;
   @include bold;
   padding-top: #{(2 * $space-s-m) - ($font-size-large-mobile * $line-height-mobile) - $space-xxs-m};
   padding-bottom: $space-xxs-m;
 
   @include tablet {
+    @include font-title-3;
     padding-top: #{(2 * $space-s) - ($font-size-large-desktop * $line-height-desktop) - $space-xxs};
     padding-bottom: $space-xxs;
   }
 }
 
 .h-s {
-  @include font-title-2;
+  @include font-title-1;
   @include bold;
   padding-top: #{$space-s-m - $space-xxs-m};
   padding-bottom: $space-xxs-m;
 
   @include tablet {
+    @include font-title-2;
     padding-top: #{$space-s - $space-xxs};
     padding-bottom: $space-xxs;
   }

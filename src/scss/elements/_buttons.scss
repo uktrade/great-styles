@@ -106,13 +106,15 @@
     &:active,
     &:visited {
       background: $white;
-      color: $colour-blue-deep-80;
+      border-color: $colour-blue-deep-100;
+      color: $colour-blue-deep-100;
     }
 
     &:focus,
     &:focus:active {
-      background: $white;
-      color: $colour-blue-deep-80;
+      background: $colour-blue-deep-10;
+      border-color: $colour-blue-deep-100;
+      color: $colour-blue-deep-100;
     }
 
     &.button--icon,
