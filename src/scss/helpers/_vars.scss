@@ -44,7 +44,7 @@ $space-xxs: ($line-height-desktop * $base-font-size-desktop) / 4;
 $space-xs: ($line-height-desktop * $base-font-size-desktop) / 2;
 $space-s: ($line-height-desktop * $base-font-size-desktop);
 $space-m: ($line-height-desktop * $base-font-size-desktop) * 3 / 2;
-$space-l: ($line-height-desktop * $base-font-size-desktop) * 2;
+$space-l: 60px;
 $space-xl: ($line-height-desktop * $base-font-size-desktop) * 3;
 $space-xxl: ($line-height-desktop * $base-font-size-desktop) * 4;
 
@@ -52,8 +52,8 @@ $space-xxl: ($line-height-desktop * $base-font-size-desktop) * 4;
 $space-xxs-m: ($line-height-mobile * $base-font-size-mobile) / 4;
 $space-xs-m: ($line-height-mobile * $base-font-size-mobile) / 2;
 $space-s-m: ($line-height-mobile * $base-font-size-mobile);
-$space-m-m: ($line-height-mobile * $base-font-size-mobile) * 3 / 2;
-$space-l-m: ($line-height-mobile * $base-font-size-mobile) * 2;
+$space-m-m: 30px;
+$space-l-m: 35px;
 $space-xl-m: ($line-height-mobile * $base-font-size-mobile) * 3;
 $space-xxl-m: ($line-height-mobile * $base-font-size-mobile) * 4;
 

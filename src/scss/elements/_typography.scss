@@ -93,7 +93,7 @@ em {
 .h-l {
   @include font-title-3;
   @include bold;
-  padding-bottom: #{(3 * $space-s-m) - ($font-size-xlarge-mobile * $line-height-mobile)};
+  padding-bottom: 30px;
 
   @include tablet {
     @include font-title-4;
