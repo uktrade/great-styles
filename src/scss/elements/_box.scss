@@ -1,8 +1,12 @@
 .box {
   background: $colour-blue-deep-10;
   border-radius: 10px;
-  padding: 30px;
+  padding: 25px;
   position: relative;
+
+  @include tablet {
+    padding: 30px;
+  }
 
   &:before {
     background: $colour-blue-deep-10;
