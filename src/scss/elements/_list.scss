@@ -100,9 +100,11 @@ ol.list-circle-number  {
       display: block;
       margin-top: 4px;
       float: left;
-      width: calc(100% - 80px);
+
+      @include tablet {
+        width: calc(100% - 80px);
+      }
     }
-    
   }
 }
 
