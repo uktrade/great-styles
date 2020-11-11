@@ -94,10 +94,15 @@ $colours:
   }
 }
 
+.border-thicker,
 .border-thick,
 .border-medium,
 .border-thin {
   border-style: solid;
+}
+
+.border-thicker  {
+  border-width: 8px;
 }
 
 .border-thick  {
