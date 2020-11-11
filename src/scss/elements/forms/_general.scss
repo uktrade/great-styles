@@ -354,8 +354,6 @@ select::-ms-expand {
     .form-label {
       padding-top: 0;
       @include font-body-3;
-      font-weight: unset;
-      font-size: unset;
     }
   }
 }
