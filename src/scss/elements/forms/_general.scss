@@ -242,7 +242,8 @@ select::-ms-expand {
 
 // DSM Forms
 
-.great-checkbox {
+.great-checkbox, 
+.multiple-choice {
   display: inline-block;
   float: none;
   clear: left;
@@ -337,6 +338,25 @@ select::-ms-expand {
   input:disabled + label {
     opacity: 0.5;
     cursor: default;
+  }
+}
+
+// Rules for Django forms generated checkbox
+.multiple-choice {
+
+  // Unset base .form-control (text-input) styles
+  .form-control {
+    border: unset;
+    background-color: unset;
+  }
+
+  [type=checkbox] + label {
+    .form-label {
+      padding-top: 0;
+      @include font-body-3;
+      font-weight: unset;
+      font-size: unset;
+    }
   }
 }
 

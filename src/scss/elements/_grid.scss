@@ -49,6 +49,10 @@
   flex-wrap: wrap;
 }
 
+.flex-direction-column {
+  flex-direction: column;
+}
+
 .flex-grid > * {
   padding: 0 15px;
   display: flex;

@@ -16,14 +16,33 @@ $footer-padding: 0 30px;
   }
 
     .magna-footer__links {
-      display: inline-flex;
       align-self: flex-end;
+      display: flex;
+      flex-flow: column wrap;
+
+      li + li {
+        margin-top: 10px;
+      }
+
+      @include breakpoint(lg) {
+        display: inline-flex;
+        flex-flow: row wrap;
+
+        li + li {
+          margin-top: 0;
+        }
+
+      }
+
+      @include breakpoint(xl) {
+        flex-wrap: nowrap;
+      }
     }
 
     .footer-links {
 
-      li + li {
-        margin-left: 30px;
+      li {
+        margin-right: 30px;
       }
 
       a {
@@ -43,10 +62,23 @@ $footer-padding: 0 30px;
 
   .magna-footer__copyright {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    min-height: 88px;
+    align-items: flex-start;
     background-color: $white;
     padding: $footer-padding;
+    
+    @include breakpoint(md) {
+      align-items: center;
+      flex-direction: row;
+      min-height: 88px;
+    }
   }
+
+    .magna-footer__dit-logo {
+      margin: 20px 0 10px 0;
+
+      @include breakpoint(md) {
+        margin: unset;
+      }
+    }

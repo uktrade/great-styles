@@ -10,11 +10,17 @@
 }
 
 /* Useful helper styles */
-.m-f-auto {
+.m-f-auto,
+.m-l-auto {
   margin-left: auto;
 }
 
 .m-r-auto {
+  margin-right: auto;
+}
+
+.m-h-auto {
+  margin-left: auto;
   margin-right: auto;
 }
 
