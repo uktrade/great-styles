@@ -64,6 +64,14 @@
   position: relative;
 }
 
+.hide-on-mobile {
+  display: none;
+
+  @include tablet {
+    display: inherit;
+  }
+}
+
 /******************************/
 /* Richtext area reset styles */
 /******************************/

@@ -104,12 +104,7 @@
 
     &:hover,
     &:active,
-    &:visited {
-      background: $white;
-      border-color: $colour-blue-deep-100;
-      color: $colour-blue-deep-100;
-    }
-
+    &:visited,
     &:focus,
     &:focus:active {
       background: $colour-blue-deep-10;
