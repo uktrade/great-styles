@@ -26,8 +26,8 @@ $footer-padding: 0 30px;
 
       @include breakpoint(lg) {
         display: inline-flex;
-        flex-flow: row wrap; 
-        
+        flex-flow: row wrap;
+
         li + li {
           margin-top: 0;
         }
