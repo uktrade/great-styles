@@ -22,6 +22,9 @@ export const Footer_Global = () => (
           <li>
             <a href="#">Contact us</a>
           </li>
+          <li>
+            <a href="#">Department for International Trade on GOV.UK</a>
+          </li>
         </ul>
         <div className="magna-footer__great-logo">
           <a href="#">
