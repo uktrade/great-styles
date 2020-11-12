@@ -67,6 +67,11 @@
       flex-direction: row;
     }
   }
+
+  .grid-row {
+    display: flex;
+    width: 100%;
+  }
 }
 
 .grid {
