@@ -91,7 +91,7 @@ em {
 }
 
 .h-l {
-  @include font-title-3;
+  @include font-title-2;
   @include bold;
   padding-bottom: 30px;
 
@@ -128,12 +128,13 @@ em {
 }
 
 .h-xs {
-  @include font-title-1;
+  @include font-body-3;
   @include bold;
   padding-top: #{$space-s-m - $space-xxs-m};
   padding-bottom: $space-xxs-m;
 
   @include tablet {
+    @include font-title-1;
     padding-top: #{$space-s - $space-xxs};
     padding-bottom: $space-xxs;
   }
@@ -156,7 +157,13 @@ em {
   }
 }
 
-.body-l { @include font-body-3; }
+.body-l { 
+  @include font-body-2;
+
+  @include tablet {
+    @include font-body-3;
+  }
+}
 .body-m { @include font-body-2; }
 .body-s { @include font-body-1; }
 
