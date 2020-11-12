@@ -25,6 +25,7 @@ $menu-margin-s: 20px;
     display: flex;
     flex-grow: 1;
     justify-content: flex-end;
+
     .lg-only {
       @include breakpoint(lg_lt) {
         display: none;
