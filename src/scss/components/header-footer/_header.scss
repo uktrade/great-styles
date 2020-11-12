@@ -7,20 +7,6 @@ $menu-item-vertical-spacing: 10px;
 $menu-margin-l: 30px;
 $menu-margin-s: 20px;
 
-@mixin desktop-only() {
-  @media (max-width: 768px) {
-    display: none;
-  }
-}
-
-@mixin mobile-only() {
-  display: none;
-
-  @media (max-width: 768px) {
-    display: flex;
-  }
-}
-
 .magna-header {
   position: relative;
   z-index: 2;
@@ -30,10 +16,8 @@ $menu-margin-s: 20px;
     margin: 10px 30px;
 
     .header-logo {
-      @include desktop {
-        height: 63px;
-        padding: 0;
-      }
+      height: 63px;
+      padding: 0;
     }
   }
 
@@ -41,6 +25,11 @@ $menu-margin-s: 20px;
     display: flex;
     flex-grow: 1;
     justify-content: flex-end;
+    .lg-only {
+      @include breakpoint(lg_lt) {
+        display: none;
+      }
+    }
   }
 
   ul {

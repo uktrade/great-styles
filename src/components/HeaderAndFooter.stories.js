@@ -72,9 +72,9 @@ export const Header_Signed_Out = () => (
               id="header-logo-exporting-is-great"
             />
           </a>
-          <div className="header-links">
+          <div className="header-links sm-hide">
             <ul id="services-area" className="services-area">
-              <li>
+              <li className="lg-only">
                 <a
                   id="header-link-learning"
                   className="button button--secondary active"
@@ -83,7 +83,7 @@ export const Header_Signed_Out = () => (
                   Learn to export
                 </a>
               </li>
-              <li>
+              <li className="lg-only">
                 <a
                   id="header-link-markets"
                   className="button button--secondary"
@@ -92,7 +92,7 @@ export const Header_Signed_Out = () => (
                   Target a market
                 </a>
               </li>
-              <li>
+              <li className="lg-only">
                 <a
                   id="header-link-exporting-plan"
                   className="button button--secondary"
@@ -149,7 +149,7 @@ export const Header_Signed_In = () => (
           </a>
           <div className="header-links">
             <ul id="services-area" className="services-area">
-              <li>
+              <li className="lg-only">
                 <a
                   id="header-link-learning"
                   className="button button--secondary"
@@ -158,7 +158,7 @@ export const Header_Signed_In = () => (
                   Learn to export
                 </a>
               </li>
-              <li>
+              <li className="lg-only">
                 <a
                   id="header-link-markets"
                   className="button button--secondary"
@@ -167,7 +167,7 @@ export const Header_Signed_In = () => (
                   Target a market
                 </a>
               </li>
-              <li>
+              <li className="lg-only">
                 <a
                   id="header-link-exporting-plan"
                   className="button button--secondary"
@@ -224,7 +224,7 @@ export const Header_Signed_In = () => (
           </a>
           <div className="header-links">
             <ul id="services-area" className="services-area">
-              <li>
+              <li className="lg-only">
                 <a
                   id="header-link-learning"
                   className="button button--secondary"
@@ -233,7 +233,7 @@ export const Header_Signed_In = () => (
                   Learn to export
                 </a>
               </li>
-              <li>
+              <li className="lg-only">
                 <a
                   id="header-link-markets"
                   className="button button--secondary"
@@ -242,7 +242,7 @@ export const Header_Signed_In = () => (
                   Target a market
                 </a>
               </li>
-              <li>
+              <li className="lg-only">
                 <a
                   id="header-link-exporting-plan"
                   className="button button--secondary"
@@ -367,7 +367,7 @@ export const Header_Menu_Open = () => {
             </a>
             <div className="header-links">
               <ul id="services-area" className="services-area">
-                <li>
+                <li className="lg-only">
                   <a
                     id="header-link-learning"
                     className="button button--secondary"
@@ -376,7 +376,7 @@ export const Header_Menu_Open = () => {
                     Learn to export
                   </a>
                 </li>
-                <li>
+                <li className="lg-only">
                   <a
                     id="header-link-markets"
                     className="button button--secondary"
@@ -385,7 +385,7 @@ export const Header_Menu_Open = () => {
                     Target a market
                   </a>
                 </li>
-                <li>
+                <li className="lg-only">
                   <a
                     id="header-link-exporting-plan"
                     className="button button--secondary"
