@@ -72,7 +72,7 @@ export const Header_Signed_Out = () => (
               id="header-logo-exporting-is-great"
             />
           </a>
-          <div className="header-links sm-hide">
+          <div className="header-links">
             <ul id="services-area" className="services-area">
               <li className="lg-only">
                 <a
