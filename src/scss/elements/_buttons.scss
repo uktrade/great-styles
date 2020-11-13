@@ -4,7 +4,7 @@
 
 // DSM Buttons
 .button {
-  @include font-body-3-bold;
+  @include font-body-1-bold;
   background: $colour-red-80;
   border: 2px solid transparent;
   border-radius: 25px;
@@ -12,9 +12,14 @@
   cursor: pointer;
   min-width: 100px;
   overflow: hidden;
-  padding: 6px 26px 5px;
+  padding: 5px 15px;
   text-align: center;
   text-decoration: none;
+
+  @include tablet {
+    @include font-body-3-bold;
+    padding: 6px 26px 5px;
+  }
 
   &:hover,
   &:active,
@@ -43,10 +48,12 @@
   }
 
   &--small {
-    @include font-body-2-bold;
-    border-radius: 20px;
-    color: $white;
-    padding: 8px 20px;
+    @include tablet {
+      @include font-body-2-bold;
+      border-radius: 20px;
+      color: $white;
+      padding: 8px 20px;
+    }
 
     &.button--loading {
       .button--loading__spinner {
@@ -64,9 +71,11 @@
   }
 
   &--large {
-    @include font-body-3-bold;
-    color: $white;
-    padding: 8px 30px;
+    @include tablet {
+      @include font-body-3-bold;
+      color: $white;
+      padding: 8px 30px;
+    }
   }
 
   &--secondary {
