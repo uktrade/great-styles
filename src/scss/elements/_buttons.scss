@@ -4,7 +4,11 @@
 
 // DSM Buttons
 .button {
-  @include font-body-1-bold;
+  font-size: 12px;
+  line-height: 15px;
+  font-family: 'FS Lucas';
+  font-style: normal;
+  font-weight: 600;
   background: $colour-red-80;
   border: 2px solid transparent;
   border-radius: 25px;
@@ -17,7 +21,8 @@
   text-decoration: none;
 
   @include tablet {
-    @include font-body-3-bold;
+    font-size: 20px;
+    line-height: 30px;
     padding: 6px 26px 5px;
   }
 
