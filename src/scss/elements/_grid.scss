@@ -56,14 +56,14 @@
   display: flex;
   flex-wrap: wrap;
 
-  > div[class^='c-'] {
+  [class^='c-'] {
     padding: 0 15px;
     display: flex;
     flex-direction: column;
   }
 
   &--direction-row {
-    div[class^='c-'] {
+    [class^='c-'] {
       flex-direction: row;
     }
   }
