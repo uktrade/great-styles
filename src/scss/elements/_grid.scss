@@ -51,6 +51,12 @@
   flex-direction: row;
 }
 
+.flex-grid {
+  margin: 0 -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .flex-grid > * {
   padding: 0 15px;
   display: flex;
@@ -62,6 +68,7 @@
     flex-grow: 1; // align heights of elements inside grid columns
   }
 }
+
 
 .grid {
   @include grid-row;
