@@ -103,9 +103,9 @@ export const Dashboard = () => (
           </section>
         </div>
         <div className="c-1-2 m-b-s">
-          <section className="g-card" id="your-export-plan-card">
+          <section className="g-card p-b-0" id="your-export-plan-card">
             <div className="g-card-header">
-              <h3 className="h-m">Your export plan</h3>
+              <h3 className="h-m">No bottom padding p-b-0</h3>
             </div>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -115,10 +115,13 @@ export const Dashboard = () => (
             </p>
           </section>
           <section className="g-card" id="your-export-plan-card">
-            <div className="g-card-header">
-              <h3 className="h-m">Your favourite colour</h3>
-            </div>
-            <p>Blue</p>
+            <h3 className="h-m">Card without header</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </p>
           </section>
         </div>
       </div>

@@ -13,12 +13,16 @@ $card-min-height-mobile: $space-s-m * 7;
 .g-card {
   box-shadow: 2px 2px 4px 0 $black-20;
   border-radius: 10px;
-  padding: $space-s;
+  padding: $space-xs $space-s;
   background: $white;
 
   @include desktop {
     min-height: $card-min-height;
     margin-bottom: $space-s;
+  }
+
+  &.p-b-0 {
+    padding-bottom: 0;
   }
 
   margin: $space-s;
@@ -28,9 +32,9 @@ $card-min-height-mobile: $space-s-m * 7;
   width: 100%;
 
   .g-card-header {
-    margin: (-$space-s) (-$space-s) 0;
-    padding: $space-xs $space-s;
-    border-bottom: 1px solid $black-30;
+    margin: 0 (-$space-s);
+    padding: 0 $space-s $space-xs;
+    border-bottom: 1px solid $blue-deep-30;
   }
 
   .g-card-full {
