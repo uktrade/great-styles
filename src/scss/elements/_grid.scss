@@ -55,24 +55,20 @@
   margin: 0 -15px;
   display: flex;
   flex-wrap: wrap;
+}
 
-  > div[class^='c-'] {
-    padding: 0 15px;
+.flex-grid > * {
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  > * { 
     display: flex;
-    flex-direction: column;
-  }
-
-  &--direction-row {
-    div[class^='c-'] {
-      flex-direction: row;
-    }
-  }
-
-  .grid-row {
-    display: flex;
-    width: 100%;
+    flex-grow: 1; // align heights of elements inside grid columns
   }
 }
+
 
 .grid {
   @include grid-row;
