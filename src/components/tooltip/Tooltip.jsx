@@ -18,7 +18,7 @@ export const Tooltip = ({title, content, position, className, isVisible, faIcon}
         onClick={() => setIsComponentVisible(true)}
       >
         <button class="button button--small button--only-icon button--tertiary">
-          <i class={`fas fa-lg ${faIcon}`}></i>
+          <i class={`fas ${faIcon}`}></i>
         </button>
       </div>
       {isComponentVisible && (
