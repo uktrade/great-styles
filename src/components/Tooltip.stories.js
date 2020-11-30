@@ -10,33 +10,42 @@ export default {
   },
 };
 
-const tooltipLeft = {
-  title: "Tooltip title",
+const tooltipData = {
   content: `
-    <p>Porchetta venison meatloaf jerky, short loin burgdoggen pastrami. Brisket filet mignon bresaola turkey flank strip steak. </p>
+    <p>Porchetta venison meatloaf jerky, short loin burgdoggen pastrami. Brisket filet mignon bresaola turkey flank strip steak.</p>
     <ul>
     <li>Point <em>emphasis</em></li>
     <li>Point <em>emphasis</em></li>
-    <li>Point <em>emphasis</em></li>
+    <li>Point <em><strong>strong</strong> emphasis</em></li>
     <li>Point <em>emphasis</em></li>
     </ul>
-    <p>Porchetta venison meatloaf jerky, short loin burgdoggen pastrami. Brisket filet mignon bresaola turkey flank strip steak. </p>
+    <small>Something small</small>
 `,
 };
-const tooltipRight = {...tooltipLeft, position: "right"};
+const tooltipDataRight = {...tooltipData, position: "right", title: "Custom title"};
+
+const style = {
+  width: "100vw",
+  height: "100vh",
+};
 
 export const Tooltip_left = () => {
   return (
-    <div>
-      <Tooltip {...tooltipLeft} />
+    <div className="height-60 bg-blue-deep-60 p-l" style={style}>
+      <Tooltip {...tooltipData} />
     </div>
   );
 };
 
 export const Tooltip_Right = () => {
   return (
-    <div>
-      <Tooltip {...tooltipRight} />
+    <div className="height-60 bg-blue-deep-60 p-l" style={style}>
+      <Tooltip
+        {...tooltipDataRight}
+        isVisible={true}
+        className="jc-end"
+        faIcon="fa-info"
+      />
     </div>
   );
 };

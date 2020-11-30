@@ -51,6 +51,14 @@
   flex-direction: row !important; // sass-lint:disable-line no-important
 }
 
+.jc-end {
+  justify-content: flex-end !important; // sass-lint:disable-line no-important;
+}
+
+.jc-start {
+  justify-content: flex-start !important; // sass-lint:disable-line no-important;
+}
+
 .flex-grid {
   margin: 0 -15px;
   display: flex;
