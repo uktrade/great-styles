@@ -31,7 +31,7 @@ const style = {
 
 export const Tooltip_left = () => {
   return (
-    <div className="height-60 bg-blue-deep-60 p-l" style={style}>
+    <div className="bg-blue-deep-60 p-l" style={style}>
       <Tooltip {...tooltipData} />
     </div>
   );
@@ -39,7 +39,7 @@ export const Tooltip_left = () => {
 
 export const Tooltip_Right = () => {
   return (
-    <div className="height-60 bg-blue-deep-60 p-l" style={style}>
+    <div className="bg-blue-deep-60 p-l" style={style}>
       <Tooltip
         {...tooltipDataRight}
         isVisible={true}
