@@ -1,0 +1,116 @@
+:root {
+  --ttpadding: 15px;
+  --tttexshadow: rgba(75, 66, 109, 0.3); // sass-lint:disable-line no-color-literals
+  --ttarrowcolor: #ffffff; // sass-lint:disable-line no-color-literals
+}
+
+// Tooltip container
+.tooltip {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+
+// Tooltip content container (shown when active)
+.tooltip__text {
+  display: flex;
+  flex-flow: column nowrap;
+  position: absolute;
+  top: calc(100% + var(--ttpadding));
+  width: 100%;
+  padding: var(--ttpadding);
+  box-shadow: 0px 3px 15px 0px var(--tttexshadow);
+  @include breakpoint(sm) {
+    top: 0;
+    max-width: 350px;
+  }
+}
+
+  .tooltip__text--left {
+    left: 0;
+    @include breakpoint(sm) {
+      left: 50px;
+    }
+  }
+
+  .tooltip__text--right {
+    right: 0;
+    @include breakpoint(sm) {
+      right: 50px;
+    }
+  }
+
+  .tooltip__close {
+    position: absolute;
+    right: var(--ttpadding);
+  }
+
+  .tooltip__close,
+  .tooltip__icon {
+    cursor: pointer;
+  }
+
+  // Tooltip content text rules
+  .tooltip__content {
+    ul {
+      li {
+        list-style: disc;
+        margin-left: 1em;
+      }
+    }
+
+    small {
+      font-size: 0.85em;
+    }
+
+    > * {
+      &:first-child {
+        margin-top: 10px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+// Tooltip arrow at the top
+// .tooltip__text--left::after,
+// .tooltip__text--right::after {
+//   bottom: 100%;
+//   left: 50%;
+//   margin-left: -6px;
+//   border-width: 6px;
+//   border-style: solid;
+//   border-color: transparent transparent #fff transparent;
+// }
+
+// Tooltip arrow to the left
+.tooltip__text--left::after {
+  content: '';
+  position: absolute;
+
+  @include breakpoint(sm) {
+    top: 20px;
+    right: 100%;
+    margin-top: -6px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent var(--ttarrowcolor) transparent transparent;
+  }
+}
+
+// Tooltip arrow to the right
+.tooltip__text--right::after {
+  content: '';
+  position: absolute;
+
+  @include breakpoint(sm) {
+    top: 20px;
+    left: 100%;
+    margin-top: -6px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--ttarrowcolor);
+  }
+}

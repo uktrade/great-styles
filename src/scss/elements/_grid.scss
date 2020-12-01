@@ -44,11 +44,19 @@
 }
 
 .flex-direction-column {
-  flex-direction: column;
+  flex-direction: column !important; // sass-lint:disable-line no-important
 }
 
 .flex-direction-row {
-  flex-direction: row;
+  flex-direction: row !important; // sass-lint:disable-line no-important
+}
+
+.jc-end {
+  justify-content: flex-end !important; // sass-lint:disable-line no-important;
+}
+
+.jc-start {
+  justify-content: flex-start !important; // sass-lint:disable-line no-important;
 }
 
 .flex-grid {
@@ -85,7 +93,8 @@
 .w-3-4,
 .w-5-12,
 .w-7-12,
-.w-1-2 {
+.w-1-2,
+.w-1-1 {
   width: 100%;
 }
 
