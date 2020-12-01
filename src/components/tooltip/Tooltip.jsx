@@ -44,7 +44,6 @@ export const Tooltip = ({title, content, position, className, isVisible, faIcon}
           </div>
         </>
       )}
-      {!isComponentVisible && ""}
     </div>
   );
 };
