@@ -242,7 +242,7 @@ select::-ms-expand {
 
 // DSM Forms
 
-.great-checkbox, 
+.great-checkbox,
 .multiple-choice {
   display: inline-block;
   float: none;
@@ -400,4 +400,20 @@ select::-ms-expand {
     top: 12px;
     left: 9px;
   }
+}
+
+.prepend {
+  border: 2px solid $colour-blue-deep-20;
+  border-radius: 10px 0 0 10px;
+  border-right-style: none;
+  padding: 12px;
+  white-space: nowrap;
+
+  @include tablet {
+    padding: 8px;
+  }
+}
+
+.form-control-prepend {
+  border-radius: 0 10px 10px 0;
 }
