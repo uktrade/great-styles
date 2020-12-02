@@ -406,12 +406,8 @@ select::-ms-expand {
   border: 2px solid $colour-blue-deep-20;
   border-radius: 10px 0 0 10px;
   border-right-style: none;
-  padding: 12px;
+  padding: 8px;
   white-space: nowrap;
-
-  @include tablet {
-    padding: 8px;
-  }
 }
 
 .form-control-prepend {

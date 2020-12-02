@@ -15,7 +15,6 @@ table {
 
   th,
   td {
-    @include body-medium;
     padding: $space-xxs-m - 1 $space-s-m $space-xxs-m 0;
     text-align: left;
     border-bottom: 1px solid $active-blue;
@@ -23,10 +22,6 @@ table {
     @include tablet {
       padding: $space-xxs - 1 $space-s $space-xxs 0;
     }
-  }
-
-  thead th {
-    @include brand-small;
   }
 
   td:last-child,
