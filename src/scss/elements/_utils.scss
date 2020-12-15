@@ -38,7 +38,7 @@
 
 .d-flex-t {
   @include tablet {
-      display: flex;
+    display: flex;
   }
 }
 
@@ -77,14 +77,14 @@
 /******************************/
 .rich-text {
   ul li {
-      list-style-type: disc;
-      list-style-position: inside;
+    list-style-type: disc;
+    list-style-position: inside;
   }
 }
 
 .width {
   &-full {
-      width: 100%;
+    width: 100%;
   }
 }
 
@@ -96,16 +96,39 @@
   border-radius: var(--radius);
 
   &-top {
-      border-top-left-radius: var(--radius);
-      border-top-right-radius: var(--radius);
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
   }
 
   &-bottom {
-      border-bottom-left-radius: var(--radius);
-      border-bottom-right-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
   }
 }
 
 .radius--small {
   --radius: 5px;
+}
+
+// Responsive
+.radius {
+  &-md {
+    @include breakpoint(sm) {
+      border-radius: var(--radius);
+    }
+  }
+
+  &-top-md {
+    @include breakpoint(sm) {
+      border-top-left-radius: var(--radius);
+      border-top-right-radius: var(--radius);
+    }
+  }
+
+  &-bottom-md {
+    @include breakpoint(sm) {
+      border-bottom-left-radius: var(--radius);
+      border-bottom-right-radius: var(--radius);
+    }
+  }
 }
