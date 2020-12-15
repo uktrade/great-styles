@@ -1,7 +1,24 @@
-@import 'helpers/mixins';
+@import "helpers/mixins";
+
+.modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
 
 .modal {
-  width: 630px;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+
+  flex-flow: column;
+
+  @include breakpoint(sm) {
+    width: 630px;
+    height: auto;
+  }
 
   &-header-bg {
     height: 160px;
@@ -13,22 +30,29 @@
 
   &-header-bg--1 {
     background: {
-      image: url(asset-path('modal-1.png'));
+      image: url(asset-path("modal-1.png"));
       size: 281px;
     }
   }
 
   &-header-bg--2 {
     background: {
-      image: url(asset-path('modal-2.png'));
+      image: url(asset-path("modal-2.png"));
       size: 365px;
     }
   }
 
   &-header-bg--3 {
     background: {
-      image: url(asset-path('modal-3.png'));
+      image: url(asset-path("modal-3.png"));
       size: 314px;
+    }
+  }
+
+  &-inner {
+    flex: 1 1 100%;
+    @include breakpoint(sm) {
+      flex: 0 1 auto;
     }
   }
 }
