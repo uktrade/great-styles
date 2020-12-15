@@ -1,9 +1,8 @@
-
 // LINKS
 // ======
 
-@import 'helpers/colours';
-@import 'helpers/mixins';
+@import "helpers/colours";
+@import "helpers/mixins";
 
 // DSM Link
 
@@ -46,6 +45,16 @@
 
   &--large {
     @extend .h-s;
+  }
+}
+
+.link.text-white {
+  &:visited,
+  &:hover,
+  &:active,
+  &:focus:active {
+    color: $blue-deep-10;
+    cursor: pointer;
   }
 }
 
