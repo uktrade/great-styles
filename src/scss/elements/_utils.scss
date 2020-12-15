@@ -104,20 +104,14 @@
     border-bottom-left-radius: var(--radius);
     border-bottom-right-radius: var(--radius);
   }
-}
 
-.radius--small {
-  --radius: 5px;
-}
-
-// Responsive
-.radius {
   &-md {
     @include breakpoint(sm) {
       border-radius: var(--radius);
     }
   }
 
+  // Responsive
   &-top-md {
     @include breakpoint(sm) {
       border-top-left-radius: var(--radius);
@@ -131,4 +125,9 @@
       border-bottom-right-radius: var(--radius);
     }
   }
+}
+
+// Modifiers
+.radius--small {
+  --radius: 5px;
 }
