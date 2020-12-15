@@ -12,9 +12,9 @@ $desktop-max-breakpoint: 1024px;
 $desktop-large-max-breakpoint: 1200px;
 
 // For use with './helpers/breakpoints' mixin
-// n   = default behaviour (target breakpoints at and above this)
-// n_d = target breakpoints less than this
-// n_o = only target this breakpoint range
+// n    = default behaviour (target breakpoints at and above this)
+// n_lt = target breakpoints less than this
+// n_o  = target only this breakpoint range
 $magna-global-breakpoints: (
   // Small devices (landscape phones: >=640px)
   sm: 'screen and (min-width: #{$mobile-max-breakpoint})',
