@@ -44,7 +44,7 @@ export const Tooltip = ({
               title="Click or press Escape to close Educational moment"
               onClick={() => setIsComponentVisible(false)}
             >
-              <i className="fas fa-times text-blue-deep-80"></i>
+              <i className="fas fa-times text-blue-deep-80" />
             </span>
             {title && (
               <div className="tooltip__title h-xs p-t-0 p-b-0">{title}</div>
