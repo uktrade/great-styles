@@ -1,6 +1,11 @@
 :root {
   --ttpadding: 15px;
-  --tttexshadow: rgba(75, 66, 109, 0.3); // sass-lint:disable-line no-color-literals
+  --tttexshadow: rgba(
+    75,
+    66,
+    109,
+    0.3
+  ); // sass-lint:disable-line no-color-literals
   --ttarrowcolor: #ffffff; // sass-lint:disable-line no-color-literals
 }
 
@@ -26,53 +31,52 @@
   }
 }
 
-  .tooltip__text--left {
-    left: 0;
-    @include breakpoint(sm) {
-      left: 50px;
+.tooltip__text--left {
+  left: 0;
+  @include breakpoint(sm) {
+    left: 50px;
+  }
+}
+
+.tooltip__text--right {
+  right: 0;
+  @include breakpoint(sm) {
+    right: 50px;
+  }
+}
+
+.tooltip__close {
+  position: absolute;
+  right: var(--ttpadding);
+}
+
+.tooltip__close {
+  cursor: pointer;
+}
+
+// Tooltip content text rules
+.tooltip__content {
+  ul {
+    li {
+      list-style: disc;
+      margin-left: 1em;
     }
   }
 
-  .tooltip__text--right {
-    right: 0;
-    @include breakpoint(sm) {
-      right: 50px;
-    }
+  small {
+    font-size: 0.85em;
   }
 
-  .tooltip__close {
-    position: absolute;
-    right: var(--ttpadding);
-  }
-
-  .tooltip__close,
-  .tooltip__icon {
-    cursor: pointer;
-  }
-
-  // Tooltip content text rules
-  .tooltip__content {
-    ul {
-      li {
-        list-style: disc;
-        margin-left: 1em;
-      }
+  > * {
+    &:first-child {
+      margin-top: 10px;
     }
 
-    small {
-      font-size: 0.85em;
-    }
-
-    > * {
-      &:first-child {
-        margin-top: 10px;
-      }
-
-      &:last-child {
-        margin-bottom: 0;
-      }
+    &:last-child {
+      margin-bottom: 0;
     }
   }
+}
 
 // Tooltip arrow at the top
 // .tooltip__text--left::after,

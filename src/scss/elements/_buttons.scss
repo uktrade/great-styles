@@ -4,6 +4,9 @@
 
 // DSM Buttons
 .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 12px;
   line-height: 15px;
   font-family: 'FS Lucas';
@@ -172,7 +175,7 @@
     i {
       padding-right: 20px;
       color: $colour-red-10;
-      transform: scale(.85);
+      transform: scale(0.85);
       vertical-align: middle;
     }
   }
@@ -215,7 +218,6 @@
     }
 
     @-webkit-keyframes spin {
-
       0% {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
@@ -225,7 +227,6 @@
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
       }
-
     }
 
     @keyframes spin {
