@@ -83,7 +83,10 @@ $shim-background: rgba($black-100, 0.7);
 
 .confirmation-modal {
   padding: $space-s;
-  max-width: 500px;
+
+  @include breakpoint(sm) {
+    max-width: 500px;
+  }
 }
 
 .max-modal {
