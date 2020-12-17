@@ -22,17 +22,15 @@ export const Tooltip = ({
 
   return (
     <div className={`tooltip ${className}`}>
-      <div
-        title="Click to view Educational moment"
-        className="tooltip__icon"
-        onClick={() => setIsComponentVisible(true)}
-      >
-        <button
+      <div title="Click to view Educational moment" className="tooltip__icon">
+        <a
           className="button button--small button--only-icon button--tertiary"
-          onClick={(e) => e.preventDefault}
+          onClick={() => setIsComponentVisible(true)}
+          role="button"
+          tabindex="0"
         >
           <i className={`fas ${faIcon}`} />
-        </button>
+        </a>
       </div>
       {isComponentVisible && (
         <>
