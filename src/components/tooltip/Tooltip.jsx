@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import ReactHtmlParser from 'react-html-parser'
 import useComponentVisibleHook from '../../hooks/useComponentVisible'
 
 export const Tooltip = ({
@@ -49,12 +50,9 @@ export const Tooltip = ({
             {title && (
               <div className="tooltip__title h-xs p-t-0 p-b-0">{title}</div>
             )}
-            <div
-              className="tooltip__content text-blue-deep-80"
-              dangerouslySetInnerHTML={{
-                __html: content,
-              }}
-            />
+            <div className="tooltip__content text-blue-deep-80">
+              {ReactHtmlParser(content)}
+            </div>
           </div>
         </>
       )}
