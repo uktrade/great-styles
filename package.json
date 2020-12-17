@@ -55,7 +55,8 @@
     "storybook": "start-storybook -p 8080 -s static",
     "build-storybook": "build-storybook -s public",
     "dsm-storybook:publish": "dsm-storybook publish",
-    "dsm-storybook:preview": "dsm-storybook preview"
+    "dsm-storybook:preview": "dsm-storybook preview",
+    "babel": "./node_modules/.bin/babel src --ignore '**/*.stories.js' --out-dir ./dist"
   },
   "browserslist": [
     ">0.2%",
