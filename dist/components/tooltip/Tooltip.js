@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _reactHtmlParser = _interopRequireDefault(require("react-html-parser"));
+
 var _useComponentVisible = _interopRequireDefault(require("../../hooks/useComponentVisible"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -54,11 +56,8 @@ var Tooltip = ({
   })), title && /*#__PURE__*/_react.default.createElement("div", {
     className: "tooltip__title h-xs p-t-0 p-b-0"
   }, title), /*#__PURE__*/_react.default.createElement("div", {
-    className: "tooltip__content text-blue-deep-80",
-    dangerouslySetInnerHTML: {
-      __html: content
-    }
-  }))));
+    className: "tooltip__content text-blue-deep-80"
+  }, (0, _reactHtmlParser.default)(content)))));
 };
 
 exports.Tooltip = Tooltip;
