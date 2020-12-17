@@ -1,24 +1,36 @@
-import React from "react";
-import PropTypes from "prop-types";
-import useComponentVisibleHook from "../../hooks/useComponentVisible";
+import React from 'react'
+import PropTypes from 'prop-types'
+import useComponentVisibleHook from '../../hooks/useComponentVisible'
 
-export const Tooltip = ({title, content, position, className, isVisible, faIcon}) => {
+export const Tooltip = ({
+  title,
+  content,
+  position,
+  className,
+  isVisible,
+  faIcon,
+}) => {
   // Init useComponentVisible hook
-  const componentVisible = useComponentVisibleHook;
-  const {ref, isComponentVisible, setIsComponentVisible} = componentVisible(isVisible);
+  const componentVisible = useComponentVisibleHook
+  const { ref, isComponentVisible, setIsComponentVisible } = componentVisible(
+    isVisible
+  )
 
   // Logic for left or right aligned. Default left.
-  const ttPosition = position === "right" ? "right" : "left";
+  const ttPosition = position === 'right' ? 'right' : 'left'
 
   return (
     <div className={`tooltip ${className}`}>
       <div
         title="Click to view Educational moment"
-        class="tooltip__icon"
+        className="tooltip__icon"
         onClick={() => setIsComponentVisible(true)}
       >
-        <button class="button button--small button--only-icon button--tertiary">
-          <i class={`fas ${faIcon}`}></i>
+        <button
+          className="button button--small button--only-icon button--tertiary"
+          onClick={(e) => e.preventDefault}
+        >
+          <i className={`fas ${faIcon}`} />
         </button>
       </div>
       {isComponentVisible && (
@@ -34,7 +46,9 @@ export const Tooltip = ({title, content, position, className, isVisible, faIcon}
             >
               <i className="fas fa-times text-blue-deep-80"></i>
             </span>
-            {title && <div className="tooltip__title h-xs p-t-0 p-b-0">{title}</div>}
+            {title && (
+              <div className="tooltip__title h-xs p-t-0 p-b-0">{title}</div>
+            )}
             <div
               className="tooltip__content text-blue-deep-80"
               dangerouslySetInnerHTML={{
@@ -45,8 +59,8 @@ export const Tooltip = ({title, content, position, className, isVisible, faIcon}
         </>
       )}
     </div>
-  );
-};
+  )
+}
 
 Tooltip.propTypes = {
   className: PropTypes.string,
@@ -55,12 +69,12 @@ Tooltip.propTypes = {
   isVisible: PropTypes.bool,
   position: PropTypes.string,
   title: PropTypes.string,
-};
+}
 
 Tooltip.defaultProps = {
-  className: "",
-  faIcon: "fa-book",
+  className: '',
+  faIcon: 'fa-book',
   isVisible: false,
-  position: "left",
-  title: "Helpful hint",
-};
+  position: 'left',
+  title: 'Helpful hint',
+}
