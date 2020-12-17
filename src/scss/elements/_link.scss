@@ -1,4 +1,3 @@
-
 // LINKS
 // ======
 
@@ -46,6 +45,16 @@
 
   &--large {
     @extend .h-s;
+  }
+}
+
+.link.text-white {
+  &:visited,
+  &:hover,
+  &:active,
+  &:focus:active {
+    color: $blue-deep-10;
+    cursor: pointer;
   }
 }
 

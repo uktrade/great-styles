@@ -30,17 +30,18 @@ var Tooltip = ({
       setIsComponentVisible = _componentVisible.setIsComponentVisible; // Logic for left or right aligned. Default left.
 
 
-  var ttPosition = position === "right" ? "right" : "left";
+  var ttPosition = position === 'right' ? 'right' : 'left';
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "tooltip ".concat(className)
   }, /*#__PURE__*/_react.default.createElement("div", {
     title: "Click to view Educational moment",
-    class: "tooltip__icon",
+    className: "tooltip__icon",
     onClick: () => setIsComponentVisible(true)
   }, /*#__PURE__*/_react.default.createElement("button", {
-    class: "button button--small button--only-icon button--tertiary"
+    className: "button button--small button--only-icon button--tertiary",
+    onClick: e => e.preventDefault
   }, /*#__PURE__*/_react.default.createElement("i", {
-    class: "fas ".concat(faIcon)
+    className: "fas ".concat(faIcon)
   }))), isComponentVisible && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
     ref: ref,
     className: "tooltip__text tooltip__text--".concat(ttPosition, " bg-white radius radius--small")
@@ -70,9 +71,9 @@ Tooltip.propTypes = {
   title: _propTypes.default.string
 };
 Tooltip.defaultProps = {
-  className: "",
-  faIcon: "fa-book",
+  className: '',
+  faIcon: 'fa-book',
   isVisible: false,
-  position: "left",
-  title: "Helpful hint"
+  position: 'left',
+  title: 'Helpful hint'
 };

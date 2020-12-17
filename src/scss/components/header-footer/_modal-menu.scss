@@ -51,7 +51,7 @@ $shim-background: rgba($black-100, 0.7);
         display: block;
         cursor: pointer;
 
-        >span {
+        > span {
           padding: 11px 0 11px 58px;
           display: block;
         }
@@ -83,7 +83,10 @@ $shim-background: rgba($black-100, 0.7);
 
 .confirmation-modal {
   padding: $space-s;
-  max-width: 500px;
+
+  @include breakpoint(sm) {
+    max-width: 500px;
+  }
 }
 
 .max-modal {
@@ -112,7 +115,11 @@ $shim-background: rgba($black-100, 0.7);
     position: absolute;
     background-color: $white;
     border: 0;
-    border-radius: 10px;
+
+    @include breakpoint(sm) {
+      border-radius: var(--radius);
+    }
+
     outline: none;
   }
 }
