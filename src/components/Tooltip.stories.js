@@ -1,14 +1,14 @@
-import React from "react";
-import {withKnobs, boolean, select, text} from "@storybook/addon-knobs";
-import {Tooltip} from "./tooltip/Tooltip";
+import React from 'react'
+import { withKnobs, boolean, select, text } from '@storybook/addon-knobs'
+import { Tooltip } from './tooltip/Tooltip'
 
 export default {
-  title: "Actions/Tooltips",
+  title: 'Actions/Tooltips',
   parameters: {
     component: Tooltip,
     decorators: [withKnobs],
   },
-};
+}
 
 const tooltipData = {
   content: `
@@ -21,31 +21,36 @@ const tooltipData = {
     </ul>
     <small>Something small</small>
 `,
-};
-const tooltipDataRight = {...tooltipData, position: "right", title: "Custom title"};
+}
+const tooltipDataRight = {
+  ...tooltipData,
+  position: 'right',
+  title: 'Custom title',
+}
 
 const style = {
-  width: "100vw",
-  height: "100vh",
-};
+  display: 'flex',
+  width: '100vw',
+  height: '100vh',
+}
+
+const styleRight = {
+  ...style,
+  'justify-content': 'flex-end',
+}
 
 export const Tooltip_left = () => {
   return (
-    <div className="bg-blue-deep-60 p-l" style={style}>
+    <div className="bg-blue-deep-60 p-xs" style={style}>
       <Tooltip {...tooltipData} />
     </div>
-  );
-};
+  )
+}
 
 export const Tooltip_Right = () => {
   return (
-    <div className="bg-blue-deep-60 p-l" style={style}>
-      <Tooltip
-        {...tooltipDataRight}
-        isVisible={true}
-        className="jc-end"
-        faIcon="fa-info"
-      />
+    <div className="bg-blue-deep-60 p-xs" style={styleRight}>
+      <Tooltip {...tooltipDataRight} isVisible={true} faIcon="fa-info" />
     </div>
-  );
-};
+  )
+}

@@ -37,11 +37,12 @@ var Tooltip = ({
     className: "tooltip ".concat(className)
   }, /*#__PURE__*/_react.default.createElement("div", {
     title: "Click to view Educational moment",
-    className: "tooltip__icon",
-    onClick: () => setIsComponentVisible(true)
-  }, /*#__PURE__*/_react.default.createElement("button", {
+    className: "tooltip__icon"
+  }, /*#__PURE__*/_react.default.createElement("a", {
     className: "button button--small button--only-icon button--tertiary",
-    onClick: e => e.preventDefault
+    onClick: () => setIsComponentVisible(true),
+    role: "button",
+    tabindex: "0"
   }, /*#__PURE__*/_react.default.createElement("i", {
     className: "fas ".concat(faIcon)
   }))), isComponentVisible && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {

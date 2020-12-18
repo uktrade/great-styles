@@ -1,14 +1,16 @@
 :root {
   --ttpadding: 15px;
-  --tttexshadow: rgba(75, 66, 109, 0.3); // sass-lint:disable-line no-color-literals
+  /* prettier-ignore */
+  --tttexshadow: rgba(75,66,109,0.3); // sass-lint:disable-line no-color-literals
   --ttarrowcolor: #ffffff; // sass-lint:disable-line no-color-literals
 }
 
 // Tooltip container
 .tooltip {
-  display: flex;
+  display: inline-flex;
   justify-content: flex-start;
   position: relative;
+  z-index: 1;
 }
 
 // Tooltip content container (shown when active)
@@ -17,26 +19,27 @@
   flex-flow: column nowrap;
   position: absolute;
   top: calc(100% + var(--ttpadding));
-  width: 100%;
+  width: calc(100vw - 2 * (var(--ttpadding)));
   padding: var(--ttpadding);
   box-shadow: 0px 3px 15px 0px var(--tttexshadow);
   @include breakpoint(sm) {
     top: 0;
-    max-width: 350px;
+    min-width: 350px;
+    max-width: 50vw;
   }
 }
 
 .tooltip__text--left {
   left: 0;
   @include breakpoint(sm) {
-    left: 50px;
+    left: calc(100% + var(--ttpadding));
   }
 }
 
 .tooltip__text--right {
   right: 0;
   @include breakpoint(sm) {
-    right: 50px;
+    right: calc(100% + var(--ttpadding));
   }
 }
 
