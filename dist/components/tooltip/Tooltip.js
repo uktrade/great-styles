@@ -13,8 +13,6 @@ var _reactHtmlParser = _interopRequireDefault(require("react-html-parser"));
 
 var _useComponentVisible = _interopRequireDefault(require("../../hooks/useComponentVisible"));
 
-var _dict = require("core-js/fn/dict");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -49,38 +47,36 @@ var Tooltip = ({
       isComponentVisible = _componentVisible.isComponentVisible,
       setIsComponentVisible = _componentVisible.setIsComponentVisible;
 
-  var _useState = (0, _react.useState)(window.innerWidth),
+  var _useState = (0, _react.useState)({}),
       _useState2 = _slicedToArray(_useState, 2),
-      windowWidth = _useState2[0],
-      setWindowWidth = _useState2[1];
+      tooltipPosition = _useState2[0],
+      setTooltipPosition = _useState2[1]; // Simply apply negative margin to the left of the element
 
-  var _useState3 = (0, _react.useState)(window.innerHeight),
-      _useState4 = _slicedToArray(_useState3, 2),
-      windowHeight = _useState4[0],
-      setWindowHeight = _useState4[1];
 
-  var _useState5 = (0, _react.useState)({}),
-      _useState6 = _slicedToArray(_useState5, 2),
-      tooltipPosition = _useState6[0],
-      setTooltipPosition = _useState6[1];
-
-  var updateWidthAndHeight = () => {
-    var left = ref.current.getClientRects()[0].left;
-    setWindowWidth(window.innerWidth);
-    setWindowHeight(window.innerHeight);
+  var updatePositionOffset = el => {
+    var left = el.current.getClientRects()[0].left;
     setTooltipPosition({
       marginLeft: "calc(-".concat(left, "px + var(--ttpadding))")
     });
   };
 
+  var onClickOpen = () => {
+    setIsComponentVisible(true); // Provide time for element to render in DOM
+
+    setTimeout(() => {
+      updatePositionOffset(ref);
+    }, 50);
+  };
+
   (0, _react.useEffect)(() => {
     if (isComponentVisible) {
-      updateWidthAndHeight();
-      window.addEventListener('resize', updateWidthAndHeight);
+      updatePositionOffset();
+      window.addEventListener('resize', updatePositionOffset);
       return () => {
-        window.removeEventListener('resize', updateWidthAndHeight);
+        window.removeEventListener('resize', updatePositionOffset);
       };
-    }
+    } // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, []); // Logic for left or right aligned. Default left.
 
   var ttPosition = position === 'right' ? 'right' : 'left';
@@ -91,7 +87,7 @@ var Tooltip = ({
     className: "tooltip__icon"
   }, /*#__PURE__*/_react.default.createElement("a", {
     className: "button button--small button--only-icon button--tertiary",
-    onClick: () => setIsComponentVisible(true),
+    onClick: () => onClickOpen(),
     role: "button",
     tabIndex: "0"
   }, /*#__PURE__*/_react.default.createElement("i", {
