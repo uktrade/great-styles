@@ -10,7 +10,6 @@
   position: relative;
   display: inline-flex;
   justify-content: flex-start;
-  z-index: 10;
 }
 
 // Tooltip content container (shown when active)
@@ -22,6 +21,7 @@
   width: calc(100vw - 2 * (var(--ttpadding)));
   padding: var(--ttpadding);
   box-shadow: 0px 3px 15px 0px var(--tttexshadow);
+  z-index: 10;
   @include breakpoint(sm) {
     top: 0;
     max-width: 350px;
