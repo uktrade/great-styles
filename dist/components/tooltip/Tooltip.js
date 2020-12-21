@@ -47,33 +47,50 @@ var Tooltip = ({
       isComponentVisible = _componentVisible.isComponentVisible,
       setIsComponentVisible = _componentVisible.setIsComponentVisible;
 
-  var _useState = (0, _react.useState)({}),
+  var mobileBreakpoint = 640;
+
+  var _useState = (0, _react.useState)(null),
       _useState2 = _slicedToArray(_useState, 2),
       tooltipPosition = _useState2[0],
-      setTooltipPosition = _useState2[1]; // Simply apply negative margin to the left of the element
+      setTooltipPosition = _useState2[1];
+
+  var _useState3 = (0, _react.useState)(window.innerWidth),
+      _useState4 = _slicedToArray(_useState3, 2),
+      windowWidth = _useState4[0],
+      setWindowWidth = _useState4[1]; // Simply apply negative margin to the left of the element
 
 
   var updatePositionOffset = el => {
     var left = el.current.getClientRects()[0].left;
+    setWindowWidth(window.innerWidth);
     setTooltipPosition({
-      marginLeft: "calc(-".concat(left, "px + var(--ttpadding))")
+      marginLeft: windowWidth <= mobileBreakpoint ? "calc(-".concat(left, "px + var(--ttpadding))") : "unset"
     });
   };
 
   var onClickOpen = () => {
     setIsComponentVisible(true); // Provide time for element to render in DOM
 
-    setTimeout(() => {
-      updatePositionOffset(ref);
-    }, 50);
+    if (windowWidth <= mobileBreakpoint) {
+      setTimeout(() => {
+        updatePositionOffset(ref);
+      }, 50);
+    }
+  };
+
+  var onClickClose = () => {
+    setIsComponentVisible(false);
+    updatePositionOffset(ref);
   };
 
   (0, _react.useEffect)(() => {
+    setWindowWidth(window.innerWidth);
+
     if (isComponentVisible) {
-      updatePositionOffset();
-      window.addEventListener('resize', updatePositionOffset);
+      updatePositionOffset(ref);
+      window.addEventListener('resize', updatePositionOffset(ref));
       return () => {
-        window.removeEventListener('resize', updatePositionOffset);
+        window.removeEventListener('resize', updatePositionOffset(ref));
       };
     } // eslint-disable-next-line react-hooks/exhaustive-deps
 
@@ -99,7 +116,7 @@ var Tooltip = ({
   }, /*#__PURE__*/_react.default.createElement("span", {
     className: "tooltip__close",
     title: "Click or press Escape to close Educational moment",
-    onClick: () => setIsComponentVisible(false)
+    onClick: () => onClickClose()
   }, /*#__PURE__*/_react.default.createElement("i", {
     className: "fas fa-times text-blue-deep-80"
   })), title && /*#__PURE__*/_react.default.createElement("div", {
