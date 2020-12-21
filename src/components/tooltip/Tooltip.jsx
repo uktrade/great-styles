@@ -17,30 +17,44 @@ export const Tooltip = ({
   const { ref, isComponentVisible, setIsComponentVisible } = componentVisible(
     isVisible
   )
-  const [tooltipPosition, setTooltipPosition] = useState({})
+  const mobileBreakpoint = 640
+  const [tooltipPosition, setTooltipPosition] = useState(null)
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
   // Simply apply negative margin to the left of the element
   const updatePositionOffset = (el) => {
     let { left } = el.current.getClientRects()[0]
+    setWindowWidth(window.innerWidth)
     setTooltipPosition({
-      marginLeft: `calc(-${left}px + var(--ttpadding))`,
+      marginLeft:
+        windowWidth <= mobileBreakpoint
+          ? `calc(-${left}px + var(--ttpadding))`
+          : `unset`,
     })
   }
 
   const onClickOpen = () => {
     setIsComponentVisible(true)
     // Provide time for element to render in DOM
-    setTimeout(() => {
-      updatePositionOffset(ref)
-    }, 50)
+    if (windowWidth <= mobileBreakpoint) {
+      setTimeout(() => {
+        updatePositionOffset(ref)
+      }, 50)
+    }
+  }
+
+  const onClickClose = () => {
+    setIsComponentVisible(false)
+    updatePositionOffset(ref)
   }
 
   useEffect(() => {
+    setWindowWidth(window.innerWidth)
     if (isComponentVisible) {
-      updatePositionOffset()
-      window.addEventListener('resize', updatePositionOffset)
+      updatePositionOffset(ref)
+      window.addEventListener('resize', updatePositionOffset(ref))
       return () => {
-        window.removeEventListener('resize', updatePositionOffset)
+        window.removeEventListener('resize', updatePositionOffset(ref))
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -71,7 +85,7 @@ export const Tooltip = ({
             <span
               className="tooltip__close"
               title="Click or press Escape to close Educational moment"
-              onClick={() => setIsComponentVisible(false)}
+              onClick={() => onClickClose()}
             >
               <i className="fas fa-times text-blue-deep-80" />
             </span>
