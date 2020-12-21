@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import ReactHtmlParser from 'react-html-parser'
 import useComponentVisibleHook from '../../hooks/useComponentVisible'
+import { set } from 'core-js/fn/dict'
 
 export const Tooltip = ({
   title,
@@ -17,6 +18,29 @@ export const Tooltip = ({
     isVisible
   )
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight)
+  const [tooltipPosition, setTooltipPosition] = useState({})
+
+  const updateWidthAndHeight = () => {
+    let { left } = ref.current.getClientRects()[0]
+    setWindowWidth(window.innerWidth)
+    setWindowHeight(window.innerHeight)
+    setTooltipPosition({
+      marginLeft: `calc(-${left}px + var(--ttpadding))`,
+    })
+  }
+
+  useEffect(() => {
+    if (isComponentVisible) {
+      updateWidthAndHeight()
+      window.addEventListener('resize', updateWidthAndHeight)
+      return () => {
+        window.removeEventListener('resize', updateWidthAndHeight)
+      }
+    }
+  }, [])
+
   // Logic for left or right aligned. Default left.
   const ttPosition = position === 'right' ? 'right' : 'left'
 
@@ -27,7 +51,7 @@ export const Tooltip = ({
           className="button button--small button--only-icon button--tertiary"
           onClick={() => setIsComponentVisible(true)}
           role="button"
-          tabindex="0"
+          tabIndex="0"
         >
           <i className={`fas ${faIcon}`} />
         </a>
@@ -37,6 +61,7 @@ export const Tooltip = ({
           <div
             ref={ref}
             className={`tooltip__text tooltip__text--${ttPosition} bg-white radius radius--small`}
+            style={tooltipPosition}
           >
             <span
               className="tooltip__close"

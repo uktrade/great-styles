@@ -36,7 +36,7 @@ const style = {
 
 const styleRight = {
   ...style,
-  'justify-content': 'flex-end',
+  justifyContent: 'flex-end',
 }
 
 export const Tooltip_left = () => {
