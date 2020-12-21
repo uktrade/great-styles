@@ -1,8 +1,8 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import ReactHtmlParser from 'react-html-parser'
 import useComponentVisibleHook from '../../hooks/useComponentVisible'
-import { set } from 'core-js/fn/dict'
 
 export const Tooltip = ({
   title,
@@ -17,28 +17,33 @@ export const Tooltip = ({
   const { ref, isComponentVisible, setIsComponentVisible } = componentVisible(
     isVisible
   )
-
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight)
   const [tooltipPosition, setTooltipPosition] = useState({})
 
-  const updateWidthAndHeight = () => {
-    let { left } = ref.current.getClientRects()[0]
-    setWindowWidth(window.innerWidth)
-    setWindowHeight(window.innerHeight)
+  // Simply apply negative margin to the left of the element
+  const updatePositionOffset = (el) => {
+    let { left } = el.current.getClientRects()[0]
     setTooltipPosition({
       marginLeft: `calc(-${left}px + var(--ttpadding))`,
     })
   }
 
+  const onClickOpen = () => {
+    setIsComponentVisible(true)
+    // Provide time for element to render in DOM
+    setTimeout(() => {
+      updatePositionOffset(ref)
+    }, 50)
+  }
+
   useEffect(() => {
     if (isComponentVisible) {
-      updateWidthAndHeight()
-      window.addEventListener('resize', updateWidthAndHeight)
+      updatePositionOffset()
+      window.addEventListener('resize', updatePositionOffset)
       return () => {
-        window.removeEventListener('resize', updateWidthAndHeight)
+        window.removeEventListener('resize', updatePositionOffset)
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   // Logic for left or right aligned. Default left.
@@ -49,7 +54,7 @@ export const Tooltip = ({
       <div title="Click to view Educational moment" className="tooltip__icon">
         <a
           className="button button--small button--only-icon button--tertiary"
-          onClick={() => setIsComponentVisible(true)}
+          onClick={() => onClickOpen()}
           role="button"
           tabIndex="0"
         >

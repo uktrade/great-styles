@@ -50,7 +50,7 @@ export const Tooltip_left = () => {
 export const Tooltip_Right = () => {
   return (
     <div className="bg-blue-deep-60 p-xs" style={styleRight}>
-      <Tooltip {...tooltipDataRight} isVisible={true} faIcon="fa-info" />
+      <Tooltip {...tooltipDataRight} faIcon="fa-info" />
     </div>
   )
 }

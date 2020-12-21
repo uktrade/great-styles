@@ -1,0 +1,10 @@
+{
+  "globals": {},
+  "env": {},
+  "rules": {
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/anchor-has-content": "off"
+  },
+  "parserOptions": {},
+  "plugins": ["jsx-a11y"]
+}
