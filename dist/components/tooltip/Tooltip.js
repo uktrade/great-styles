@@ -47,19 +47,22 @@ var Tooltip = ({
       isComponentVisible = _componentVisible.isComponentVisible,
       setIsComponentVisible = _componentVisible.setIsComponentVisible;
 
-  var mobileBreakpoint = 640;
-
   var _useState = (0, _react.useState)(null),
       _useState2 = _slicedToArray(_useState, 2),
       tooltipPosition = _useState2[0],
-      setTooltipPosition = _useState2[1]; // Simply apply negative margin to the left of the element
+      setTooltipPosition = _useState2[1]; // Find mobile breakpoint width from CSS var
 
+
+  var mobileBreakpoint = Number(getComputedStyle(document.documentElement).getPropertyValue('--breakpoint-mobile').replace('px', '')) || 640; // Apply negative margin to the left of the element
 
   var updatePositionOffset = el => {
     var left = el.current.getClientRects()[0].left;
-    setTooltipPosition({
-      marginLeft: window.innerWidth <= mobileBreakpoint ? "calc(-".concat(left, "px + var(--ttpadding))") : null
-    });
+
+    if (el.current.classList.contains('tooltip__text--left')) {
+      setTooltipPosition({
+        marginLeft: window.innerWidth <= mobileBreakpoint ? "calc(-".concat(left, "px + var(--ttpadding))") : null
+      });
+    }
   };
 
   var onClickOpen = () => {
