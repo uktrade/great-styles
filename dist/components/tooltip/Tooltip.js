@@ -52,26 +52,20 @@ var Tooltip = ({
   var _useState = (0, _react.useState)(null),
       _useState2 = _slicedToArray(_useState, 2),
       tooltipPosition = _useState2[0],
-      setTooltipPosition = _useState2[1];
-
-  var _useState3 = (0, _react.useState)(window.innerWidth),
-      _useState4 = _slicedToArray(_useState3, 2),
-      windowWidth = _useState4[0],
-      setWindowWidth = _useState4[1]; // Simply apply negative margin to the left of the element
+      setTooltipPosition = _useState2[1]; // Simply apply negative margin to the left of the element
 
 
   var updatePositionOffset = el => {
     var left = el.current.getClientRects()[0].left;
-    setWindowWidth(window.innerWidth);
     setTooltipPosition({
-      marginLeft: windowWidth <= mobileBreakpoint ? "calc(-".concat(left, "px + var(--ttpadding))") : "unset"
+      marginLeft: window.innerWidth <= mobileBreakpoint ? "calc(-".concat(left, "px + var(--ttpadding))") : null
     });
   };
 
   var onClickOpen = () => {
     setIsComponentVisible(true); // Provide time for element to render in DOM
 
-    if (windowWidth <= mobileBreakpoint) {
+    if (window.innerWidth <= mobileBreakpoint) {
       setTimeout(() => {
         updatePositionOffset(ref);
       }, 50);
@@ -84,8 +78,6 @@ var Tooltip = ({
   };
 
   (0, _react.useEffect)(() => {
-    setWindowWidth(window.innerWidth);
-
     if (isComponentVisible) {
       updatePositionOffset(ref);
       window.addEventListener('resize', updatePositionOffset(ref));
@@ -94,7 +86,7 @@ var Tooltip = ({
       };
     } // eslint-disable-next-line react-hooks/exhaustive-deps
 
-  }, []); // Logic for left or right aligned. Default left.
+  }, [window.innerWidth]); // Logic for left or right aligned. Default left.
 
   var ttPosition = position === 'right' ? 'right' : 'left';
   return /*#__PURE__*/_react.default.createElement("div", {

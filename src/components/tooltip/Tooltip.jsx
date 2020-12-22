@@ -19,24 +19,22 @@ export const Tooltip = ({
   )
   const mobileBreakpoint = 640
   const [tooltipPosition, setTooltipPosition] = useState(null)
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
   // Simply apply negative margin to the left of the element
   const updatePositionOffset = (el) => {
     let { left } = el.current.getClientRects()[0]
-    setWindowWidth(window.innerWidth)
     setTooltipPosition({
       marginLeft:
-        windowWidth <= mobileBreakpoint
+        window.innerWidth <= mobileBreakpoint
           ? `calc(-${left}px + var(--ttpadding))`
-          : `unset`,
+          : null,
     })
   }
 
   const onClickOpen = () => {
     setIsComponentVisible(true)
     // Provide time for element to render in DOM
-    if (windowWidth <= mobileBreakpoint) {
+    if (window.innerWidth <= mobileBreakpoint) {
       setTimeout(() => {
         updatePositionOffset(ref)
       }, 50)
@@ -49,7 +47,6 @@ export const Tooltip = ({
   }
 
   useEffect(() => {
-    setWindowWidth(window.innerWidth)
     if (isComponentVisible) {
       updatePositionOffset(ref)
       window.addEventListener('resize', updatePositionOffset(ref))
@@ -58,7 +55,7 @@ export const Tooltip = ({
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [window.innerWidth])
 
   // Logic for left or right aligned. Default left.
   const ttPosition = position === 'right' ? 'right' : 'left'
