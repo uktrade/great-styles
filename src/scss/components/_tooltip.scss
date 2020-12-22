@@ -37,6 +37,7 @@
 }
 
 .tooltip__text--right {
+  left: 0;
   right: 0;
 
   @include breakpoint(sm) {
