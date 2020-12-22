@@ -64,10 +64,6 @@ var Tooltip = ({
       setTooltipPosition({
         marginLeft: window.innerWidth <= mobileBreakpoint ? "calc(-".concat(left, "px + var(--ttpadding))") : null
       });
-    } else {
-      setTooltipPosition({
-        marginLeft: window.innerWidth <= mobileBreakpoint ? "calc(-".concat(right, "px + var(--ttpadding))") : null
-      });
     }
   };
 

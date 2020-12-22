@@ -37,13 +37,6 @@ export const Tooltip = ({
             ? `calc(-${left}px + var(--ttpadding))`
             : null,
       })
-    } else {
-      setTooltipPosition({
-        marginLeft:
-          window.innerWidth <= mobileBreakpoint
-            ? `calc(-${right}px + var(--ttpadding))`
-            : null,
-      })
     }
   }
 
