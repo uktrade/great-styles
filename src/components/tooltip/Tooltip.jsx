@@ -28,22 +28,13 @@ export const Tooltip = ({
 
   // Apply negative margin to the left of the element
   const updatePositionOffset = (el) => {
-    let { left, right } = el.current.getClientRects()[0]
-    if (el.current.classList.contains('tooltip__text--left')) {
-      setTooltipPosition({
-        marginLeft:
-          window.innerWidth <= mobileBreakpoint
-            ? `calc(-${left}px + var(--ttpadding))`
-            : null,
-      })
-    } else {
-      setTooltipPosition({
-        marginLeft:
-          window.innerWidth <= mobileBreakpoint
-            ? `calc(-${right}px + 40px + var(--ttpadding))`
-            : null,
-      })
-    }
+    let { left } = el.current.getClientRects()[0]
+    setTooltipPosition({
+      marginLeft:
+        window.innerWidth <= mobileBreakpoint
+          ? `calc(-${left}px + var(--ttpadding))`
+          : null,
+    })
   }
 
   const onClickOpen = () => {

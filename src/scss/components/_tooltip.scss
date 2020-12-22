@@ -37,8 +37,8 @@
 }
 
 .tooltip__text--right {
+  right: unset;
   left: 0;
-  right: 0;
 
   @include breakpoint(sm) {
     left: unset;
