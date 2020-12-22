@@ -56,9 +56,7 @@ var Tooltip = ({
   var mobileBreakpoint = Number(getComputedStyle(document.documentElement).getPropertyValue('--breakpoint-mobile').replace('px', '')) || 640; // Apply negative margin to the left of the element
 
   var updatePositionOffset = el => {
-    var _el$current$getClient = el.current.getClientRects()[0],
-        left = _el$current$getClient.left,
-        right = _el$current$getClient.right;
+    var left = el.current.getClientRects()[0].left;
 
     if (el.current.classList.contains('tooltip__text--left')) {
       setTooltipPosition({
