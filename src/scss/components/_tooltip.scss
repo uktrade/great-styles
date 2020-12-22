@@ -30,6 +30,7 @@
 
 .tooltip__text--left {
   left: 0;
+
   @include breakpoint(sm) {
     left: calc(100% + var(--ttpadding));
   }
@@ -38,8 +39,8 @@
 .tooltip__text--right {
   right: unset;
   left: 0;
+
   @include breakpoint(sm) {
-    right: 0;
     left: unset;
     right: calc(100% + var(--ttpadding));
   }
