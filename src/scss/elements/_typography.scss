@@ -86,6 +86,7 @@ em {
 
   @include tablet {
     @include font-title-5;
+    @include bold;
     padding-bottom: #{3 * $space-s - ($font-size-xxlarge-desktop * $line-height-desktop)};
   }
 }
@@ -97,6 +98,7 @@ em {
 
   @include tablet {
     @include font-title-4;
+    @include bold;
     padding-bottom: #{(3 * $space-s) - ($font-size-xlarge-desktop * $line-height-desktop)};
   }
 }
@@ -109,6 +111,7 @@ em {
 
   @include tablet {
     @include font-title-3;
+    @include bold;
     padding-top: #{(2 * $space-s) - ($font-size-large-desktop * $line-height-desktop) - $space-xxs};
     padding-bottom: $space-xxs;
   }
@@ -122,6 +125,7 @@ em {
 
   @include tablet {
     @include font-title-2;
+    @include bold;
     padding-top: #{$space-s - $space-xxs};
     padding-bottom: $space-xxs;
   }
@@ -135,6 +139,7 @@ em {
 
   @include tablet {
     @include font-title-1;
+    @include bold;
     padding-top: #{$space-s - $space-xxs};
     padding-bottom: $space-xxs;
   }
@@ -157,7 +162,7 @@ em {
   }
 }
 
-.body-l { 
+.body-l {
   @include font-body-2;
 
   @include tablet {
