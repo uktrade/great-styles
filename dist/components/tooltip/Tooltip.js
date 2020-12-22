@@ -50,7 +50,17 @@ var Tooltip = ({
   var _useState = (0, _react.useState)(null),
       _useState2 = _slicedToArray(_useState, 2),
       tooltipPosition = _useState2[0],
-      setTooltipPosition = _useState2[1]; // Find mobile breakpoint width from CSS var
+      setTooltipPosition = _useState2[1];
+
+  var _useState3 = (0, _react.useState)(false),
+      _useState4 = _slicedToArray(_useState3, 2),
+      mount = _useState4[0],
+      setMount = _useState4[1];
+
+  var _useState5 = (0, _react.useState)(false),
+      _useState6 = _slicedToArray(_useState5, 2),
+      tooltipOpen = _useState6[0],
+      setTooltipOpen = _useState6[1]; // Find mobile breakpoint width from CSS var
 
 
   var mobileBreakpoint = Number(getComputedStyle(document.documentElement).getPropertyValue('--breakpoint-mobile').replace('px', '')) || 640; // Apply negative margin to the left of the element
@@ -63,9 +73,11 @@ var Tooltip = ({
   };
 
   var onClickOpen = () => {
-    setIsComponentVisible(true); // Provide time for element to render in DOM
+    setIsComponentVisible(true);
+    setTooltipOpen(true);
 
-    if (window.innerWidth <= mobileBreakpoint) {
+    if (window.innerWidth <= mobileBreakpoint && !tooltipOpen) {
+      // Provide time for element to render in DOM
       setTimeout(() => {
         updatePositionOffset(ref);
       }, 50);
@@ -75,18 +87,20 @@ var Tooltip = ({
   var onClickClose = () => {
     setIsComponentVisible(false);
     updatePositionOffset(ref);
+    setTooltipOpen(false);
   };
 
   (0, _react.useEffect)(() => {
-    if (isComponentVisible) {
+    if (isComponentVisible && !mount) {
       updatePositionOffset(ref);
+      setMount(true);
       window.addEventListener('resize', updatePositionOffset(ref));
       return () => {
         window.removeEventListener('resize', updatePositionOffset(ref));
       };
-    } // eslint-disable-next-line react-hooks/exhaustive-deps
-
-  }, [window.innerWidth]); // Logic for left or right aligned. Default left.
+    }
+  }, // eslint-disable-next-line react-hooks/exhaustive-deps
+  [isComponentVisible, ref, mount]); // Logic for left or right aligned. Default left.
 
   var ttPosition = position === 'right' ? 'right' : 'left';
   return /*#__PURE__*/_react.default.createElement("div", {
@@ -96,26 +110,27 @@ var Tooltip = ({
     className: "tooltip__icon"
   }, /*#__PURE__*/_react.default.createElement("a", {
     className: "button button--small button--only-icon button--tertiary",
-    onClick: () => onClickOpen(),
+    onClick: onClickOpen,
     role: "button",
-    tabIndex: "0"
+    tabIndex: "0",
+    type: "button"
   }, /*#__PURE__*/_react.default.createElement("i", {
     className: "fas ".concat(faIcon)
-  }))), isComponentVisible && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+  }))), isComponentVisible && /*#__PURE__*/_react.default.createElement("div", {
     ref: ref,
     className: "tooltip__text tooltip__text--".concat(ttPosition, " bg-white radius radius--small"),
     style: tooltipPosition
   }, /*#__PURE__*/_react.default.createElement("span", {
     className: "tooltip__close",
     title: "Click or press Escape to close Educational moment",
-    onClick: () => onClickClose()
+    onClick: onClickClose
   }, /*#__PURE__*/_react.default.createElement("i", {
     className: "fas fa-times text-blue-deep-80"
   })), title && /*#__PURE__*/_react.default.createElement("div", {
     className: "tooltip__title h-xs p-t-0 p-b-0"
   }, title), /*#__PURE__*/_react.default.createElement("div", {
     className: "tooltip__content text-blue-deep-80"
-  }, (0, _reactHtmlParser.default)(content)))));
+  }, (0, _reactHtmlParser.default)(content))));
 };
 
 exports.Tooltip = Tooltip;
