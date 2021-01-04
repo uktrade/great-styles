@@ -1,0 +1,10 @@
+{
+  "globals": {},
+  "env": {},
+  "rules": {
+    "react-hooks/exhaustive-deps": 0
+  },
+  "extends": ["prettier"],
+  "parserOptions": {},
+  "plugins": ["jsx-a11y", "prettier"]
+}

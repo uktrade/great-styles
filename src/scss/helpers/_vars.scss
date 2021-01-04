@@ -1,3 +1,10 @@
+// Creating CSS vars so we can read these in our JS components
+:root {
+  --breakpoint-mobile: 640px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-desktop-large: 1200px;
+}
 
 $site-width: 1230px;
 

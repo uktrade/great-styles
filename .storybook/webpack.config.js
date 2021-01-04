@@ -3,8 +3,8 @@ module.exports = {
     rules: [
       {
         test: /\.(svg)$/,
-        use: [{ loader: 'raw-loader' }]
-      }
-    ]
-  }
-};
+        use: [{ loader: 'raw-loader' }],
+      },
+    ],
+  },
+}
