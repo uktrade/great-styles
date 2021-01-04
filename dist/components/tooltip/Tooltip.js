@@ -111,7 +111,6 @@ var Tooltip = ({
   }, /*#__PURE__*/_react.default.createElement("button", {
     className: "button button--small button--only-icon button--tertiary",
     onClick: onClickOpen,
-    tabIndex: "0",
     type: "button"
   }, /*#__PURE__*/_react.default.createElement("i", {
     className: "fas ".concat(faIcon)

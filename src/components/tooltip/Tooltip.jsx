@@ -80,7 +80,6 @@ export const Tooltip = ({
         <button
           className="button button--small button--only-icon button--tertiary"
           onClick={onClickOpen}
-          tabIndex="0"
           type="button"
         >
           <i className={`fas ${faIcon}`} />
