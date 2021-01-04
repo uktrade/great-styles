@@ -108,10 +108,9 @@ var Tooltip = ({
   }, /*#__PURE__*/_react.default.createElement("div", {
     title: "Click to view Educational moment",
     className: "tooltip__icon"
-  }, /*#__PURE__*/_react.default.createElement("a", {
+  }, /*#__PURE__*/_react.default.createElement("button", {
     className: "button button--small button--only-icon button--tertiary",
     onClick: onClickOpen,
-    role: "button",
     tabIndex: "0",
     type: "button"
   }, /*#__PURE__*/_react.default.createElement("i", {

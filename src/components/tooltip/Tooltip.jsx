@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import ReactHtmlParser from 'react-html-parser'
@@ -78,15 +77,14 @@ export const Tooltip = ({
   return (
     <div className={`tooltip ${className}`}>
       <div title="Click to view Educational moment" className="tooltip__icon">
-        <a
+        <button
           className="button button--small button--only-icon button--tertiary"
           onClick={onClickOpen}
-          role="button"
           tabIndex="0"
           type="button"
         >
           <i className={`fas ${faIcon}`} />
-        </a>
+        </button>
       </div>
       {isComponentVisible && (
         <div
