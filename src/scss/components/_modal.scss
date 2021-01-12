@@ -9,6 +9,8 @@
 }
 
 .modal {
+  --modal-close-size-large: 30px;
+
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -18,6 +20,23 @@
   @include breakpoint(sm) {
     width: 630px;
     height: auto;
+  }
+
+  &-close {
+    &--x {
+      font-size: var(--font-size-body-3);
+      margin-top: calc(var(--modal-close-size-large) / -2);
+      margin-right: calc(var(--modal-close-size-large) / -2);
+      margin-left: auto;
+    }
+    &--x-large {
+      font-size: var(--modal-close-size-large);
+    }
+  }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
   }
 
   &-header-bg {
