@@ -3,6 +3,17 @@
     DSM provides design token functionality.
 */
 
+:root {
+  --font-size-title-1: 24px;
+  --font-size-title-2: 28px;
+  --font-size-title-3: 36px;
+  --font-size-title-4: 48px;
+  --font-size-title-5: 60px;
+
+  --font-size-body-1: 12px;
+  --font-size-body-2: 16px;
+  --font-size-body-3: 20px;
+}
 
 /*
     Colours
@@ -18,110 +29,110 @@ $colour-black-05: #efefef !default;
     Text Styles
 */
 
-@mixin font-title-1 () {
-    font-size: 24px;
-    line-height: 34px;
-    color: $colour-blue-deep-80;
-    font-family: 'FS Lucas';
-    font-style: normal;
-    font-weight: 600;
+@mixin font-title-1() {
+  font-size: var(--font-size-title-1);
+  line-height: 34px;
+  color: $colour-blue-deep-80;
+  font-family: 'FS Lucas';
+  font-style: normal;
+  font-weight: 600;
 }
 
-@mixin font-title-2 () {
-    font-size: 28px;
-    line-height: 32px;
-    color: $colour-blue-deep-80;
-    font-family: 'FS Lucas';
-    font-style: normal;
-    font-weight: 600;
+@mixin font-title-2() {
+  font-size: var(--font-size-title-2);
+  line-height: 32px;
+  color: $colour-blue-deep-80;
+  font-family: 'FS Lucas';
+  font-style: normal;
+  font-weight: 600;
 }
 
-@mixin font-title-3 () {
-    font-size: 36px;
-    line-height: 40px;
-    color: $colour-blue-deep-80;
-    font-family: 'FS Lucas';
-    font-style: normal;
-    font-weight: 600;
+@mixin font-title-3() {
+  font-size: var(--font-size-title-3);
+  line-height: 40px;
+  color: $colour-blue-deep-80;
+  font-family: 'FS Lucas';
+  font-style: normal;
+  font-weight: 600;
 }
 
-@mixin font-title-4 () {
-    font-size: 48px;
-    line-height: 48px;
-    color: $colour-blue-deep-80;
-    font-family: 'FS Lucas';
-    font-style: normal;
-    font-weight: 600;
+@mixin font-title-4() {
+  font-size: var(--font-size-title-4);
+  line-height: 48px;
+  color: $colour-blue-deep-80;
+  font-family: 'FS Lucas';
+  font-style: normal;
+  font-weight: 600;
 }
 
-@mixin font-title-5 () {
-    font-size: 60px;
-    line-height: 60px;
-    color: $colour-blue-deep-80;
-    font-family: 'FS Lucas';
-    font-style: normal;
-    font-weight: 600;
+@mixin font-title-5() {
+  font-size: var(--font-size-title-5);
+  line-height: 60px;
+  color: $colour-blue-deep-80;
+  font-family: 'FS Lucas';
+  font-style: normal;
+  font-weight: 600;
 }
 
-@mixin font-body-1 () {
-    font-size: 12px;
-    line-height: 15px;
-    color: $colour-blue-deep-80;
-    font-family: 'FS Lucas';
-    font-style: normal;
-    font-weight: 400;
+@mixin font-body-1() {
+  font-size: var(--font-size-body-1);
+  line-height: 15px;
+  color: $colour-blue-deep-80;
+  font-family: 'FS Lucas';
+  font-style: normal;
+  font-weight: 400;
 }
 
-@mixin font-body-1-bold () {
-    font-size: 12px;
-    line-height: 15px;
-    color: $colour-blue-deep-80;
-    font-family: 'FS Lucas';
-    font-style: normal;
-    font-weight: 600;
+@mixin font-body-1-bold() {
+  font-size: var(--font-size-body-1);
+  line-height: 15px;
+  color: $colour-blue-deep-80;
+  font-family: 'FS Lucas';
+  font-style: normal;
+  font-weight: 600;
 }
 
-@mixin font-body-2 () {
-    font-size: 16px;
-    line-height: 20px;
-    color: $colour-blue-deep-80;
-    font-family: 'FS Lucas';
-    font-style: normal;
-    font-weight: 400;
+@mixin font-body-2() {
+  font-size: var(--font-size-body-2);
+  line-height: 20px;
+  color: $colour-blue-deep-80;
+  font-family: 'FS Lucas';
+  font-style: normal;
+  font-weight: 400;
 }
 
-@mixin font-body-2-bold () {
-    font-size: 16px;
-    line-height: 20px;
-    color: $colour-blue-deep-80;
-    font-family: 'FS Lucas';
-    font-style: normal;
-    font-weight: 600;
+@mixin font-body-2-bold() {
+  font-size: var(--font-size-body-2);
+  line-height: 20px;
+  color: $colour-blue-deep-80;
+  font-family: 'FS Lucas';
+  font-style: normal;
+  font-weight: 600;
 }
 
-@mixin font-body-3 () {
-    font-size: 20px;
-    line-height: 30px;
-    color: $colour-blue-deep-80;
-    font-family: 'FS Lucas';
-    font-style: normal;
-    font-weight: 400;
+@mixin font-body-3() {
+  font-size: var(--font-size-body-3);
+  line-height: 30px;
+  color: $colour-blue-deep-80;
+  font-family: 'FS Lucas';
+  font-style: normal;
+  font-weight: 400;
 }
 
-@mixin font-body-3-bold () {
-    font-size: 20px;
-    line-height: 30px;
-    color: $colour-blue-deep-80;
-    font-family: 'FS Lucas';
-    font-style: normal;
-    font-weight: 600;
+@mixin font-body-3-bold() {
+  font-size: 20px;
+  line-height: 30px;
+  color: $colour-blue-deep-80;
+  font-family: 'FS Lucas';
+  font-style: normal;
+  font-weight: 600;
 }
 
-@mixin quote-text () {
-    font-size: 24px;
-    line-height: 40px;
-    color: $colour-blue-deep-80;
-    font-family: Georgia;
-    font-style: italic;
-    font-weight: 400;
+@mixin quote-text() {
+  font-size: var(--font-size-body-3);
+  line-height: 40px;
+  color: $colour-blue-deep-80;
+  font-family: Georgia;
+  font-style: italic;
+  font-weight: 400;
 }
