@@ -131,7 +131,7 @@ export const Modal_window_6_empty = () => (
       <div className="modal-header bg-white radius-top-s p-h-s p-t-s">
         <a
           href="/"
-          className="button button--secondary button--small button--icon modal-close modal-close--back m-t-n-xs m-l-n-xs"
+          className="button button--secondary button--small button--icon modal-close modal-close--back m-t-n-xs m-f-n-xs"
         >
           <i className="fas fa-arrow-left" />
           <span>Back</span>
