@@ -50,6 +50,7 @@
   "scripts": {
     "static-watch": "npx gulp",
     "static-build": "npx gulp build",
+    "lint": "npx gulp lint",
     "storybook-manifest": "cp manifest_storybook.yml storybook-static/manifest.yml",
     "storybook-push": "cd storybook-static && cf push great-styles-staging",
     "storybook-staging": "npm run build-storybook && npm run storybook-manifest && npm run storybook-push",

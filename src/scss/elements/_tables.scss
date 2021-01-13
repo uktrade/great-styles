@@ -18,9 +18,14 @@ table {
     padding: $space-xxs-m - 1 $space-s-m $space-xxs-m 0;
     text-align: left;
     border-bottom: 1px solid $active-blue;
+    vertical-align: middle;
 
     @include tablet {
       padding: $space-xxs - 1 $space-s $space-xxs 0;
+    }
+
+    &.no-data {
+      text-align: center;
     }
   }
 
@@ -31,5 +36,19 @@ table {
 
   caption {
     text-align: left;
+  }
+}
+
+table.border-blue-deep-20 {
+  th,
+  td {
+    border-color: $blue-deep-20;
+  }
+}
+
+table.valign-middle {
+  th,
+  td {
+    vertical-align: middle;
   }
 }
