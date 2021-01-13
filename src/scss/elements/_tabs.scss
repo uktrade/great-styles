@@ -1,0 +1,15 @@
+// Data table tabs
+
+@import "helpers/vars";
+
+.tab-list-item {
+  border-radius: 25px 25px 25px 25px;
+  background: transparent;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+
+.tab-list-active {
+  background-color: $white;
+  font-weight: bold;
+}
