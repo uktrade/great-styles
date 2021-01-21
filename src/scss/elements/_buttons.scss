@@ -3,30 +3,64 @@
 @import 'helpers/vars';
 
 // DSM Buttons
+// https://uktrade.atlassian.net/wiki/spaces/Great/pages/1883865161/Responsive+design+development
+
+:root {
+  --button-border-radius: 100px;
+  --button-font-weight: 600;
+  --button-min-width: 100px;
+  --button-padding-h: 20px;
+  --button-padding-v: 0;
+
+  --button-small-height: 40px;
+  --button-small-font-size: var(--font-size-body-2);
+  --button-small-icon-padding: 15px;
+  --button-small-loading-icon-size: 22px;
+
+  --button-medium-height: 45px;
+  --button-medium-font-size: var(--font-size-body-3);
+  --button-medium-icon-padding: 20px;
+  --button-medium-loading-icon-size: 30px;
+
+  --button-large-height: 50px;
+  --button-large-font-size: var(--font-size-title-1);
+  --button-large-icon-padding: 21px;
+  --button-large-loading-icon-size: 32px;
+}
+
 .button {
+  --button-height: var(--button-small-height);
+  --button-font-size: var(--button-small-font-size);
+  --button-loading-icon-size: var(--button-small-loading-icon-size);
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
-  line-height: 15px;
+  font-size: var(--button-font-size);
+  height: var(--button-height);
   font-family: 'FS Lucas';
   font-style: normal;
-  font-weight: 600;
+  font-weight: var(--button-font-weight);
   background: $colour-red-80;
   border: 2px solid transparent;
-  border-radius: 25px;
+  border-radius: var(--button-border-radius);
   color: $white;
   cursor: pointer;
-  min-width: 100px;
+  min-width: var(--button-min-width);
   overflow: hidden;
-  padding: 5px 15px;
+  padding: var(--button-padding-v) var(--button-padding-h);
   text-align: center;
   text-decoration: none;
+  min-width: 100%;
 
-  @include tablet {
-    font-size: 20px;
-    line-height: 30px;
-    padding: 6px 26px 5px;
+  @include breakpoint(md) {
+    min-width: unset;
+  }
+  @include breakpoint(lg) {
+    min-width: var(--button-min-width);
+    --button-height: var(--button-medium-height);
+    --button-font-size: var(--button-medium-font-size);
+    --button-loading-icon-size: var(--button-medium-loading-icon-size);
   }
 
   &:hover,
@@ -56,33 +90,69 @@
   }
 
   &--small {
-    @include tablet {
-      @include font-body-2-bold;
-      border-radius: 20px;
-      color: $white;
-      padding: 8px 20px;
+    --button-loading-icon-size: var(--button-small-loading-icon-size);
+    @include breakpoint(lg) {
+      --button-height: var(--button-small-height);
+      --button-font-size: var(--button-small-font-size);
     }
 
-    &.button--loading {
-      .button--loading__spinner {
-        width: 20px;
-        height: 20px;
-      }
+    &.button--icon {
+      --button-icon-padding: var(--button-small-icon-padding);
 
-      &.button--only-icon {
-        .button--loading__spinner {
-          width: 26px;
-          height: 26px;
-        }
+      i {
+        transform: scale(1);
       }
     }
   }
 
   &--large {
-    @include tablet {
-      @include font-body-3-bold;
-      color: $white;
-      padding: 8px 30px;
+    --button-height: var(--button-medium-height);
+    --button-font-size: var(--button-medium-font-size);
+    --button-loading-icon-size: var(--button-medium-loading-icon-size);
+
+    @include breakpoint(lg) {
+      --button-height: var(--button-large-height);
+      --button-font-size: var(--button-large-font-size);
+      --button-loading-icon-size: var(--button-large-loading-icon-size);
+    }
+
+    &.button--icon {
+      --button-icon-padding: var(--button-medium-icon-padding);
+
+      @include breakpoint(lg) {
+        --button-icon-padding: var(--button-large-icon-padding);
+      }
+
+      i {
+        transform: scale(0.92);
+      }
+    }
+  }
+
+  // Default or medium
+  &--icon {
+    --button-icon-padding: var(--button-small-icon-padding);
+
+    @include breakpoint(lg) {
+      --button-icon-padding: var(--button-medium-icon-padding);
+    }
+
+    i {
+      padding-right: var(--button-icon-padding);
+      color: $colour-red-10;
+      transform: scale(0.8);
+      vertical-align: middle;
+    }
+  }
+
+  &--only-icon {
+    min-width: var(--button-height);
+    padding: 0;
+
+    i {
+      color: $colour-red-10;
+      transform: scale(1.2);
+      vertical-align: middle;
     }
   }
 
@@ -169,36 +239,12 @@
     }
   }
 
-  &--icon {
-    padding-left: 18px;
-
-    i {
-      padding-right: 20px;
-      color: $colour-red-10;
-      transform: scale(0.85);
-      vertical-align: middle;
-    }
-  }
-
-  &--only-icon {
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    min-width: 40px;
-
-    i {
-      color: $colour-red-10;
-      transform: scale(1.2);
-      vertical-align: middle;
-    }
-  }
-
   &--loading {
     &__spinner,
     &__spinner:after {
       border-radius: 50%;
-      width: 30px;
-      height: 30px;
+      width: var(--button-loading-icon-size);
+      height: var(--button-loading-icon-size);
     }
 
     &__spinner {
