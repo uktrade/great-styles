@@ -46,9 +46,8 @@
   border-radius: var(--button-border-radius);
   color: $white;
   cursor: pointer;
-  min-width: var(--button-min-width);
   overflow: hidden;
-  padding: var(--button-padding-v) var(--button-padding-h);
+  padding: var(--button-padding-v --button-padding-h);
   text-align: center;
   text-decoration: none;
   min-width: 100%;
@@ -56,6 +55,7 @@
   @include breakpoint(md) {
     min-width: unset;
   }
+
   @include breakpoint(lg) {
     min-width: var(--button-min-width);
     --button-height: var(--button-medium-height);
