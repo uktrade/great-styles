@@ -91,6 +91,7 @@
 
   &--small {
     --button-loading-icon-size: var(--button-small-loading-icon-size);
+
     @include breakpoint(lg) {
       --button-height: var(--button-small-height);
       --button-font-size: var(--button-small-font-size);
