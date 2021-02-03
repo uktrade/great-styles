@@ -8,50 +8,30 @@ export const Collapsed = () => (
       <label className="form-label" htmlFor="Business performance">
         Business performance
       </label>
-      <input
-        className="form-control"
-        id="Business performance"
-        type="text"
-        name="Business performance"
-        placeholder="Select one"
-        readOnly
-        value="£50 million or over"
-      />
     </div>
-    <button
-      className="select__button text-blue-deep-20 bg-white"
-      type="button"
-      aria-haspopup="listbox"
-    >
-      <i className="fas fa-sort" />
-    </button>
+    <div className="select__button text-blue-deep-20 button--toggle ">
+      <button aria-haspopup="listbox" tabIndex="0" type="button" className="f-r button--toggle">
+        <i className="fas button--toggle fa-sort" />
+      </button>
+    </div>
+    <div className="select__placeholder text-blue-deep-60 bg-white radius ">Payment in advance</div>
   </div>
 );
 
 export const Expanded = () => (
   <div className="select m-b-l">
-    <div className="form-group width-full">
+    <div className="form-group">
       <label className="form-label" htmlFor="Business performance">
         Business performance
       </label>
-      <input
-        className="form-control"
-        id="Business performance"
-        type="text"
-        name="Business performance"
-        placeholder="Select one"
-        readOnly=""
-        value="£50 million or over"
-      />
     </div>
-    <button
-      className="select__button text-blue-deep-20 bg-white"
-      type="button"
-      aria-haspopup="listbox"
-    >
-      <i className="fas fa-times-circle text-blue-deep-60" />
-    </button>
-    <ul role="listbox" className="select__list bg-white body-l radius">
+    <div className="select__button text-blue-deep-20 button--toggle select__button--close">
+      <button aria-haspopup="listbox" tabIndex="0" type="button" className="f-r button--toggle">
+        <i className="fas button--toggle fa-times-circle text-blue-deep-60" />
+      </button>
+    </div>
+    <div className="select__placeholder text-blue-deep-60 bg-white radius hidden">Payment in advance</div>
+    <ul role="listbox" className="select__list m-t-0 bg-white body-l radius">
       <li>Select one</li>
       <li className="select__list--item" aria-selected="false" role="option">
         item 1

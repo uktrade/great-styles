@@ -3,13 +3,10 @@
 
   &__button {
     border: 0;
-    bottom: 10px;
     font: inherit;
-    left: 0;
-    padding: 5px 15px;
+    margin-top: 15px;
     position: absolute;
     right: 10px;
-    width: 100%;
     z-index: 1;
 
     i {
@@ -21,9 +18,14 @@
     }
   }
 
+  &__placeholder {
+    border: 2px solid $colour-blue-deep-20;
+    min-height: 50px;
+    padding: 10px 15px;
+  }
+
   &__list {
     border: 2px solid $colour-blue-deep-60;
-    margin-top: -50px;
     position: absolute;
     width: 100%;
     z-index: 2;
