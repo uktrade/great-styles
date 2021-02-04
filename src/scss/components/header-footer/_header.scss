@@ -56,9 +56,6 @@ $menu-margin-s: 20px;
   nav {
     width: 100%;
     display: flex;
-
-    .services-area,
-    .user-state-area {}
   }
 
   #header-link-user-profile {
@@ -72,6 +69,7 @@ $menu-margin-s: 20px;
     background-color: $white;
     position: relative;
     padding: 0;
+    transition: background-color 0.2s;
 
     &:focus,
     &.active {
@@ -79,18 +77,16 @@ $menu-margin-s: 20px;
 
       &:after {
         content: '';
-        top: -10%;
-        left: -10%;
+        top: -4px;
+        left: -4px;
         display: block;
         position: absolute;
         border: 2px solid $red-80;
-        width: 110%;
-        height: 110%;
+        width: 48px;
+        height: 48px;
         border-radius: 50%;
       }
     }
-
-    transition: background-color 0.2s;
 
     &:hover {
       background-color: darken($white, 10%);
@@ -106,6 +102,4 @@ $menu-margin-s: 20px;
       border-radius: 50%;
     }
   }
-
-
 }
