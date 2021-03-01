@@ -1,6 +1,10 @@
 .select {
   position: relative;
 
+  button i {
+    pointer-events: none;
+  }
+
   &__button {
     border: 0;
     font: inherit;
