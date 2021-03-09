@@ -90,6 +90,12 @@ var Tooltip = ({
     setTooltipOpen(false);
   };
 
+  var onKeyClose = key => {
+    if (key === 'Enter') {
+      onClickClose();
+    }
+  };
+
   (0, _react.useEffect)(() => {
     if (isComponentVisible && !mount) {
       updatePositionOffset(ref);
@@ -121,7 +127,9 @@ var Tooltip = ({
   }, /*#__PURE__*/_react.default.createElement("span", {
     className: "tooltip__close",
     title: "Click or press Escape to close Educational moment",
-    onClick: onClickClose
+    onClick: onClickClose,
+    onKeyUp: e => onKeyClose(e.key),
+    tabindex: "0"
   }, /*#__PURE__*/_react.default.createElement("i", {
     className: "fas fa-times text-blue-deep-80"
   })), title && /*#__PURE__*/_react.default.createElement("div", {

@@ -56,6 +56,12 @@ export const Tooltip = ({
     setTooltipOpen(false)
   }
 
+  const onKeyClose = (key) => {
+    if (key === 'Enter') {
+      onClickClose()
+    }
+  }
+
   useEffect(
     () => {
       if (isComponentVisible && !mount) {
@@ -95,6 +101,8 @@ export const Tooltip = ({
             className="tooltip__close"
             title="Click or press Escape to close Educational moment"
             onClick={onClickClose}
+            onKeyUp={(e) => onKeyClose(e.key)}
+            tabindex="0"
           >
             <i className="fas fa-times text-blue-deep-80" />
           </span>
