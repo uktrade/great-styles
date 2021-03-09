@@ -50,6 +50,7 @@
   position: absolute;
   right: var(--ttpadding);
   cursor: pointer;
+
   &:focus {
     outline: 6px solid $focus-yellow;
   }
