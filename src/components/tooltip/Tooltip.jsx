@@ -102,7 +102,7 @@ export const Tooltip = ({
             title="Click or press Escape to close Educational moment"
             onClick={onClickClose}
             onKeyUp={(e) => onKeyClose(e.key)}
-            tabindex="0"
+            tabIndex="0"
           >
             <i className="fas fa-times text-blue-deep-80" />
           </span>
