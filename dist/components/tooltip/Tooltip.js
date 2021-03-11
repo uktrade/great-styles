@@ -129,7 +129,7 @@ var Tooltip = ({
     title: "Click or press Escape to close Educational moment",
     onClick: onClickClose,
     onKeyUp: e => onKeyClose(e.key),
-    tabindex: "0"
+    tabIndex: "0"
   }, /*#__PURE__*/_react.default.createElement("i", {
     className: "fas fa-times text-blue-deep-80"
   })), title && /*#__PURE__*/_react.default.createElement("div", {
