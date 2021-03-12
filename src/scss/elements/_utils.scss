@@ -49,8 +49,11 @@
 }
 
 .flex-jc-space-between {
-  display: flex;
   justify-content: space-between;
+}
+
+.flex-ai-center {
+  align-items: center;
 }
 
 .f-r {
