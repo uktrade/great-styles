@@ -170,6 +170,23 @@ $card-min-height-mobile: $space-s-m * 7;
       }
     }
   }
+
+  &-body {
+    border-bottom: 1px solid $blue-deep-30;
+  }
+
+  &-progress {
+    background: {
+      repeat: no-repeat;
+      position: bottom right;
+      image: url('/static/images/ep-placeholder.svg');
+      size: 210px;
+    }
+
+    &--complete {
+      background-image: url('/static/images/ep-placeholder-complete.png');
+    }
+  }
 }
 
 @media (max-width: 640px) {
