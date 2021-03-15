@@ -13,7 +13,7 @@ $card-min-height-mobile: $space-s-m * 7;
 .g-card {
   box-shadow: 2px 2px 4px 0 $black-20;
   border-radius: 10px;
-  padding: $space-xs $space-s;
+  padding: $space-s;
   background: $white;
 
   @include desktop {
@@ -35,6 +35,10 @@ $card-min-height-mobile: $space-s-m * 7;
     margin: 0 (-$space-s);
     padding: 0 $space-s $space-xs;
     border-bottom: 1px solid $blue-deep-30;
+
+    @include breakpoint(md) {
+      display: flex;
+    }
   }
 
   .g-card-full {
@@ -176,15 +180,19 @@ $card-min-height-mobile: $space-s-m * 7;
   }
 
   &-progress {
-    background: {
-      repeat: no-repeat;
-      position: bottom right;
-      image: url('/static/images/ep-placeholder.svg');
-      size: 210px;
+    @include breakpoint(md) {
+      background: {
+        repeat: no-repeat;
+        position: bottom right;
+        image: url('/static/images/ep-placeholder.svg');
+        size: 210px;
+      }
     }
 
     &--complete {
-      background-image: url('/static/images/ep-placeholder-complete.png');
+      @include breakpoint(md) {
+        background-image: url('/static/images/ep-placeholder-complete.png');
+      }
     }
   }
 }
