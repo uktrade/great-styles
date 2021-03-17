@@ -26,12 +26,29 @@
     border: 2px solid $colour-blue-deep-20;
     min-height: 50px;
     padding: 10px 15px;
+    position: relative;
+
+    .tag--icon {
+      position: relative;
+      z-index: 2;
+    }
+
+    &--input {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+    }
   }
 
   &__list {
     border: 2px solid $colour-blue-deep-60;
+    left: -1px;
     position: absolute;
-    width: 100%;
+    top: -1px;
+    width: 101%;
     z-index: 2;
 
     li {
