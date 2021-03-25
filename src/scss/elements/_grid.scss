@@ -184,7 +184,7 @@
 }
 
 .w-auto {
-  width: auto;
+  width: auto !important; // sass-lint:disable-line no-important;
 }
 
 .w-full-viewport {
