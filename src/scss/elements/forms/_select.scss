@@ -72,3 +72,15 @@
     margin-bottom: 0;
   }
 }
+
+.select-date {
+  position: relative;
+
+  &__friendly {
+    position: absolute;
+    z-index: 1;
+    background-color: $colour-white-100;
+    padding: 2px 10px 2px 2px;
+    margin: 0 0 0 15px;
+  }
+}
