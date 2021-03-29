@@ -161,3 +161,9 @@ export const button_full_width = () =>
     'button button--full-width button--tertiary',
     'button button--full-width button--quaternary',
   ])
+
+export const button_tiny_toggle = () => (
+  <button className="button button--tiny-toggle" type="button">
+    <i className="fa fa-chevron-circle-down" />
+  </button>
+)
