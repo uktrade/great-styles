@@ -19,7 +19,7 @@ Run storybook in dev mode:
 
 Build and watch static assets (indepentent process) using gulp:
 `npm i -g gulp` then `gulp` will compile and watch for ongoing SCSS changes.
-or `npm rum build-static` will execute gulp with `npx` (if you prefer not to install gulp globally).
+or `npm run static-build` will execute gulp with `npx` (if you prefer not to install gulp globally).
 
 Preview DSM/storybook locally:
 `npm run dsm-storybook:preview`

@@ -184,14 +184,14 @@ $card-min-height-mobile: $space-s-m * 7;
       background: {
         repeat: no-repeat;
         position: bottom right;
-        image: url('/static/images/ep-placeholder.svg');
+        image: url('/assets/images/ep-placeholder.svg');
         size: 210px;
       }
     }
 
     &--complete {
       @include breakpoint(md) {
-        background-image: url('/static/images/ep-placeholder-complete.png');
+        background-image: url('/assets/images/ep-placeholder-complete.png');
       }
     }
   }
