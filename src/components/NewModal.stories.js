@@ -10,9 +10,15 @@ export default {
   },
 }
 
+const containerStyle = {
+  display: 'flex',
+  width: '100vw',
+  height: '100vh',
+}
+
 export const Modal_1 = () => {
   return (
-    <div className="bg-blue-deep-60 p-xs">
+    <div className="bg-blue-deep-60 p-xs" style={containerStyle}>
       <Modal {...Modal_1.args} />
     </div>
   )
