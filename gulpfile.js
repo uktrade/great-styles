@@ -14,13 +14,13 @@ const SASS_LINT_FILES = [
   `!${PROJECT_DIR}/src/scss/elements/_reset.scss`,
   `!${PROJECT_DIR}/src/scss/helpers/_colours.scss`,
 ];
-const CSS_DIR = `${PROJECT_DIR}/static`;
-const CSS_FILES = `${PROJECT_DIR}/static/**/*.css`;
-const CSS_MAPS = `${PROJECT_DIR}/static/**/*.css.map`;
+const CSS_DIR = `${PROJECT_DIR}/assets`;
+const CSS_FILES = `${PROJECT_DIR}/assets/**/*.css`;
+const CSS_MAPS = `${PROJECT_DIR}/assets/**/*.css.map`;
 const IMAGES_SRC = `${PROJECT_DIR}/src/scss/images/**/*`;
-const IMAGES_DEST = `${PROJECT_DIR}/static/images/`;
+const IMAGES_DEST = `${PROJECT_DIR}/assets/images/`;
 const FONTS_SRC = `${PROJECT_DIR}/src/scss/fonts/**/*`;
-const FONTS_DEST = `${PROJECT_DIR}/static/fonts/`;
+const FONTS_DEST = `${PROJECT_DIR}/assets/fonts/`;
 
 gulp.task("lint", function() {
   console.log(`${PROJECT_DIR}/src/scss/elements/_reset.scss`);
