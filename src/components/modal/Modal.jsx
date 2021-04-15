@@ -1,9 +1,17 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, cloneElement } from 'react'
 import PropTypes from 'prop-types'
 import ReactHtmlParser from 'react-html-parser'
 import useComponentVisibleHook from '../../hooks/useComponentVisible'
 
-export const Modal = ({ title, content, className, isOpen, faIcon }) => {
+export const Modal = ({
+  title,
+  content,
+  className,
+  isOpen,
+  faIcon,
+  customButton,
+  disabled,
+}) => {
   // Init useComponentVisible hook
   const componentVisible = useComponentVisibleHook
   const { ref, isComponentVisible, setIsComponentVisible } = componentVisible(
@@ -19,21 +27,38 @@ export const Modal = ({ title, content, className, isOpen, faIcon }) => {
   }
 
   const onKeyClose = (key) => {
-    if (key === 'Enter') {
+    if (key === 'Enter' || key === ' ') {
       onHandleClose()
     }
   }
 
+  const test = (message) => console.log(message)
+
+  // Not attaching function
+  const customButtonEl = customButton
+    ? cloneElement(
+        customButton,
+        {
+          onHandleOpen,
+        },
+        null
+      )
+    : undefined
+
   return (
     <div className={`tooltip ${className}`}>
       <div title="Click to view modal moment" className="tooltip__icon">
-        <button
-          className="button button--small button--only-icon button--tertiary"
-          onClick={onHandleOpen}
-          type="button"
-        >
-          <i className={`fas ${faIcon}`} />
-        </button>
+        {customButton ? (
+          <>{customButtonEl}</>
+        ) : (
+          <button
+            className="button button--small"
+            onClick={onHandleOpen}
+            type="button"
+          >
+            Open modal
+          </button>
+        )}
       </div>
       {isComponentVisible && (
         <div
@@ -68,6 +93,8 @@ Modal.propTypes = {
   isOpen: PropTypes.bool,
   position: PropTypes.string,
   title: PropTypes.string,
+  customButton: PropTypes.node,
+  disabled: PropTypes.bool,
 }
 
 Modal.defaultProps = {

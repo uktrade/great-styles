@@ -16,6 +16,14 @@ const containerStyle = {
   height: '100vh',
 }
 
+const CustomButton = () => {
+  return (
+    <button className="button button--small button--secondary" type="button">
+      Open custom
+    </button>
+  )
+}
+
 export const Modal_1 = () => {
   return (
     <div className="bg-blue-deep-60 p-xs" style={containerStyle}>
@@ -23,4 +31,8 @@ export const Modal_1 = () => {
     </div>
   )
 }
-Modal_1.args = {}
+Modal_1.args = {
+  // customButton: <CustomButton />,
+  isOpen: false,
+  disabled: true,
+}
