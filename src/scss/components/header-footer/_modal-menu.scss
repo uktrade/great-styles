@@ -114,6 +114,10 @@ $shim-background: rgba($black-100, 0.7);
 }
 
 .modal {
+  --modal-padding: 30px;
+  --modal-close-size: 30px;
+  --modal-close-bgColour: rgba(255, 255, 255, 0.9);
+
   background-color: $white;
   border: 0;
   outline: none;
@@ -124,7 +128,7 @@ $shim-background: rgba($black-100, 0.7);
 
   &.modal--new {
     position: relative;
-    padding: 30px;
+    padding: var(--modal-padding);
 
     // Sizes {
     &.modal--small {
@@ -151,19 +155,30 @@ $shim-background: rgba($black-100, 0.7);
   }
 
   &__close {
-    --modal-close-size: 30px;
-    --modal-bgColour: rgba(255, 255, 255, 0.9);
-
     position: absolute;
-    right: calc(0.5 * var(--modal-close-size));
-    top: calc(0.5 * var(--modal-close-size));
-    border-radius: 100px;
-    background-color: var(--modal-bgColour);
-    height: var(--modal-close-size);
-    width: var(--modal-close-size);
     display: flex;
     align-items: center;
     justify-content: center;
+    right: calc(0.5 * var(--modal-close-size));
+    top: calc(0.5 * var(--modal-close-size));
+    border-radius: 100px;
+    background-color: var(--modal-close-bgColour);
+    height: var(--modal-close-size);
+    width: var(--modal-close-size);
+
+    i {
+      color: $colour-blue-deep-80;
+    }
+
+    &:hover,
+    &:active,
+    &:active:focus {
+      background: $colour-red-80;
+
+      i {
+        color: white;
+      }
+    }
   }
 
   &__container {
@@ -184,7 +199,7 @@ $shim-background: rgba($black-100, 0.7);
     border-radius: var(--radius);
 
     img {
-      padding: 0 15px;
+      padding: 0 calc(0.5 * var(--modal-padding));
       width: 100%;
     }
   }
@@ -192,6 +207,25 @@ $shim-background: rgba($black-100, 0.7);
   &__content {
     flex: 1;
     overflow-y: auto;
+
+    // This creates the illusion of a drop shadow when content is scrollable.
+    background: linear-gradient(white 30%, rgba(255, 255, 255, 0)),
+      linear-gradient(rgba(255, 255, 255, 0), white 70%) 0% 100%,
+      radial-gradient(
+        farthest-side at 50% 0%,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0)
+      ),
+      radial-gradient(
+          farthest-side at 50% 100%,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0)
+        )
+        0 100%;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: 100% 40px, 100% 40px, 100% 15px, 100% 15px;
+    background-attachment: local, local, scroll, scroll;
   }
 
   &__footer {

@@ -49,7 +49,7 @@ export const Modal = ({
           onKeyUp={(e) => onKeyClose(e.key)}
           tabIndex="0"
         >
-          <i className="fas fa-times text-blue-deep-80" />
+          <i className="fas fa-times" />
         </button>
       )}
       <div className="modal__container">

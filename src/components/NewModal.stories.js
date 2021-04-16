@@ -36,8 +36,10 @@ Modal_1.props = {
     bgClass: 'bg-blue-deep-80',
   },
   primaryButtonClick: () => console.log('Primary clicked'),
+  primaryButtonLabel: 'Done',
   secondaryButtonClick: () => console.log('Secondary clicked'),
+  secondaryButtonLabel: 'Cancel',
   closeClick: () => console.log('Close clicked'),
-  progressPercentage: 20,
+  progressPercentage: 50,
   // modalSize: 'small',
 }
