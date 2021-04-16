@@ -1,4 +1,5 @@
 /* Styles for modal overlays, windows and menus */
+// sass-lint:disable no-color-literals
 
 $shim-background: rgba($black-100, 0.7);
 
@@ -151,12 +152,13 @@ $shim-background: rgba($black-100, 0.7);
 
   &__close {
     --modal-close-size: 30px;
+    --modal-bgColour: rgba(255, 255, 255, 0.9);
 
     position: absolute;
     right: calc(0.5 * var(--modal-close-size));
     top: calc(0.5 * var(--modal-close-size));
     border-radius: 100px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: var(--modal-bgColour);
     height: var(--modal-close-size);
     width: var(--modal-close-size);
     display: flex;
