@@ -110,16 +110,59 @@ $shim-background: rgba($black-100, 0.7);
     align-items: center;
     justify-content: center;
   }
+}
 
-  .modal {
-    position: absolute;
-    background-color: $white;
-    border: 0;
+.modal {
+  position: absolute;
+  background-color: $white;
+  border: 0;
 
-    @include breakpoint(sm) {
-      border-radius: var(--radius);
+  @include breakpoint(sm) {
+    border-radius: var(--radius);
+  }
+
+  outline: none;
+
+  &--new {
+    padding: 20px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    max-height: 90vh;
+    flex-flow: column nowrap;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: space-between;
+    border-radius: var(--radius);
+    img {
+      padding: 0 15px;
+      width: 100%;
     }
+  }
 
-    outline: none;
+  &__content {
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  &__footer {
+    display: flex;
+    flex: 1 0 60px;
+    padding-top: 20px;
+    align-items: center;
+    &-item {
+      flex: 1;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      margin: 0 5px;
+    }
   }
 }
