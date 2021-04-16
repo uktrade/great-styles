@@ -215,6 +215,15 @@ $shim-background: rgba($black-100, 0.7);
         min-width: unset;
         max-width: 250px;
 
+        &:only-child {
+          max-width: 100%;
+
+          @include breakpoint(sm) {
+            margin-left: auto;
+            max-width: 250px;
+          }
+        }
+
         + .button {
           margin-left: 10px;
         }
