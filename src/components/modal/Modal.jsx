@@ -15,6 +15,7 @@ export const Modal = ({
   primaryButtonDisable,
   secondaryButtonLabel,
   secondaryButtonClick,
+  secondaryButtonDisable,
   closeClick,
   progressPercentage,
   isOpen,
@@ -43,11 +44,13 @@ export const Modal = ({
           id="dialog-close"
           type="button"
           aria-label="Close"
-          className="pull-right m-r-0 dialog-close"
+          className="modal__close"
           onClick={closeClick}
           onKeyUp={(e) => onKeyClose(e.key)}
           tabIndex="0"
-        />
+        >
+          <i className="fas fa-times text-blue-deep-80" />
+        </button>
       )}
       <div className="modal__container">
         <div className="modal__content">
@@ -65,20 +68,19 @@ export const Modal = ({
           {children}
         </div>
         <div className="modal__footer">
-          {progressPercentage != null ? (
+          {progressPercentage !== null && (
             <div className="modal__footer-progress progress-section">
               <div className="progress-bar">
                 <span style={{ width: `${progressPercentage}%` }} />
               </div>
             </div>
-          ) : (
-            ''
           )}
           <div className="modal__footer-actions">
             {secondaryButtonClick && (
               <button
                 type="button"
                 className="button button--tertiary"
+                disabled={secondaryButtonDisable}
                 onClick={secondaryButtonClick}
               >
                 {secondaryButtonLabel || 'Exit'}
@@ -118,12 +120,12 @@ Modal.propTypes = {
   primaryButtonDisable: PropTypes.bool,
   secondaryButtonLabel: PropTypes.string,
   secondaryButtonClick: PropTypes.func,
+  secondaryButtonDisable: PropTypes.bool,
   isOpen: PropTypes.bool,
   progressPercentage: PropTypes.number,
 }
 Modal.defaultProps = {
   title: '<Modal title>',
-  closeClick: null,
   minHeight: 105,
   image: {
     src: '',
@@ -132,10 +134,7 @@ Modal.defaultProps = {
   },
   modalSize: 'medium',
   primaryButtonLabel: '<Primary>',
-  primaryButtonClick: null,
-  primaryButtonDisable: false,
   secondaryButtonLabel: '<Secondary>',
-  secondaryButtonClick: null,
   progressPercentage: null,
   isOpen: true,
 }

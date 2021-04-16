@@ -28,16 +28,16 @@ export const Modal_1 = () => {
   )
 }
 Modal_1.props = {
-  // title: 'Modal title',
+  title: 'Modal title',
   body: `<p>Some content here Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut error distinctio laboriosam quae at quibusdam animi odit, deleniti nostrum iusto adipisci tenetur id rem eos, quos voluptatum accusantium beatae magni!</p>`,
   image: {
     src: modalImage,
     alt: 'Alt text',
     bgClass: 'bg-blue-deep-80',
   },
-  primaryButtonClick: true,
-  secondaryButtonClick: true,
-  closeClick: true,
+  primaryButtonClick: () => console.log('Primary clicked'),
+  secondaryButtonClick: () => console.log('Secondary clicked'),
+  closeClick: () => console.log('Close clicked'),
   progressPercentage: 20,
   // modalSize: 'small',
 }

@@ -122,7 +122,8 @@ $shim-background: rgba($black-100, 0.7);
   }
 
   &.modal--new {
-    padding: 20px;
+    position: relative;
+    padding: 30px;
 
     // Sizes {
     &.modal--small {
@@ -146,6 +147,21 @@ $shim-background: rgba($black-100, 0.7);
         width: calc(100vw - 40px);
       }
     }
+  }
+
+  &__close {
+    --modal-close-size: 30px;
+
+    position: absolute;
+    right: calc(0.5 * var(--modal-close-size));
+    top: calc(0.5 * var(--modal-close-size));
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.9);
+    height: var(--modal-close-size);
+    width: var(--modal-close-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__container {
