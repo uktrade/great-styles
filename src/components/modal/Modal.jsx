@@ -9,6 +9,7 @@ export const Modal = ({
   image,
   children,
   minHeight,
+  modalSize,
   primaryButtonLabel,
   primaryButtonClick,
   primaryButtonDisable,
@@ -18,11 +19,17 @@ export const Modal = ({
   progressPercentage,
   isOpen,
 }) => {
+  const onKeyClose = (key) => {
+    if (key === 'Enter' || key === ' ') {
+      closeClick()
+    }
+  }
+
   return (
     <ReactModal
       isOpen={isOpen}
       onRequestClose={closeClick}
-      className="modal modal--new"
+      className={`modal modal--new modal--${modalSize}`}
       overlayClassName="modal-overlay center"
       shouldCloseOnOverlayClick={false}
       style={{
@@ -38,11 +45,13 @@ export const Modal = ({
           aria-label="Close"
           className="pull-right m-r-0 dialog-close"
           onClick={closeClick}
+          onKeyUp={(e) => onKeyClose(e.key)}
+          tabIndex="0"
         />
       )}
       <div className="modal__container">
         <div className="modal__content">
-          {image && (
+          {image.src && (
             <div className={`modal__image ${image.bgClass}`}>
               <img src={image.src} alt={image.alt} />
             </div>
@@ -57,7 +66,7 @@ export const Modal = ({
         </div>
         <div className="modal__footer">
           {progressPercentage != null ? (
-            <div className="progress-section modal__footer-item">
+            <div className="modal__footer-progress progress-section">
               <div className="progress-bar">
                 <span style={{ width: `${progressPercentage}%` }} />
               </div>
@@ -65,25 +74,27 @@ export const Modal = ({
           ) : (
             ''
           )}
-          {secondaryButtonClick && (
-            <button
-              type="button"
-              className="button button--tertiary modal__footer-item"
-              onClick={secondaryButtonClick}
-            >
-              {secondaryButtonLabel || 'Exit'}
-            </button>
-          )}
-          {primaryButtonClick && (
-            <button
-              type="button"
-              className="button button--primary modal__footer-item"
-              disabled={primaryButtonDisable}
-              onClick={primaryButtonClick}
-            >
-              {primaryButtonLabel || 'Continue'}
-            </button>
-          )}
+          <div className="modal__footer-actions">
+            {secondaryButtonClick && (
+              <button
+                type="button"
+                className="button button--tertiary"
+                onClick={secondaryButtonClick}
+              >
+                {secondaryButtonLabel || 'Exit'}
+              </button>
+            )}
+            {primaryButtonClick && (
+              <button
+                type="button"
+                className="button button--primary"
+                disabled={primaryButtonDisable}
+                onClick={primaryButtonClick}
+              >
+                {primaryButtonLabel || 'Continue'}
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </ReactModal>
@@ -101,6 +112,7 @@ Modal.propTypes = {
   children: PropTypes.node,
   closeClick: PropTypes.func,
   minHeight: PropTypes.oneOfType(PropTypes.string, PropTypes.number),
+  modalSize: PropTypes.string.isRequired,
   primaryButtonLabel: PropTypes.string,
   primaryButtonClick: PropTypes.func,
   primaryButtonDisable: PropTypes.bool,
@@ -113,6 +125,12 @@ Modal.defaultProps = {
   title: '<Modal title>',
   closeClick: null,
   minHeight: 105,
+  image: {
+    src: '',
+    alt: 'Modal image',
+    bgClass: '',
+  },
+  modalSize: 'medium',
   primaryButtonLabel: '<Primary>',
   primaryButtonClick: null,
   primaryButtonDisable: false,

@@ -113,25 +113,51 @@ $shim-background: rgba($black-100, 0.7);
 }
 
 .modal {
-  position: absolute;
   background-color: $white;
   border: 0;
+  outline: none;
 
   @include breakpoint(sm) {
     border-radius: var(--radius);
   }
 
-  outline: none;
-
-  &--new {
+  &.modal--new {
     padding: 20px;
+
+    // Sizes {
+    &.modal--small {
+      height: 300px;
+      width: 300px;
+      border-radius: var(--radius);
+
+      @include breakpoint(sm) {
+        height: auto;
+      }
+    }
+
+    &.modal--medium {
+      @include breakpoint(sm) {
+        width: 630px;
+      }
+    }
+
+    &.modal--large {
+      @include breakpoint(sm) {
+        width: calc(100vw - 40px);
+      }
+    }
   }
 
   &__container {
     display: flex;
     justify-content: space-between;
-    max-height: 90vh;
     flex-flow: column nowrap;
+    height: 100%;
+
+    @include breakpoint(sm) {
+      height: unset;
+      max-height: calc(100vh - 80px);
+    }
   }
 
   &__image {
@@ -151,18 +177,46 @@ $shim-background: rgba($black-100, 0.7);
 
   &__footer {
     display: flex;
-    flex: 1 0 60px;
+    flex: 0 0 60px;
+    @include breakpoint(sm) {
+      flex-grow: 1;
+    }
     padding-top: 20px;
     align-items: center;
-    &-item {
-      flex: 1;
-      &:first-child {
-        margin-left: 0;
+    flex-wrap: wrap;
+
+    @include breakpoint(sm) {
+      flex-wrap: nowrap;
+    }
+
+    &-progress {
+      flex: 1 1 100%;
+      margin-bottom: 20px;
+
+      @include breakpoint(sm) {
+        flex: 0 1 35%;
+        margin-bottom: unset;
+        margin-right: 20px;
       }
-      &:last-child {
-        margin-right: 0;
+    }
+
+    &-actions {
+      display: flex;
+      flex: 1 1 100%;
+      justify-content: space-between;
+
+      @include breakpoint(sm) {
+        flex: 1 1 65%;
       }
-      margin: 0 5px;
+
+      .button {
+        flex: 1 0 auto;
+        min-width: unset;
+        max-width: 250px;
+        + .button {
+          margin-left: 10px;
+        }
+      }
     }
   }
 }
