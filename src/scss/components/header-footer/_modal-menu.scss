@@ -228,6 +228,29 @@ $shim-background: rgba($black-100, 0.7);
     background-attachment: local, local, scroll, scroll;
   }
 
+  &__body {
+    ul {
+      li {
+        list-style: disc;
+        margin-left: 1em;
+      }
+    }
+
+    small {
+      font-size: 0.85em;
+    }
+
+    > * {
+      &:first-child {
+        margin-top: 10px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   &__footer {
     display: flex;
     flex: 0 0 60px;
