@@ -25,13 +25,13 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 
 function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var Tooltip = ({
+const Tooltip = ({
   title,
   content,
   position,
@@ -40,39 +40,39 @@ var Tooltip = ({
   faIcon
 }) => {
   // Init useComponentVisible hook
-  var componentVisible = _useComponentVisible.default;
+  const componentVisible = _useComponentVisible.default;
 
-  var _componentVisible = componentVisible(isVisible),
-      ref = _componentVisible.ref,
-      isComponentVisible = _componentVisible.isComponentVisible,
-      setIsComponentVisible = _componentVisible.setIsComponentVisible;
+  const _componentVisible = componentVisible(isVisible),
+        ref = _componentVisible.ref,
+        isComponentVisible = _componentVisible.isComponentVisible,
+        setIsComponentVisible = _componentVisible.setIsComponentVisible;
 
-  var _useState = (0, _react.useState)(null),
-      _useState2 = _slicedToArray(_useState, 2),
-      tooltipPosition = _useState2[0],
-      setTooltipPosition = _useState2[1];
+  const _useState = (0, _react.useState)(null),
+        _useState2 = _slicedToArray(_useState, 2),
+        tooltipPosition = _useState2[0],
+        setTooltipPosition = _useState2[1];
 
-  var _useState3 = (0, _react.useState)(false),
-      _useState4 = _slicedToArray(_useState3, 2),
-      mount = _useState4[0],
-      setMount = _useState4[1];
+  const _useState3 = (0, _react.useState)(false),
+        _useState4 = _slicedToArray(_useState3, 2),
+        mount = _useState4[0],
+        setMount = _useState4[1];
 
-  var _useState5 = (0, _react.useState)(false),
-      _useState6 = _slicedToArray(_useState5, 2),
-      tooltipOpen = _useState6[0],
-      setTooltipOpen = _useState6[1]; // Find mobile breakpoint width from CSS var
+  const _useState5 = (0, _react.useState)(false),
+        _useState6 = _slicedToArray(_useState5, 2),
+        tooltipOpen = _useState6[0],
+        setTooltipOpen = _useState6[1]; // Find mobile breakpoint width from CSS var
 
 
-  var mobileBreakpoint = Number(getComputedStyle(document.documentElement).getPropertyValue('--breakpoint-mobile').replace('px', '')) || 640; // Apply negative margin to the left of the element
+  const mobileBreakpoint = Number(getComputedStyle(document.documentElement).getPropertyValue('--breakpoint-mobile').replace('px', '')) || 640; // Apply negative margin to the left of the element
 
-  var updatePositionOffset = el => {
-    var left = el.current.getClientRects()[0].left;
+  const updatePositionOffset = el => {
+    let left = el.current.getClientRects()[0].left;
     setTooltipPosition({
       marginLeft: window.innerWidth <= mobileBreakpoint ? "calc(-".concat(left, "px + var(--ttpadding))") : null
     });
   };
 
-  var onClickOpen = () => {
+  const onClickOpen = () => {
     setIsComponentVisible(true);
     setTooltipOpen(true);
 
@@ -84,13 +84,13 @@ var Tooltip = ({
     }
   };
 
-  var onClickClose = () => {
+  const onClickClose = () => {
     setIsComponentVisible(false);
     updatePositionOffset(ref);
     setTooltipOpen(false);
   };
 
-  var onKeyClose = key => {
+  const onKeyClose = key => {
     if (key === 'Enter') {
       onClickClose();
     }
@@ -108,7 +108,7 @@ var Tooltip = ({
   }, // eslint-disable-next-line react-hooks/exhaustive-deps
   [isComponentVisible, ref, mount]); // Logic for left or right aligned. Default left.
 
-  var ttPosition = position === 'right' ? 'right' : 'left';
+  const ttPosition = position === 'right' ? 'right' : 'left';
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "tooltip ".concat(className)
   }, /*#__PURE__*/_react.default.createElement("div", {
