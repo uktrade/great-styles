@@ -71,14 +71,14 @@ ModalTour.propTypes = {
       body: PropTypes.string,
     }).isRequired
   ).isRequired,
-  modalComplete: PropTypes.func.isRequired,
-  modalClose: PropTypes.func.isRequired,
+  onModalComplete: PropTypes.func.isRequired,
+  onModalClose: PropTypes.func.isRequired,
   children: PropTypes.node,
 }
 ModalTour.defaultProps = {
   isModalOpen: false,
   slides: [],
-  modalComplete: () => void 0,
-  modalClose: () => void 0,
+  onModalComplete: () => void 0,
+  onModalClose: () => void 0,
   children: null,
 }
