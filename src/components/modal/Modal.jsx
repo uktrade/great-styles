@@ -121,7 +121,7 @@ Modal.propTypes = {
   secondaryButtonLabel: PropTypes.string,
   secondaryButtonClick: PropTypes.func,
   secondaryButtonDisable: PropTypes.bool,
-  isOpen: PropTypes.bool,
+  isOpen: PropTypes.bool.isRequired,
   progressPercentage: PropTypes.number,
 }
 Modal.defaultProps = {
