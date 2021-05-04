@@ -37,7 +37,7 @@
   align-items: center;
   justify-content: center;
   font-size: var(--button-font-size);
-  height: var(--button-height);
+  min-height: var(--button-height);
   font-family: 'FS Lucas';
   font-style: normal;
   font-weight: var(--button-font-weight);
