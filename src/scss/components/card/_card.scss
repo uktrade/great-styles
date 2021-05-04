@@ -92,6 +92,10 @@ $card-min-height-mobile: $space-s-m * 7;
     height: auto;
     display: block;
     object-fit: contain;
+
+    @include breakpoint(sm_lt) {
+      margin-bottom: 20px;
+    }
   }
 
   .g-card-inner.html-content>*:last-child {
