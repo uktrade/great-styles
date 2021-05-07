@@ -2,7 +2,7 @@
   position: relative;
 
   &__button {
-    border: none;
+    border: 0;
     font: inherit;
     margin-top: 16px;
     position: absolute;
@@ -43,7 +43,7 @@
       left: 0;
       bottom: 0;
       z-index: 1;
-      border: none;
+      border: 0;
       background: transparent;
 
       &:focus {
@@ -65,7 +65,7 @@
     overflow: hidden;
 
     border: 2px solid $colour-blue-deep-20;
-    border-top: none;
+    border-top: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 
