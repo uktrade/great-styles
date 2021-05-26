@@ -184,8 +184,8 @@ $card-min-height-mobile: $space-s-m * 7;
   }
 
   &-progress {
-    @include breakpoint(sm_lt) {
-      background-image: none !important;
+    @include breakpoint(md_lt) {
+      background-size: 0;
     }
 
     @include breakpoint(md) {
