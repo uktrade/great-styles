@@ -132,7 +132,7 @@ var Tooltip = ({
     tabIndex: "0"
   }, /*#__PURE__*/_react.default.createElement("i", {
     className: "fas fa-times text-blue-deep-80"
-  })), title && /*#__PURE__*/_react.default.createElement("div", {
+  })), title && /*#__PURE__*/_react.default.createElement("h2", {
     className: "tooltip__title h-xs p-t-0 p-b-0"
   }, title), /*#__PURE__*/_react.default.createElement("div", {
     className: "tooltip__content text-blue-deep-80"
