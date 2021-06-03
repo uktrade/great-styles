@@ -107,7 +107,7 @@ export const Tooltip = ({
             <i className="fas fa-times text-blue-deep-80" />
           </span>
           {title && (
-            <div className="tooltip__title h-xs p-t-0 p-b-0">{title}</div>
+            <h2 className="tooltip__title h-xs p-t-0 p-b-0">{title}</h2>
           )}
           <div className="tooltip__content text-blue-deep-80">
             {ReactHtmlParser(content)}
