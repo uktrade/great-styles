@@ -183,6 +183,10 @@
   width: 100%;
 }
 
+.w-auto {
+  width: auto !important; // sass-lint:disable-line no-important;
+}
+
 .w-full-viewport {
   width: 100vw;
   margin-left: calc(-50vw + 50%);

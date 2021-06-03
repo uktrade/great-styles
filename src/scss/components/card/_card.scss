@@ -92,6 +92,10 @@ $card-min-height-mobile: $space-s-m * 7;
     height: auto;
     display: block;
     object-fit: contain;
+
+    @include breakpoint(sm_lt) {
+      margin-bottom: 20px;
+    }
   }
 
   .g-card-inner.html-content>*:last-child {
@@ -180,6 +184,10 @@ $card-min-height-mobile: $space-s-m * 7;
   }
 
   &-progress {
+    @include breakpoint(md_lt) {
+      background-size: 0;
+    }
+
     @include breakpoint(md) {
       background: {
         repeat: no-repeat;

@@ -37,7 +37,7 @@
   align-items: center;
   justify-content: center;
   font-size: var(--button-font-size);
-  height: var(--button-height);
+  min-height: var(--button-height);
   font-family: 'FS Lucas';
   font-style: normal;
   font-weight: var(--button-font-weight);
@@ -296,5 +296,28 @@
 
   &--full-width {
     width: 100%;
+  }
+
+  &--mobile-auto {
+    @include breakpoint(sm_lt) {
+      min-width: auto;
+      width: auto;
+    }
+  }
+}
+
+.button--tiny-toggle {
+  background-color: unset;
+  padding: 0;
+  min-width: unset;
+  color: $blue-deep-80;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:focus:active {
+    background-color: unset;
+    color: $colour-blue-deep-100;
+    border-color: transparent;
   }
 }
