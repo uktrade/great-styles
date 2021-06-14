@@ -10,6 +10,7 @@ export const Tooltip = ({
   className,
   isVisible,
   faIcon,
+  showTitle,
 }) => {
   // Init useComponentVisible hook
   const componentVisible = useComponentVisibleHook
@@ -87,8 +88,10 @@ export const Tooltip = ({
           className="button button--small button--only-icon button--tertiary"
           onClick={onClickOpen}
           type="button"
+          aria-haspopup="dialog"
         >
           <i className={`fas ${faIcon}`} />
+          <span className="visually-hidden">{title}</span>
         </button>
       </div>
       {isComponentVisible && (
@@ -96,8 +99,10 @@ export const Tooltip = ({
           ref={ref}
           className={`tooltip__text tooltip__text--${ttPosition} bg-white radius radius--small`}
           style={tooltipPosition}
+          role="dialog"
+          aria-labelledby="tooltip-title"
         >
-          <span
+          <button
             className="tooltip__close"
             title="Click or press Escape to close Educational moment"
             onClick={onClickClose}
@@ -105,10 +110,9 @@ export const Tooltip = ({
             tabIndex="0"
           >
             <i className="fas fa-times text-blue-deep-80" />
-          </span>
-          {title && (
-            <h2 className="tooltip__title h-xs p-t-0 p-b-0">{title}</h2>
-          )}
+            <span className="visually-hidden">Click or press Escape to close Educational moment</span>
+          </button>
+          {<h2 id="tooltip-title" className={`tooltip__title h-xs p-t-0 p-b-0 ${showTitle ? '' : 'visually-hidden'}`}>{title}</h2>}
           <div className="tooltip__content text-blue-deep-80">
             {ReactHtmlParser(content)}
           </div>
@@ -125,6 +129,7 @@ Tooltip.propTypes = {
   isVisible: PropTypes.bool,
   position: PropTypes.string,
   title: PropTypes.string,
+  showTitle: PropTypes.bool,
 }
 
 Tooltip.defaultProps = {
@@ -133,4 +138,5 @@ Tooltip.defaultProps = {
   isVisible: false,
   position: 'left',
   title: 'Helpful hint',
+  showTitle: true,
 }

@@ -24,8 +24,13 @@ const tooltipData = {
 }
 const tooltipDataRight = {
   ...tooltipData,
-  position: 'right',
   title: 'Custom title',
+  position: 'right',
+}
+
+const tooltipDataTitleHidden = {
+  ...tooltipData,
+  showTitle: false,
 }
 
 const style = {
@@ -51,6 +56,14 @@ export const Tooltip_Right = () => {
   return (
     <div className="bg-blue-deep-60 p-xs" style={styleRight}>
       <Tooltip {...tooltipDataRight} faIcon="fa-info" />
+    </div>
+  )
+}
+
+export const Tooltip_hidden_title = () => {
+  return (
+    <div className="bg-blue-deep-60 p-xs" style={style}>
+      <Tooltip {...tooltipDataTitleHidden} faIcon="fa-info" />
     </div>
   )
 }
