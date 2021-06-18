@@ -1,4 +1,3 @@
-
 // Multiple choice/radio buttons
 
 @import 'helpers/colours';
@@ -11,6 +10,7 @@ li.multiple-choice {
   @include tablet {
     margin-bottom: $space-xs;
   }
+
   margin-bottom: $space-xs-m;
 }
 
@@ -28,10 +28,8 @@ li.multiple-choice {
   padding: 0 0 0 $space-m-m;
   min-height: $space-m-m;
 
-
   // Absolutely position inputs within label, to allow text to wrap
   input {
-
     @include tablet {
       width: $space-m;
       height: $space-m;
@@ -56,6 +54,7 @@ li.multiple-choice {
       line-height: $space-m;
       float: left;
     }
+
     cursor: pointer;
     padding-left: 0;
     display: block;
@@ -71,49 +70,42 @@ li.multiple-choice {
     }
   }
 
-  [type=radio] + label {
-    &::before {
-      border: 2px solid $grey;
-      background-color: $white;
-    }
-  }
-
-  [type=radio] + label::before {
+  [type='radio']+label::before {
     content: '';
-    border: 2px solid;
+    border: 2px solid $grey;
     background: transparent;
     width: 20px;
     height: 20px;
 
     position: absolute;
-    top: 0;
+    top: 9px;
     left: 0;
     border-radius: 50%;
   }
 
-  [type=radio] + label::after {
+  [type='radio']+label::after {
     content: '';
     width: 0;
     height: 0;
     position: absolute;
     border: 6px solid;
-    top: 6px;
+    top: 15px;
     left: 6px;
     border-radius: 50%;
     opacity: 0;
   }
 
   // Focused state
-  [type=radio]:focus + label::before {
+  [type='radio']:focus+label::before {
     box-shadow: 0 0 0 4px $focus-yellow;
   }
 
-  [type=checkbox]:focus + label::before {
+  [type='checkbox']:focus+label::before {
     box-shadow: 0 0 0 3px $focus-yellow;
   }
 
   // Selected state
-  input:checked + label::after {
+  input:checked+label::after {
     opacity: 1;
   }
 
@@ -122,11 +114,25 @@ li.multiple-choice {
     cursor: default;
   }
 
-  input:disabled + label {
+  input:disabled+label {
     opacity: 0.5;
     cursor: default;
   }
 
+  &.large {
+    [type='radio']+label::before {
+      width: 30px;
+      height: 30px;
+      top: 4px;
+      left: 0;
+    }
+
+    [type='radio']+label::after {
+      top: 12px;
+      left: 8px;
+      border-width: 9px;
+    }
+  }
 }
 
 // To sit multiple choice inputs next to each other, use .inline on parent
