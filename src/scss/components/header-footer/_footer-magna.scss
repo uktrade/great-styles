@@ -7,78 +7,78 @@ $footer-padding: 0 30px;
   flex-direction: column;
 }
 
-  .magna-footer__nav {
-    display: flex;
+.magna-footer__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 182px;
+  padding: $footer-padding;
+}
+
+.magna-footer__links {
+  align-self: flex-end;
+  display: flex;
+  flex-flow: column wrap;
+
+  li+li {
+    margin-top: 10px;
+  }
+
+  @include breakpoint(lg) {
+    display: inline-flex;
+    flex-flow: row wrap;
+
+    li+li {
+      margin-top: 0;
+    }
+
+  }
+
+  @include breakpoint(xl) {
+    flex-wrap: nowrap;
+  }
+}
+
+.footer-links {
+
+  li {
+    margin-right: 30px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $white;
+    padding-right: 4px;
+    border-bottom: 2px solid $white;
+  }
+}
+
+.magna-footer__great-logo {
+  img {
+    width: 191px;
+    height: 66px;
+  }
+}
+
+.magna-footer__copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: $white;
+  padding: $footer-padding;
+
+  @include breakpoint(md) {
+    align-items: center;
     flex-direction: row;
-    justify-content: space-between;
-    min-height: 182px;
-    padding: $footer-padding;
+    min-height: 88px;
   }
+}
 
-    .magna-footer__links {
-      align-self: flex-end;
-      display: flex;
-      flex-flow: column wrap;
+.magna-footer__dit-logo {
+  margin: 20px 0 10px;
 
-      li + li {
-        margin-top: 10px;
-      }
-
-      @include breakpoint(lg) {
-        display: inline-flex;
-        flex-flow: row wrap;
-
-        li + li {
-          margin-top: 0;
-        }
-
-      }
-
-      @include breakpoint(xl) {
-        flex-wrap: nowrap;
-      }
-    }
-
-    .footer-links {
-
-      li {
-        margin-right: 30px;
-      }
-
-      a {
-        text-decoration: none;
-        color: $white;
-        padding-right: 4px;
-        border-bottom: 2px solid $white;
-      }
-    }
-
-    .magna-footer__great-logo {
-      img {
-        width: 191px;
-        height: 66px;
-      }
-    }
-
-  .magna-footer__copyright {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    background-color: $white;
-    padding: $footer-padding;
-    
-    @include breakpoint(md) {
-      align-items: center;
-      flex-direction: row;
-      min-height: 88px;
-    }
+  @include breakpoint(md) {
+    margin: unset;
   }
-
-    .magna-footer__dit-logo {
-      margin: 20px 0 10px 0;
-
-      @include breakpoint(md) {
-        margin: unset;
-      }
-    }
+}

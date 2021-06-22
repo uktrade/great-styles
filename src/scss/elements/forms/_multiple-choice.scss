@@ -51,14 +51,13 @@ li.multiple-choice {
 
   label {
     @include tablet {
-      line-height: $space-m;
       float: left;
     }
 
+    margin-bottom: $space-xxs;
     cursor: pointer;
     padding-left: 0;
     display: block;
-    line-height: $space-m-m;
 
     // remove 300ms pause on mobile
     -ms-touch-action: manipulation;
@@ -76,9 +75,8 @@ li.multiple-choice {
     background: transparent;
     width: 20px;
     height: 20px;
-
     position: absolute;
-    top: 9px;
+    top: 0;
     left: 0;
     border-radius: 50%;
   }
@@ -89,7 +87,7 @@ li.multiple-choice {
     height: 0;
     position: absolute;
     border: 6px solid;
-    top: 15px;
+    top: 6px;
     left: 6px;
     border-radius: 50%;
     opacity: 0;
@@ -120,17 +118,21 @@ li.multiple-choice {
   }
 
   &.large {
-    [type='radio']+label::before {
-      width: 30px;
-      height: 30px;
-      top: 4px;
-      left: 0;
-    }
+    [type='radio']+label {
+      margin-bottom: $space-s;
 
-    [type='radio']+label::after {
-      top: 12px;
-      left: 8px;
-      border-width: 9px;
+      &::before {
+        width: 30px;
+        height: 30px;
+        top: -5px;
+        left: 0;
+      }
+
+      &::after {
+        top: 3px;
+        left: 8px;
+        border-width: 9px;
+      }
     }
   }
 }
