@@ -162,6 +162,14 @@ export const button_full_width = () =>
     'button button--full-width button--quaternary',
   ])
 
+export const button_auto_width = () =>
+  renderButtons([
+    'button button--auto-width',
+    'button button--auto-width button--secondary',
+    'button button--auto-width button--tertiary',
+    'button button--auto-width button--quaternary',
+  ])
+
 export const button_tiny_toggle = () => (
   <button className="button button--tiny-toggle" type="button">
     <i className="fa fa-chevron-circle-down" />

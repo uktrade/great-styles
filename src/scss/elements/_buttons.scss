@@ -298,11 +298,9 @@
     width: 100%;
   }
 
-  &--mobile-auto {
-    @include breakpoint(sm_lt) {
-      min-width: auto;
-      width: auto;
-    }
+  &--auto-width {
+    min-width: auto;
+    width: auto;
   }
 }
 
