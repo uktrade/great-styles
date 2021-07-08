@@ -1,4 +1,5 @@
 /* Styles for modal overlays, windows and menus */
+// sass-lint:disable no-color-literals
 
 $shim-background: rgba($black-100, 0.7);
 
@@ -110,16 +111,198 @@ $shim-background: rgba($black-100, 0.7);
     align-items: center;
     justify-content: center;
   }
+}
 
-  .modal {
-    position: absolute;
-    background-color: $white;
-    border: 0;
+.modal {
+  --modal-padding: 30px;
+  --modal-close-size: 30px;
+  --modal-close-bgColour: rgba(255, 255, 255, 0.9);
 
-    @include breakpoint(sm) {
+  background-color: $white;
+  border: 0;
+  outline: none;
+
+  @include breakpoint(sm) {
+    border-radius: var(--radius);
+  }
+
+  &.modal--new {
+    position: relative;
+    padding: var(--modal-padding);
+
+    // Sizes {
+    &.modal--small {
+      height: 300px;
+      width: 300px;
       border-radius: var(--radius);
+
+      @include breakpoint(sm) {
+        height: auto;
+      }
     }
 
-    outline: none;
+    &.modal--medium {
+      @include breakpoint(sm) {
+        width: 630px;
+      }
+    }
+
+    &.modal--large {
+      @include breakpoint(sm) {
+        width: calc(100vw - 40px);
+      }
+    }
+  }
+
+  &__close {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: calc(0.5 * var(--modal-close-size));
+    top: calc(0.5 * var(--modal-close-size));
+    border-radius: 100px;
+    background-color: var(--modal-close-bgColour);
+    height: var(--modal-close-size);
+    width: var(--modal-close-size);
+
+    i {
+      color: $colour-blue-deep-80;
+    }
+
+    &:hover,
+    &:active,
+    &:active:focus {
+      background: $colour-red-80;
+
+      i {
+        color: white;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column nowrap;
+    height: 100%;
+
+    @include breakpoint(sm) {
+      height: unset;
+      max-height: calc(100vh - 80px);
+    }
+  }
+
+  &__image {
+    display: flex;
+    justify-content: space-between;
+    border-radius: var(--radius);
+
+    img {
+      padding: 0 calc(0.5 * var(--modal-padding));
+      width: 100%;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    overflow-y: auto;
+
+    // This creates the illusion of a drop shadow when content is scrollable.
+    background: linear-gradient(white 30%, rgba(255, 255, 255, 0)),
+      linear-gradient(rgba(255, 255, 255, 0), white 70%) 0% 100%,
+      radial-gradient(
+        farthest-side at 50% 0%,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0)
+      ),
+      radial-gradient(
+          farthest-side at 50% 100%,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0)
+        )
+        0 100%;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: 100% 40px, 100% 40px, 100% 15px, 100% 15px;
+    background-attachment: local, local, scroll, scroll;
+  }
+
+  &__body {
+    ul {
+      li {
+        list-style: disc;
+        margin-left: 1em;
+      }
+    }
+
+    small {
+      font-size: 0.85em;
+    }
+
+    > * {
+      &:first-child {
+        margin-top: 10px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex: 0 0 60px;
+    @include breakpoint(sm) {
+      flex-grow: 1;
+    }
+    padding-top: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include breakpoint(sm) {
+      flex-wrap: nowrap;
+    }
+
+    &-progress {
+      flex: 1 1 100%;
+      margin-bottom: 20px;
+
+      @include breakpoint(sm) {
+        flex: 0 1 35%;
+        margin-bottom: unset;
+        margin-right: 20px;
+      }
+    }
+
+    &-actions {
+      display: flex;
+      flex: 1 1 100%;
+      justify-content: space-between;
+
+      @include breakpoint(sm) {
+        flex: 1 1 65%;
+      }
+
+      .button {
+        flex: 1 0 auto;
+        min-width: unset;
+        max-width: 250px;
+
+        &:only-child {
+          max-width: 100%;
+
+          @include breakpoint(sm) {
+            margin-left: auto;
+            max-width: 250px;
+          }
+        }
+
+        + .button {
+          margin-left: 10px;
+        }
+      }
+    }
   }
 }
