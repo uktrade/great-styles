@@ -1,8 +1,7 @@
+@import 'helpers/colours';
+
 :root {
   --ttpadding: 15px;
-  /* prettier-ignore */
-  --tttexshadow: rgba(75, 66, 109, 0.3); // sass-lint:disable-line no-color-literals
-  --ttarrowcolor: #ffffff; // sass-lint:disable-line no-color-literals
 }
 
 // Tooltip container
@@ -20,7 +19,8 @@
   top: calc(35px + var(--ttpadding));
   width: calc(100vw - 2 * (var(--ttpadding)));
   padding: var(--ttpadding);
-  box-shadow: 0px 3px 15px 0px var(--tttexshadow);
+  box-shadow: 0 10px 20px 0 rgba($colour-blue-deep-80, 0.1); // sass-lint:disable-line no-color-literals
+  border: 1px solid $colour-blue-deep-10;
   z-index: 10;
 
   @include breakpoint(sm) {
@@ -85,7 +85,7 @@
     font-size: 0.85em;
   }
 
-  >* {
+  > * {
     &:first-child {
       margin-top: 10px;
     }
@@ -96,43 +96,36 @@
   }
 }
 
-// Tooltip arrow at the top
-// .tooltip__text--left::after,
-// .tooltip__text--right::after {
-//   bottom: 100%;
-//   left: 50%;
-//   margin-left: -6px;
-//   border-width: 6px;
-//   border-style: solid;
-//   border-color: transparent transparent #fff transparent;
-// }
+// Tooltip arrow
+.tooltip__text--left::after,
+.tooltip__text--right::after {
+  content: '';
+  display: none;
+  position: absolute;
+  background: inherit;
+  top: 14px;
+  width: 9px;
+  height: 9px;
+  border-top: inherit;
+  border-left: inherit;
+}
 
 // Tooltip arrow to the left
 .tooltip__text--left::after {
-  content: '';
-  position: absolute;
-
   @include breakpoint(sm) {
-    top: 20px;
+    display: block;
     right: 100%;
-    margin-top: -6px;
-    border-width: 6px;
-    border-style: solid;
-    border-color: transparent var(--ttarrowcolor) transparent transparent;
+    transform: rotate(-45deg);
+    margin-right: -4px;
   }
 }
 
 // Tooltip arrow to the right
 .tooltip__text--right::after {
-  content: '';
-  position: absolute;
-
   @include breakpoint(sm) {
-    top: 20px;
+    display: block;
     left: 100%;
-    margin-top: -6px;
-    border-width: 6px;
-    border-style: solid;
-    border-color: transparent transparent transparent var(--ttarrowcolor);
+    transform: rotate(135deg);
+    margin-left: -4px;
   }
 }

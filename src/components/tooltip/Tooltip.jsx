@@ -97,7 +97,7 @@ export const Tooltip = ({
       {isComponentVisible && (
         <div
           ref={ref}
-          className={`tooltip__text tooltip__text--${ttPosition} bg-white radius radius--small`}
+          className={`tooltip__text tooltip__text--${ttPosition} bg-white radius`}
           style={tooltipPosition}
           role="dialog"
           aria-labelledby="tooltip-title"
