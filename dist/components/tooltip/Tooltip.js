@@ -126,7 +126,7 @@ const Tooltip = ({
     className: "visually-hidden"
   }, title))), isComponentVisible && /*#__PURE__*/_react.default.createElement("div", {
     ref: ref,
-    className: "tooltip__text tooltip__text--".concat(ttPosition, " bg-white radius radius--small"),
+    className: "tooltip__text tooltip__text--".concat(ttPosition, " bg-white radius"),
     style: tooltipPosition,
     role: "dialog",
     "aria-labelledby": "tooltip-title"
