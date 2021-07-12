@@ -19,7 +19,7 @@
   top: calc(35px + var(--ttpadding));
   width: calc(100vw - 2 * (var(--ttpadding)));
   padding: var(--ttpadding);
-  box-shadow: 0px 10px 20px 0px rgba($colour-blue-deep-80, 0.1);
+  box-shadow: 0 10px 20px 0 rgba($colour-blue-deep-80, 0.1); // sass-lint:disable-line no-color-literals
   border: 1px solid $colour-blue-deep-10;
   z-index: 10;
 
