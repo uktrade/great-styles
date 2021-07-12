@@ -49,6 +49,7 @@
 
 .tooltip__close {
   position: absolute;
+  z-index: 1;
   right: var(--ttpadding);
   cursor: pointer;
   margin-right: -9px;
