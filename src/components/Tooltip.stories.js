@@ -33,6 +33,8 @@ const tooltipDataTitleHidden = {
   showTitle: false,
 }
 
+const bgSelect = () => select('Background', {White: '', 'Deep blue': 'bg-blue-deep-60'}, 'bg-blue-deep-60')
+
 const style = {
   display: 'flex',
   width: '100vw',
@@ -46,7 +48,7 @@ const styleRight = {
 
 export const Tooltip_left = () => {
   return (
-    <div className="bg-blue-deep-60 p-xs" style={style}>
+    <div className={`${bgSelect()} p-xs`} style={style}>
       <Tooltip {...tooltipData} />
     </div>
   )
@@ -54,7 +56,7 @@ export const Tooltip_left = () => {
 
 export const Tooltip_Right = () => {
   return (
-    <div className="bg-blue-deep-60 p-xs" style={styleRight}>
+    <div className={`${bgSelect()} p-xs`} style={styleRight}>
       <Tooltip {...tooltipDataRight} faIcon="fa-info" />
     </div>
   )
@@ -62,7 +64,7 @@ export const Tooltip_Right = () => {
 
 export const Tooltip_hidden_title = () => {
   return (
-    <div className="bg-blue-deep-60 p-xs" style={style}>
+    <div className={`${bgSelect()} p-xs`} style={style}>
       <Tooltip {...tooltipDataTitleHidden} faIcon="fa-info" />
     </div>
   )
