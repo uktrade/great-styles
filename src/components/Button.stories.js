@@ -5,7 +5,7 @@ export default { title: 'Actions/Button' }
 
 const renderButtons = (buttons, isDisabled = false, isIconOnly = false) => {
   const label = text('Button text', '')
-  const icon = buttons.some(b => b.includes('-icon')) ? select('Button icon', ['plus', 'download', 'arrow-right', 'arrow-left'], 'plus') : null
+  const icon = buttons.some(b => b.includes('-icon')) ? select('Button icon', ['plus', 'plus-square', 'download', 'arrow-right', 'arrow-left', 'chevron-down', 'chevron-up'], 'plus') : null
   return (
     <div>
       {buttons.map((classes) => {
