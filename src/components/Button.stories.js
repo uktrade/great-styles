@@ -1,8 +1,11 @@
 import React from 'react'
+import { select, text } from '@storybook/addon-knobs'
 
 export default { title: 'Actions/Button' }
 
 const renderButtons = (buttons, isDisabled = false, isIconOnly = false) => {
+  const label = text('Button text', '')
+  const icon = buttons.some(b => b.includes('-icon')) ? select('Button icon', ['plus', 'download', 'arrow-right', 'arrow-left'], 'plus') : null
   return (
     <div>
       {buttons.map((classes) => {
@@ -12,15 +15,15 @@ const renderButtons = (buttons, isDisabled = false, isIconOnly = false) => {
               {classes.split().map((c) => {
                 if (c.includes('loading')) {
                   return <div class="button--loading__spinner">Loading...</div>
-                } else if (c.includes('icon')) {
+                } else if (icon) {
                   return (
                     <>
-                      <i className="fas fa-plus" />
-                      {!isIconOnly && <span>{`.${c}`}</span>}
+                      <i className={`fas fa-${icon}`} />
+                      {!isIconOnly && <span>{label || `.${c}`}</span>}
                     </>
                   )
                 } else {
-                  return `.${c}`
+                  return label || `.${c}`
                 }
               })}
             </button>
