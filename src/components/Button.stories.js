@@ -1,8 +1,10 @@
 import React from 'react'
+import { text } from '@storybook/addon-knobs'
 
 export default { title: 'Actions/Button' }
 
 const renderButtons = (buttons, isDisabled = false, isIconOnly = false) => {
+  const label = text('Button text', '')
   return (
     <div>
       {buttons.map((classes) => {
@@ -16,11 +18,11 @@ const renderButtons = (buttons, isDisabled = false, isIconOnly = false) => {
                   return (
                     <>
                       <i className="fas fa-plus" />
-                      {!isIconOnly && <span>{`.${c}`}</span>}
+                      {!isIconOnly && <span>{label || `.${c}`}</span>}
                     </>
                   )
                 } else {
-                  return `.${c}`
+                  return label || `.${c}`
                 }
               })}
             </button>
