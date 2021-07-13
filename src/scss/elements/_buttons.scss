@@ -10,7 +10,7 @@
   --button-font-weight: 600;
   --button-min-width: 100px;
   --button-padding-h: 20px;
-  --button-padding-v: 0;
+  --button-padding-v: 0px; // sass-lint:disable-line zero-unit -- unit needed to use with calc()
 
   --button-small-height: 40px;
   --button-small-font-size: var(--font-size-body-2);
@@ -47,7 +47,7 @@
   color: $white;
   cursor: pointer;
   overflow: hidden;
-  padding: var(--button-padding-v) var(--button-padding-h);
+  padding: calc(2px + var(--button-padding-v)) var(--button-padding-h) var(--button-padding-v);
   text-align: center;
   text-decoration: none;
   min-width: 100%;
@@ -143,6 +143,7 @@
       color: $colour-red-10;
       transform: scale(0.8);
       vertical-align: middle;
+      margin-top: -1px;
     }
   }
 
@@ -154,6 +155,7 @@
       color: $colour-red-10;
       transform: scale(1.2);
       vertical-align: middle;
+      margin-top: 0;
     }
   }
 
