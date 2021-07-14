@@ -14,12 +14,12 @@
 
   --button-small-height: 40px;
   --button-small-font-size: var(--font-size-body-2);
-  --button-small-icon-padding: 15px;
+  --button-small-icon-padding: 10px;
   --button-small-loading-icon-size: 22px;
 
   --button-medium-height: 45px;
   --button-medium-font-size: var(--font-size-body-3);
-  --button-medium-icon-padding: 20px;
+  --button-medium-icon-padding: 15px;
   --button-medium-loading-icon-size: 30px;
 
   --button-large-height: 50px;
@@ -99,10 +99,6 @@
 
     &.button--icon {
       --button-icon-padding: var(--button-small-icon-padding);
-
-      i {
-        transform: scale(1);
-      }
     }
   }
 
@@ -132,18 +128,14 @@
 
   // Default or medium
   &--icon {
-    --button-icon-padding: var(--button-small-icon-padding);
-
-    @include breakpoint(lg) {
-      --button-icon-padding: var(--button-medium-icon-padding);
-    }
+    --button-icon-padding: var(--button-medium-icon-padding);
 
     i {
       padding-right: var(--button-icon-padding);
       color: $colour-red-10;
-      transform: scale(0.8);
+      transform: scale(1);
       vertical-align: middle;
-      margin-top: -1px;
+      margin-top: -2px;
     }
   }
 
