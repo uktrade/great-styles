@@ -176,18 +176,24 @@ export const Multiselect = () => (
       <div className="select__placeholder text-blue-deep-60 bg-white radius">
         <div className="select__placeholder--input"></div>
         <div className="select__placeholder--value">
-          <button
-            className="tag tag--icon tag--secondary tag--small m-r-xs"
-            type="button"
-          >
-            Other <i className="fas fa-times-circle"></i>
-          </button>
-          <button
-            className="tag tag--icon tag--secondary tag--small m-r-xs"
-            type="button"
-          >
-            Merchant services <i className="fas fa-times-circle"></i>
-          </button>
+          <ul className="select__selected">
+            <li>
+              <button
+                className="tag tag--icon tag--secondary tag--small m-r-xs"
+                type="button"
+              >
+                Other <i className="fas fa-times-circle"></i>
+              </button>
+            </li>
+            <li>
+              <button
+                className="tag tag--icon tag--secondary tag--small m-r-xs"
+                type="button"
+              >
+                Merchant services <i className="fas fa-times-circle"></i>
+              </button>
+            </li>
+          </ul>
         </div>
         <div
           role="listbox"
@@ -230,7 +236,9 @@ export const Multiselect = () => (
 export const TypeAhead = () => (
   <div className="select m-b-l autocomplete" style={{ width: '500px' }}>
     <div className="form-group  ">
-      <label className="form-label visually-hidden" htmlFor="company_name"></label>
+      <label className="form-label" htmlFor="company_name">
+        Company name
+      </label>
       <div className="learning ">
         <div className="learning__buttons m-b-xs"></div>
         <div className="learning__content"></div>
@@ -250,7 +258,7 @@ export const TypeAhead = () => (
           role="listbox"
           className="select__list body-l bg-white radius select__list--open "
           aria-expanded="true"
-          style={{display: 'block'}}
+          style={{ display: 'block' }}
         >
           <ul className="option-list">
             <li
