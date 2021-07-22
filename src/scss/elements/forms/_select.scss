@@ -32,6 +32,7 @@
     min-height: 50px;
     padding: 10px 30px 10px 15px;
     position: static;
+    line-height: initial;
 
     &__expanded {
       border-bottom-left-radius: 0;
@@ -55,7 +56,18 @@
   }
 
   .select__placeholder:focus {
-      @include focus;
+    @include focus;
+  }
+
+  .select__selected {
+    list-style: none;
+    margin: -3px 0;
+    padding: 0;
+
+    & li {
+      display: inline-block;
+      padding: 2px 0;
+    }
   }
 
   &__list.select__list {
@@ -65,7 +77,7 @@
     right: 0;
     width: unset;
     top: 100%;
-    margin: -8px 0 0 ;
+    margin: -8px 0 0;
     min-height: 8px;
     z-index: 2;
     overflow: hidden;
@@ -78,7 +90,7 @@
     ul.option-list {
       max-height: 260px;
       overflow: auto;
-      margin: 8px 0 0 ;
+      margin: 8px 0 0;
 
       li {
         padding: 10px 20px;
