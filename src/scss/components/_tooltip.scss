@@ -17,7 +17,8 @@
   display: flex;
   flex-flow: column nowrap;
   top: calc(35px + var(--ttpadding));
-  width: calc(100vw - 2 * (var(--ttpadding)));
+  left: 0;
+  width: calc(100vw - (2 * var(--ttpadding)));
   padding: var(--ttpadding);
   box-shadow: 0 10px 20px 0 rgba($colour-blue-deep-80, 0.1); // sass-lint:disable-line no-color-literals
   border: 1px solid $colour-blue-deep-10;
@@ -30,20 +31,18 @@
 }
 
 .tooltip__text--left {
-  left: 0;
-
   @include breakpoint(sm) {
-    left: calc(100% + var(--ttpadding));
+    left: calc(40px + var(--ttpadding));
   }
 }
 
 .tooltip__text--right {
-  right: unset;
-  left: 0;
+  transform: translateX(calc(-100% + 40px));
 
   @include breakpoint(sm) {
-    left: unset;
-    right: calc(100% + var(--ttpadding));
+    left: auto;
+    right: calc(40px + var(--ttpadding));
+    transform: none;
   }
 }
 

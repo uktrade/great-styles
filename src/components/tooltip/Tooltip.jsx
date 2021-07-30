@@ -17,44 +17,14 @@ export const Tooltip = ({
   const { ref, isComponentVisible, setIsComponentVisible } = componentVisible(
     isVisible
   )
-  const [tooltipPosition, setTooltipPosition] = useState(null)
   const [mount, setMount] = useState(false)
-  const [tooltipOpen, setTooltipOpen] = useState(false)
-  // Find mobile breakpoint width from CSS var
-  const mobileBreakpoint =
-    Number(
-      getComputedStyle(document.documentElement)
-        .getPropertyValue('--breakpoint-mobile')
-        .replace('px', '')
-    ) || 640
-
-  // Apply negative margin to the left of the element
-  const updatePositionOffset = (el) => {
-    let { left } = el.current.getClientRects()[0]
-    setTooltipPosition({
-      marginLeft:
-        window.innerWidth <= mobileBreakpoint
-          ? `calc(-${left}px + var(--ttpadding))`
-          : null,
-    })
-  }
 
   const onClickOpen = () => {
     setIsComponentVisible(true)
-    setTooltipOpen(true)
-
-    if (window.innerWidth <= mobileBreakpoint && !tooltipOpen) {
-      // Provide time for element to render in DOM
-      setTimeout(() => {
-        updatePositionOffset(ref)
-      }, 50)
-    }
   }
 
   const onClickClose = () => {
     setIsComponentVisible(false)
-    updatePositionOffset(ref)
-    setTooltipOpen(false)
   }
 
   const onKeyClose = (key) => {
@@ -66,12 +36,7 @@ export const Tooltip = ({
   useEffect(
     () => {
       if (isComponentVisible && !mount) {
-        updatePositionOffset(ref)
         setMount(true)
-        window.addEventListener('resize', updatePositionOffset(ref))
-        return () => {
-          window.removeEventListener('resize', updatePositionOffset(ref))
-        }
       }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -98,7 +63,6 @@ export const Tooltip = ({
         <div
           ref={ref}
           className={`tooltip__text tooltip__text--${ttPosition} bg-white radius`}
-          style={tooltipPosition}
           role="dialog"
           aria-labelledby="tooltip-title"
         >

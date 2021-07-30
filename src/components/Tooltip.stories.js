@@ -48,24 +48,30 @@ const styleRight = {
 
 export const Tooltip_left = () => {
   return (
-    <div className={`${bgSelect()} p-xs`} style={style}>
-      <Tooltip {...tooltipData} />
+    <div className={`${bgSelect()} p-v-m`} style={style}>
+      <div className='container'>
+        <Tooltip {...tooltipData} />
+      </div>
     </div>
   )
 }
 
 export const Tooltip_Right = () => {
   return (
-    <div className={`${bgSelect()} p-xs`} style={styleRight}>
+    <div className={`${bgSelect()} p-v-m`} style={styleRight}>
+      <div className='container'>
       <Tooltip {...tooltipDataRight} faIcon="fa-info" />
+      </div>
     </div>
   )
 }
 
 export const Tooltip_hidden_title = () => {
   return (
-    <div className={`${bgSelect()} p-xs`} style={style}>
+    <div className={`${bgSelect()} p-v-m`} style={style}>
+      <div className='container'>
       <Tooltip {...tooltipDataTitleHidden} faIcon="fa-info" />
+      </div>
     </div>
   )
 }
