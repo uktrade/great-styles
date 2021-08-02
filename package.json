@@ -30,11 +30,13 @@
     "@babel/cli": "^7.14.8",
     "@babel/preset-env": "^7.14.9",
     "@babel/preset-react": "^7.14.5",
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-sass": "^5.0.0",
     "gulp-sass-lint": "^1.4.0",
     "gulp-sourcemaps": "^3.0.0",
+    "node-sass": "^6.0.1",
     "nodemon": "^2.0.12"
   }
 }

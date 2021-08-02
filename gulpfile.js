@@ -2,7 +2,7 @@
 const path = require("path");
 const gulp = require("gulp");
 const nodemon = require("nodemon");
-const sass = require("gulp-sass");
+const sass = require('gulp-sass')(require('node-sass'));
 const sassLint = require("gulp-sass-lint");
 const sourcemaps = require("gulp-sourcemaps");
 const del = require("del");
@@ -49,7 +49,7 @@ gulp.task("sass:compile", function() {
     .pipe(sourcemaps.init())
     .pipe(
       sass({
-        outputStyle: "compressed",
+        outputStyle: "compressed"
       }).on("error", sass.logError)
     )
     .pipe(sourcemaps.write("./maps"))
