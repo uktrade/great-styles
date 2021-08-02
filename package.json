@@ -31,11 +31,25 @@
     "@babel/preset-env": "^7.14.9",
     "@babel/preset-react": "^7.14.5",
     "@fortawesome/fontawesome-free": "^5.15.3",
+    "@invisionapp/dsm-storybook": "^0.0.147",
+    "@storybook/addon-a11y": "^5.3.21",
+    "@storybook/addon-actions": "^5.3.21",
+    "@storybook/addon-backgrounds": "^5.3.21",
+    "@storybook/addon-centered": "^5.3.21",
+    "@storybook/addon-docs": "^5.3.21",
+    "@storybook/addon-knobs": "^5.3.21",
+    "@storybook/addon-storysource": "^5.3.21",
+    "@storybook/addons": "^5.3.21",
+    "@storybook/preset-create-react-app": "^3.2.0",
+    "@storybook/react": "^5.3.21",
+    "core-js": "^2.6.12",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-sass": "^5.0.0",
     "gulp-sass-lint": "^1.4.0",
     "gulp-sourcemaps": "^3.0.0",
-    "node-sass": "^6.0.1"
+    "node-sass": "^6.0.1",
+    "react-html-parser": "^2.0.2",
+    "react-scripts": "^3.4.4"
   }
 }
