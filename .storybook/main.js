@@ -1,7 +1,16 @@
 module.exports = {
   stories: ["../src/**/*.stories.js"],
   addons: [
-    "@storybook/preset-create-react-app",
+    {
+      name: "@storybook/preset-scss",
+      options: {
+        sassLoaderOptions: {
+          sassOptions: {
+            includePaths: ["src/scss"],
+          },
+        }
+      }
+    },
     {
       name: "@storybook/addon-docs",
       options: {
