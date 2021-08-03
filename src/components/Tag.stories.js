@@ -1,7 +1,5 @@
 import React from "react";
 
-import tagDocs from "./Tag.mdx";
-
 export default {
   title: "Actions/Tag",
   parameters: {
@@ -11,7 +9,6 @@ export default {
       id: "5f6de8af2e4958dec03e7d04",
       versionFilePath: "../components/versionFile.json",
     },
-    docs: {page: tagDocs},
   },
 };
 

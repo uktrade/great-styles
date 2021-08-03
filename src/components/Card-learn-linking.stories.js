@@ -1,11 +1,7 @@
 import React from "react";
-import cardDocs from "./Card.mdx";
 
 export default {
   title: "Card",
-  parameters: {
-    docs: {page: cardDocs},
-  },
 };
 
 export const Learn_linking = () => (

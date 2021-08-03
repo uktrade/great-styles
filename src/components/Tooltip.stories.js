@@ -4,9 +4,7 @@ import { Tooltip } from './tooltip/Tooltip'
 
 export default {
   title: 'Actions/Tooltips',
-  parameters: {
-    component: Tooltip,
-  },
+  component: Tooltip,
 }
 
 const tooltipData = {

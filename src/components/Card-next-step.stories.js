@@ -1,11 +1,7 @@
 import React from "react";
-import cardDocs from "./Card.mdx";
 
 export default {
   title: "Structure",
-  parameters: {
-    docs: {page: cardDocs},
-  },
 };
 
 export const next_step = () => (

@@ -1,16 +1,13 @@
 import React from "react";
-import textInputDocs from "./text-input.mdx";
 
 export default {
   title: "Form/Text-field",
   parameters: {
-    // component: Tag,
     // Module-Level 'in-dsm' configuration (Will apply to all stories inside the module)
     "in-dsm": {
       id: "5f778c24191bcac78a413d8e",
       versionFilePath: "../versionFile.json",
     },
-    docs: {page: textInputDocs},
   },
 };
 

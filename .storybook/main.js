@@ -14,8 +14,6 @@ module.exports = {
         }
       }
     },
-    "@storybook/addon-docs",
-    "@storybook/addon-storysource",
     "@storybook/addon-knobs",
     "@storybook/addon-a11y",
     "@storybook/addon-backgrounds",
