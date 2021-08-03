@@ -1,11 +1,9 @@
 import React from "react";
-import {withKnobs} from "@storybook/addon-knobs";
 import cardDocs from "./Card.mdx";
 
 export default {
   title: "Structure",
   parameters: {
-    decorators: [withKnobs],
     docs: {page: cardDocs},
   },
 };

@@ -1,8 +1,4 @@
-import {withA11y} from "@storybook/addon-a11y";
-import {withDsm} from "@invisionapp/dsm-storybook";
 import "../src/scss/great-styles.scss";
-
-export const decorators = [withA11y, withDsm]
 
 export const parameters = {
   layout: 'centered',

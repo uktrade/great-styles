@@ -1,13 +1,11 @@
 import React from "react";
-import {withKnobs, boolean, select, text} from "@storybook/addon-knobs";
-import {action} from "@storybook/addon-actions";
+
 import tagDocs from "./Tag.mdx";
 
 export default {
   title: "Actions/Tag",
   parameters: {
     // component: Tag,
-    decorators: [withKnobs],
     // Module-Level 'in-dsm' configuration (Will apply to all stories inside the module)
     "in-dsm": {
       id: "5f6de8af2e4958dec03e7d04",

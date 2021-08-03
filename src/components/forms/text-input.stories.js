@@ -1,13 +1,10 @@
 import React from "react";
-import {withKnobs, boolean, select, text} from "@storybook/addon-knobs";
-import {action} from "@storybook/addon-actions";
 import textInputDocs from "./text-input.mdx";
 
 export default {
   title: "Form/Text-field",
   parameters: {
     // component: Tag,
-    decorators: [withKnobs],
     // Module-Level 'in-dsm' configuration (Will apply to all stories inside the module)
     "in-dsm": {
       id: "5f778c24191bcac78a413d8e",
