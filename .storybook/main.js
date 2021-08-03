@@ -1,5 +1,8 @@
 module.exports = {
   stories: ["../src/**/*.stories.js"],
+  features: {
+    postcss: false,
+  },
   addons: [
     {
       name: "@storybook/preset-scss",
