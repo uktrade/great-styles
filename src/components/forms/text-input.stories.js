@@ -85,38 +85,28 @@ export const Input_date = () => (
   </div>
 );
 
-Input.story = {
-  parameters: {
-    // Story-Level 'in-dsm' configuration (Will apply only to the story that is being configured)
-    // Story-Level configuration will override Module-Level 'in-dsm' configuration for the specific story
-    "in-dsm": {id: "5f778c24191bcac78a413d8e", versionFilePath: "../versionFile.json"},
-  },
+Input.parameters = {
+  // Story-Level 'in-dsm' configuration (Will apply only to the story that is being configured)
+  // Story-Level configuration will override Module-Level 'in-dsm' configuration for the specific story
+  "in-dsm": {id: "5f778c24191bcac78a413d8e", versionFilePath: "../versionFile.json"},
 };
-Input_error.story = {
-  parameters: {
-    // Story-Level 'in-dsm' configuration (Will apply only to the story that is being configured)
-    // Story-Level configuration will override Module-Level 'in-dsm' configuration for the specific story
-    "in-dsm": {id: "5f778c24191bcac78a413d8e", versionFilePath: "../versionFile.json"},
-  },
+Input_error.parameters = {
+  // Story-Level 'in-dsm' configuration (Will apply only to the story that is being configured)
+  // Story-Level configuration will override Module-Level 'in-dsm' configuration for the specific story
+  "in-dsm": {id: "5f778c24191bcac78a413d8e", versionFilePath: "../versionFile.json"},
 };
-Input_with_placeholder.story = {
-  parameters: {
-    // Story-Level 'in-dsm' configuration (Will apply only to the story that is being configured)
-    // Story-Level configuration will override Module-Level 'in-dsm' configuration for the specific story
-    "in-dsm": {id: "5f778c24191bcac78a413d8e", versionFilePath: "../versionFile.json"},
-  },
+Input_with_placeholder.parameters = {
+  // Story-Level 'in-dsm' configuration (Will apply only to the story that is being configured)
+  // Story-Level configuration will override Module-Level 'in-dsm' configuration for the specific story
+  "in-dsm": {id: "5f778c24191bcac78a413d8e", versionFilePath: "../versionFile.json"},
 };
-Input_disabled.story = {
-  parameters: {
-    // Story-Level 'in-dsm' configuration (Will apply only to the story that is being configured)
-    // Story-Level configuration will override Module-Level 'in-dsm' configuration for the specific story
-    "in-dsm": {id: "5f778c24191bcac78a413d8e", versionFilePath: "../versionFile.json"},
-  },
+Input_disabled.parameters = {
+  // Story-Level 'in-dsm' configuration (Will apply only to the story that is being configured)
+  // Story-Level configuration will override Module-Level 'in-dsm' configuration for the specific story
+  "in-dsm": {id: "5f778c24191bcac78a413d8e", versionFilePath: "../versionFile.json"},
 };
-Input_date.story = {
-  parameters: {
-    // Story-Level 'in-dsm' configuration (Will apply only to the story that is being configured)
-    // Story-Level configuration will override Module-Level 'in-dsm' configuration for the specific story
-    "in-dsm": {id: "5f778c24191bcac78a413d8e", versionFilePath: "../versionFile.json"},
-  },
+Input_date.parameters = {
+  // Story-Level 'in-dsm' configuration (Will apply only to the story that is being configured)
+  // Story-Level configuration will override Module-Level 'in-dsm' configuration for the specific story
+  "in-dsm": {id: "5f778c24191bcac78a413d8e", versionFilePath: "../versionFile.json"},
 };

@@ -63,34 +63,26 @@ export const tag_small_with_icon = () => {
   );
 };
 
-tag_small.story = {
-  parameters: {
-    // Story-Level 'in-dsm' configuration (Will apply only to the story that is being configured)
-    // Story-Level configuration will override Module-Level 'in-dsm' configuration for the specific story
-    "in-dsm": {id: "5f6de8af2e4958dec03e7d04", versionFilePath: "./versionFile.json"},
-  },
+tag_small.parameters = {
+  // Story-Level 'in-dsm' configuration (Will apply only to the story that is being configured)
+  // Story-Level configuration will override Module-Level 'in-dsm' configuration for the specific story
+  "in-dsm": {id: "5f6de8af2e4958dec03e7d04", versionFilePath: "./versionFile.json"},
 };
 
-tag_small_with_icon.story = {
-  parameters: {
-    // Story-Level 'in-dsm' configuration (Will apply only to the story that is being configured)
-    // Story-Level configuration will override Module-Level 'in-dsm' configuration for the specific story
-    "in-dsm": {id: "5f6de7c5c476164038982c05", versionFilePath: "./versionFile.json"},
-  },
+tag_small_with_icon.parameters = {
+  // Story-Level 'in-dsm' configuration (Will apply only to the story that is being configured)
+  // Story-Level configuration will override Module-Level 'in-dsm' configuration for the specific story
+  "in-dsm": {id: "5f6de7c5c476164038982c05", versionFilePath: "./versionFile.json"},
 };
 
-tag_medium.story = {
-  parameters: {
-    // Story-Level 'in-dsm' configuration (Will apply only to the story that is being configured)
-    // Story-Level configuration will override Module-Level 'in-dsm' configuration for the specific story
-    "in-dsm": {id: "5f6de6b09cc293515fe8535b", versionFilePath: "./versionFile.json"},
-  },
+tag_medium.parameters = {
+  // Story-Level 'in-dsm' configuration (Will apply only to the story that is being configured)
+  // Story-Level configuration will override Module-Level 'in-dsm' configuration for the specific story
+  "in-dsm": {id: "5f6de6b09cc293515fe8535b", versionFilePath: "./versionFile.json"},
 };
 
-tag_medium_with_icon.story = {
-  parameters: {
-    // Story-Level 'in-dsm' configuration (Will apply only to the story that is being configured)
-    // Story-Level configuration will override Module-Level 'in-dsm' configuration for the specific story
-    "in-dsm": {id: "5f6de94bef8559bddd31cb46", versionFilePath: "./versionFile.json"},
-  },
+tag_medium_with_icon.parameters = {
+  // Story-Level 'in-dsm' configuration (Will apply only to the story that is being configured)
+  // Story-Level configuration will override Module-Level 'in-dsm' configuration for the specific story
+  "in-dsm": {id: "5f6de94bef8559bddd31cb46", versionFilePath: "./versionFile.json"},
 };
