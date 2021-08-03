@@ -1,10 +1,19 @@
 {
   "globals": {},
-  "env": {},
+  "env": {
+    "es6": true
+  },
   "rules": {
     "react-hooks/exhaustive-deps": 0
   },
   "extends": ["prettier"],
-  "parserOptions": {},
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
   "plugins": ["react-hooks", "jsx-a11y", "prettier"]
 }
