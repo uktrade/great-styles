@@ -11,12 +11,7 @@ module.exports = {
         }
       }
     },
-    {
-      name: "@storybook/addon-docs",
-      options: {
-        configureJSX: true,
-      },
-    },
+    "@storybook/addon-docs",
     "@storybook/addon-storysource",
     "@storybook/addon-knobs",
     "@storybook/addon-actions",
