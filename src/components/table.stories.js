@@ -1,11 +1,7 @@
 import React from "react";
-import { withKnobs } from "@storybook/addon-knobs";
 
 export default {
   title: "Tables",
-  parameters: {
-    decorators: [withKnobs],
-  },
 };
 
 export const Tabbed_table = () => (

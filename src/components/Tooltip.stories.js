@@ -1,13 +1,10 @@
 import React from 'react'
-import { withKnobs, boolean, select, text } from '@storybook/addon-knobs'
+import { select } from '@storybook/addon-knobs'
 import { Tooltip } from './tooltip/Tooltip'
 
 export default {
   title: 'Actions/Tooltips',
-  parameters: {
-    component: Tooltip,
-    decorators: [withKnobs],
-  },
+  component: Tooltip,
 }
 
 const tooltipData = {

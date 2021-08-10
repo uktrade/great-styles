@@ -1,13 +1,7 @@
 import React from "react";
-import {withKnobs} from "@storybook/addon-knobs";
-import cardDocs from "./Card.mdx";
 
 export default {
   title: "Card",
-  parameters: {
-    decorators: [withKnobs],
-    docs: {page: cardDocs},
-  },
 };
 
 export const Learn_linking = () => (

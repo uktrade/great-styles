@@ -1,11 +1,7 @@
 import React from "react";
-import {withKnobs} from "@storybook/addon-knobs";
 
 export default {
   title: "Header and Footer",
-  parameters: {
-    decorators: [withKnobs],
-  },
 };
 
 export const Footer_Global = () => (

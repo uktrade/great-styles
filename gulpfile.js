@@ -1,8 +1,7 @@
 "use strict";
 const path = require("path");
 const gulp = require("gulp");
-const nodemon = require("nodemon");
-const sass = require("gulp-sass");
+const sass = require('gulp-sass')(require('node-sass'));
 const sassLint = require("gulp-sass-lint");
 const sourcemaps = require("gulp-sourcemaps");
 const del = require("del");
@@ -49,7 +48,7 @@ gulp.task("sass:compile", function() {
     .pipe(sourcemaps.init())
     .pipe(
       sass({
-        outputStyle: "compressed",
+        outputStyle: "compressed"
       }).on("error", sass.logError)
     )
     .pipe(sourcemaps.write("./maps"))
@@ -66,14 +65,6 @@ gulp.task("watch", function() {
   gulp.watch([SASS_FILES], gulp.series("sass:compile"));
 });
 
-gulp.task("server", function() {
-  return nodemon({
-    script: "index.js",
-  }).on("restart", function() {
-    console.log("Changes detected. Restarting.");
-  });
-});
-
 gulp.task("styles", gulp.series("clean", "sass:compile"));
 
 // No server nor watch
@@ -81,5 +72,5 @@ gulp.task("build", gulp.series("clean", "images", "copy-fonts", "styles"));
 
 gulp.task(
   "default",
-  gulp.series("clean", "images", "copy-fonts", "styles", gulp.parallel("server", "watch"))
+  gulp.series("build", "watch")
 );

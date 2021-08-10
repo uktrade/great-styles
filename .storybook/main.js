@@ -1,16 +1,20 @@
 module.exports = {
   stories: ["../src/**/*.stories.js"],
+  features: {
+    postcss: false,
+  },
   addons: [
-    "@storybook/preset-create-react-app",
     {
-      name: "@storybook/addon-docs",
+      name: "@storybook/preset-scss",
       options: {
-        configureJSX: true,
-      },
+        sassLoaderOptions: {
+          sassOptions: {
+            includePaths: ["src/scss"],
+          },
+        }
+      }
     },
-    "@storybook/addon-storysource",
     "@storybook/addon-knobs",
-    "@storybook/addon-actions",
     "@storybook/addon-a11y",
     "@storybook/addon-backgrounds",
     "@invisionapp/dsm-storybook",
