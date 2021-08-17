@@ -41,7 +41,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(jpg|png|gif|jpeg|svg)$/,
+        include: path.resolve(__dirname, 'src/scss/images'),
         use: {
           loader: 'url-loader',
           options: {
@@ -51,7 +51,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(woff|woff2|eot|ttf)$/,
+        include: path.resolve(__dirname, 'src/scss/fonts'),
         use: {
           loader: 'url-loader',
           options: {
