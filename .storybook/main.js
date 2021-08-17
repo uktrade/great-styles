@@ -17,6 +17,7 @@ module.exports = {
     "@storybook/addon-knobs",
     "@storybook/addon-a11y",
     "@storybook/addon-backgrounds",
-    "@invisionapp/dsm-storybook",
+    // TODO: enable when a non-vulnerable version of DSM is released
+    //"@invisionapp/dsm-storybook",
   ],
 };
