@@ -67,6 +67,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "css-loader": "^3.6.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "gulp": "^4.0.2",
