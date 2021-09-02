@@ -23,7 +23,7 @@
   @include font-generator(
     $font-size: $font-size-xlarge-desktop,
     $font-size-mobile: $font-size-xlarge-mobile,
-  )
+  );
 
   line-height: (2 * $line-height-mobile * $base-font-size-mobile) / $font-size-xlarge-mobile;
 
@@ -36,7 +36,7 @@
   @include font-generator(
     $font-size: $font-size-large-desktop,
     $font-size-mobile: $font-size-large-mobile,
-  )
+  );
 
   line-height: ($line-height-mobile * $base-font-size-mobile) / $font-size-large-mobile;
 
@@ -56,7 +56,7 @@
   @include font-generator(
     $font-size: $font-size-small-desktop,
     $font-size-mobile: $font-size-small-mobile,
-  )
+  );
 
   line-height: ($line-height-mobile * $base-font-size-mobile) / $font-size-small-mobile;
 
@@ -70,7 +70,7 @@
     $font-family: $quote-font,
     $font-size: $font-size-large-desktop,
     $font-size-mobile: $font-size-large-mobile,
-  )
+  );
   font-style: italic;
   line-height: ($line-height-mobile * $base-font-size-mobile) / $font-size-large-mobile;
 
