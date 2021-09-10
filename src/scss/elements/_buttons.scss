@@ -184,9 +184,14 @@
     border-color: $colour-blue-deep-80;
     color: $colour-blue-deep-80;
 
+    &:visited {
+      background: $white;
+      border-color: $colour-blue-deep-80;
+      color: $colour-blue-deep-80;
+    }
+
     &:hover,
     &:active,
-    &:visited,
     &:focus,
     &:focus:active {
       background: $colour-blue-deep-10;
