@@ -37,6 +37,7 @@
     "@storybook/addons": "^6.3.8",
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^6.3.8",
+    "ansi-regex": ">=5.0.1",
     "babel-loader": "^8.2.2",
     "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^3.6.0",
