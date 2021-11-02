@@ -103,7 +103,7 @@
   }
 
   .w-1-5 {
-    width: percentage(1 * 0.2);
+    width: percentage(math.div(1, 5));
   }
 
   .w-1-4 {
@@ -123,7 +123,7 @@
   }
 
   .w-3-4 {
-    width: percentage(3 * 0.25);
+    width: percentage(math.div(3, 4));
   }
 
   .w-5-12 {
@@ -146,7 +146,7 @@
 }
 
 .w-1-5-all {
-  width: percentage(1 * 0.2);
+  width: percentage(math.div(1, 5));
 }
 
 .w-1-4-all {
@@ -166,7 +166,7 @@
 }
 
 .w-3-4-all {
-  width: percentage(3 * 0.25);
+  width: percentage(math.div(3, 4));
 }
 
 .w-5-12-all {
@@ -215,7 +215,7 @@
 }
 
 .c-1-4 {
-  @include grid-column(1 * 0.25);
+  @include grid-column(math.div(1, 4));
   width: 100%;
 }
 
@@ -230,12 +230,12 @@
 }
 
 .c-1-5 {
-  @include grid-column(1 * 0.2);
+  @include grid-column(math.div(1, 5));
   width: 100%;
 }
 
 .c-3-4 {
-  @include grid-column(3 * 0.25);
+  @include grid-column(math.div(3, 4));
   width: 100%;
 }
 
@@ -268,7 +268,7 @@
   }
 
   .w-1-5-m {
-    width: percentage(1 * 0.2);
+    width: percentage(math.div(1, 5));
   }
 
   .w-1-4-m {
@@ -288,7 +288,7 @@
   }
 
   .w-3-4-m {
-    width: percentage(3 * 0.25);
+    width: percentage(math.div(3, 4));
   }
 
   .w-5-12-m {
@@ -312,7 +312,7 @@
   }
 
   .c-1-2-m {
-    @include grid-column(1 * 0.5);
+    @include grid-column(math.div(1, 2));
   }
 
   .c-1-3-m {
@@ -324,11 +324,11 @@
   }
 
   .c-1-5-m {
-    @include grid-column(1 * 0.2);
+    @include grid-column(math.div(1, 5));
   }
 
   .c-1-4-m {
-    @include grid-column(1 * 0.25);
+    @include grid-column(math.div(1, 4));
   }
 
   .c-5-12-m {
@@ -344,7 +344,7 @@
   }
 
   .c-3-4-m {
-    @include grid-column(3 * 0.25);
+    @include grid-column(math.div(3, 4));
   }
 
   .c-1-12-m {
@@ -360,7 +360,7 @@
   }
 
   .w-1-5-l {
-    width: percentage(1 * 0.2);
+    width: percentage(math.div(1, 5));
   }
 
   .w-1-4-l {
@@ -380,7 +380,7 @@
   }
 
   .w-3-4-l {
-    width: percentage(3 * 0.25);
+    width: percentage(math.div(3, 4));
   }
 
   .w-5-12-l {
@@ -404,7 +404,7 @@
   }
 
   .c-1-2-l {
-    @include grid-column(1 * 0.5);
+    @include grid-column(math.div(1, 2));
   }
 
   .c-1-3-l {
@@ -416,11 +416,11 @@
   }
 
   .c-1-4-l {
-    @include grid-column(1 * 0.25);
+    @include grid-column(math.div(1, 4));
   }
 
   .c-1-5-l {
-    @include grid-column(1 * 0.2);
+    @include grid-column(math.div(1, 5));
   }
 
   .c-5-12-l {
@@ -436,7 +436,7 @@
   }
 
   .c-3-4-l {
-    @include grid-column(3 * 0.25);
+    @include grid-column(math.div(3, 4));
   }
 
   .c-1-12-l {
@@ -452,7 +452,7 @@
   }
 
   .w-1-5-xl {
-    width: percentage(1 * 0.2);
+    width: percentage(math.div(1, 5));
   }
 
   .w-1-4-xl {
@@ -472,7 +472,7 @@
   }
 
   .w-3-4-xl {
-    width: percentage(3 * 0.25);
+    width: percentage(math.div(3, 4));
   }
 
   .w-5-12-xl {
@@ -496,7 +496,7 @@
   }
 
   .c-1-2-xl {
-    @include grid-column(1 * 0.5);
+    @include grid-column(math.div(1, 2));
   }
 
   .c-1-3-xl {
@@ -508,11 +508,11 @@
   }
 
   .c-1-4-xl {
-    @include grid-column(1 * 0.25);
+    @include grid-column(math.div(1, 4));
   }
 
   .c-1-5-xl {
-    @include grid-column(1 * 0.2);
+    @include grid-column(math.div(1, 5));
   }
 
   .c-5-12-xl {
@@ -528,7 +528,7 @@
   }
 
   .c-3-4-xl {
-    @include grid-column(3 * 0.25);
+    @include grid-column(math.div(3, 4));
   }
 
   .c-1-12-xl {
