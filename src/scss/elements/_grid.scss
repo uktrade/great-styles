@@ -200,7 +200,7 @@
 }
 
 .c-1-2 {
-  @include grid-column(1 * 0.5);
+  @include grid-column(math.div(1, 2));
   width: 100%;
 }
 
