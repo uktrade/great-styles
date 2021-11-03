@@ -1,4 +1,4 @@
-
+@use "sass:math";
 
 @mixin font-generator(
   $font-family: $brand-font-body,
@@ -22,46 +22,46 @@
 @mixin body-xlarge {
   @include font-generator(
     $font-size: $font-size-xlarge-desktop,
-    $font-size-mobile: $font-size-xlarge-mobile,
-  )
+    $font-size-mobile: $font-size-xlarge-mobile
+  );
 
-  line-height: (2 * $line-height-mobile * $base-font-size-mobile) / $font-size-xlarge-mobile;
+  line-height: math.div(2 * $line-height-mobile * $base-font-size-mobile, $font-size-xlarge-mobile);
 
   @include tablet {
-    line-height: (2 * $line-height-desktop * $base-font-size-desktop) / $font-size-xlarge-desktop;
+    line-height: math.div(2 * $line-height-desktop * $base-font-size-desktop, $font-size-xlarge-desktop);
   }
 }
 
 @mixin body-large {
   @include font-generator(
     $font-size: $font-size-large-desktop,
-    $font-size-mobile: $font-size-large-mobile,
-  )
+    $font-size-mobile: $font-size-large-mobile
+  );
 
-  line-height: ($line-height-mobile * $base-font-size-mobile) / $font-size-large-mobile;
+  line-height: math.div($line-height-mobile * $base-font-size-mobile, $font-size-large-mobile);
 
   @include tablet {
-    line-height: ($line-height-desktop * $base-font-size-desktop) / $font-size-large-desktop;
+    line-height: math.div($line-height-desktop * $base-font-size-desktop, $font-size-large-desktop);
   }
 }
 
 @mixin body-medium {
   @include font-generator(
     $font-size: $base-font-size-desktop,
-    $font-size-mobile: $base-font-size-mobile,
-  )
+    $font-size-mobile: $base-font-size-mobile
+  );
 }
 
 @mixin body-small {
   @include font-generator(
     $font-size: $font-size-small-desktop,
-    $font-size-mobile: $font-size-small-mobile,
-  )
+    $font-size-mobile: $font-size-small-mobile
+  );
 
-  line-height: ($line-height-mobile * $base-font-size-mobile) / $font-size-small-mobile;
+  line-height: math.div($line-height-mobile * $base-font-size-mobile, $font-size-small-mobile);
 
   @include tablet {
-    line-height: ($line-height-desktop * $base-font-size-desktop) / $font-size-small-desktop;
+    line-height: math.div($line-height-desktop * $base-font-size-desktop, $font-size-small-desktop);
   }
 }
 
@@ -69,13 +69,13 @@
   @include font-generator(
     $font-family: $quote-font,
     $font-size: $font-size-large-desktop,
-    $font-size-mobile: $font-size-large-mobile,
-  )
+    $font-size-mobile: $font-size-large-mobile
+  );
   font-style: italic;
-  line-height: ($line-height-mobile * $base-font-size-mobile) / $font-size-large-mobile;
+  line-height: math.div($line-height-mobile * $base-font-size-mobile, $font-size-large-mobile);
 
   @include tablet {
-    line-height: ($line-height-desktop * $base-font-size-desktop) / $font-size-large-desktop;
+    line-height: math.div($line-height-desktop * $base-font-size-desktop, $font-size-large-desktop);
   }
 }
 
@@ -105,7 +105,7 @@
     $font-size-mobile: $font-size-xxlarge-mobile,
     $font-weight: $bold,
     $font-family: $brand-font-heading
-  )
+  );
 }
 
 @mixin brand-large {
@@ -114,7 +114,7 @@
     $font-size-mobile: $font-size-xlarge-mobile,
     $font-weight: $bold,
     $font-family: $brand-font-heading
-  )
+  );
 }
 
 @mixin brand-medium {
@@ -123,7 +123,7 @@
     $font-size-mobile: $font-size-large-mobile,
     $font-weight: $bold,
     $font-family: $brand-font-heading
-  )
+  );
 }
 
 @mixin brand-small {
@@ -132,7 +132,7 @@
     $font-size-mobile: $base-font-size-mobile,
     $font-weight: $bold,
     $font-family: $brand-font-heading
-  )
+  );
 }
 
 @mixin brand-xsmall {
@@ -141,5 +141,5 @@
     $font-size-mobile: $font-size-small-mobile,
     $font-weight: $bold,
     $font-family: $brand-font-heading
-  )
+  );
 }
