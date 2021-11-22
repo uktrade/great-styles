@@ -28,7 +28,7 @@
   }
 
   &__placeholder {
-    border: 2px solid $colour-blue-deep-20;
+    border: 2px solid $colour-blue-deep-50;
     min-height: 50px;
     padding: 10px 30px 10px 15px;
     position: static;
@@ -82,7 +82,7 @@
     z-index: 2;
     overflow: hidden;
 
-    border: 2px solid $colour-blue-deep-20;
+    border: 2px solid $colour-blue-deep-50;
     border-top: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;

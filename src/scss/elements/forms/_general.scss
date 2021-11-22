@@ -96,7 +96,7 @@ select.form-control {
   color: $blue-deep-60;
   width: 100%;
   padding: 0;
-  border: 2px solid $blue-deep-20;
+  border: 2px solid $blue-deep-50;
   border-radius: 10px;
 }
 
@@ -403,7 +403,7 @@ select::-ms-expand {
 }
 
 .prepend {
-  border: 2px solid $colour-blue-deep-20;
+  border: 2px solid $colour-blue-deep-50;
   border-radius: 10px 0 0 10px;
   border-right-style: none;
   padding: 8px;
