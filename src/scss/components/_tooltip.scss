@@ -37,7 +37,7 @@
 }
 
 .tooltip__text--right {
-  transform: translateX(calc(-100% + 40px));
+  transform: translateX(calc(-100% + 70px));
 
   @include breakpoint(sm) {
     left: auto;
