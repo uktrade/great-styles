@@ -8,10 +8,7 @@
   padding: 0 13px;
 
   &:hover,
-  &:active {
-    background: $colour-red-100;
-  }
-
+  &:active,
   &:focus,
   &:focus:active {
     background: $colour-red-100;
@@ -47,10 +44,7 @@
     background: $colour-blue-deep-80;
 
     &:hover,
-    &:active {
-      background: $colour-blue-deep-100;
-    }
-
+    &:active,
     &:focus,
     &:focus:active {
       background: $colour-blue-deep-100;
@@ -67,15 +61,12 @@
     color: $colour-blue-deep-80;
 
     &:hover,
-    &:active {
-      background: $white;
-      color: $colour-blue-deep-80;
-    }
-
+    &:active,
     &:focus,
     &:focus:active {
-      background: $white;
-      color: $colour-blue-deep-80;
+      background: $colour-blue-deep-10;
+      border-color: $colour-blue-deep-100;
+      color: $colour-blue-deep-100;
     }
 
     i {
