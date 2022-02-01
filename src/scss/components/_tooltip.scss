@@ -14,8 +14,6 @@
 // Tooltip content container (shown when active)
 .tooltip__text {
   position: absolute;
-  display: flex;
-  flex-flow: column nowrap;
   top: calc(35px + var(--ttpadding));
   left: 0;
   width: calc(100vw - (2 * var(--ttpadding)));
@@ -47,11 +45,9 @@
 }
 
 .tooltip__close {
-  position: absolute;
-  z-index: 1;
-  right: var(--ttpadding);
+  float: right;
   cursor: pointer;
-  margin-right: -9px;
+  margin: -5px -5px 0 0;
   width: 30px;
   height: 30px;
   overflow: hidden;
