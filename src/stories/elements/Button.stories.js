@@ -1,7 +1,7 @@
 import React from 'react'
 import { select, text } from '@storybook/addon-knobs'
 
-export default { title: 'Actions/Button' }
+export default { title: 'Elements/Button' }
 
 const renderButtons = (buttons, isDisabled = false, isIconOnly = false) => {
   const label = text('Button text', '')
@@ -10,11 +10,11 @@ const renderButtons = (buttons, isDisabled = false, isIconOnly = false) => {
     <div>
       {buttons.map((classes) => {
         return (
-          <div className="m-b-s">
+          <div className='m-b-s'>
             <button className={classes} disabled={isDisabled}>
               {classes.split().map((c) => {
                 if (c.includes('loading')) {
-                  return <div class="button--loading__spinner">Loading...</div>
+                  return <div class='button--loading__spinner'>Loading...</div>
                 } else if (icon) {
                   return (
                     <>
@@ -90,7 +90,7 @@ export const button_disabled = () =>
       'button button--tertiary',
       'button button--quaternary',
     ],
-    true
+    true,
   )
 
 export const button_loading = () =>
@@ -122,7 +122,7 @@ export const button_small_only_icon = () =>
       'button button--small button--only-icon button--loading button--quaternary',
     ],
     false,
-    true
+    true,
   )
 
 export const button_medium_only_icon = () =>
@@ -138,7 +138,7 @@ export const button_medium_only_icon = () =>
       'button button--only-icon button--loading button--quaternary',
     ],
     false,
-    true
+    true,
   )
 
 export const button_large_only_icon = () =>
@@ -154,7 +154,7 @@ export const button_large_only_icon = () =>
       'button button--large button--only-icon button--loading button--quaternary',
     ],
     false,
-    true
+    true,
   )
 
 export const button_full_width = () =>
@@ -174,7 +174,7 @@ export const button_auto_width = () =>
   ])
 
 export const button_tiny_toggle = () => (
-  <button className="button button--tiny-toggle" type="button">
-    <i className="fa fa-chevron-circle-down" />
+  <button className='button button--tiny-toggle' type='button'>
+    <i className='fa fa-chevron-circle-down' />
   </button>
 )

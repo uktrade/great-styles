@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react'
 
-export default {title: "Structure"};
+export default { title: 'To be sorted/Elements/Quote' }
 
 export const Quote = () => (
-  <div className="m-s">
-    <figure className="quote">
+  <div className='m-s'>
+    <figure className='quote'>
       <blockquote>
         At that one show, I picked up orders from customers in seven countries on the
         other side of the atlantic... the potential rewards for smaller businesses can be
@@ -17,4 +17,4 @@ export const Quote = () => (
       </figcaption>
     </figure>
   </div>
-);
+)

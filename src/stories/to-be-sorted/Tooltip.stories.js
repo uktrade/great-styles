@@ -1,9 +1,9 @@
 import React from 'react'
 import { select } from '@storybook/addon-knobs'
-import { Tooltip } from './tooltip/Tooltip'
+import { Tooltip } from '../../components/tooltip/Tooltip'
 
 export default {
-  title: 'Actions/Tooltips',
+  title: 'To be sorted/Components/Tooltips',
   component: Tooltip,
 }
 
@@ -30,7 +30,7 @@ const tooltipDataTitleHidden = {
   showTitle: false,
 }
 
-const bgSelect = () => select('Background', {White: '', 'Deep blue': 'bg-blue-deep-60'}, 'bg-blue-deep-60')
+const bgSelect = () => select('Background', { White: '', 'Deep blue': 'bg-blue-deep-60' }, 'bg-blue-deep-60')
 
 const style = {
   display: 'flex',
@@ -57,7 +57,7 @@ export const Tooltip_Right = () => {
   return (
     <div className={`${bgSelect()} p-v-m`} style={styleRight}>
       <div className='container'>
-      <Tooltip {...tooltipDataRight} faIcon="fa-info" />
+        <Tooltip {...tooltipDataRight} faIcon='fa-info' />
       </div>
     </div>
   )
@@ -67,7 +67,7 @@ export const Tooltip_hidden_title = () => {
   return (
     <div className={`${bgSelect()} p-v-m`} style={style}>
       <div className='container'>
-      <Tooltip {...tooltipDataTitleHidden} faIcon="fa-info" />
+        <Tooltip {...tooltipDataTitleHidden} faIcon='fa-info' />
       </div>
     </div>
   )

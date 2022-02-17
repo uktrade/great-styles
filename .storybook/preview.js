@@ -7,7 +7,7 @@ export const parameters = {
   // Sort the stories and folders alphabetically (at the top level)
   options: {
     storySort: {
-      order: ['Base styles', ['Colours', 'Typography', 'Grid'], 'Elements'],
+      order: ['Base', ['Colours', 'Typography', 'Grid'], 'Elements', 'Forms', 'Components', 'Modules'],
     },
   },
 }
