@@ -1,10 +1,12 @@
 import React from 'react'
 
 export default {
-  title: 'To be sorted/Components/Beta tag',
+  title: 'Components/Beta Tag',
 }
 
-export const Beta = () => (
+// TODO: Is this component even useful anymore?
+
+export const BetaTag = () => (
   <span className='beta bg-blue-deep-10 text-blue-deep-80 bold uppercase'>
     Beta
   </span>
