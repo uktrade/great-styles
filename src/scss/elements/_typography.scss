@@ -1,18 +1,17 @@
-
-@import 'helpers/vars';
-@import 'helpers/mixins';
+@import '../helpers/vars';
+@import '../helpers/mixins';
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 @import url('https://fonts.googleapis.com/css?family=Overpass:700');
 
-@import 'design-tokens';
-@import 'design-tokens-temp';
+@import '../design-tokens';
+@import '../design-tokens-temp';
 
 @font-face {
   font-family: 'FS Lucas';
-  src: url($fonts+'/FSLucas-Regular.woff2') format('woff2'),
-       url($fonts+'/FSLucas-Regular.woff') format('woff'),
-       url($fonts+'/FSLucas-Regular.ttf') format('truetype');
+  src: url('#{$fonts}/FSLucas-Regular.woff2') format('woff2'),
+  url('#{$fonts}/FSLucas-Regular.woff') format('woff'),
+  url('#{$fonts}/FSLucas-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -20,13 +19,14 @@
 // sass-lint:disable-all
 @font-face {
   font-family: 'FS Lucas SemiBold';
-  src: url($fonts+'/FSLucas-SemiBold.eot'),
-       url($fonts+'/FSLucas-SemiBold.eot?#iefix') format('embedded-opentype'),
-       url($fonts+'/FSLucas-SemiBold.woff2') format('woff2'),
-       url($fonts+'/FSLucas-SemiBold.woff') format('woff'),
-       url($fonts+'/FSLucas-SemiBold.ttf') format('truetype'),
-       url($fonts+'/FSLucas-SemiBold.svg#UbuntuBold') format('svg');
+  src: url('#{$fonts}/FSLucas-SemiBold.eot'),
+  url('#{$fonts}/FSLucas-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts}/FSLucas-SemiBold.woff2') format('woff2'),
+  url('#{$fonts}/FSLucas-SemiBold.woff') format('woff'),
+  url('#{$fonts}/FSLucas-SemiBold.ttf') format('truetype'),
+  url('#{$fonts}/FSLucas-SemiBold.svg#UbuntuBold') format('svg');
 }
+
 // sass-lint:enable-all
 
 body {
@@ -62,11 +62,25 @@ em {
 
 // Text
 
-.uppercase { text-transform: uppercase }
-.bold { @include bold }
-.italic { font-style: italic }
-.font-brand { font-family: $brand-font-heading }
-.font-body { font-family: $brand-font-body }
+.uppercase {
+  text-transform: uppercase
+}
+
+.bold {
+  @include bold
+}
+
+.italic {
+  font-style: italic
+}
+
+.font-brand {
+  font-family: $brand-font-heading
+}
+
+.font-body {
+  font-family: $brand-font-body
+}
 
 %heading {
   text-indent: -1px;
@@ -169,8 +183,14 @@ em {
     @include font-body-3;
   }
 }
-.body-m { @include font-body-2; }
-.body-s { @include font-body-1; }
+
+.body-m {
+  @include font-body-2;
+}
+
+.body-s {
+  @include font-body-1;
+}
 
 .body-l-b {
   @include font-body-3-bold;
@@ -187,4 +207,6 @@ em {
   @include bold;
 }
 
-.quote-text { @include quote-text; }
+.quote-text {
+  @include quote-text;
+}
