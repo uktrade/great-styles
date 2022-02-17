@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default { title: 'To be sorted/Elements/Quote' }
+export default { title: 'Elements/Quote' }
 
 export const Quote = () => (
   <div className='m-s'>

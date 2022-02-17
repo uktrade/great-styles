@@ -23,6 +23,7 @@ blockquote {
     margin-top: 0;
   }
 
+  // FIXME: use <cite>, not <figcaption>!
   figcaption {
     color: $blue-deep-100;
     font-size: 20px;
