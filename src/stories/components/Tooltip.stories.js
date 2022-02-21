@@ -3,22 +3,16 @@ import { select } from '@storybook/addon-knobs'
 import { Tooltip } from '../../components/tooltip/Tooltip'
 
 export default {
-  title: 'To be sorted/Components/Tooltips',
+  title: 'Components/Tooltips',
   component: Tooltip,
 }
 
+// TODO: Implement props as controls
+
 const tooltipData = {
-  content: `
-    <p>Porchetta venison meatloaf jerky, short loin burgdoggen pastrami. Brisket filet mignon bresaola turkey flank strip steak.</p>
-    <ul>
-    <li>Point <em>emphasis</em></li>
-    <li>Point <em>emphasis</em></li>
-    <li>Point <em><strong>strong</strong> emphasis</em></li>
-    <li>Point <em>emphasis</em></li>
-    </ul>
-    <small>Something small</small>
-`,
+  content: `<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, ea.</p>`,
 }
+
 const tooltipDataRight = {
   ...tooltipData,
   title: 'Custom title',
