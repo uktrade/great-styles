@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default { title: 'To be sorted/Modules/Media-block' }
+export default { title: 'Components/Media Block' }
 
-export const Default = () => (
+export const MediaBlock = () => (
   <div className='m-s'>
-    <div className='media-block m-b-s m-h-s'>
+    <div className='media-block'>
       <img src='https://dummyimage.com/70x70/000/fff' alt='' />
       <div>
         <h3 className='h-l text-blue-deep-80'>Heading text</h3>
@@ -13,9 +13,9 @@ export const Default = () => (
     </div>
   </div>
 )
-export const Round_image = () => (
+export const RoundImage = () => (
   <div className='m-s'>
-    <div className='media-block media-block--round-image m-b-s m-h-s'>
+    <div className='media-block media-block--round-image'>
       <img src='https://dummyimage.com/70x70/000/fff' alt='' />
       <div>
         <h3 className='h-l text-blue-deep-80'>Heading text</h3>
@@ -24,9 +24,9 @@ export const Round_image = () => (
     </div>
   </div>
 )
-export const Border_left = () => (
+export const BorderLeft = () => (
   <div className='m-s'>
-    <div className='media-block media-block--round-image m-b-s m-h-s'>
+    <div className='media-block media-block--round-image'>
       <i className='fas fa-ban'></i>
       <div className='g-panel g-panel--horizontal-mobile'>
         <h3 className='h-l text-blue-deep-80'>Heading text</h3>
