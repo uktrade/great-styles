@@ -3,18 +3,19 @@ import React from 'react'
 export default { title: 'Components/Modal' }
 
 // FIXME: What types of modals are actually used? What features need showcasing?
+// FIXME: any story below should showcase a working modal, i.e. with full close/dismiss functionality.
 export const Modal_window_1 = () => (
   <div className='bg-blue-deep-10 modal-container'>
     <div className='modal'>
       <div className='modal-header modal-header-bg modal-header-bg--1 radius-top-s bg-blue-deep-80 p-s'>
         <a
-          href='/'
+          href='#'
           className='link text-white body-m modal-close modal-close--back'
         >
           <i className='fas fa-arrow-left m-r-xxs' /> Back
         </a>
         <a
-          href='/'
+          href='#'
           className='link text-white modal-close modal-close--x modal-close--x-large'
         >
           <i className='fas fa-times-circle' />
@@ -38,7 +39,7 @@ export const Modal_window_2 = () => (
   <div className='bg-blue-deep-10 modal-container'>
     <div className='modal'>
       <div className='modal-header modal-header-bg modal-header-bg--2 radius-top-s bg-blue-deep-80 p-s'>
-        <a href='/' className='link text-white body-m modal-close'>
+        <a href='#' className='link text-white body-m modal-close'>
           <i className='fas fa-arrow-left m-r-xxs' /> Back
         </a>
       </div>
@@ -60,7 +61,7 @@ export const Modal_window_3 = () => (
   <div className='bg-blue-deep-10 modal-container'>
     <div className='modal'>
       <div className='modal-header modal-header-bg modal-header-bg--3 radius-top-s bg-blue-deep-80 p-s'>
-        <a href='/' className='link text-white body-m modal-close'>
+        <a href='#' className='link text-white body-m modal-close'>
           <i className='fas fa-arrow-left m-r-xxs' /> Back
         </a>
       </div>
@@ -83,7 +84,7 @@ export const Modal_window_4 = () => (
     <div className='modal'>
       <div className='modal-header bg-white radius-top-s p-h-s p-t-s'>
         <a
-          href='/'
+          href='#'
           className='button button--secondary button--small button--icon modal-close'
         >
           <i className='fas fa-arrow-left' />
@@ -108,7 +109,7 @@ export const Modal_window_5 = () => (
   <div className='bg-blue-deep-10 modal-container'>
     <div className='modal'>
       <div className='modal-header bg-white radius-top-s p-h-s p-t-s'>
-        <a href='/' className='link modal-close modal-close--x'>
+        <a href='#' className='link modal-close modal-close--x'>
           <i className='fas fa-times' />
         </a>
       </div>
@@ -131,13 +132,13 @@ export const Modal_window_6_empty = () => (
     <div className='modal'>
       <div className='modal-header bg-white radius-top-s p-h-s p-t-s'>
         <a
-          href='/'
+          href='#'
           className='button button--secondary button--small button--icon modal-close modal-close--back m-t-n-xs m-f-n-xs'
         >
           <i className='fas fa-arrow-left' />
           <span>Back</span>
         </a>
-        <a href='/' className='link modal-close modal-close--x'>
+        <a href='#' className='link modal-close modal-close--x'>
           <i className='fas fa-times' />
         </a>
       </div>
@@ -152,7 +153,7 @@ export const Modal_window_no_image = () => (
   <div className='bg-blue-deep-10 modal-container'>
     <div className='modal'>
       <div className='modal-header radius-top-s bg-blue-deep-80 p-s'>
-        <a href='/' className='link text-white body-m modal-close'>
+        <a href='#' className='link text-white body-m modal-close'>
           <i className='fas fa-arrow-left m-r-xxs' /> Back
         </a>
       </div>
@@ -174,7 +175,7 @@ export const Modal_window_with_footer = () => (
   <div className='bg-blue-deep-10 modal-container'>
     <div className='modal'>
       <div className='modal-header modal-header-bg modal-header-bg--1 radius-top-s bg-blue-deep-80 p-s'>
-        <a href='/' className='link text-white body-m modal-close'>
+        <a href='#' className='link text-white body-m modal-close'>
           <i className='fas fa-arrow-circle-left m-r-xxs' /> Back
         </a>
       </div>
