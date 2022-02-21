@@ -103,3 +103,33 @@ export const Dashboard = () => (
     </div>
   </div>
 )
+
+// FIXME: Is this just a normal card? Duplication?
+export const NextStep = () => (
+  <div className='m-s'>
+    <div className='grid'>
+      <div className='c-1-12'>
+        <h4 className='h-s'>&nbsp;</h4>
+      </div>
+      <div className='c-10-12'>
+        <div className='g-card g-card--with-image'>
+          <div className='g-card--with-image__content'>
+            <p className='body-l-b m-0'>Your next lesson</p>
+            <h3 className='h-m p-t-xxs'>Marketing at events - Attend a trade show</h3>
+            <p className='text-blue-deep-80 m-t-0 p-t-0 m-b-xs'>
+              <i className='fas fa-clock m-r-xxs' />
+              <strong> 12 min read</strong>
+            </p>
+            <button className='button button--secondary m-b-xs'>Continue learning</button>
+          </div>
+          <div className='g-card--with-image__image'>
+            <img src='https://dummyimage.com/443x248/000/fff' alt='' />
+          </div>
+        </div>
+      </div>
+      <div className='c-1-12'>
+        <h4 className='h-s'>&nbsp;</h4>
+      </div>
+    </div>
+  </div>
+)
