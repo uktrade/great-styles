@@ -1,7 +1,8 @@
 import React from 'react'
 
-export default { title: 'To be sorted/Modules/Overlays' }
+export default { title: 'Components/Modal' }
 
+// FIXME: What types of modals are actually used? What features need showcasing?
 export const Modal_window_1 = () => (
   <div className='bg-blue-deep-10 modal-container'>
     <div className='modal'>
