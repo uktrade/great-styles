@@ -16,7 +16,8 @@
     "storybook-staging": "npm run build-storybook && npm run storybook-manifest && npm run storybook-push",
     "storybook": "start-storybook -p 8080 -s static",
     "build-storybook": "build-storybook -s public",
-    "babel": "./node_modules/.bin/babel src --ignore '**/*.stories.js','./src/index.js' --out-dir ./dist"
+    "babel": "./node_modules/.bin/babel src --ignore '**/*.stories.js','./src/index.js' --out-dir ./dist",
+    "preinstall": "npx npm-force-resolutions"
   },
   "browserslist": [
     ">0.2%",
@@ -25,33 +26,34 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@babel/cli": "^7.14.8",
-    "@babel/preset-env": "^7.14.9",
-    "@babel/preset-react": "^7.14.5",
+    "@babel/cli": "^7.17.6",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
     "@fortawesome/fontawesome-free": "^5.15.3",
-    "@storybook/addon-a11y": "6.2.9",
-    "@storybook/addon-knobs": "6.2.9",
-    "@storybook/addons": "^6.3.8",
+    "@storybook/addon-a11y": "^6.4.19",
+    "@storybook/addon-knobs": "^6.4.0",
+    "@storybook/addons": "^6.4.19",
     "@storybook/preset-scss": "^1.0.3",
-    "@storybook/react": "^6.3.8",
-    "ansi-regex": "^5.0.1",
-    "babel-loader": "^8.2.2",
+    "@storybook/react": "^6.4.19",
+    "babel-loader": "^8.2.3",
     "copy-webpack-plugin": "^9.0.1",
-    "css-loader": "^3.6.0",
     "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "html-webpack-plugin": "^5.3.2",
-    "mini-css-extract-plugin": "^2.2.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "html-webpack-plugin": "^5.5.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-html-parser": "^2.0.2",
-    "remove-files-webpack-plugin": "^1.4.5",
-    "sass": "^1.43.4",
+    "remove-files-webpack-plugin": "^1.5.0",
+    "sass": "^1.49.8",
     "sass-loader": "^10.2.0",
-    "style-loader": "^1.3.0",
-    "webpack-cli": "^4.8.0"
+    "webpack-cli": "^4.9.2"
+  },
+  "resolutions": {
+    "glob-parent": ">=5.1.2",
+    "trim": ">=0.0.3",
+    "postcss": ">=8.2.13"
   }
 }
