@@ -3,11 +3,9 @@ import '../src/scss/great-styles.scss'
 export const parameters = {
   layout: 'centered',
   docs: { page: null },
-  // TODO: Define some actual organisation for all components/atoms/modules
-  // Sort the stories and folders alphabetically (at the top level)
   options: {
     storySort: {
-      order: ['Base', ['Colours', 'Typography', 'Grid'], 'Elements', 'Forms', 'Components', 'Modules'],
+      order: ['Base', ['Colours', 'Typography', 'Grid'], 'Elements', 'Forms', 'Components'],
     },
   },
 }
