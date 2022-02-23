@@ -31,6 +31,7 @@
     "@babel/preset-react": "^7.16.7",
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@storybook/addon-a11y": "^6.4.19",
+    "@storybook/addon-backgrounds": "^6.4.19",
     "@storybook/addon-knobs": "^6.4.0",
     "@storybook/addons": "^6.4.19",
     "@storybook/preset-scss": "^1.0.3",

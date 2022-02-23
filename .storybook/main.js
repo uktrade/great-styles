@@ -1,20 +1,21 @@
 module.exports = {
-  stories: ["../src/**/*.stories.js"],
+  stories: ['../src/**/*.stories.js'],
   features: {
     postcss: false,
   },
   addons: [
     {
-      name: "@storybook/preset-scss",
+      name: '@storybook/preset-scss',
       options: {
         sassLoaderOptions: {
           sassOptions: {
-            includePaths: ["src/scss"],
+            includePaths: ['src/scss'],
           },
-        }
-      }
+        },
+      },
     },
-    "@storybook/addon-knobs",
-    "@storybook/addon-a11y",
+    '@storybook/addon-knobs',
+    '@storybook/addon-a11y',
+    '@storybook/addon-backgrounds',
   ],
-};
+}
