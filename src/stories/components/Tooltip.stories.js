@@ -23,8 +23,8 @@ const tooltipDataTitleHidden = {
 
 const style = {
   display: 'flex',
-  width: '100vw',
-  height: '100vh',
+  width: 'calc(100vw - 2em)',
+  height: 'calc(100vh - 2em)',
 }
 
 const styleRight = {

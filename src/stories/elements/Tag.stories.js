@@ -14,9 +14,9 @@ const renderTags = (extra_classes = '') => {
   const icon = extra_classes.includes('--icon')
 
   return (
-    <div>
+    <>
       {tags.map(tag => (
-          <div className='m-b-s'>
+          <div className='m-b-s' key={tag.classes.replace(' ', '-')}>
             <button className={`${tag.classes} ${extra_classes}`}>
               {tag.label}
               {icon && <i className='fas fa-plus' />}
@@ -24,7 +24,7 @@ const renderTags = (extra_classes = '') => {
           </div>
         ),
       )}
-    </div>
+    </>
   )
 }
 

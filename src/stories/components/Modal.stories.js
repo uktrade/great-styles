@@ -5,7 +5,7 @@ export default { title: 'Components/Modal' }
 // FIXME: What types of modals are actually used? What features need showcasing?
 // FIXME: any story below should showcase a working modal, i.e. with full close/dismiss functionality.
 export const Modal_window_1 = () => (
-  <div className='bg-blue-deep-10 modal-container'>
+  <div className='modal-container'>
     <div className='modal'>
       <div className='modal-header modal-header-bg modal-header-bg--1 radius-top-s bg-blue-deep-80 p-s'>
         <a
@@ -36,7 +36,7 @@ export const Modal_window_1 = () => (
 )
 
 export const Modal_window_2 = () => (
-  <div className='bg-blue-deep-10 modal-container'>
+  <div className='modal-container'>
     <div className='modal'>
       <div className='modal-header modal-header-bg modal-header-bg--2 radius-top-s bg-blue-deep-80 p-s'>
         <a href='#' className='link text-white body-m modal-close'>
@@ -58,7 +58,7 @@ export const Modal_window_2 = () => (
 )
 
 export const Modal_window_3 = () => (
-  <div className='bg-blue-deep-10 modal-container'>
+  <div className='modal-container'>
     <div className='modal'>
       <div className='modal-header modal-header-bg modal-header-bg--3 radius-top-s bg-blue-deep-80 p-s'>
         <a href='#' className='link text-white body-m modal-close'>
@@ -80,7 +80,7 @@ export const Modal_window_3 = () => (
 )
 
 export const Modal_window_4 = () => (
-  <div className='bg-blue-deep-10 modal-container'>
+  <div className='modal-container'>
     <div className='modal'>
       <div className='modal-header bg-white radius-top-s p-h-s p-t-s'>
         <a
@@ -106,7 +106,7 @@ export const Modal_window_4 = () => (
 )
 
 export const Modal_window_5 = () => (
-  <div className='bg-blue-deep-10 modal-container'>
+  <div className='modal-container'>
     <div className='modal'>
       <div className='modal-header bg-white radius-top-s p-h-s p-t-s'>
         <a href='#' className='link modal-close modal-close--x'>
@@ -128,7 +128,7 @@ export const Modal_window_5 = () => (
 )
 
 export const Modal_window_6_empty = () => (
-  <div className='bg-blue-deep-10 modal-container'>
+  <div className='modal-container'>
     <div className='modal'>
       <div className='modal-header bg-white radius-top-s p-h-s p-t-s'>
         <a
@@ -143,14 +143,14 @@ export const Modal_window_6_empty = () => (
         </a>
       </div>
       <div className='modal-inner text-blue-deep-80 bg-white radius-bottom-s'>
-        <div className='p-h-s p-t-0 p-b-s' style={{ height: '200px' }}></div>
+        <div className='p-h-s p-t-0 p-b-s' style={{ height: '200px' }} />
       </div>
     </div>
   </div>
 )
 
 export const Modal_window_no_image = () => (
-  <div className='bg-blue-deep-10 modal-container'>
+  <div className='modal-container'>
     <div className='modal'>
       <div className='modal-header radius-top-s bg-blue-deep-80 p-s'>
         <a href='#' className='link text-white body-m modal-close'>
@@ -172,7 +172,7 @@ export const Modal_window_no_image = () => (
 )
 
 export const Modal_window_with_footer = () => (
-  <div className='bg-blue-deep-10 modal-container'>
+  <div className='modal-container'>
     <div className='modal'>
       <div className='modal-header modal-header-bg modal-header-bg--1 radius-top-s bg-blue-deep-80 p-s'>
         <a href='#' className='link text-white body-m modal-close'>

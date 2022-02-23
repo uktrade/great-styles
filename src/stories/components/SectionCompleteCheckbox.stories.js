@@ -3,7 +3,7 @@ import React from 'react'
 export default { title: 'Components/Section Complete Checkbox' }
 
 export const SectionCompleteCheckbox = () => (
-  <div className='bg-blue-deep-80 m-s p-m'>
+  <div className='bg-blue-deep-80 p-m'>
     <h3 className='h-m text-white m-b-xs'>Section complete?</h3>
     <div className='great-checkbox great-checkbox--large'>
       <input type='checkbox' id='checkbox_complete' />
