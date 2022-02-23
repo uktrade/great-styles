@@ -1,9 +1,8 @@
-
 // BREADCRUMBS
 // ============
 
-@import 'helpers/mixins';
-@import 'helpers/vars';
+@import '../helpers/mixins';
+@import '../helpers/vars';
 
 .g-breadcrumbs {
   @include float-clear;
