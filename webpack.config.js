@@ -1,4 +1,5 @@
 const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const RemovePlugin = require('remove-files-webpack-plugin')
 
@@ -15,12 +16,14 @@ module.exports = {
     rules: [
       {
         test: /\.s?css$/i,
-        exclude: /node_modules/,
-        type: 'asset/source',
-        generator: {
-          filename: '[name].css',
-        },
         use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
           // Compiles Sass to CSS
           {
             loader: 'sass-loader',
@@ -58,6 +61,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new MiniCssExtractPlugin({}),
     new CopyPlugin({
       patterns: [
         { from: './src/scss/images', to: 'images' },
