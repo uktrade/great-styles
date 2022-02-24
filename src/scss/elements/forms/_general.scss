@@ -1,8 +1,7 @@
-
-@import 'helpers/colours';
-@import 'helpers/mixins';
-@import 'helpers/vars';
-@import 'helpers/typography-mixins';
+@import '../../helpers/colours';
+@import '../../helpers/mixins';
+@import '../../helpers/vars';
+@import '../../helpers/typography-mixins';
 
 
 // Fieldset is used to group more than one .form-group
@@ -116,6 +115,7 @@ textarea.form-control {
   background-image: none;
   height: 80px;
 }
+
 // scss-lint:enable QualifyingElement
 
 

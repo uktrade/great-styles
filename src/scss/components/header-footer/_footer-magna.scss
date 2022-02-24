@@ -1,4 +1,4 @@
-@import 'helpers/mixins';
+@import '../../helpers/mixins';
 
 $footer-padding: 0 30px;
 
@@ -20,7 +20,7 @@ $footer-padding: 0 30px;
   display: flex;
   flex-flow: column wrap;
 
-  li+li {
+  li + li {
     margin-top: 10px;
   }
 
@@ -28,7 +28,7 @@ $footer-padding: 0 30px;
     display: inline-flex;
     flex-flow: row wrap;
 
-    li+li {
+    li + li {
       margin-top: 0;
     }
 

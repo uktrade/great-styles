@@ -1,12 +1,24 @@
-import "../src/scss/great-styles.scss";
+import '../src/scss/great-styles.scss'
+
+export const backgrounds = [
+  {
+    name: 'Blue deep 10',
+    value: '#e9e7ed',
+  },
+]
 
 export const parameters = {
   layout: 'centered',
-  docs: {page: null},
-  // TODO: Define some actual organisation for all components/atoms/modules
-  // Sort the stories and folders alphabetically (at the top level)
+  docs: { page: null },
   options: {
-    storySort: (a, b) =>
-      a[1].kind === b[1].kind ? 0 : a[1].id.localeCompare(b[1].id, {numeric: true}),
+    storySort: {
+      order: ['Base', ['Colours', 'Typography', 'Grid'], 'Elements', 'Forms', 'Components'],
+    },
   },
-};
+  backgrounds: {
+    values: backgrounds,
+    grid: {
+      disable: true,
+    },
+  },
+}

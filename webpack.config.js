@@ -17,9 +17,7 @@ module.exports = {
       {
         test: /\.s?css$/i,
         use: [
-          // extract to separate file
           MiniCssExtractPlugin.loader,
-          // Translates CSS into CommonJS
           {
             loader: 'css-loader',
             options: {
@@ -30,12 +28,7 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              implementation: require('sass'),
               sourceMap: true,
-              sassOptions: {
-                outputStyle: 'compressed',
-                includePaths: [path.resolve(__dirname, 'src/scss')],
-              }
             },
           },
         ],
@@ -46,8 +39,8 @@ module.exports = {
           loader: 'url-loader',
           options: {
             limit: 0,
-            name: './images/[name].[ext]'
-          }
+            name: './images/[name].[ext]',
+          },
         },
       },
       {
@@ -56,20 +49,18 @@ module.exports = {
           loader: 'url-loader',
           options: {
             limit: 0,
-            name: './fonts/[name].[ext]'
-          }
-        }
+            name: './fonts/[name].[ext]',
+          },
+        },
       },
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: '[name].css'
-    }),
+    new MiniCssExtractPlugin({}),
     new CopyPlugin({
       patterns: [
-        { from: "./src/scss/images", to: "images" },
-        { from: "./src/scss/fonts", to: "fonts" },
+        { from: './src/scss/images', to: 'images' },
+        { from: './src/scss/fonts', to: 'fonts' },
       ],
     }),
     new RemovePlugin({
@@ -82,5 +73,5 @@ module.exports = {
         ],
       },
     }),
-  ]
+  ],
 }

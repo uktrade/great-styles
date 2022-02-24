@@ -1,5 +1,5 @@
-@import 'helpers/vars';
-@import 'helpers/mixins';
+@import '../helpers/vars';
+@import '../helpers/mixins';
 
 #skip-link {
   @include body-small;
