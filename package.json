@@ -17,7 +17,7 @@
     "storybook": "start-storybook -p 8080 -s static",
     "build-storybook": "build-storybook -s public",
     "babel": "./node_modules/.bin/babel src --ignore '**/*.stories.js','./src/index.js' --out-dir ./dist",
-    "preinstall": "npx npm-force-resolutions"
+    "preinstall": "npx force-resolutions"
   },
   "browserslist": [
     ">0.2%",
