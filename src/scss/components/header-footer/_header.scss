@@ -1,7 +1,6 @@
 @import '../../helpers/vars';
 @import '../../helpers/colours';
 @import '../../helpers/mixins';
-@import '../../helpers/vars';
 
 .magna-header {
   @include float-clear();
@@ -22,7 +21,10 @@
 
 .magna-header__logo {
   float: left;
+  position: relative;
+  z-index: 1;
   margin-right: 1rem;
+  margin-bottom: -100%;
 
   & img {
     display: block;
@@ -30,9 +32,9 @@
     height: 60px;
     margin-top: 15px;
 
-    @include breakpoint(md) {
+    @include breakpoint(sm) {
       height: 75px;
-      margin-top: 0;
+      margin-top: 13px;
     }
   }
 }
@@ -47,16 +49,38 @@
   }
 }
 
-.magna-header__dropdown-button {
+.magna-header__menu {
+  position: relative;
   float: right;
   clear: right;
   display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+
+  @include breakpoint(sm) {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    padding-left: 170px;
+    margin-top: 0;
+  }
+}
+
+.magna-header__dropdown-button {
+  position: relative;
+  z-index: 5;
+  display: flex;
   align-items: center;
   padding: .5rem 1rem;
-  margin: 5px 0 15px;
+  margin-top: .5rem;
   border: 2px solid #fff;
   color: $white;
   font-size: 1rem;
+
+  @include breakpoint(sm) {
+    margin: 1rem 0 0 2rem;
+  }
 
   &[aria-expanded=true] {
     background: $active-blue;
@@ -108,20 +132,104 @@
 
 }
 
+.magna-header__overlay {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .5);
+
+  [aria-expanded=true] ~ & {
+    display: block;
+  }
+}
+
 .magna-header__dropdown {
   display: none;
+  position: absolute;
+  z-index: 4;
+  left: -15px;
+  right: -15px;
+  top: 45px;
+  background: $blue-deep-80;
+
+  [aria-expanded=true] + & {
+    display: block;
+  }
+
+  @include breakpoint(sm) {
+    left: auto;
+    right: 0;
+    top: 57px;
+    width: 370px;
+  }
+}
+
+.magna-header__greeting {
+  padding: 15px;
+  background-color: $active-blue;
+  color: $white;
+}
+
+.magna-header__menu-items {
+  margin: 0;
+  padding: 0 20px;
+
+  & li {
+    margin: 0;
+    padding: 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $blue-deep-70;
+    }
+  }
+
+  & a,
+  & button {
+    position: relative;
+    display: block;
+    padding: .5rem 0;
+    font-size: 1em;
+    font-family: 'FS Lucas', Arial, Helvetica, sans-serif;
+
+    .tag {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  & button {
+    width: 100%;
+    color: $white;
+    text-align: left;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .magna-header__search {
   clear: both;
   display: flex;
+  flex-basis: 100%;
   justify-content: space-between;
+  margin-top: 1rem;
+
+  @include breakpoint(sm) {
+    flex-basis: auto;
+    margin-left: 2rem;
+  }
 
   & input {
     flex-grow: 1;
     min-width: 10rem;
     padding-left: 1rem;
     font-family: 'FS Lucas', Arial, Helvetica, sans-serif;
+    border-radius: 0;
 
     &:focus {
       padding: 0 0 0 1rem;
@@ -135,7 +243,7 @@
     background-repeat: no-repeat;
     background-position: 50%;
     background-color: $active-blue;
-    background-image: url('./images/search.svg');
+    background-image: url(asset-path('search.svg'));
     background-size: 20px;
     color: $white;
     cursor: pointer;
@@ -144,7 +252,7 @@
 
 
 .magna-header__nav {
-  margin: 0;
+  margin: 1rem 0 0;
 
   @include breakpoint(lg_lt) {
     display: none;
@@ -152,6 +260,13 @@
 
   & li {
     display: inline-block;
-    margin: 0 1rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  & a {
+    display: inline-block;
+    margin: 0 0 0 2rem;
+    padding: .5rem 0;
   }
 }
