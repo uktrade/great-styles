@@ -3,103 +3,155 @@
 @import '../../helpers/mixins';
 @import '../../helpers/vars';
 
-$menu-item-vertical-spacing: 10px;
-$menu-margin-l: 30px;
-$menu-margin-s: 20px;
-
 .magna-header {
-  position: relative;
-  z-index: 2;
+  @include float-clear();
+  padding: 20px 0;
+  background: $blue-deep-100;
+  font-family: 'Overpass', Arial, Helvetica, sans-serif;
 
-  #header-logo-link {
-    line-height: 0;
-    margin: 10px 30px;
-
-    .header-logo {
-      height: 63px;
-      padding: 0;
-    }
-  }
-
-  .header-links {
-    display: flex;
-    flex-grow: 1;
-    justify-content: flex-end;
-
-    .lg-only {
-      @include breakpoint(lg_lt) {
-        display: none;
-      }
-    }
-  }
-
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-
-    li {
-      display: flex;
-      align-items: center;
-      margin: 0 5px;
-
-      a.button.button--secondary {
-        background-color: $blue-deep-90;
-
-        &.active {
-          background-color: $blue-deep-80;
-        }
-      }
-    }
-  }
-
-  nav {
-    width: 100%;
-    display: flex;
-  }
-
-  #header-link-user-profile {
-    margin: 15px 30px;
-  }
-
-  .avatar {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: $white;
-    position: relative;
-    padding: 0;
-    transition: background-color 0.2s;
-
-    &:focus,
-    &.active {
-      outline: none;
-
-      &:after {
-        content: '';
-        top: -4px;
-        left: -4px;
-        display: block;
-        position: absolute;
-        border: 2px solid $red-80;
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-      }
-    }
+  & a {
+    font-size: 1rem;
+    color: $white;
+    text-decoration: none;
 
     &:hover {
-      background-color: darken($white, 10%);
+      text-decoration: underline;
     }
+  }
+}
 
-    .fas {
-      margin-top: 5px;
-    }
+.magna-header__logo {
+  float: left;
+  margin-right: 1rem;
 
-    img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
+  & img {
+    display: block;
+    width: auto;
+    height: 60px;
+    margin-top: 15px;
+
+    @include breakpoint(md) {
+      height: 75px;
+      margin-top: 0;
     }
+  }
+}
+
+.magna-header__extra-links {
+  float: right;
+  margin: 0;
+
+  & li {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+}
+
+.magna-header__dropdown-button {
+  float: right;
+  clear: right;
+  display: flex;
+  align-items: center;
+  padding: .5rem 1rem;
+  margin: 5px 0 15px;
+  border: 2px solid #fff;
+  color: $white;
+  font-size: 1rem;
+
+  &[aria-expanded=true] {
+    background: $active-blue;
+  }
+}
+
+.magna-header__dropdown-button__icon {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  pointer-events: none;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: $white;
+    left: 0;
+    transition: all .2s ease;
+  }
+
+  &:before {
+    top: 3px;
+
+    .magna-header__dropdown-button[aria-expanded=true] & {
+      width: 25px;
+      top: 9px;
+      left: -2px;
+      transform: rotate(45deg);
+    }
+  }
+
+  &:after {
+    bottom: 3px;
+
+    .magna-header__dropdown-button[aria-expanded=true] & {
+      width: 25px;
+      bottom: 9px;
+      left: -2px;
+      transform: rotate(-45deg);
+    }
+  }
+
+
+}
+
+.magna-header__dropdown {
+  display: none;
+}
+
+.magna-header__search {
+  clear: both;
+  display: flex;
+  justify-content: space-between;
+
+  & input {
+    flex-grow: 1;
+    min-width: 10rem;
+    padding-left: 1rem;
+    font-family: 'FS Lucas', Arial, Helvetica, sans-serif;
+
+    &:focus {
+      padding: 0 0 0 1rem;
+    }
+  }
+
+  & button {
+    flex-shrink: 0;
+    height: 42px;
+    width: 42px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-color: $active-blue;
+    background-image: url('./images/search.svg');
+    background-size: 20px;
+    color: $white;
+    cursor: pointer;
+  }
+}
+
+
+.magna-header__nav {
+  margin: 0;
+
+  @include breakpoint(lg_lt) {
+    display: none;
+  }
+
+  & li {
+    display: inline-block;
+    margin: 0 1rem;
   }
 }
