@@ -1,6 +1,6 @@
 {
   "name": "great-styles",
-  "version": "0.2.0",
+  "version": "0.4.1",
   "engines": {
     "node": "12"
   },
@@ -8,15 +8,12 @@
   "main": "src/index.js",
   "private": true,
   "scripts": {
-    "static-watch": "webpack --watch --mode development",
-    "static-build": "webpack --mode production",
-    "lint": "echo \"No linting setup.\"",
-    "storybook-manifest": "cp manifest_storybook.yml storybook-static/manifest.yml",
-    "storybook-push": "cd storybook-static && cf push great-styles-staging",
-    "storybook-staging": "npm run build-storybook && npm run storybook-manifest && npm run storybook-push",
-    "storybook": "start-storybook -p 8080 -s static",
-    "build-storybook": "build-storybook -s public",
+    "build": "webpack --mode production",
+    "build:dev": "webpack --watch --mode development",
     "babel": "./node_modules/.bin/babel src --ignore '**/*.stories.js','./src/index.js' --out-dir ./dist",
+    "storybook": "start-storybook -p 8080 -s static",
+    "storybook:deploy": "./deploy-storybook.sh",
+    "storybook:build": "build-storybook -s public",
     "preinstall": "npx force-resolutions"
   },
   "browserslist": [
@@ -36,14 +33,12 @@
     "@storybook/addons": "^6.4.19",
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^6.4.19",
-    "babel-loader": "^8.2.3",
     "copy-webpack-plugin": "^9.0.1",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.4.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.5.3",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",

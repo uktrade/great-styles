@@ -16,4 +16,4 @@ jobs:
             - "node_modules"
       - run:
           command: |
-            npm run lint
+            npm run build && npm run babel

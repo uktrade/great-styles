@@ -1,7 +1,13 @@
-To do (delete all that do not apply):
+To do:
 
-- [ ] Changelog entry added.
-- [ ] (if there are vulnerable requirements) Upgraded any vulnerable dependencies.
-- [ ] CSS have been compiled.
-- [ ] Add a printscreen to the PR
-- [ ] Components have been built for use in e.g. great-cms: `npm run babel`
+- [ ] Changelog entry has been added
+- [ ] Vulnerable dependencies have been upgraded/fixed
+- [ ] CSS has been compiled: `npm run build`
+- [ ] JS components have been compiled: `npm run babel`
+- [ ] Printscreen has been added to the PR
+
+If this is a new release:
+
+- [ ] Changelog has been updated
+- [ ] `package.json` version has been updated
+- [ ] Release tag has been created

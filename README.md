@@ -5,40 +5,53 @@
 [![gitflow-image]][gitflow]
 [![calver-image]][calver]
 
-**Styles GREAT platform - the Department for International Trade (DIT)**
+**GREAT platform styles and components - the Department for International Trade (DIT)**
 
 ---
 
 ## Development
 
-Install dependencies
-`npm install`
+Install dependencies:
+
+```shell
+$ npm install
+```
 
 Run storybook in dev mode:
-`npm run storybook`
 
-Build and watch static assets (indepentent process) using gulp:
-`npm i -g gulp` then `gulp` will compile and watch for ongoing SCSS changes.
-or `npm rum build-static` will execute gulp with `npx` (if you prefer not to install gulp globally).
+```shell
+$ npm run storybook
+```
 
-Preview DSM/storybook locally:
-`npm run dsm-storybook:preview`
+Build all assets:
 
-Publish DSM/storybook:
-`npm run dsm-storybook:publish`
+```shell
+$ npm run build 
+$ npm run babel
+```
 
-you will need a proper .dsmrc file, read more on how to "manage authentication tokens" here:
-https://support.invisionapp.com/hc/en-us/articles/360028510211-Configuring-the-Storybook-DSM-Integration
+Build the static version of Storybook:
 
-### Installing
+```shell
+$ npm run storybook:build
+```
 
-### Requirements
+## Versioning
 
-### Helpful links
+To release a new version, create a new release on Github. The new tag on publish should follow Semantic Versioning.
 
-- [Include static folders for `dsm-storybook` to correctly apply global styles](https://support.invisionapp.com/hc/en-us/articles/360044117952-Can-I-include-static-assets-with-the-DSM-Storybook-integration-)
+Services using great-styles as a dependency can then update their version of `great-styles`:
 
-### Related projects
+```shell
+$ npm install --save-dev uktrade/great-styles#v0.4.1
+```
 
-upstream: invision DSM
-downstream: https://github.com/uktrade/great-cms
+## Publishing Storybook
+
+You will need to be logged in to GOVUK PaaS/Cloud Foundry. Once logged in, and with sufficient permissions, you will be
+able to build and deploy the static Storybook instance:
+
+```shell
+$ npm run storybook:deploy
+```
+
