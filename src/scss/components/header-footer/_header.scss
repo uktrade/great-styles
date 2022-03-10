@@ -7,15 +7,16 @@
   padding: 20px 0;
   background: $blue-deep-100;
   font-family: 'Overpass', Arial, Helvetica, sans-serif;
+}
 
-  & a {
-    font-size: 1rem;
-    color: $white;
-    text-decoration: none;
+.magna-header a,
+.magna-header--modal a {
+  font-size: 1rem;
+  color: $white;
+  text-decoration: none;
 
-    &:hover {
-      text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
   }
 }
 
