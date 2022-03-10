@@ -50,7 +50,6 @@
   },
   "resolutions": {
     "glob-parent": ">=5.1.2",
-    "trim": ">=0.0.3",
-    "postcss": ">=8.2.13"
+    "trim": ">=0.0.3"
   }
 }
