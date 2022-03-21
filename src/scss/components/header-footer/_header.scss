@@ -1,6 +1,7 @@
 @import '../../helpers/vars';
 @import '../../helpers/colours';
 @import '../../helpers/mixins';
+@import '../../helpers/breakpoints';
 
 .magna-header {
   @include float-clear();
@@ -10,7 +11,7 @@
 }
 
 .magna-header a,
-.magna-header--modal a {
+.magna-header__dropdown a {
   font-size: 1rem;
   color: $white;
   text-decoration: none;
@@ -149,35 +150,64 @@
 }
 
 .magna-header__dropdown {
-  display: none;
+  display: block;
   position: absolute;
   z-index: 4;
-  left: -15px;
-  right: -15px;
-  top: 45px;
+  left: 0;
+  right: 0;
+  top: 49px;
+  margin: 0 -15px;
   background: $blue-deep-80;
+  overflow: visible;
 
-  [aria-expanded=true] + & {
+  [aria-expanded=false] + & {
+    display: none;
+  }
+
+  [aria-expanded=true] + &,
+  &--open {
     display: block;
+    // `display: block` can only be animated using keyframes
+    -webkit-animation: fadeIn .3s;
+    animation: fadeIn .3s;
   }
 
   @include breakpoint(sm) {
     left: auto;
-    right: 0;
     top: 57px;
     width: 370px;
+    margin: 0;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
 .magna-header__greeting {
   padding: 15px;
   background-color: $active-blue;
+  font-family: 'Overpass', Arial, Helvetica, sans-serif;
   color: $white;
 }
 
 .magna-header__menu-items {
   margin: 0;
-  padding: 0 20px;
+  padding: 5px 20px;
 
   & li {
     margin: 0;
@@ -255,10 +285,6 @@
 .magna-header__nav {
   margin: 1rem 0 0;
 
-  @include breakpoint(lg_lt) {
-    display: none;
-  }
-
   & li {
     display: inline-block;
     margin: 0;
@@ -269,5 +295,9 @@
     display: inline-block;
     margin: 0 0 0 2rem;
     padding: .5rem 0;
+
+    &.active {
+      text-decoration: underline;
+    }
   }
 }
