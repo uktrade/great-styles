@@ -9,7 +9,7 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div style={{ width: '100vw', marginLeft: '-1rem' }}>
+    <div style={{ width: '100vw', margin: '-1rem' }}>
       <header className='magna-header'>
         <nav className='container container-fluid'>
           <a className='magna-header__logo' href='#'>
@@ -32,9 +32,15 @@ export const Header = () => {
               <div className='magna-header__greeting'>Hi John</div>
               <ul className='magna-header__menu-items'>
                 <li><a href='#'>Home</a></li>
-                <li><a href='#'>Learn to export <span className='tag tag--small'>new</span></a></li>
-                <li><a href='#'>Where to export <span className='tag tag--small'>new</span></a></li>
-                <li><a href='#'>Make an export plan <span className='tag tag--small'>new</span></a></li>
+                <li className='hide-lg'>
+                  <a href='#'>Learn to export <span className='tag tag--small'>new</span></a>
+                </li>
+                <li className='hide-lg'>
+                  <a href='#'>Where to export <span className='tag tag--small'>new</span></a>
+                </li>
+                <li className='hide-lg'>
+                  <a href='#'>Make an export plan <span className='tag tag--small'>new</span></a>
+                </li>
                 <li><a href='#'>Account</a></li>
                 <li><a href='#'>Advice</a></li>
                 <li><a href='#'>Markets</a></li>
@@ -56,7 +62,7 @@ export const Header = () => {
               </button>
             </form>
 
-            <ul className='magna-header__nav'>
+            <ul className='magna-header__nav hide-lg_lt'>
               <li><a href='#'>Learn to export</a></li>
               <li><a href='#'>Where to export</a></li>
               <li><a href='#'>Make an export plan</a></li>
@@ -64,6 +70,16 @@ export const Header = () => {
           </div>
         </nav>
       </header>
+
+      <div className='container container-fluid p-v-l' style={{ height: '120vh' }}>
+        <h1 className='h-xl text-blue-deep-20'>Lorem ipsum</h1>
+
+        <p className='text-blue-deep-20'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci
+          amet asperiores atque aut autem
+          commodi consequuntur dolores ducimus, ea earum et ex, explicabo id itaque molestiae mollitia nam
+          necessitatibus neque, nesciunt nisi odio qui quis quo ratione repellat repudiandae saepe sint soluta suscipit
+          tempora ullam vel vitae!</p>
+      </div>
     </div>
   )
 }

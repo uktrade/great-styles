@@ -1,3 +1,6 @@
+@import '../helpers/vars';
+@import '../helpers/breakpoints';
+
 .visually-hidden {
   position: absolute;
   overflow: hidden;
@@ -79,6 +82,16 @@
     display: inherit;
   }
 }
+
+// Responsive hide classes
+@each $name, $media in $magna-global-breakpoints {
+  @include breakpoint($name) {
+    .hide-#{$name} {
+      display: none;
+    }
+  }
+}
+
 
 /******************************/
 /* Richtext area reset styles */
