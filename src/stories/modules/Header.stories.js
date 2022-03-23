@@ -41,10 +41,10 @@ export const Header = () => {
                 <li className='hide-lg'>
                   <a href='#'>Make an export plan <span className='tag tag--small'>new</span></a>
                 </li>
-                <li><a href='#'>Account</a></li>
                 <li><a href='#'>Advice</a></li>
                 <li><a href='#'>Markets</a></li>
                 <li><a href='#'>Services</a></li>
+                <li><a href='#'>Account</a></li>
                 <li>
                   <button type='button'>Sign out</button>
                 </li>
