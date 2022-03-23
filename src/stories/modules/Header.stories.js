@@ -11,7 +11,7 @@ export const Header = () => {
   return (
     <div style={{ width: '100vw', margin: '-1rem' }}>
       <header className='magna-header'>
-        <nav className='container container-fluid'>
+        <nav className='container'>
           <a className='magna-header__logo' href='#'>
             <img src={logo} alt='Department for International Trade' />
           </a>

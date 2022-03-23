@@ -3,11 +3,18 @@
 @import '../../helpers/mixins';
 @import '../../helpers/breakpoints';
 
+@mixin focus_outline {
+  &:focus {
+    outline: 4px solid $focus-yellow;
+  }
+}
+
 .magna-header {
   @include float-clear();
   padding: 20px 0;
   background: $blue-deep-100;
   font-family: 'Overpass', Arial, Helvetica, sans-serif;
+  font-weight: 400;
 }
 
 .magna-header a,
@@ -76,9 +83,14 @@
   align-items: center;
   padding: .5rem 1rem;
   margin-top: .5rem;
+  background: $blue-deep-100;
   border: 2px solid #fff;
-  color: $white;
+  font-family: 'Overpass', Arial, Helvetica, sans-serif;
   font-size: 1rem;
+  color: $white;
+  cursor: pointer;
+
+  @include focus_outline;
 
   @include breakpoint(sm) {
     margin: 1rem 0 0 2rem;
@@ -226,6 +238,8 @@
     font-size: 1em;
     font-family: 'FS Lucas', Arial, Helvetica, sans-serif;
 
+    @include focus_outline;
+
     .tag {
       position: absolute;
       right: 0;
@@ -236,10 +250,17 @@
     width: 100%;
     color: $white;
     text-align: left;
+    background: none;
+    border: 0;
+    cursor: pointer;
 
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  & .button:hover {
+    text-decoration: none;
   }
 }
 
@@ -252,6 +273,9 @@
 
   @include breakpoint(sm) {
     flex-basis: auto;
+  }
+
+  @include breakpoint(lg) {
     margin-left: 2rem;
   }
 
@@ -276,8 +300,11 @@
     background-color: $active-blue;
     background-image: url(asset-path('search.svg'));
     background-size: 20px;
+    border: 0;
     color: $white;
     cursor: pointer;
+
+    @include focus_outline;
   }
 }
 
@@ -295,6 +322,8 @@
     display: inline-block;
     margin: 0 0 0 2rem;
     padding: .5rem 0;
+
+    @include focus_outline;
 
     &.active {
       text-decoration: underline;
