@@ -1,21 +1,30 @@
 @import '../../helpers/vars';
 @import '../../helpers/colours';
 @import '../../helpers/mixins';
+@import '../../helpers/breakpoints';
+
+@mixin focus_outline {
+  &:focus {
+    outline: 4px solid $focus-yellow;
+  }
+}
 
 .magna-header {
   @include float-clear();
   padding: 20px 0;
   background: $blue-deep-100;
   font-family: 'Overpass', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
 
-  & a {
-    font-size: 1rem;
-    color: $white;
-    text-decoration: none;
+.magna-header a,
+.magna-header__dropdown a {
+  font-size: 1rem;
+  color: $white;
+  text-decoration: none;
 
-    &:hover {
-      text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
   }
 }
 
@@ -70,13 +79,22 @@
 .magna-header__dropdown-button {
   position: relative;
   z-index: 5;
-  display: flex;
+  display: none;
   align-items: center;
   padding: .5rem 1rem;
   margin-top: .5rem;
+  background: $blue-deep-100;
   border: 2px solid #fff;
-  color: $white;
+  font-family: 'Overpass', Arial, Helvetica, sans-serif;
   font-size: 1rem;
+  color: $white;
+  cursor: pointer;
+
+  .js-enabled & {
+    display: flex;
+  }
+
+  @include focus_outline;
 
   @include breakpoint(sm) {
     margin: 1rem 0 0 2rem;
@@ -148,35 +166,68 @@
 }
 
 .magna-header__dropdown {
-  display: none;
-  position: absolute;
+  display: block;
   z-index: 4;
-  left: -15px;
-  right: -15px;
-  top: 45px;
+  left: 0;
+  right: 0;
+  top: 49px;
+  margin: 0 -15px;
   background: $blue-deep-80;
+  overflow: visible;
 
-  [aria-expanded=true] + & {
+  .js-enabled & {
+    display: none;
+    position: absolute;
+  }
+
+  &[aria-hidden=true] {
+    display: none;
+  }
+
+  &[aria-hidden=false],
+  .js-enabled &--open {
     display: block;
+    // `display: block` can only be animated using keyframes
+    -webkit-animation: fadeIn .3s;
+    animation: fadeIn .3s;
   }
 
   @include breakpoint(sm) {
     left: auto;
-    right: 0;
     top: 57px;
     width: 370px;
+    margin: 0;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
 .magna-header__greeting {
   padding: 15px;
   background-color: $active-blue;
+  font-family: 'Overpass', Arial, Helvetica, sans-serif;
   color: $white;
 }
 
 .magna-header__menu-items {
   margin: 0;
-  padding: 0 20px;
+  padding: 5px 20px;
 
   & li {
     margin: 0;
@@ -195,6 +246,8 @@
     font-size: 1em;
     font-family: 'FS Lucas', Arial, Helvetica, sans-serif;
 
+    @include focus_outline;
+
     .tag {
       position: absolute;
       right: 0;
@@ -205,10 +258,17 @@
     width: 100%;
     color: $white;
     text-align: left;
+    background: none;
+    border: 0;
+    cursor: pointer;
 
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  & .button:hover {
+    text-decoration: none;
   }
 }
 
@@ -221,6 +281,9 @@
 
   @include breakpoint(sm) {
     flex-basis: auto;
+  }
+
+  @include breakpoint(lg) {
     margin-left: 2rem;
   }
 
@@ -245,18 +308,17 @@
     background-color: $active-blue;
     background-image: url(asset-path('search.svg'));
     background-size: 20px;
+    border: 0;
     color: $white;
     cursor: pointer;
+
+    @include focus_outline;
   }
 }
 
 
 .magna-header__nav {
   margin: 1rem 0 0;
-
-  @include breakpoint(lg_lt) {
-    display: none;
-  }
 
   & li {
     display: inline-block;
@@ -268,5 +330,11 @@
     display: inline-block;
     margin: 0 0 0 2rem;
     padding: .5rem 0;
+
+    @include focus_outline;
+
+    &.active {
+      text-decoration: underline;
+    }
   }
 }

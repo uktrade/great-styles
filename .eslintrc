@@ -6,7 +6,10 @@
   "rules": {
     "react-hooks/exhaustive-deps": 0
   },
-  "extends": ["prettier"],
+  "extends": [
+    "prettier"
+  ],
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": 6,
@@ -15,5 +18,9 @@
       "experimentalObjectRestSpread": true
     }
   },
-  "plugins": ["react-hooks", "jsx-a11y", "prettier"]
+  "plugins": [
+    "react-hooks",
+    "jsx-a11y",
+    "prettier"
+  ]
 }

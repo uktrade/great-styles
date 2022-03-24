@@ -9,9 +9,9 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div style={{ width: '100vw', marginLeft: '-1rem' }}>
+    <div style={{ width: '100vw', margin: '-1rem' }}>
       <header className='magna-header'>
-        <nav className='container container-fluid'>
+        <nav className='container'>
           <a className='magna-header__logo' href='#'>
             <img src={logo} alt='Department for International Trade' />
           </a>
@@ -56,7 +56,7 @@ export const Header = () => {
               </button>
             </form>
 
-            <ul className='magna-header__nav'>
+            <ul className='magna-header__nav hide-lg_lt'>
               <li><a href='#'>Learn to export</a></li>
               <li><a href='#'>Where to export</a></li>
               <li><a href='#'>Make an export plan</a></li>
@@ -64,6 +64,16 @@ export const Header = () => {
           </div>
         </nav>
       </header>
+
+      <div className='container p-v-l' style={{ height: '120vh' }}>
+        <h1 className='h-xl text-blue-deep-20'>Lorem ipsum</h1>
+
+        <p className='text-blue-deep-20'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci
+          amet asperiores atque aut autem
+          commodi consequuntur dolores ducimus, ea earum et ex, explicabo id itaque molestiae mollitia nam
+          necessitatibus neque, nesciunt nisi odio qui quis quo ratione repellat repudiandae saepe sint soluta suscipit
+          tempora ullam vel vitae!</p>
+      </div>
     </div>
   )
 }

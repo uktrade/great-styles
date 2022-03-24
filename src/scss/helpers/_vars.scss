@@ -28,22 +28,19 @@ $magna-global-breakpoints: (
   // Extra small devices (portrait phones: <640px)
   sm_lt: 'screen and (max-width: #{$mobile-max-breakpoint})',
   // Small devices (landscape phones: >=640px, <768px)
-  sm_o: 'screen (min-width: #{$mobile-max-breakpoint}) and (max-width: #{$tablet-max-breakpoint})',
-
+  sm_o: 'screen and (min-width: #{$mobile-max-breakpoint}) and (max-width: #{$tablet-max-breakpoint})',
   // Medium devices (tablets: >=768px)
   md: 'screen and (min-width: #{$tablet-max-breakpoint})',
   // Small devices (landscape phones: <768px)
   md_lt: 'screen and (max-width: #{$tablet-max-breakpoint})',
   // Medium devices (tablets: >=768px, <1024px)
-  md_o: 'screen (min-width: #{$tablet-max-breakpoint}) and (max-width: #{$desktop-max-breakpoint})',
-
+  md_o: 'screen and (min-width: #{$tablet-max-breakpoint}) and (max-width: #{$desktop-max-breakpoint})',
   // Large devices (desktops: >=1024px)
   lg: 'screen and (min-width: #{$desktop-max-breakpoint})',
   // Medium devices (tablets: <1024px)
   lg_lt: 'screen and (max-width: #{$desktop-max-breakpoint})',
   // Large devices (desktops: >=1024px, <1200px)
-  lg_o: 'screen (min-width: #{$desktop-max-breakpoint}) and (max-width: #{$desktop-large-max-breakpoint})',
-  
+  lg_o: 'screen and (min-width: #{$desktop-max-breakpoint}) and (max-width: #{$desktop-large-max-breakpoint})',
   // Extra large devices (large desktops: >=1200px)
   xl: 'screen and (min-width: #{$desktop-large-max-breakpoint})',
   // Large devices (desktops: <1200px)
