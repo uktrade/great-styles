@@ -32,19 +32,13 @@ export const Header = () => {
               <div className='magna-header__greeting'>Hi John</div>
               <ul className='magna-header__menu-items'>
                 <li><a href='#'>Home</a></li>
-                <li className='hide-lg'>
-                  <a href='#'>Learn to export <span className='tag tag--small'>new</span></a>
-                </li>
-                <li className='hide-lg'>
-                  <a href='#'>Where to export <span className='tag tag--small'>new</span></a>
-                </li>
-                <li className='hide-lg'>
-                  <a href='#'>Make an export plan <span className='tag tag--small'>new</span></a>
-                </li>
+                <li><a href='#'>Learn to export <span className='tag tag--small'>new</span></a></li>
+                <li><a href='#'>Where to export <span className='tag tag--small'>new</span></a></li>
+                <li><a href='#'>Make an export plan <span className='tag tag--small'>new</span></a></li>
+                <li><a href='#'>Account</a></li>
                 <li><a href='#'>Advice</a></li>
                 <li><a href='#'>Markets</a></li>
                 <li><a href='#'>Services</a></li>
-                <li><a href='#'>Account</a></li>
                 <li>
                   <button type='button'>Sign out</button>
                 </li>
@@ -71,7 +65,7 @@ export const Header = () => {
         </nav>
       </header>
 
-      <div className='container container-fluid p-v-l' style={{ height: '120vh' }}>
+      <div className='container p-v-l' style={{ height: '120vh' }}>
         <h1 className='h-xl text-blue-deep-20'>Lorem ipsum</h1>
 
         <p className='text-blue-deep-20'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci
