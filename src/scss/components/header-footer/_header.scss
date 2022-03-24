@@ -79,7 +79,7 @@
 .magna-header__dropdown-button {
   position: relative;
   z-index: 5;
-  display: flex;
+  display: none;
   align-items: center;
   padding: .5rem 1rem;
   margin-top: .5rem;
@@ -89,6 +89,10 @@
   font-size: 1rem;
   color: $white;
   cursor: pointer;
+
+  .js-enabled & {
+    display: flex;
+  }
 
   @include focus_outline;
 
@@ -163,7 +167,6 @@
 
 .magna-header__dropdown {
   display: block;
-  position: absolute;
   z-index: 4;
   left: 0;
   right: 0;
@@ -172,12 +175,17 @@
   background: $blue-deep-80;
   overflow: visible;
 
-  [aria-expanded=false] + & {
+  .js-enabled & {
+    display: none;
+    position: absolute;
+  }
+
+  &[aria-hidden=true] {
     display: none;
   }
 
-  [aria-expanded=true] + &,
-  &--open {
+  &[aria-hidden=false],
+  .js-enabled &--open {
     display: block;
     // `display: block` can only be animated using keyframes
     -webkit-animation: fadeIn .3s;
