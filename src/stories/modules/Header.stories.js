@@ -9,7 +9,7 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div style={{ width: '100vw', margin: '-1rem' }}>
+    <div className='js-enabled' style={{ width: '100vw', margin: '-1rem' }}>
       <header className='magna-header'>
         <nav className='container'>
           <a className='magna-header__logo' href='#'>
@@ -28,7 +28,7 @@ export const Header = () => {
               Menu
               <span className='magna-header__dropdown-button__icon' />
             </button>
-            <div id='main-menu' className='magna-header__dropdown' role='dialog'>
+            <div id='main-menu' className='magna-header__dropdown' role='dialog' aria-hidden={!isOpen}>
               <div className='magna-header__greeting'>Hi John</div>
               <ul className='magna-header__menu-items'>
                 <li><a href='#'>Home</a></li>
