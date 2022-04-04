@@ -14,18 +14,27 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
  * using their respective `aria-controls` and `id` attributes.
  *
  * Usage:
- *    <button aria-controls="target" data-reveal-button [data-reveal-modal]>Toggle</button>
+ *    <button
+ *      aria-controls="target"
+ *      data-reveal-button
+ *      [data-reveal-modal]
+ *      [data-reveal-tabs="tab-group"]
+ *    >
+ *      Toggle
+ *    </button>
  *    <div id="target">Content to reveal</div>
  *
  * CSS should be used to show/hide the content based on the `aria-expanded` and `aria-hidden` attributes.
  *
- * Optional: adding the `data-reveal-modal` attribute to the trigger will treat the content as a modal:
+ * Optional attribute: `data-reveal-modal`
+ * When added to the trigger, will treat the content as a modal:
  * - Pressing 'Escape' will close
  * - Clicking anywhere outside the content will close (provide your own overlay with CSS)
  * - Focus will be trapped within content and trigger
  *
- * Optional: adding the `data-reveal-group` attribute will handle all related reveals as linked and
- * function like an accordion or tabs, i.e. only one of the linked reveals will be open at once.
+ * Optional attribute: `data-reveal-tabs="tab-group-id"
+ * When added to the trigger, will handle all related reveals as linked and function like tabs, i.e. only
+ * one of the linked reveals will be open at once, with the first one open by default at the start.
  */
 var tabbable = 'a[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])';
 
@@ -37,7 +46,7 @@ var Reveal = /*#__PURE__*/function () {
     this.button = buttonElement;
     this.content = document.querySelector("#".concat(buttonElement.getAttribute('aria-controls')));
     this.asModal = buttonElement.getAttribute('data-reveal-modal') !== null;
-    this.group = buttonElement.getAttribute('data-reveal-group');
+    this.tabGroup = buttonElement.getAttribute('data-reveal-tabs');
 
     if (this.asModal) {
       var contentTabbable = Array.from(this.content.querySelectorAll(tabbable));
@@ -49,7 +58,13 @@ var Reveal = /*#__PURE__*/function () {
     this.close = this.close.bind(this);
     this.handleKeydown = this.handleKeydown.bind(this);
     this.handleOutsideClick = this.handleOutsideClick.bind(this);
-    this.close();
+
+    if (this.tabGroup && document.querySelector("[data-reveal-tabs=\"".concat(this.tabGroup, "\"]")) === this.button) {
+      this.open();
+    } else {
+      this.close();
+    }
+
     buttonElement.addEventListener('click', this.toggle);
   }
 
@@ -99,7 +114,7 @@ var Reveal = /*#__PURE__*/function () {
   }, {
     key: "toggle",
     value: function toggle() {
-      if (this.isOpen()) {
+      if (this.isOpen() && !this.tabGroup) {
         this.close();
       } else {
         this.open();
@@ -113,9 +128,9 @@ var Reveal = /*#__PURE__*/function () {
       this.button.setAttribute('aria-expanded', 'true');
       this.content.setAttribute('aria-hidden', 'false');
 
-      if (this.group) {
+      if (this.tabGroup) {
         this.button.addEventListener('reveal:close', this.close);
-        document.querySelectorAll("[data-reveal-group=\"".concat(this.group, "\"]")).forEach(function (el) {
+        document.querySelectorAll("[data-reveal-tabs=\"".concat(this.tabGroup, "\"]")).forEach(function (el) {
           if (el !== _this.button) {
             el.dispatchEvent(new Event('reveal:close'));
           }
@@ -133,7 +148,7 @@ var Reveal = /*#__PURE__*/function () {
       this.button.setAttribute('aria-expanded', 'false');
       this.content.setAttribute('aria-hidden', 'true');
 
-      if (this.group) {
+      if (this.tabGroup) {
         this.button.removeEventListener('reveal:close', this.close);
       }
 
