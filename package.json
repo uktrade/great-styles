@@ -8,9 +8,10 @@
   "main": "src/index.js",
   "private": true,
   "scripts": {
+    "test": "jest",
     "build": "webpack --mode production",
     "build:dev": "webpack --watch --mode development",
-    "babel": "./node_modules/.bin/babel src --ignore '**/*.stories.js','./src/index.js' --out-dir ./dist",
+    "babel": "./node_modules/.bin/babel src --ignore '**/*.stories.js','./src/index.js',**/*.test.js --out-dir ./dist",
     "storybook": "start-storybook -p 8080 -s static",
     "storybook:deploy": "./deploy-storybook.sh",
     "storybook:build": "build-storybook -s public",
