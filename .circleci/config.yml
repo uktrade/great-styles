@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: cimg/node:12
+      - image: cimg/node:16.13
     steps:
       - checkout
       - restore_cache:
@@ -21,7 +21,7 @@ jobs:
             npm run build && npm run babel
   test:
     docker:
-      - image: cimg/node:12
+      - image: cimg/node:16.13
     steps:
       - checkout
       - restore_cache:
