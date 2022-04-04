@@ -2,6 +2,8 @@
 
 ## Pre-release
 
+- Add tabbed mode to Reveal module
+
 ## [0.5.0](https://github.com/uktrade/great-styles/releases/tag/0.5.0)
 
 [Full Changelog](https://github.com/uktrade/great-styles/compare/0.4.1...0.5.0)

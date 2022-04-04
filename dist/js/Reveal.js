@@ -23,6 +23,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
  * - Pressing 'Escape' will close
  * - Clicking anywhere outside the content will close (provide your own overlay with CSS)
  * - Focus will be trapped within content and trigger
+ *
+ * Optional: adding the `data-reveal-group` attribute will handle all related reveals as linked and
+ * function like an accordion or tabs, i.e. only one of the linked reveals will be open at once.
  */
 var tabbable = 'a[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])';
 
@@ -34,6 +37,7 @@ var Reveal = /*#__PURE__*/function () {
     this.button = buttonElement;
     this.content = document.querySelector("#".concat(buttonElement.getAttribute('aria-controls')));
     this.asModal = buttonElement.getAttribute('data-reveal-modal') !== null;
+    this.group = buttonElement.getAttribute('data-reveal-group');
 
     if (this.asModal) {
       var contentTabbable = Array.from(this.content.querySelectorAll(tabbable));
@@ -42,6 +46,7 @@ var Reveal = /*#__PURE__*/function () {
     }
 
     this.toggle = this.toggle.bind(this);
+    this.close = this.close.bind(this);
     this.handleKeydown = this.handleKeydown.bind(this);
     this.handleOutsideClick = this.handleOutsideClick.bind(this);
     this.close();
@@ -103,8 +108,19 @@ var Reveal = /*#__PURE__*/function () {
   }, {
     key: "open",
     value: function open() {
+      var _this = this;
+
       this.button.setAttribute('aria-expanded', 'true');
       this.content.setAttribute('aria-hidden', 'false');
+
+      if (this.group) {
+        this.button.addEventListener('reveal:close', this.close);
+        document.querySelectorAll("[data-reveal-group=\"".concat(this.group, "\"]")).forEach(function (el) {
+          if (el !== _this.button) {
+            el.dispatchEvent(new Event('reveal:close'));
+          }
+        });
+      }
 
       if (this.asModal) {
         document.addEventListener('keydown', this.handleKeydown);
@@ -116,6 +132,10 @@ var Reveal = /*#__PURE__*/function () {
     value: function close() {
       this.button.setAttribute('aria-expanded', 'false');
       this.content.setAttribute('aria-hidden', 'true');
+
+      if (this.group) {
+        this.button.removeEventListener('reveal:close', this.close);
+      }
 
       if (this.asModal) {
         document.removeEventListener('keydown', this.handleKeydown);
