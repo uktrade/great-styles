@@ -1,40 +1,52 @@
 version: 2
+
+# Variables
+node: &node
+  image: cimg/node:16.13
+
+npm_restore_cache: &npm_restore_cache
+  restore_cache:
+    keys:
+      - v1-deps-{{ checksum "package-lock.json" }}
+      - v1-deps-
+
+npm_install: &npm_install
+  run:
+    command: npm i
+
+npm_save_cache: &npm_save_cache
+  save_cache:
+    key: v1-deps-{{ checksum "package-lock.json" }}
+    paths:
+      - "node_modules"
+
+# Jobs
 jobs:
   build:
     docker:
-      - image: cimg/node:16.13
+      - *node
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - v1-deps-{{ checksum "package-lock.json" }}
-            - v1-deps-
+      - *npm_restore_cache
+      - *npm_install
+      - *npm_save_cache
       - run:
-          command: |
-            npm i
-      - save_cache:
-          key: v1-deps-{{ checksum "package-lock.json" }}
-          paths:
-            - "node_modules"
-      - run:
-          command: |
-            npm run build && npm run babel
+          command: npm run build && npm run babel
   test:
     docker:
-      - image: cimg/node:16.13
+      - *node
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - v1-deps-{{ checksum "package-lock.json" }}
-            - v1-deps-
+      - *npm_restore_cache
+      - *npm_install
+      - *npm_save_cache
       - run:
-          command: |
-            npm i
-      - save_cache:
-          key: v1-deps-{{ checksum "package-lock.json" }}
-          paths:
-            - "node_modules"
-      - run:
-          command: |
-            npm run test
+          command: npm run test
+
+# Workflows
+workflows:
+  version: 2
+  test_and_build:
+    jobs:
+      - test
+      - build

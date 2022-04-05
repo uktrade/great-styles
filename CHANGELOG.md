@@ -2,6 +2,10 @@
 
 ## Pre-release
 
+## [0.6.0](https://github.com/uktrade/great-styles/releases/tag/0.6.0)
+
+[Full Changelog](https://github.com/uktrade/great-styles/compare/0.5.0...0.6.0)
+
 - Add tabbed mode to Reveal module
 - Switched to Node 16
 
