@@ -2,6 +2,8 @@
 
 ## Pre-release
 
+- Ensure dependencies overrides are correctly applied
+
 ## [0.6.1](https://github.com/uktrade/great-styles/releases/tag/0.6.1)
 
 [Full Changelog](https://github.com/uktrade/great-styles/compare/0.6.0...0.6.1)

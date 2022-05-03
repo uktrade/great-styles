@@ -22,6 +22,7 @@ module.exports = {
             loader: 'css-loader',
             options: {
               sourceMap: true,
+              url: false,
             },
           },
           // Compiles Sass to CSS
@@ -32,26 +33,6 @@ module.exports = {
             },
           },
         ],
-      },
-      {
-        include: path.resolve(__dirname, 'src/scss/images'),
-        use: {
-          loader: 'url-loader',
-          options: {
-            limit: 0,
-            name: './images/[name].[ext]',
-          },
-        },
-      },
-      {
-        include: path.resolve(__dirname, 'src/scss/fonts'),
-        use: {
-          loader: 'url-loader',
-          options: {
-            limit: 0,
-            name: './fonts/[name].[ext]',
-          },
-        },
       },
     ],
   },
