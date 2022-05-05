@@ -6,7 +6,6 @@ const RemovePlugin = require('remove-files-webpack-plugin')
 module.exports = {
   devtool: 'source-map',
   entry: {
-    bundle: './src/index.js',
     'great-styles': './src/scss/great-styles.scss',
   },
   output: {
@@ -25,7 +24,6 @@ module.exports = {
               url: false,
             },
           },
-          // Compiles Sass to CSS
           {
             loader: 'sass-loader',
             options: {
@@ -47,8 +45,6 @@ module.exports = {
     new RemovePlugin({
       after: {
         include: [
-          './static/bundle.js',
-          './static/bundle.js.map',
           './static/great-styles.js',
           './static/great-styles.js.map',
         ],
