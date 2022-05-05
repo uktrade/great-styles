@@ -16,7 +16,7 @@
     "build:all": "npm run build && npm run babel",
     "storybook": "start-storybook -p 8080 -s static",
     "storybook:deploy": "./deploy-storybook.sh",
-    "storybook:build": "build-storybook -s public"
+    "storybook:build": "build-storybook"
   },
   "browserslist": [
     ">0.2%",
