@@ -31,7 +31,7 @@ jobs:
       - *npm_install
       - *npm_save_cache
       - run:
-          command: npm run build && npm run babel
+          command: npm run build:all
   test:
     docker:
       - *node
@@ -42,6 +42,16 @@ jobs:
       - *npm_save_cache
       - run:
           command: npm run test
+  build-storybook:
+    docker:
+      - *node
+    steps:
+      - checkout
+      - *npm_restore_cache
+      - *npm_install
+      - *npm_save_cache
+      - run:
+          command: npm run storybook:build
 
 # Workflows
 workflows:
@@ -50,3 +60,4 @@ workflows:
     jobs:
       - test
       - build
+      - build-storybook
