@@ -1,6 +1,6 @@
 {
   "name": "great-styles",
-  "version": "0.6.1",
+  "version": "0.6.5",
   "engines": {
     "node": "^16.13.0",
     "npm": "^8.3.0"
