@@ -2,7 +2,33 @@
 
 ## Pre-release
 
-- Ensure dependencies overrides are correctly applied
+## [v0.6.5](https://github.com/uktrade/great-styles/releases/tag/v0.6.5)
+
+[Full Changelog](https://github.com/uktrade/great-styles/compare/2023-01-20...v0.6.5)
+
+### Patch
+- Update webpack
+
+## [2023-01-20](https://github.com/uktrade/great-styles/releases/tag/2023-01-20)
+
+[Full Changelog](https://github.com/uktrade/great-styles/compare/2022-11-23...2023-01-20)
+
+### Patch
+- Update json5
+
+## [2022-11-23](https://github.com/uktrade/great-styles/releases/tag/2022-11-23)
+
+[Full Changelog](https://github.com/uktrade/great-styles/compare/2022-08-12...2022-11-23)
+
+### Patch
+- Update loader-utils
+
+## [2022-08-12](https://github.com/uktrade/great-styles/releases/tag/2022-08-12)
+
+[Full Changelog](https://github.com/uktrade/great-styles/compare/0.6.1...2022-08-12)
+
+### Patch
+- Update terser
 
 ## [0.6.1](https://github.com/uktrade/great-styles/releases/tag/0.6.1)
 
