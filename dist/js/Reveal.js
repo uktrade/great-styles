@@ -1,11 +1,11 @@
 "use strict";
 
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 /**
  * Reveal functionality
  *
@@ -36,38 +36,32 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
  * When added to the trigger, will handle all related reveals as linked and function like tabs, i.e. only
  * one of the linked reveals will be open at once, with the first one open by default at the start.
  */
-var tabbable = 'a[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])';
 
+var tabbable = 'a[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])';
 var Reveal = /*#__PURE__*/function () {
   function Reveal(buttonElement) {
     _classCallCheck(this, Reveal);
-
     if (!buttonElement) return;
     this.button = buttonElement;
     this.content = document.querySelector("#".concat(buttonElement.getAttribute('aria-controls')));
     this.asModal = buttonElement.getAttribute('data-reveal-modal') !== null;
     this.tabGroup = buttonElement.getAttribute('data-reveal-tabs');
-
     if (this.asModal) {
       var contentTabbable = Array.from(this.content.querySelectorAll(tabbable));
       this.firstTabbableElement = contentTabbable[0];
       this.lastTabbableElement = contentTabbable[contentTabbable.length - 1];
     }
-
     this.toggle = this.toggle.bind(this);
     this.close = this.close.bind(this);
     this.handleKeydown = this.handleKeydown.bind(this);
     this.handleOutsideClick = this.handleOutsideClick.bind(this);
-
     if (this.tabGroup && document.querySelector("[data-reveal-tabs=\"".concat(this.tabGroup, "\"]")) === this.button) {
       this.open();
     } else {
       this.close();
     }
-
     buttonElement.addEventListener('click', this.toggle);
   }
-
   _createClass(Reveal, [{
     key: "handleKeydown",
     value: function handleKeydown(event) {
@@ -75,23 +69,19 @@ var Reveal = /*#__PURE__*/function () {
         if (event.key === 'Escape') {
           this.close();
         }
-
         if (event.key === 'Tab') {
           if (event.target === this.firstTabbableElement && event.shiftKey) {
             event.preventDefault();
             this.button.focus();
           }
-
           if (event.target === this.lastTabbableElement && !event.shiftKey) {
             event.preventDefault();
             this.button.focus();
           }
-
           if (event.target === this.button && !event.shiftKey) {
             event.preventDefault();
             this.firstTabbableElement.focus();
           }
-
           if (event.target === this.button && event.shiftKey) {
             event.preventDefault();
             this.lastTabbableElement.focus();
@@ -124,10 +114,8 @@ var Reveal = /*#__PURE__*/function () {
     key: "open",
     value: function open() {
       var _this = this;
-
       this.button.setAttribute('aria-expanded', 'true');
       this.content.setAttribute('aria-hidden', 'false');
-
       if (this.tabGroup) {
         this.button.addEventListener('reveal:close', this.close);
         document.querySelectorAll("[data-reveal-tabs=\"".concat(this.tabGroup, "\"]")).forEach(function (el) {
@@ -136,7 +124,6 @@ var Reveal = /*#__PURE__*/function () {
           }
         });
       }
-
       if (this.asModal) {
         document.addEventListener('keydown', this.handleKeydown);
         document.addEventListener('click', this.handleOutsideClick);
@@ -147,21 +134,17 @@ var Reveal = /*#__PURE__*/function () {
     value: function close() {
       this.button.setAttribute('aria-expanded', 'false');
       this.content.setAttribute('aria-hidden', 'true');
-
       if (this.tabGroup) {
         this.button.removeEventListener('reveal:close', this.close);
       }
-
       if (this.asModal) {
         document.removeEventListener('keydown', this.handleKeydown);
         document.removeEventListener('click', this.handleOutsideClick);
       }
     }
   }]);
-
   return Reveal;
 }();
-
 (function () {
   window.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('[data-reveal-button]').forEach(function (el) {
