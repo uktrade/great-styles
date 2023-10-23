@@ -14,9 +14,10 @@
     "build:dev": "webpack --watch --mode development",
     "babel": "./node_modules/.bin/babel src --ignore '**/*.stories.js','./src/index.js',**/*.test.js --out-dir ./dist",
     "build:all": "npm run build && npm run babel",
-    "storybook": "start-storybook -p 8080 -s static",
+    "storybook": "storybook dev -p 6006",
     "storybook:deploy": "./deploy-storybook.sh",
-    "storybook:build": "build-storybook"
+    "storybook:build": "storybook build",
+    "build-storybook": "storybook build"
   },
   "browserslist": [
     ">0.2%",
@@ -27,17 +28,26 @@
   "devDependencies": {
     "@babel/cli": "^7.17.6",
     "@babel/eslint-parser": "^7.17.0",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@fortawesome/fontawesome-free": "^5.15.3",
-    "@storybook/addon-a11y": "^6.4.19",
-    "@storybook/addon-backgrounds": "^6.4.19",
-    "@storybook/addon-knobs": "^6.4.0",
-    "@storybook/addons": "^6.4.19",
-    "@storybook/builder-webpack5": "^6.4.19",
-    "@storybook/manager-webpack5": "^6.4.19",
+    "@storybook/addon-a11y": "^7.5.1",
+    "@storybook/addon-backgrounds": "^7.5.1",
+    "@storybook/addon-essentials": "^7.5.1",
+    "@storybook/addon-interactions": "^7.5.1",
+    "@storybook/addon-knobs": "^7.0.0",
+    "@storybook/addon-links": "^7.5.1",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/addons": "^7.5.1",
+    "@storybook/blocks": "^7.5.1",
+    "@storybook/builder-webpack5": "^7.5.1",
+    "@storybook/cli": "^7.5.1",
+    "@storybook/manager-webpack5": "^6.5.16",
     "@storybook/preset-scss": "^1.0.3",
-    "@storybook/react": "^6.4.19",
+    "@storybook/react": "^7.5.1",
+    "@storybook/react-webpack5": "^7.5.1",
+    "@storybook/testing-library": "^0.2.2",
     "@testing-library/dom": "^8.11.3",
     "@testing-library/user-event": "^13.5.0",
     "copy-webpack-plugin": "^10.2.4",
@@ -46,15 +56,19 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-storybook": "^0.6.15",
+    "i": "^0.3.7",
     "jest": "^29.6.0",
     "jest-environment-jsdom": "29.6.0",
     "mini-css-extract-plugin": "^2.5.3",
+    "npm": "^10.2.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-html-parser": "^2.0.2",
     "remove-files-webpack-plugin": "^1.5.0",
     "sass": "^1.49.8",
     "sass-loader": "^12.6.0",
+    "storybook": "^7.5.1",
     "webpack": "^5.76.0",
     "webpack-cli": "^4.9.2"
   },
@@ -66,6 +80,11 @@
     "semver": "7.5.2"
   },
   "dependencies": {
-    "semver": "^7.5.2"
+    "semver": "7.5.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }

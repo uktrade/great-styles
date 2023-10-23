@@ -1,11 +1,10 @@
 module.exports = {
-  core: {
-    builder: 'webpack5',
-  },
   stories: ['../src/**/*.stories.js'],
+
   features: {
     postcss: false,
   },
+
   addons: [
     {
       name: '@storybook/preset-scss',
@@ -21,4 +20,13 @@ module.exports = {
     '@storybook/addon-a11y',
     '@storybook/addon-backgrounds',
   ],
+
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {}
+  },
+
+  docs: {
+    autodocs: true
+  }
 }

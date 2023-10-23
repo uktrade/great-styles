@@ -12,7 +12,13 @@ export const parameters = {
   docs: { page: null },
   options: {
     storySort: {
-      order: ['Base', ['Colours', 'Typography', 'Grid'], 'Elements', 'Forms', 'Components'],
+      order: [
+        'Base',
+        ['Colours', 'Typography', 'Grid'],
+        'Elements',
+        'Forms',
+        'Components',
+      ],
     },
   },
   backgrounds: {
