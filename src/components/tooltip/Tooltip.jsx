@@ -55,7 +55,7 @@ export const Tooltip = ({
           type="button"
           aria-haspopup="dialog"
         >
-          <span className={`great-icon fas ${faIcon}`} />
+          <span role='img' className={`great-icon fas ${faIcon}`} />
           <span className="visually-hidden">{title}</span>
         </button>
       </div>
