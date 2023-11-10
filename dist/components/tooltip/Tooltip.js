@@ -67,8 +67,8 @@ var Tooltip = function Tooltip(_ref) {
     onClick: onClickOpen,
     type: "button",
     "aria-haspopup": "dialog"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "fas ".concat(faIcon)
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    className: "great-icon fas ".concat(faIcon)
   }), /*#__PURE__*/_react.default.createElement("span", {
     className: "visually-hidden"
   }, title))), isComponentVisible && /*#__PURE__*/_react.default.createElement("div", {
@@ -84,7 +84,8 @@ var Tooltip = function Tooltip(_ref) {
       return onKeyClose(e.key);
     },
     tabIndex: "0"
-  }, /*#__PURE__*/_react.default.createElement("i", {
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    role: "img",
     className: "fas fa-times text-blue-deep-80"
   }), /*#__PURE__*/_react.default.createElement("span", {
     className: "visually-hidden"
