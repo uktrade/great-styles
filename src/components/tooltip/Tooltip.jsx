@@ -55,7 +55,7 @@ export const Tooltip = ({
           type="button"
           aria-haspopup="dialog"
         >
-          <i className={`fas ${faIcon}`} />
+          <span role='img' className={`great-icon fas ${faIcon}`} />
           <span className="visually-hidden">{title}</span>
         </button>
       </div>
@@ -73,7 +73,7 @@ export const Tooltip = ({
             onKeyUp={(e) => onKeyClose(e.key)}
             tabIndex="0"
           >
-            <i className="fas fa-times text-blue-deep-80" />
+            <span role='img' className="fas fa-times text-blue-deep-80" />
             <span className="visually-hidden">Click or press Escape to close Educational moment</span>
           </button>
           {<h2 id="tooltip-title" className={`tooltip__title h-xs p-t-0 p-b-0 ${showTitle ? '' : 'visually-hidden'}`}>{title}</h2>}
